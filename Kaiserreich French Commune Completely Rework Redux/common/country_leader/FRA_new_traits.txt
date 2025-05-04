@@ -1,0 +1,309 @@
+leader_traits = {
+    FRA_general_architect_of_neosocialism = {
+        sprite = 13
+		random = no
+
+		stability_factor = -0.05
+        industrial_capacity_factory = 0.1
+        consumer_goods_factor = -0.1
+
+        ai_will_do = { factor = 2 }
+    }
+    FRA_technocratic_supporter = {
+        sprite = 13
+		random = no
+
+		political_power_factor = 0.1
+        political_advisor_cost_factor = -0.66
+
+        ai_will_do = { factor = 2 }
+    }
+    FRA_pragmatic_reformers = {
+        sprite = 13
+		random = no
+
+		stability_factor = 0.1
+        political_power_factor = 0.05
+        mobilization_laws_cost_factor = -0.25
+        trade_laws_cost_factor  = -0.25
+        economy_cost_factor = -0.25
+        political_advisor_cost_factor = -0.25
+
+        ai_will_do = { factor = 2 }
+    }
+    FRA_loyal_federal_syndicators = {
+        sprite = 13
+		random = no
+
+		production_factory_start_efficiency_factor = 0.15	
+        production_factory_max_efficiency_factor = 0.1
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_unconventional_leninist = {
+        sprite = 13
+		random = no
+
+		political_power_factor = -0.1
+        global_building_slots_factor = 0.15
+        local_resources_factor = 0.15
+        production_speed_buildings_factor = 0.05	
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_supporters_of_sound_economy = {
+        sprite = 13
+		random = no
+
+        stability_factor = 0.05
+        production_speed_industrial_complex_factor = 0.2
+        production_speed_arms_factory_factor = 0.05
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_red_flag_bearers_of_the_hidden_front = {
+        sprite = 13
+		random = no
+
+        operative_slot = 1
+        operation_infiltrate_outcome = 0.25
+        operation_outcome = 0.25
+        intel_network_gain_factor = 0.3
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_antiwar_pacifist = {
+        sprite = 13
+		random = no
+
+        war_support_factor = -0.05
+        syndicalist_drift = 0.01
+        radical_socialist_drift = 0.01
+        production_speed_buildings_factor = 0.15
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_moderate_social_reformers = {
+        sprite = 13
+		random = no
+
+        political_power_factor = 0.05
+        stability_weekly = 0.005
+        war_support_weekly = 0.005
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_school_socialist = {
+        sprite = 13
+		random = no
+
+        research_speed_factor = 0.15
+        sickness_chance = -0.5
+        production_factory_start_efficiency_factor = 0.05
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_social_anthropologist = {
+        sprite = 13
+		random = no
+
+        required_garrison_factor = -0.25
+        resistance_decay = 0.15
+        compliance_growth = 0.15
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_proletarian_democracy_advocate = {
+        sprite = 13
+		random = no
+
+        political_power_factor = 0.1
+        line_change_production_efficiency_factor = 0.2
+        party_popularity_stability_factor = 0.25
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_anti_marxist_anarchist = {
+        sprite = 13
+		random = no
+
+        stability_factor = -0.05
+        radical_socialist_drift = 0.01
+        production_factory_efficiency_gain_factor = 0.25
+        modifier_army_sub_unit_militia_attack_factor = 0.15
+        modifier_army_sub_unit_militia_defence_factor = 0.15
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_anarchist_journalist = {
+        sprite = 13
+		random = no
+
+        stability_factor = 0.1
+        war_support_factor = -0.05
+        line_change_production_efficiency_factor = 0.1
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_platformist_agronomist = {
+        sprite = 13
+		random = no
+
+        local_supplies = 0.15
+        consumer_goods_factor = -0.15
+        supply_consumption_factor = -0.1
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_feminist_in_defence_of_the_family = {
+        sprite = 13
+		random = no
+
+        stability_factor = 0.05
+        production_factory_max_efficiency_factor = 0.05
+        conscription_factor = 0.15
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_planned_economy_economist = {
+        sprite = 13
+		random = no
+
+        production_factory_max_efficiency_factor = 0.1
+        industrial_capacity_factory = 0.025
+        production_factory_efficiency_gain_factor = -0.05
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_double_edged_and_smooth = {
+        sprite = 13
+		random = no
+
+        operative_slot = 1
+        own_operative_detection_chance_factor = -0.5
+        own_operative_capture_chance_factor = -0.25
+        root_out_resistance_effectiveness_factor = 0.25
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_surrealist_leninist = {
+        sprite = 13
+		random = no
+
+        research_speed_factor = 0.1
+        industrial_capacity_factory = 0.025
+        production_factory_max_efficiency_factor = 0.05
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_pioneer_economics_supporters = {
+        sprite = 13
+		random = no
+
+        stability_factor = -0.1
+        industrial_capacity_factory = 0.15
+        production_factory_start_efficiency_factor = -0.1
+        production_factory_max_efficiency_factor = 0.15
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_military_mayors = {
+        sprite = 13
+		random = no
+
+        production_speed_arms_factory_factor = 0.15
+        experience_gain_army_factor = 0.05
+        experience_gain_navy_factor = 0.05
+        experience_gain_air_factor = 0.05
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_genius_economist = {
+        sprite = 13
+		random = no
+
+        political_power_factor = -0.2
+        production_factory_start_efficiency_factor = 0.2	
+        production_factory_max_efficiency_factor = 0.15		
+        line_change_production_efficiency_factor = 0.15		
+        production_factory_efficiency_gain_factor = 0.2		
+        industrial_capacity_factory = 0.025				
+        industrial_capacity_dockyard = 0.05					        
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_ideological_zealot = {
+        sprite = 13
+		random = no
+
+        totalist_drift = 0.05
+        stability_factor = 0.05
+        war_support_factor = 0.1
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_militarist_agitator = {
+        sprite = 13
+		random = no
+
+        war_support_factor = 0.05
+        army_attack_factor = 0.1						
+        army_defence_factor = 0.1					
+        army_core_attack_factor = -0.05					
+        army_core_defence_factor = -0.05				     
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_anti_consumerist_ascetic = {
+        sprite = 13
+		random = no
+
+        stability_factor = -0.1
+        war_support_factor = -0.1
+        consumer_goods_factor = -0.2   
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_president_of_acephale = {
+        sprite = 13
+		random = no
+
+        stability_factor = -0.25
+        conscription_factor = -0.2
+        research_speed_factor = 0.1
+        production_factory_max_efficiency_factor = 0.1
+        industrial_capacity_factory = 0.05
+        army_speed_factor = 0.05
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_surrealist_architect = {
+        sprite = 13
+		random = no
+
+        stability_factor = -0.05
+        political_power_factor = 0.1
+        production_speed_buildings_factor = 0.1  
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_anthropological_poet = {
+        sprite = 13
+		random = no
+
+        political_power_factor = 0.05 
+        army_org_factor = 0.05
+        compliance_gain = 0.25   
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_cultural_caesar = {
+        sprite = 13
+		random = no
+
+        political_power_factor = 0.15
+        totalist_drift = 0.05
+
+        ai_will_do = { factor = 2 }
+    }
+}

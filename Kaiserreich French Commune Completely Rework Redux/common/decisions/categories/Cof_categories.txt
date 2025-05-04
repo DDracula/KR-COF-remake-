@@ -1,0 +1,5 @@
+Cof_politics = {
+    icon = GFX_decision_cat_communard_flag
+	allowed = { original_tag = FRA }
+	priority = 12
+}

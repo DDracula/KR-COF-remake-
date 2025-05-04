@@ -1,0 +1,15 @@
+defined_text = {
+	name = Cof_politics_detail1
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_detail_hidden } }
+        localization_key = Cof_politics_detail1_key
+    }
+}
+
+defined_text = {
+	name = Cof_politics_detail2
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_detail_hidden } }
+        localization_key = Cof_politics_detail2_key
+    }
+}

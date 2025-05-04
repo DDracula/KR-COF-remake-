@@ -1,0 +1,16 @@
+#### 公社政治 ####
+Cof_politics = {
+    Cof_politics_show_or_hide_detail = {
+        icon = eng_trade_unions_support
+		allowed = { original_tag = FRA }
+		visible = { always = yes }
+		days_re_enable = 0
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = Cofpolitics_detail_hidden } }
+				set_country_flag = Cofpolitics_detail_hidden
+			}
+			else = { clr_country_flag = Cofpolitics_detail_hidden }
+		}
+    }
+}

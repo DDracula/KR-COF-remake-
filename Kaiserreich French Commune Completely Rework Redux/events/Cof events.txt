@@ -1,0 +1,5 @@
+add_namespace = cofpolitics
+add_namespace = cofeconomic
+add_namespace = cofmilitary
+add_namespace = cofinternational
+add_namespace = int
