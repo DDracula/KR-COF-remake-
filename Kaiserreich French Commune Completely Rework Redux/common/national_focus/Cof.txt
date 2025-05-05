@@ -1,0 +1,18 @@
+#!gfx:interface/redux/goals.gfx
+
+focus_tree = {
+	id = Cof_focus
+
+	country = {
+		factor = 0 
+		modifier = {
+			add = 100
+			tag = FRA
+		}  
+	}
+	default = no
+	continuous_focus_position = { x = 200 y = 1000 }
+
+    
+
+}

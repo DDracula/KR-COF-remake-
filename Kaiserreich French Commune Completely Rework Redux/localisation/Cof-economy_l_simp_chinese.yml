@@ -1,0 +1,18 @@
+﻿l_simp_chinese:
+  Cof_economy:0 "公社经济"
+  Cof_economy_desc:0 "经济现状：[cof_economy_situation] ([?cof_econ_values|+=.1])\n\n经济事物代表：[DED_leader_loc]\n\n经济派系影响力：\n$faction_synd$：[?ecnomy_synd|Y.1%%]\n$faction_oppo$：[?ecnomy_oppo|Y.1%%]\n$faction_jaco$：[?ecnomy_jaco|Y.1%%]\n$faction_sore$：[?ecnomy_sore|Y.1%%]\n\n经济模式倾向：[Cof_economy_model]\n\n经济活力指标：\n工业：\n-管理经验：[?econ_industry_manage|Y.1]\n-组织能力：[?econ_industry_organize|Y.1]\n-机械工艺：[?econ_industry_machine|Y.1]\n\n农业：\n-机械化水平：[?econ_agriculture_mechanized|Y.1]\n-化工生产：[?econ_agriculture_chemical|Y.1]\n-农副产品链：[?econ_agriculture_chain|Y.1]\n\n经济平等：[?econ_equal|Y.1]\n产业联系：[?econ_link|Y.1]\n创新能力：[?econ_innovate|Y.1]"
+
+  cof_economy_situation_good5:0 "§G经济奇迹§!"
+  cof_economy_situation_good4:0 "§G经济腾飞§!"
+  cof_economy_situation_good3:0 "§7经济繁荣§!"
+  cof_economy_situation_good2:0 "§7经济扩张§!"
+  cof_economy_situation_good1:0 "§7经济发展§!"
+  cof_economy_situation_soso:0 "§Y稳中向好§!"
+  cof_economy_situation_bad1:0 "§R经济低迷§!"
+  cof_economy_situation_bad2:0 "§r经济衰退§!"
+  cof_economy_situation_bad3:0 "§x经济危机§!"
+  cof_economy_situation_bad4:0 "§o经济萧条§!"
+  cof_economy_situation_bad5:0 "§o经济崩溃§!"
+
+  Cof_economy_period_change:0 "经济周期变化"
+  Cof_economy_show_detail:0 "显示/隐藏经济详细信息"

@@ -1,0 +1,936 @@
+faction_infulences_count = {
+    set_variable = { infulence_synd = 0 }
+    set_variable = { infulence_oppo = 0 }
+    set_variable = { infulence_jaco = 0 }
+    set_variable = { infulence_sore = 0 }
+    #CSP
+    if = {
+        limit = { has_country_flag = CCSP_synd }
+        add_to_variable = { infulence_synd = 3 }
+    }
+    if = {
+        limit = { has_country_flag = CCSP_oppo }
+        add_to_variable = { infulence_oppo = 3 }
+    }
+    if = {
+        limit = { has_country_flag = CCSP_jaco }
+        add_to_variable = { infulence_jaco = 3 }
+    }
+    if = {
+        limit = { has_country_flag = CCSP_sore }
+        add_to_variable = { infulence_sore = 3 }
+    }
+
+    if = {
+        limit = { has_country_flag = DED_synd }
+        add_to_variable = { infulence_synd = 2.4 }
+    }
+    if = {
+        limit = { has_country_flag = DED_oppo }
+        add_to_variable = { infulence_oppo = 2.4 }
+    }
+    if = {
+        limit = { has_country_flag = DED_jaco }
+        add_to_variable = { infulence_jaco = 2.4 }
+    }
+    if = {
+        limit = { has_country_flag = DED_sore }
+        add_to_variable = { infulence_sore = 2.4 }
+    }
+
+    if = {
+        limit = { has_country_flag = DFA_synd }
+        add_to_variable = { infulence_synd = 2.4 }
+    }
+    if = {
+        limit = { has_country_flag = DFA_oppo }
+        add_to_variable = { infulence_oppo = 2.4 }
+    }
+    if = {
+        limit = { has_country_flag = DFA_jaco }
+        add_to_variable = { infulence_jaco = 2.4 }
+    }
+    if = {
+        limit = { has_country_flag = DFA_sore }
+        add_to_variable = { infulence_sore = 2.4 }
+    }
+
+    if = {
+        limit = { has_country_flag = DIS_synd }
+        add_to_variable = { infulence_synd = 1.8 }
+    }
+    if = {
+        limit = { has_country_flag = DIS_oppo }
+        add_to_variable = { infulence_oppo = 1.8 }
+    }
+    if = {
+        limit = { has_country_flag = DIS_jaco }
+        add_to_variable = { infulence_jaco = 1.8 }
+    }
+    if = {
+        limit = { has_country_flag = DIS_sore }
+        add_to_variable = { infulence_sore = 1.8 }
+    }
+
+    if = {
+        limit = { has_country_flag = DSRG_synd }
+        add_to_variable = { infulence_synd = 1.8 }
+    }
+    if = {
+        limit = { has_country_flag = DSRG_oppo }
+        add_to_variable = { infulence_oppo = 1.8 }
+    }
+    if = {
+        limit = { has_country_flag = DSRG_jaco }
+        add_to_variable = { infulence_jaco = 1.8 }
+    }
+    if = {
+        limit = { has_country_flag = DSRG_sore }
+        add_to_variable = { infulence_sore = 1.8 }
+    }
+
+    if = {
+        limit = { has_country_flag = CGSC_synd }
+        add_to_variable = { infulence_synd = 2.4 }
+    }
+    if = {
+        limit = { has_country_flag = CGSC_oppo }
+        add_to_variable = { infulence_oppo = 2.4 }
+    }
+    if = {
+        limit = { has_country_flag = CGSC_jaco }
+        add_to_variable = { infulence_jaco = 2.4 }
+    }
+    if = {
+        limit = { has_country_flag = CGSC_sore }
+        add_to_variable = { infulence_sore = 2.4 }
+    }
+
+    if = {
+        limit = {
+			check_variable = { dominant_faction_synd > dominant_faction_oppo }
+			check_variable = { dominant_faction_synd > dominant_faction_jaco }
+			check_variable = { dominant_faction_synd > dominant_faction_sore }	
+        }
+        add_to_variable = { infulence_synd = 1.2 }
+    }
+    if = {
+        limit = {
+			check_variable = { dominant_faction_oppo > dominant_faction_synd }
+			check_variable = { dominant_faction_oppo > dominant_faction_jaco }
+			check_variable = { dominant_faction_oppo > dominant_faction_sore }	
+        }
+        add_to_variable = { infulence_oppo = 1.2 }
+    }
+    if = {
+        limit = {
+			check_variable = { dominant_faction_jaco > dominant_faction_oppo }
+			check_variable = { dominant_faction_jaco > dominant_faction_synd }
+			check_variable = { dominant_faction_jaco > dominant_faction_sore }	
+        }
+        add_to_variable = { infulence_jaco = 1.2 }
+    }
+    if = {
+        limit = {
+			check_variable = { dominant_faction_sore > dominant_faction_oppo }
+			check_variable = { dominant_faction_sore > dominant_faction_jaco }
+			check_variable = { dominant_faction_sore > dominant_faction_synd }	
+        }
+        add_to_variable = { infulence_sore = 1.2 }
+    }
+    if = {
+        limit = {
+            OR = {
+                check_variable = { dominant_faction_synd = 3 }
+                check_variable = { dominant_faction_oppo = 3 }
+                check_variable = { dominant_faction_jaco = 3 }
+                check_variable = { dominant_faction_sore = 3 }
+                AND = {
+                    check_variable = { dominant_faction_synd < 3 }
+                    check_variable = { dominant_faction_oppo < 3 }
+                    check_variable = { dominant_faction_jaco < 3 }
+                    check_variable = { dominant_faction_sore < 3 }
+                }
+            }
+        }
+        add_to_variable = { infulence_synd = 0.3 }
+        add_to_variable = { infulence_oppo = 0.3 }
+        add_to_variable = { infulence_jaco = 0.3 }
+        add_to_variable = { infulence_sore = 0.3 }
+    }
+
+    #BGT
+    set_temp_variable = { infulence_synd_temp = seat_synd }
+    divide_temp_variable = { infulence_synd_temp = 650 }
+    multiply_temp_variable = { infulence_synd_temp = 20 }
+    add_to_variable = { infulence_synd = infulence_synd_temp }
+
+    set_temp_variable = { infulence_oppo_temp = seat_oppo }
+    divide_temp_variable = { infulence_oppo_temp = 650 }
+    multiply_temp_variable = { infulence_oppo_temp = 20 }
+    add_to_variable = { infulence_oppo = infulence_oppo_temp }
+    
+    set_temp_variable = { infulence_jaco_temp = seat_jaco }
+    divide_temp_variable = { infulence_jaco_temp = 650 }
+    multiply_temp_variable = { infulence_jaco_temp = 20 }
+    add_to_variable = { infulence_jaco = infulence_jaco_temp }
+
+    set_temp_variable = { infulence_sore_temp = seat_sore }
+    divide_temp_variable = { infulence_sore_temp = 650 }
+    multiply_temp_variable = { infulence_sore_temp = 20 }
+    add_to_variable = { infulence_sore = infulence_sore_temp }
+
+    #class
+    #
+    set_temp_variable = { class_pop_temp = pop_workers }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_workers_synd }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_synd = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_workers }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_workers_oppo }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_oppo = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_workers }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_workers_jaco }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_jaco = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_workers }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_workers_sore }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_sore = class_pop_temp }
+
+    #
+    set_temp_variable = { class_pop_temp = pop_peasants }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_peasants_synd }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_synd = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_peasants }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_peasants_oppo }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_oppo = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_peasants }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_peasants_jaco }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_jaco = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_peasants }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_peasants_sore }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_sore = class_pop_temp }
+
+    #
+    set_temp_variable = { class_pop_temp = pop_merchants }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_merchants_synd }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_synd = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_merchants }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_merchants_oppo }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_oppo = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_merchants }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_merchants_jaco }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_jaco = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_merchants }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_merchants_sore }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_sore = class_pop_temp }
+
+    #
+    set_temp_variable = { class_pop_temp = pop_scholars }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_scholars_synd }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_synd = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_scholars }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_scholars_oppo }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_oppo = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_scholars }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_scholars_jaco }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_jaco = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_scholars }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_scholars_sore }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_sore = class_pop_temp }
+
+    #
+    set_temp_variable = { class_pop_temp = pop_bureaucrats }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_bureaucrats_synd }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_synd = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_bureaucrats }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_bureaucrats_oppo }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_oppo = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_bureaucrats }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_bureaucrats_jaco }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_jaco = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_bureaucrats }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_bureaucrats_sore }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_sore = class_pop_temp }
+
+    #
+    set_temp_variable = { class_pop_temp = pop_army }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_army_synd }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_synd = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_army }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_army_oppo }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_oppo = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_army }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_army_jaco }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_jaco = class_pop_temp }
+
+    set_temp_variable = { class_pop_temp = pop_army }
+    multiply_temp_variable = { class_pop_temp = 0.3 }
+    multiply_temp_variable = { class_pop_temp = pop_army_sore }
+    multiply_temp_variable = { class_pop_temp = 0.01 }
+    add_to_variable = { infulence_sore = class_pop_temp }
+
+    #economy
+    set_temp_variable = { ecnomy_temp = ecnomy_synd }
+    multiply_temp_variable = { ecnomy_temp = 0.2 }
+    add_to_variable = { infulence_synd = ecnomy_temp }
+
+    set_temp_variable = { ecnomy_temp = ecnomy_oppo }
+    multiply_temp_variable = { ecnomy_temp = 0.2 }
+    add_to_variable = { infulence_oppo = ecnomy_temp }
+
+    set_temp_variable = { ecnomy_temp = ecnomy_jaco }
+    multiply_temp_variable = { ecnomy_temp = 0.2 }
+    add_to_variable = { infulence_jaco = ecnomy_temp }
+
+    set_temp_variable = { ecnomy_temp = ecnomy_sore }
+    multiply_temp_variable = { ecnomy_temp = 0.2 }
+    add_to_variable = { infulence_sore = ecnomy_temp }
+
+    #army
+    set_temp_variable = { military_temp = military_synd }
+    multiply_temp_variable = { military_temp = 0.15 }
+    add_to_variable = { infulence_synd = military_temp }
+
+    set_temp_variable = { military_temp = military_oppo }
+    multiply_temp_variable = { military_temp = 0.15 }
+    add_to_variable = { infulence_oppo = military_temp }
+    
+    set_temp_variable = { military_temp = military_jaco }
+    multiply_temp_variable = { military_temp = 0.15 }
+    add_to_variable = { infulence_jaco = military_temp }
+
+    set_temp_variable = { military_temp = military_sore }
+    multiply_temp_variable = { military_temp = 0.15 }
+    add_to_variable = { infulence_sore = military_temp }
+}
+
+csp_position_change = {
+    set_variable = { dominant_faction_synd = 0 }
+    set_variable = { dominant_faction_oppo = 0 }
+    set_variable = { dominant_faction_jaco = 0 }
+    set_variable = { dominant_faction_sore = 0 }
+
+    if = {
+        limit = { has_country_flag = CCSP_synd }
+        add_to_variable = { dominant_faction_synd = 1 }
+    }
+    if = {
+        limit = { has_country_flag = CCSP_oppo }
+        add_to_variable = { dominant_faction_oppo = 1 }
+    }
+    if = {
+        limit = { has_country_flag = CCSP_jaco }
+        add_to_variable = { dominant_faction_jaco = 1 }
+    }
+    if = {
+        limit = { has_country_flag = CCSP_sore }
+        add_to_variable = { dominant_faction_sore = 1 }
+    }
+
+    if = {
+        limit = { has_country_flag = DED_synd }
+        add_to_variable = { dominant_faction_synd = 1 }
+    }
+    if = {
+        limit = { has_country_flag = DED_oppo }
+        add_to_variable = { dominant_faction_oppo = 1 }
+    }
+    if = {
+        limit = { has_country_flag = DED_jaco }
+        add_to_variable = { dominant_faction_jaco = 1 }
+    }
+    if = {
+        limit = { has_country_flag = DED_sore }
+        add_to_variable = { dominant_faction_sore = 1 }
+    }
+
+    if = {
+        limit = { has_country_flag = DFA_synd }
+        add_to_variable = { dominant_faction_synd = 1 }
+    }
+    if = {
+        limit = { has_country_flag = DFA_oppo }
+        add_to_variable = { dominant_faction_oppo = 1 }
+    }
+    if = {
+        limit = { has_country_flag = DFA_jaco }
+        add_to_variable = { dominant_faction_jaco = 1 }
+    }
+    if = {
+        limit = { has_country_flag = DFA_sore }
+        add_to_variable = { dominant_faction_sore = 1 }
+    }
+
+    if = {
+        limit = { has_country_flag = DIS_synd }
+        add_to_variable = { dominant_faction_synd = 1 }
+    }
+    if = {
+        limit = { has_country_flag = DIS_oppo }
+        add_to_variable = { dominant_faction_oppo = 1 }
+    }
+    if = {
+        limit = { has_country_flag = DIS_jaco }
+        add_to_variable = { dominant_faction_jaco = 1 }
+    }
+    if = {
+        limit = { has_country_flag = DIS_sore }
+        add_to_variable = { dominant_faction_sore = 1 }
+    }
+
+    if = {
+        limit = { has_country_flag = DSRG_synd }
+        add_to_variable = { dominant_faction_synd = 1 }
+    }
+    if = {
+        limit = { has_country_flag = DSRG_oppo }
+        add_to_variable = { dominant_faction_oppo = 1 }
+    }
+    if = {
+        limit = { has_country_flag = DSRG_jaco }
+        add_to_variable = { dominant_faction_jaco = 1 }
+    }
+    if = {
+        limit = { has_country_flag = DSRG_sore }
+        add_to_variable = { dominant_faction_sore = 1 }
+    }
+
+    if = {
+        limit = { has_country_flag = CGSC_synd }
+        add_to_variable = { dominant_faction_synd = 1 }
+    }
+    if = {
+        limit = { has_country_flag = CGSC_oppo }
+        add_to_variable = { dominant_faction_oppo = 1 }
+    }
+    if = {
+        limit = { has_country_flag = CGSC_jaco }
+        add_to_variable = { dominant_faction_jaco = 1 }
+    }
+    if = {
+        limit = { has_country_flag = CGSC_sore }
+        add_to_variable = { dominant_faction_sore = 1 }
+    }
+
+    faction_infulences_count = yes
+}
+
+bgt_seat_change = {
+    if = { limit = { check_variable = { smc = 0 } } }
+	else = {
+		add_to_variable = { seat_synd_mode = smc }
+		custom_effect_tooltip = seat_synd_mode_change_tips
+	}
+    if = { limit = { check_variable = { src = 0 } } }
+	else = {
+		add_to_variable = { seat_synd_radi = src }
+		custom_effect_tooltip = seat_synd_radi_change_tips
+	}
+    set_variable = { seat_synd = seat_synd_mode }
+	add_to_variable = { seat_synd = seat_synd_radi }
+
+    if = { limit = { check_variable = { occ = 0 } } }
+	else = {
+		add_to_variable = { seat_oppo_comm = occ }
+		custom_effect_tooltip = seat_oppo_comm_change_tips
+	}
+    if = { limit = { check_variable = { oac = 0 } } }
+	else = {
+		add_to_variable = { seat_oppo_anar = oac }
+		custom_effect_tooltip = seat_oppo_anar_change_tips
+	}
+    set_variable = { seat_oppo = seat_oppo_comm }
+	add_to_variable = { seat_oppo = seat_oppo_anar }
+
+    if = { limit = { check_variable = { jnc = 0 } } }
+	else = {
+		add_to_variable = { seat_jaco_neos = jnc }
+		custom_effect_tooltip = seat_jaco_neos_change_tips
+	}
+    if = { limit = { check_variable = { jrc = 0 } } }
+	else = {
+		add_to_variable = { seat_jaco_revo = jrc }
+		custom_effect_tooltip = seat_jaco_revo_change_tips
+	}
+    set_variable = { seat_jaco = seat_jaco_neos }
+	add_to_variable = { seat_jaco = seat_jaco_revo }
+
+    if = { limit = { check_variable = { soc = 0 } } }
+	else = {
+		add_to_variable = { seat_sore_oldl = soc }
+		custom_effect_tooltip = seat_sore_oldl_change_tips
+	}
+    if = { limit = { check_variable = { syc = 0 } } }
+	else = {
+		add_to_variable = { seat_sore_yout = syc }
+		custom_effect_tooltip = seat_sore_yout_change_tips
+	}
+    set_variable = { seat_sore = seat_sore_oldl }
+	add_to_variable = { seat_sore = seat_sore_yout }
+
+    faction_infulences_count = yes
+}
+
+class_pop_satisfactions_change = {
+    if = { limit = { check_variable = { wc = 0 } }	}
+	else = {
+		add_to_variable = { pop_satisfaction_workers = wc }
+		clamp_variable = {
+			var = pop_satisfaction_workers
+			max = 100
+			min = 0
+		}
+		custom_effect_tooltip = pop_satisfaction_workers_change
+	}
+    if = { limit = { check_variable = { pc = 0 } }	}
+	else = {
+		add_to_variable = { pop_satisfaction_peasants = pc }
+		clamp_variable = {
+			var = pop_satisfaction_peasants
+			max = 100
+			min = 0
+		}
+		custom_effect_tooltip = pop_satisfaction_peasants_change
+	}
+    if = { limit = { check_variable = { mc = 0 } }	}
+	else = {
+		add_to_variable = { pop_satisfaction_merchants = mc }
+		clamp_variable = {
+			var = pop_satisfaction_merchants
+			max = 100
+			min = 0
+		}
+		custom_effect_tooltip = pop_satisfaction_merchants_change
+	}
+    if = { limit = { check_variable = { sc = 0 } }	}
+	else = {
+		add_to_variable = { pop_satisfaction_scholars = sc }
+		clamp_variable = {
+			var = pop_satisfaction_scholars
+			max = 100
+			min = 0
+		}
+		custom_effect_tooltip = pop_satisfaction_scholars_change
+	}
+    if = { limit = { check_variable = { bc = 0 } }	}
+	else = {
+		add_to_variable = { pop_satisfaction_bureaucrats  = bc }
+		clamp_variable = {
+			var = pop_satisfaction_bureaucrats 
+			max = 100
+			min = 0
+		}
+		custom_effect_tooltip = pop_satisfaction_bureaucrats_change
+	}
+    if = { limit = { check_variable = { ac = 0 } }	}
+	else = {
+		add_to_variable = { pop_satisfaction_army = ac }
+		clamp_variable = {
+			var = pop_satisfaction_army
+			max = 100
+			min = 0
+		}
+		custom_effect_tooltip = pop_satisfaction_army_change
+	}
+
+    set_variable = { pop_satisfaction = 0 }
+    add_to_variable = { pop_satisfaction = pop_satisfaction_workers }
+    add_to_variable = { pop_satisfaction = pop_satisfaction_peasants }
+    add_to_variable = { pop_satisfaction = pop_satisfaction_merchants }
+    add_to_variable = { pop_satisfaction = pop_satisfaction_scholars }
+    add_to_variable = { pop_satisfaction = pop_satisfaction_bureaucrats }
+    add_to_variable = { pop_satisfaction = pop_satisfaction_army }
+    divide_variable = { pop_satisfaction = 6 }
+}
+
+class_pop_change = {
+    if = { limit = { check_variable = { pop_wc = 0 } } }
+	else = {
+		add_to_variable = { pop_workers = pop_wc }
+		custom_effect_tooltip = pop_workers_change_tips
+	}
+    if = { limit = { check_variable = { pop_pc = 0 } } }
+	else = {
+		add_to_variable = { pop_peasants = pop_pc }
+		custom_effect_tooltip = pop_peasants_change_tips
+	}
+    if = { limit = { check_variable = { pop_mc = 0 } } }
+	else = {
+		add_to_variable = { pop_merchants = pop_mc }
+		custom_effect_tooltip = pop_merchants_change_tips
+	}
+    if = { limit = { check_variable = { pop_sc = 0 } } }
+	else = {
+		add_to_variable = { pop_scholars = pop_sc }
+		custom_effect_tooltip = pop_scholars_change_tips
+	}
+    if = { limit = { check_variable = { pop_bc = 0 } } }
+	else = {
+		add_to_variable = { pop_bureaucrats = pop_bc }
+		custom_effect_tooltip = pop_bureaucrats_change_tips
+	}
+    if = { limit = { check_variable = { pop_ac = 0 } } }
+	else = {
+		add_to_variable = { pop_army = pop_ac }
+		custom_effect_tooltip = pop_army_change_tips
+	}
+
+    if = { limit = { check_variable = { pop_aoc = 0 } } }
+	else = {
+		add_to_variable = { pop_army_officers = pop_aoc }
+		custom_effect_tooltip = pop_army_officers_change_tips
+	}
+    if = { limit = { check_variable = { pop_anc = 0 } } }
+	else = {
+		add_to_variable = { pop_army_ncos = pop_anc }
+		custom_effect_tooltip = pop_army_ncos_change_tips
+	}
+    if = { limit = { check_variable = { pop_asc = 0 } } }
+	else = {
+		add_to_variable = { pop_army_soldiers = pop_asc }
+		custom_effect_tooltip = pop_army_soldiers_change_tips
+	}
+    army_faction_tendency_change = yes
+
+    faction_infulences_count = yes
+}
+
+class_pop_faction_tendency_change = {
+    if = {
+        limit = { check_variable = { pop_target = 1 } } #workers 
+        workers_faction_tendency_change = yes
+    }
+    if = {
+        limit = { check_variable = { pop_target = 2 } } #peasants
+        peasants_faction_tendency_change = yes
+    }
+    if = {
+        limit = { check_variable = { pop_target = 3 } } #merchants
+        merchants_faction_tendency_change = yes
+    }
+    if = {
+        limit = { check_variable = { pop_target = 4 } } #scholars
+        scholars_faction_tendency_change = yes
+    }
+    if = {
+        limit = { check_variable = { pop_target = 5 } } #bureaucrats 
+        bureaucrats_faction_tendency_change = yes
+    }
+
+    #army
+    if = {
+        limit = { check_variable = { pop_target = 6 } } #officers
+        officers_faction_tendency_change = yes
+        army_faction_tendency_change = yes
+    }
+    if = {
+        limit = { check_variable = { pop_target = 7 } } #ncos
+        ncos_faction_tendency_change = yes
+        army_faction_tendency_change = yes
+    }
+    if = {
+        limit = { check_variable = { pop_target = 8 } } #soldiers
+        soldiers_faction_tendency_change = yes
+        army_faction_tendency_change = yes
+    }
+
+    faction_infulences_count = yes
+}
+
+workers_faction_tendency_change = {
+    if = { limit = { check_variable = { pop_syndc = 0 } } }
+	else = {
+		add_to_variable = { pop_workers_synd = pop_syndc }
+		custom_effect_tooltip = pop_synd_change_tips
+	}
+    if = { limit = { check_variable = { pop_oppoc = 0 } } }
+	else = {
+		add_to_variable = { pop_workers_oppo = pop_oppoc }
+		custom_effect_tooltip = pop_oppo_change_tips
+	}
+    if = { limit = { check_variable = { pop_jacoc = 0 } } }
+	else = {
+		add_to_variable = { pop_workers_jaco = pop_jacoc }
+		custom_effect_tooltip = pop_jaco_change_tips
+	}
+    if = { limit = { check_variable = { pop_sorec = 0 } } }
+	else = {
+		add_to_variable = { pop_workers_sore = pop_sorec }
+		custom_effect_tooltip = pop_sore_change_tips
+	}
+}
+
+peasants_faction_tendency_change = {
+    if = { limit = { check_variable = { pop_syndc = 0 } } }
+	else = {
+		add_to_variable = { pop_peasants_synd = pop_syndc }
+		custom_effect_tooltip = pop_synd_change_tips
+	}
+    if = { limit = { check_variable = { pop_oppoc = 0 } } }
+	else = {
+		add_to_variable = { pop_peasants_oppo = pop_oppoc }
+		custom_effect_tooltip = pop_oppo_change_tips
+	}
+    if = { limit = { check_variable = { pop_jacoc = 0 } } }
+	else = {
+		add_to_variable = { pop_peasants_jaco = pop_jacoc }
+		custom_effect_tooltip = pop_jaco_change_tips
+	}
+    if = { limit = { check_variable = { pop_sorec = 0 } } }
+	else = {
+		add_to_variable = { pop_peasants_sore = pop_sorec }
+		custom_effect_tooltip = pop_sore_change_tips
+	}
+}
+
+merchants_faction_tendency_change = {
+    if = { limit = { check_variable = { pop_syndc = 0 } } }
+	else = {
+		add_to_variable = { pop_merchants_synd = pop_syndc }
+		custom_effect_tooltip = pop_synd_change_tips
+	}
+    if = { limit = { check_variable = { pop_oppoc = 0 } } }
+	else = {
+		add_to_variable = { pop_merchants_oppo = pop_oppoc }
+		custom_effect_tooltip = pop_oppo_change_tips
+	}
+    if = { limit = { check_variable = { pop_jacoc = 0 } } }
+	else = {
+		add_to_variable = { pop_merchants_jaco = pop_jacoc }
+		custom_effect_tooltip = pop_jaco_change_tips
+	}
+    if = { limit = { check_variable = { pop_sorec = 0 } } }
+	else = {
+		add_to_variable = { pop_merchants_sore = pop_sorec }
+		custom_effect_tooltip = pop_sore_change_tips
+	}
+}
+
+scholars_faction_tendency_change = {
+    if = { limit = { check_variable = { pop_syndc = 0 } } }
+	else = {
+		add_to_variable = { pop_scholars_synd = pop_syndc }
+		custom_effect_tooltip = pop_synd_change_tips
+	}
+    if = { limit = { check_variable = { pop_oppoc = 0 } } }
+	else = {
+		add_to_variable = { pop_scholars_oppo = pop_oppoc }
+		custom_effect_tooltip = pop_oppo_change_tips
+	}
+    if = { limit = { check_variable = { pop_jacoc = 0 } } }
+	else = {
+		add_to_variable = { pop_scholars_jaco = pop_jacoc }
+		custom_effect_tooltip = pop_jaco_change_tips
+	}
+    if = { limit = { check_variable = { pop_sorec = 0 } } }
+	else = {
+		add_to_variable = { pop_scholars_sore = pop_sorec }
+		custom_effect_tooltip = pop_sore_change_tips
+	}
+}
+
+bureaucrats_faction_tendency_change = {
+    if = { limit = { check_variable = { pop_syndc = 0 } } }
+	else = {
+		add_to_variable = { pop_bureaucrats_synd = pop_syndc }
+		custom_effect_tooltip = pop_synd_change_tips
+	}
+    if = { limit = { check_variable = { pop_oppoc = 0 } } }
+	else = {
+		add_to_variable = { pop_bureaucrats_oppo = pop_oppoc }
+		custom_effect_tooltip = pop_oppo_change_tips
+	}
+    if = { limit = { check_variable = { pop_jacoc = 0 } } }
+	else = {
+		add_to_variable = { pop_bureaucrats_jaco = pop_jacoc }
+		custom_effect_tooltip = pop_jaco_change_tips
+	}
+    if = { limit = { check_variable = { pop_sorec = 0 } } }
+	else = {
+		add_to_variable = { pop_bureaucrats_sore = pop_sorec }
+		custom_effect_tooltip = pop_sore_change_tips
+	}
+}
+
+officers_faction_tendency_change = {
+    if = { limit = { check_variable = { pop_syndc = 0 } } }
+	else = {
+		add_to_variable = { pop_officers_synd = pop_syndc }
+		custom_effect_tooltip = pop_synd_change_tips
+	}
+    if = { limit = { check_variable = { pop_oppoc = 0 } } }
+	else = {
+		add_to_variable = { pop_officers_oppo = pop_oppoc }
+		custom_effect_tooltip = pop_oppo_change_tips
+	}
+    if = { limit = { check_variable = { pop_jacoc = 0 } } }
+	else = {
+		add_to_variable = { pop_officers_jaco = pop_jacoc }
+		custom_effect_tooltip = pop_jaco_change_tips
+	}
+    if = { limit = { check_variable = { pop_sorec = 0 } } }
+	else = {
+		add_to_variable = { pop_officers_sore = pop_sorec }
+		custom_effect_tooltip = pop_sore_change_tips
+	}
+}
+
+ncos_faction_tendency_change = {
+    if = { limit = { check_variable = { pop_syndc = 0 } } }
+	else = {
+		add_to_variable = { pop_ncos_synd = pop_syndc }
+		custom_effect_tooltip = pop_synd_change_tips
+	}
+    if = { limit = { check_variable = { pop_oppoc = 0 } } }
+	else = {
+		add_to_variable = { pop_ncos_oppo = pop_oppoc }
+		custom_effect_tooltip = pop_oppo_change_tips
+	}
+    if = { limit = { check_variable = { pop_jacoc = 0 } } }
+	else = {
+		add_to_variable = { pop_ncos_jaco = pop_jacoc }
+		custom_effect_tooltip = pop_jaco_change_tips
+	}
+    if = { limit = { check_variable = { pop_sorec = 0 } } }
+	else = {
+		add_to_variable = { pop_ncos_sore = pop_sorec }
+		custom_effect_tooltip = pop_sore_change_tips
+	}
+}
+
+soldiers_faction_tendency_change = {
+    if = { limit = { check_variable = { pop_syndc = 0 } } }
+	else = {
+		add_to_variable = { pop_soldiers_synd = pop_syndc }
+		custom_effect_tooltip = pop_synd_change_tips
+	}
+    if = { limit = { check_variable = { pop_oppoc = 0 } } }
+	else = {
+		add_to_variable = { pop_soldiers_oppo = pop_oppoc }
+		custom_effect_tooltip = pop_oppo_change_tips
+	}
+    if = { limit = { check_variable = { pop_jacoc = 0 } } }
+	else = {
+		add_to_variable = { pop_soldiers_jaco = pop_jacoc }
+		custom_effect_tooltip = pop_jaco_change_tips
+	}
+    if = { limit = { check_variable = { pop_sorec = 0 } } }
+	else = {
+		add_to_variable = { pop_soldiers_sore = pop_sorec }
+		custom_effect_tooltip = pop_sore_change_tips
+	}
+}
+
+army_faction_tendency_return = {
+    set_temp_variable = { officers_tendc = pop_army_officers }
+    multiply_temp_variable = { officers_tendc = 0.01 }
+    set_temp_variable = { ncos_tendc = pop_army_ncos }
+    multiply_temp_variable = { ncos_tendc = 0.01 }
+    set_temp_variable = { soldiers_tendc = pop_army_soldiers }
+    multiply_temp_variable = { soldiers_tendc = 0.01 }
+}
+
+army_faction_tendency_change = {
+    #synd
+    set_variable = { pop_army_synd = 0 }
+    army_faction_tendency_return = yes
+    multiply_temp_variable = { officers_tendc = pop_officers_synd }
+    multiply_temp_variable = { ncos_tendc = pop_ncos_synd }
+    multiply_temp_variable = { soldiers_tendc = pop_soldiers_synd }
+    add_to_variable = { pop_army_synd = officers_tendc }
+    add_to_variable = { pop_army_synd = ncos_tendc }
+    add_to_variable = { pop_army_synd = soldiers_tendc }
+
+    #oppo
+    set_variable = { pop_army_oppo = 0 }
+    army_faction_tendency_return = yes
+    multiply_temp_variable = { officers_tendc = pop_officers_oppo }
+    multiply_temp_variable = { ncos_tendc = pop_ncos_oppo }
+    multiply_temp_variable = { soldiers_tendc = pop_soldiers_oppo }
+    add_to_variable = { pop_army_oppo = officers_tendc }
+    add_to_variable = { pop_army_oppo = ncos_tendc }
+    add_to_variable = { pop_army_oppo = soldiers_tendc }
+
+    #jaco
+    set_variable = { pop_army_jaco = 0 }
+    army_faction_tendency_return = yes
+    multiply_temp_variable = { officers_tendc = pop_officers_jaco }
+    multiply_temp_variable = { ncos_tendc = pop_ncos_jaco }
+    multiply_temp_variable = { soldiers_tendc = pop_soldiers_jaco }
+    add_to_variable = { pop_army_jaco = officers_tendc }
+    add_to_variable = { pop_army_jaco = ncos_tendc }
+    add_to_variable = { pop_army_jaco = soldiers_tendc }
+
+    #sore
+    set_variable = { pop_army_sore = 0 }
+    army_faction_tendency_return = yes
+    multiply_temp_variable = { officers_tendc = pop_officers_sore }
+    multiply_temp_variable = { ncos_tendc = pop_ncos_sore }
+    multiply_temp_variable = { soldiers_tendc = pop_soldiers_sore }
+    add_to_variable = { pop_army_sore = officers_tendc }
+    add_to_variable = { pop_army_sore = ncos_tendc }
+    add_to_variable = { pop_army_sore = soldiers_tendc }
+
+}

@@ -1,0 +1,10 @@
+﻿l_simp_chinese:
+  Cof_militray_reform:0 "军事改革"
+  Cof_militray_reform_desc:0 "公社军队总参谋长：[CGSC_leader_loc]\n\n军事派系影响力：\n$faction_synd$：[?military_synd|Y.1%%]\n$faction_oppo$：[?military_oppo|Y.1%%]\n$faction_jaco$：[?military_jaco|Y.1%%]\n$faction_sore$：[?military_sore|Y.1%%]\n\n$class_pop_officers$：[?pop_army_officers|Y.1%%]\n主导支持派系：[Cof_politics_officers_tendency]\n[Cof_politics_class_officers]\n\n$class_pop_ncos$：[?pop_army_ncos|Y.1%%]\n主导支持派系：[Cof_politics_ncos_tendency]\n[Cof_politics_class_ncos]\n\n$class_pop_soldiers$：[?pop_army_soldiers|Y.1%%]\n主导支持派系：[Cof_politics_soldiers_tendency]\n[Cof_politics_class_soldiers]\n\n军队学说：[Cof_army_theory]\n学说落实度：[?Cof_army_theory_implementation|G.1%%]\n\n军队自主：[Cof_army_autonomy]\n战斗意愿：[?Cof_army_willing|G.1]\n训练质量：[?Cof_army_training|G.1]\n装备技术：[?Cof_army_equpiment|G.1]\n参军热情：[?Cof_army_passionate|G.1]"
+
+  Cof_politics_class_officers_key:0 "详细支持占比：\n$faction_synd$：[?pop_officers_synd|Y.1%%]\n$faction_oppo$：[?pop_officers_oppo|Y.1%%]\n$faction_jaco$：[?pop_officers_jaco|Y.1%%]\n$faction_sore$：[?pop_officers_sore|Y.1%%]"
+  Cof_politics_class_ncos_key:0 "详细支持占比：\n$faction_synd$：[?pop_ncos_synd|Y.1%%]\n$faction_oppo$：[?pop_ncos_oppo|Y.1%%]\n$faction_jaco$：[?pop_ncos_jaco|Y.1%%]\n$faction_sore$：[?pop_ncos_sore|Y.1%%]"
+  Cof_politics_class_soldiers_key:0 "详细支持占比：\n$faction_synd$：[?pop_soldiers_synd|Y.1%%]\n$faction_oppo$：[?pop_soldiers_oppo|Y.1%%]\n$faction_jaco$：[?pop_soldiers_jaco|Y.1%%]\n$faction_sore$：[?pop_soldiers_sore|Y.1%%]"
+
+  Cof_militray_reform_period_change:0 "军事周期变化"
+  Cof_army_class_show_detail:0 "显示/隐藏军队详细信息"
