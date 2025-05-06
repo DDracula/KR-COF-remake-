@@ -16,3 +16,162 @@
 
   Cof_economy_period_change:0 "经济周期变化"
   Cof_economy_show_detail:0 "显示/隐藏经济详细信息"
+
+  FRA_expand_CGT:0 "扩张总工会"
+  FRA_re_co_ordination:0 "重组产业工会"
+  FRA_everything_goes_to_CGT:0 "总工会触及一切"
+  FRA_weaken_CGT:0 "削弱总工会"
+  FRA_ensuring_proletariat_leadership:0 "确保无产阶级领导"
+  FRA_new_labor_revolution:0 "新劳动革命"
+  FRA_removal_of_labor_restrictions_for_women:0 "解除妇女劳动限制"
+  FRA_agricultural_industry_workers:0 "农业产业工人"
+  FRA_cultural_union:0 "文化工会"
+  FRA_new_proletariat:0 "新无产阶级"
+  FRA_dont_be_afraid_of_losing_job:0 "“别害怕失业”"
+  FRA_national_employment_platform:0 "国家就业平台"
+  FRA_more_universal_revolution:0 "更普遍的革命"
+  FRA_occams_razor_reform:0 "“奥卡姆剃刀”改革"
+  FRA_street_economy:0 "街道经济"
+  FRA_socialism_allows_freelancing:0 "社会主义下的自由职业"
+  FRA_from_survival_to_living:0 "从生存到生活"
+  FRA_unions_are_not_just_for_labor:0 "不仅是工人的工会"
+  FRA_night_school_for_skills:0 "技术夜校"
+  FRA_expand_Paris_metro:0 "扩张巴黎都市圈"
+  FRA_strengthen_ties_with_british:0 "加强与不列颠联系"
+  FRA_expand_Atlantic_trade:0 "扩张大西洋贸易"
+  FRA_build_best_port_of_Mediterranean:0 "建设地中海第一港"
+  FRA_french_national_railway:0 "法兰西国家铁路"
+  FRA_block_development_model:0 "区块发展模式"
+  FRA_central_city:0 "中央城"
+  FRA_brittanys_maritime_economy:0 "布列塔尼海上经济"
+  FRA_maritime_industry:0 "海上实业"
+  FRA_from_shoreline_to_shoreline:0 "从海岸线到海岸线"
+  FRA_tewnty_four_hours_of_light:0 "二十四小时光明"
+  FRA_expansion_domestic_electricity_consumption:0 "扩张生活用电"
+  FRA_power_supply_for_priority_industries:0 "优先工业供电"
+  FRA_industrial_to_consumer_goods:0 "工业品到消费品"
+  FRA_entertainment_in_the_factory:0 "工厂的消遣和娱乐"
+  FRA_dont_luddite_movement:0 "无需卢德运动"
+  FRA_material_communism:0 "物质的共产主义"
+  FRA_hydropower_development:0 "开发水电"
+  FRA_urban_renovation:0 "城市革新"
+  FRA_back_to_the_country:0 "回到乡村"
+  FRA_robust_urbanization:0 "稳步城镇化"
+  FRA_expand_urban_rural_continuum:0 "扩张城乡结合部"
+  FRA_transportation_hub_new_city:0 "交通枢纽新城市"
+  FRA_focus_on_agricultural_functions:0 "注重农业职能"
+  FRA_rural_infrastructure_development:0 "乡村基础设施建设"
+  FRA_subsidizing_subsistence_farmers:0 "扶助自耕农"
+  FRA_mixed_agriculture:0 "混合农业"
+  FRA_fresh_supply_in_all_seasons:0 "四季都有新鲜供给"
+  FRA_encouraging_commodity_agriculture:0 "鼓励商品农业"
+  FRA_get_out_of_the_field:0 "走出田地"
+  FRA_new_frontier_program:0 "“新边疆”计划"
+  FRA_first_five_years_plan:0 "1936年五年计划"
+  FRA_long_term_economic_planning:0 "长期经济规划"
+  FRA_step_by_step:0 "随机应变"
+  FRA_non_directive_assistance:0 "非指导性协助"
+  FRA_banning_the_black_market:0 "查禁黑市交易"
+  FRA_preventive_economic_protection:0 "预防性经济保护"
+  FRA_massive_tax_cuts:0 "大规模减税"
+  FRA_pragmatic_foreign_trade:0 "务实外贸"
+  FRA_government_is_not_people:0 "政府不是人民"
+  FRA_self_sufficiency_program:0 "自给自足计划"
+  FRA_rubber_solutions:0 "橡胶解决方案"
+  FRA_revo_synthetic_refinery:0 "革命炼油厂"
+  FRA_comprehensive_education_program:0 "全面教育计划"
+  FRA_rural_education_subsidy:0 "乡村教育资助"
+  FRA_industrialized_rural:0 "产业型乡村"
+  FRA_the_anarchic_landscape:0 "安娜其风光"
+  FRA_planned_economic_reforms:0 "有计划的经济改革"
+  FRA_central_planning_commission:0 "中央计划委员会"
+  FRA_heavy_industry_oriented:0 "重工业导向"
+  FRA_nature_modifier_plan:0 "改造自然计划"
+  FRA_no_peaks_are_unclimbable:0 "无峰不可攀"
+  FRA_green_industry:0 "绿色工业"
+  FRA_peoples_academy_of_sciences:0 "法兰西人民科学院"
+  FRA_world_center_for_revolutionary_science:0 "世界革命科学中心"
+  FRA_let_nature_take_its_course:0 "顺其自然"
+  FRA_humanitarian_economic_assistance:0 "人道主义经济救援"
+  FRA_support_for_vulnerable_groups:0 "扶助弱势群体"
+  FRA_universal_basic_benefits:0 "全民基本福利"
+  FRA_re_employment_of_the_poor:0 "贫民再就业"
+  FRA_civilian_science_funding:0 "民间科学资助"
+  FRA_when_happiness_knocks:0 "当幸福来敲门"
+  FRA_reform_the_shift_system:0 "改革轮班制"
+  FRA_try_six_hour_workdays:0 "尝试六小时工作制"
+  FRA_normalization_of_the_national_economy:0 "国家经济规范化"
+  FRA_voluntary_commodity_exchanges:0 "自愿商品交易所"
+  FRA_institutionalized_catching_up:0 "制度化赶集"
+  FRA_socialist_market:0 "社会主义市场"
+  FRA_downsizing_tiny_communes:0 "合并微小公社"
+  FRA_bordeaux_model:0 "波尔多模式"
+  FRA_industrial_technocrat:0 "产业技术官僚"
+  FRA_more_union_guidanc_rights:0 "更多的工会指导权"
+  FRA_borrow_from_model:0 "效仿模范"
+  FRA_rejecting_headless_co_ops:0 "拒绝“无头苍蝇”式合作社"
+  FRA_one_plus_one_equals_three:0 "1+1=3"
+  FRA_co_ops_more_than_just_workplaces:0 "合作社不只是工作"
+  FRA_whats_not_a_co_op:0 "还有什么不是合作社？"
+  FRA_abandonment_of_backward_industries:0 "放弃落后产业"
+  FRA_abandonment_is_not_desertion:0 "放弃不是遗弃"
+  FRA_older_with_newer:0 "老带新"
+  FRA_synergizing_industrial_progress:0 "协同产业进步"
+  FRA_expanding_economic_advantages:0 "扩张经济优势"
+  FRA_monopolization_of_justice:0 "出于正义的垄断"
+  FRA_internal_competition:0 "内部竞争"
+  FRA_centrally_planned_economy:0 "中央计划经济"
+  FRA_spillover_effect:0 "满溢效应"
+  FRA_a_countrys_success:0 "一个国家的成功"
+  FRA_focus_on_backward_areas:0 "注重落后地区"
+  FRA_border_area_economic_reconstruction:0 "边疆经济重建"
+  FRA_economic_seminar_committee:0 "经济研讨委员会"
+  FRA_new_apprenticeships:0 "新学徒制度"
+  FRA_spontaneous_marketing_activities:0 "自发的市场活动"
+  FRA_prepare_for_the_next_war:0 "为下一次大战做准备"
+  FRA_centralized_military_factory:0 "集中军事工业"
+  FRA_matching_local_industry:0 "适配当地产业"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

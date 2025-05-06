@@ -191,21 +191,6 @@ add_ideas = FRA_communard_spirit
 country_event = { id = comfrance.28 days = 77 }
 country_event = { id = iwo.23 days = 90 }
 
-set_variable = { seat_synd_mode = 147 }
-set_variable = { seat_synd_radi = 126 }
-set_variable = { seat_synd = 273 }
-set_variable = { seat_oppo_comm = 92 }
-set_variable = { seat_oppo_anar = 84 }
-set_variable = { seat_oppo = 176 }
-set_variable = { seat_jaco_neos = 64 }
-set_variable = { seat_jaco_revo = 38 }
-set_variable = { seat_jaco = 102 }
-set_variable = { seat_sore_oldl = 57 }
-set_variable = { seat_sore_yout = 42 }
-set_variable = { seat_sore = 99 }
-
-set_variable = {  }
-
 ### Integration ###
 ROOT = {
 	1 = { enable_state_integration_50_compliance = yes } #Corsica

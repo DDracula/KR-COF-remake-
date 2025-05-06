@@ -11,8 +11,1642 @@ focus_tree = {
 		}  
 	}
 	default = no
-	continuous_focus_position = { x = 200 y = 1000 }
+	continuous_focus_position = { x = 200 y = 2000 }
 
-    
+    ### economy
+	#CGT
+	focus = {
+		id = FRA_expand_CGT
+		icon = GFX_focus_
+		mutually_exclusive = { focus = FRA_weaken_CGT }
+		x = 1
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_re_co_ordination
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_CGT
+		prerequisite = { focus = FRA_expand_CGT }
+		x = -2
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_everything_goes_to_CGT
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_CGT
+		prerequisite = { focus = FRA_re_co_ordination }
+		x = -2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_weaken_CGT
+		icon = GFX_focus_
+		mutually_exclusive = { focus = FRA_expand_CGT }
+		x = 5
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_new_labor_revolution
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_CGT
+		prerequisite = { 
+			focus = FRA_expand_CGT 
+			focus = FRA_weaken_CGT 
+		}
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_agricultural_industry_workers
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_CGT
+		prerequisite = { focus = FRA_new_labor_revolution }
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_new_proletariat
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_CGT
+		prerequisite = { focus = FRA_ensuring_proletariat_leadership }
+		prerequisite = { focus = FRA_agricultural_industry_workers }
+		prerequisite = { focus = FRA_cultural_union }
+		x = -1
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_ensuring_proletariat_leadership
+		icon = GFX_focus_
+		relative_position_id = FRA_weaken_CGT
+		prerequisite = { 
+			focus = FRA_expand_CGT 
+			focus = FRA_weaken_CGT 
+		}
+		mutually_exclusive = { focus = FRA_fairer_household_registration_system }
+		x = -5
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_removal_of_labor_restrictions_for_women
+		icon = GFX_focus_
+		relative_position_id = FRA_weaken_CGT
+		prerequisite = { focus = FRA_new_labor_revolution }
+		x = -4
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_more_universal_revolution
+		icon = GFX_focus_
+		relative_position_id = FRA_weaken_CGT
+		prerequisite = { 
+			focus = FRA_expand_CGT 
+			focus = FRA_weaken_CGT 
+		}
+		mutually_exclusive = { focus = FRA_ensuring_proletariat_leadership }
+		x = -2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_occams_razor_reform
+		icon = GFX_focus_
+		relative_position_id = FRA_weaken_CGT
+		prerequisite = { focus = FRA_more_universal_revolution }
+		mutually_exclusive = { focus = FRA_unions_are_not_just_for_labor }
+		x = 0
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_street_economy
+		icon = GFX_focus_
+		relative_position_id = FRA_weaken_CGT
+		prerequisite = { focus = FRA_occams_razor_reform }
+		x = 0
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_socialism_allows_freelancing
+		icon = GFX_focus_
+		relative_position_id = FRA_weaken_CGT
+		prerequisite = { focus = FRA_occams_razor_reform }
+		prerequisite = { focus = FRA_dont_be_afraid_of_losing_job }
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_from_survival_to_living
+		icon = GFX_focus_
+		relative_position_id = FRA_weaken_CGT
+		prerequisite = { focus = FRA_socialism_allows_freelancing }
+		prerequisite = { focus = FRA_night_school_for_skills }
+		prerequisite = { focus = FRA_expansion_domestic_electricity_consumption }
+		x = 2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_unions_are_not_just_for_labor
+		icon = GFX_focus_
+		relative_position_id = FRA_weaken_CGT
+		prerequisite = { focus = FRA_more_universal_revolution }
+		mutually_exclusive = { focus = FRA_occams_razor_reform }
+		x = -2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_dont_be_afraid_of_losing_job
+		icon = GFX_focus_
+		relative_position_id = FRA_weaken_CGT
+		prerequisite = { focus = FRA_weaken_CGT }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_night_school_for_skills
+		icon = GFX_focus_
+		relative_position_id = FRA_weaken_CGT
+		prerequisite = { focus = FRA_dont_be_afraid_of_losing_job }
+		prerequisite = { focus = FRA_urban_renovation }
+		prerequisite = { focus = FRA_new_labor_revolution }
+		x = 2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_cultural_union
+		icon = GFX_focus_
+		relative_position_id = FRA_weaken_CGT
+		prerequisite = { 
+			focus = FRA_unions_are_not_just_for_labor 
+			focus = FRA_everything_goes_to_CGT 
+		}
+		x = -1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_national_employment_platform
+		icon = GFX_focus_
+		relative_position_id = FRA_weaken_CGT
+		prerequisite = { focus = FRA_dont_be_afraid_of_losing_job }
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	#construction
+	focus = {
+		id = FRA_expand_Paris_metro
+		icon = GFX_focus_
+		x = 9
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_strengthen_ties_with_british
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		x = 6
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_expand_Atlantic_trade
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		x = 8
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_build_best_port_of_Mediterranean
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		x = 2
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_french_national_railway
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_expand_Paris_metro
+			focus = FRA_strengthen_ties_with_british
+			focus = FRA_expand_Atlantic_trade
+			focus = FRA_build_best_port_of_Mediterranean
+		}
+		x = 4
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_block_development_model
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_french_national_railway }
+		x = 4
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_central_city
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_transportation_hub_new_city }
+		prerequisite = { focus = FRA_block_development_model }
+		x = 3
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_maritime_industry 
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_expand_Atlantic_trade
+			focus = FRA_build_best_port_of_Mediterranean
+		}
+		x = 5
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_from_shoreline_to_shoreline 
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_strengthen_ties_with_british
+			focus = FRA_expand_Atlantic_trade
+			focus = FRA_build_best_port_of_Mediterranean
+		}
+		x = 7
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_brittanys_maritime_economy
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_strengthen_ties_with_british
+			focus = FRA_expand_Atlantic_trade
+		}
+		x = 9
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_tewnty_four_hours_of_light
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_expand_Paris_metro
+			focus = FRA_strengthen_ties_with_british
+			focus = FRA_expand_Atlantic_trade
+			focus = FRA_build_best_port_of_Mediterranean
+		}
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_expansion_domestic_electricity_consumption
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_tewnty_four_hours_of_light }
+		mutually_exclusive = { focus = FRA_power_supply_for_priority_industries }
+		x = -1
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_power_supply_for_priority_industries
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_tewnty_four_hours_of_light }
+		mutually_exclusive = { focus = FRA_expansion_domestic_electricity_consumption }
+		x = 2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_industrial_to_consumer_goods
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_power_supply_for_priority_industries }
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_entertainment_in_the_factory
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_power_supply_for_priority_industries }
+		x = 0
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_dont_luddite_movement
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_power_supply_for_priority_industries }
+		x = 2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_material_communism
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_industrial_to_consumer_goods }
+		prerequisite = { focus = FRA_entertainment_in_the_factory }
+		prerequisite = { focus = FRA_dont_luddite_movement }
+		x = 1
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_hydropower_development
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_expansion_domestic_electricity_consumption 
+			focus = FRA_power_supply_for_priority_industries 
+		}
+		x = -1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_urban_renovation 
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_expand_Paris_metro
+			focus = FRA_strengthen_ties_with_british
+			focus = FRA_expand_Atlantic_trade
+			focus = FRA_build_best_port_of_Mediterranean
+		}
+		mutually_exclusive = { focus = FRA_back_to_the_country  }
+		mutually_exclusive = { focus = FRA_robust_urbanization  }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_back_to_the_country 
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_expand_Paris_metro
+			focus = FRA_strengthen_ties_with_british
+			focus = FRA_expand_Atlantic_trade
+			focus = FRA_build_best_port_of_Mediterranean
+		}
+		mutually_exclusive = { focus = FRA_urban_renovation  }
+		mutually_exclusive = { focus = FRA_robust_urbanization  }
+		x = 3
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_robust_urbanization 
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_expand_Paris_metro
+			focus = FRA_strengthen_ties_with_british
+			focus = FRA_expand_Atlantic_trade
+			focus = FRA_build_best_port_of_Mediterranean
+		}
+		mutually_exclusive = { focus = FRA_back_to_the_country  }
+		mutually_exclusive = { focus = FRA_urban_renovation  }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_expand_urban_rural_continuum
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_robust_urbanization }
+		x = 2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_transportation_hub_new_city
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_expand_urban_rural_continuum }
+		prerequisite = { focus = FRA_french_national_railway }
+		x = 3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_focus_on_agricultural_functions
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_expand_Paris_metro
+			focus = FRA_strengthen_ties_with_british
+			focus = FRA_expand_Atlantic_trade
+			focus = FRA_build_best_port_of_Mediterranean
+		}
+		mutually_exclusive = { focus = FRA_rural_infrastructure_development }
+		x = 6
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_rural_infrastructure_development
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_expand_Paris_metro
+			focus = FRA_strengthen_ties_with_british
+			focus = FRA_expand_Atlantic_trade
+			focus = FRA_build_best_port_of_Mediterranean
+		}
+		mutually_exclusive = { focus = FRA_focus_on_agricultural_functions }
+		x = 9
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_subsidizing_subsistence_farmers
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_rural_infrastructure_development
+			focus = FRA_focus_on_agricultural_functions
+		}
+		prerequisite = { 
+			focus = FRA_back_to_the_country 
+			focus = FRA_robust_urbanization 
+		}
+		mutually_exclusive = { focus = FRA_new_frontier_program }
+		x = 5
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_encouraging_commodity_agriculture
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_subsidizing_subsistence_farmers }
+		mutually_exclusive = { focus = FRA_get_out_of_the_field }
+		x = 5
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_mixed_agriculture
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_encouraging_commodity_agriculture }
+		x = 6
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_fresh_supply_in_all_seasons
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_encouraging_commodity_agriculture }
+		x = 5
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_get_out_of_the_field
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_subsidizing_subsistence_farmers }
+		mutually_exclusive = { focus = FRA_encouraging_commodity_agriculture }
+		x = 7
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_new_frontier_program
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { 
+			focus = FRA_rural_infrastructure_development
+			focus = FRA_focus_on_agricultural_functions
+		}
+		mutually_exclusive = { focus = FRA_subsidizing_subsistence_farmers }
+		x = 8
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	#5yearsplan
+	focus = {
+		id = FRA_first_five_years_plan
+		icon = GFX_focus_
+		x = 21
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_long_term_economic_planning
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_first_five_years_plan }
+		mutually_exclusive = { focus = FRA_step_by_step }
+		x = 4
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_step_by_step
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_first_five_years_plan }
+		mutually_exclusive = { focus = FRA_long_term_economic_planning }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_non_directive_assistance
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_step_by_step }
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_banning_the_black_market
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_non_directive_assistance }
+		x = -1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_massive_tax_cuts
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_non_directive_assistance }
+		x = 0
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_preventive_economic_protection
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_non_directive_assistance }
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_pragmatic_foreign_trade 
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { 
+			focus = FRA_from_shoreline_to_shoreline 
+			focus = FRA_brittanys_maritime_economy
+		}
+		mutually_exclusive = { focus = FRA_self_sufficiency_program  }
+		x = 2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_government_is_not_people
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_pragmatic_foreign_trade }
+		x = 2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_self_sufficiency_program 
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_long_term_economic_planning }
+		mutually_exclusive = { focus = FRA_pragmatic_foreign_trade  }
+		x = 4
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_revo_synthetic_refinery
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_self_sufficiency_program }
+		x = 4
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_rubber_solutions
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_revo_synthetic_refinery }
+		x = 4
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_comprehensive_education_program
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_first_five_years_plan }
+		mutually_exclusive = { focus = FRA_rural_education_subsidy }
+		x = 3
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_rural_education_subsidy
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_first_five_years_plan }
+		mutually_exclusive = { focus = FRA_comprehensive_education_program }
+		x = -2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_industrialized_rural
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_rural_education_subsidy }
+		prerequisite = { focus = FRA_rural_infrastructure_development }
+		prerequisite = { focus = FRA_new_frontier_program }
+		prerequisite = { focus = FRA_get_out_of_the_field }
+		x = -3
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_anarchic_landscape
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_industrialized_rural }
+		prerequisite = { focus = FRA_massive_tax_cuts }
+		x = -2
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	#economy reform
+	focus = {
+		id = FRA_planned_economic_reforms
+		icon = GFX_focus_
+		mutually_exclusive = { focus = FRA_let_nature_take_its_course }
+		x = 32
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_central_planning_commission
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_planned_economic_reforms }
+		prerequisite = { focus = FRA_first_five_years_plan }
+		x = -4
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_heavy_industry_oriented
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_central_planning_commission }
+		x = -5
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_nature_modifier_plan
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_central_planning_commission }
+		prerequisite = { focus = FRA_long_term_economic_planning }
+		x = -6
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_no_peaks_are_unclimbable
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_nature_modifier_plan }
+		x = -5
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_green_industry
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_nature_modifier_plan }
+		x = -6
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		} 
+	}
+
+	focus = {
+		id = FRA_peoples_academy_of_sciences
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_central_planning_commission }
+		x = -4
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_world_center_for_revolutionary_science
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_peoples_academy_of_sciences }
+		prerequisite = { focus = FRA_comprehensive_education_program }
+		x = -4
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_let_nature_take_its_course
+		icon = GFX_focus_
+		mutually_exclusive = { focus = FRA_planned_economic_reforms }
+		x = 38
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_humanitarian_economic_assistance
+		icon = GFX_focus_
+		relative_position_id = FRA_let_nature_take_its_course
+		prerequisite = { focus = FRA_let_nature_take_its_course }
+		x = 4
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_support_for_vulnerable_groups
+		icon = GFX_focus_
+		relative_position_id = FRA_let_nature_take_its_course
+		prerequisite = { focus = FRA_humanitarian_economic_assistance }
+		x = 5
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_universal_basic_benefits
+		icon = GFX_focus_
+		relative_position_id = FRA_let_nature_take_its_course
+		prerequisite = { focus = FRA_support_for_vulnerable_groups }
+		x = 5
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_civilian_science_funding
+		icon = GFX_focus_
+		relative_position_id = FRA_let_nature_take_its_course
+		prerequisite = { focus = FRA_humanitarian_economic_assistance }
+		x = 4
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_re_employment_of_the_poor
+		icon = GFX_focus_
+		relative_position_id = FRA_let_nature_take_its_course
+		prerequisite = { focus = FRA_humanitarian_economic_assistance }
+		x = 6
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_when_happiness_knocks
+		icon = GFX_focus_
+		relative_position_id = FRA_let_nature_take_its_course
+		prerequisite = { focus = FRA_universal_basic_benefits }
+		prerequisite = { 
+			focus = FRA_civilian_science_funding 
+			focus = FRA_re_employment_of_the_poor 
+		}
+		x = 5
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_reform_the_shift_system
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { 
+			focus = FRA_planned_economic_reforms 
+			focus = FRA_let_nature_take_its_course 
+		}
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_try_six_hour_workdays
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { 
+			focus = FRA_planned_economic_reforms 
+			focus = FRA_let_nature_take_its_course 
+		}
+		x = 7
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_normalization_of_the_national_economy
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { 
+			focus = FRA_planned_economic_reforms 
+			focus = FRA_let_nature_take_its_course 
+		}
+		x = 3
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_voluntary_commodity_exchanges
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_normalization_of_the_national_economy }
+		mutually_exclusive = { focus = FRA_downsizing_tiny_communes }
+		mutually_exclusive = { focus = FRA_more_union_guidanc_rights }
+		x = 4
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_institutionalized_catching_up
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_voluntary_commodity_exchanges }
+		x = 5
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_socialist_market
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_institutionalized_catching_up }
+		prerequisite = { focus = FRA_let_nature_take_its_course }
+		x = 3
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_downsizing_tiny_communes
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_normalization_of_the_national_economy }
+		mutually_exclusive = { focus = FRA_voluntary_commodity_exchanges }
+		mutually_exclusive = { focus = FRA_more_union_guidanc_rights }
+		x = -4
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_bordeaux_model
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_downsizing_tiny_communes }
+		x = -4
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_industrial_technocrat
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_bordeaux_model }
+		prerequisite = { focus = FRA_older_with_newer }
+		x = -3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_more_union_guidanc_rights
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_normalization_of_the_national_economy }
+		mutually_exclusive = { focus = FRA_downsizing_tiny_communes }
+		mutually_exclusive = { focus = FRA_voluntary_commodity_exchanges }
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_borrow_from_model
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_more_union_guidanc_rights }
+		x = 0
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_rejecting_headless_co_ops
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_more_union_guidanc_rights }
+		x = 1
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_one_plus_one_equals_three
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_rejecting_headless_co_ops }
+		x = 0
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_co_ops_more_than_just_workplaces
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_rejecting_headless_co_ops }
+		x = 2
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_whats_not_a_co_op
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_rejecting_headless_co_ops }
+		x = 1
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_abandonment_of_backward_industries
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { 
+			focus = FRA_planned_economic_reforms 
+			focus = FRA_let_nature_take_its_course 
+		}
+		mutually_exclusive = { focus = FRA_synergizing_industrial_progress }
+		x = -3
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_older_with_newer
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_synergizing_industrial_progress }
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_synergizing_industrial_progress
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { 
+			focus = FRA_planned_economic_reforms 
+			focus = FRA_let_nature_take_its_course 
+		}
+		mutually_exclusive = { focus = FRA_abandonment_of_backward_industries }
+		x = 1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_abandonment_is_not_desertion
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_abandonment_of_backward_industries }
+		x = -3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_expanding_economic_advantages
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { 
+			focus = FRA_planned_economic_reforms 
+			focus = FRA_let_nature_take_its_course 
+		}
+		mutually_exclusive = { focus = FRA_focus_on_backward_areas }
+		x = 5
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_monopolization_of_justice
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_expanding_economic_advantages }
+		prerequisite = { focus = FRA_downsizing_tiny_communes }
+		x = 5
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_internal_competition
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_monopolization_of_justice }
+		x = 5
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_centrally_planned_economy
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_internal_competition }
+		prerequisite = { focus = FRA_economic_seminar_committee }
+		x = 0
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_spillover_effect
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_monopolization_of_justice }
+		x = 7
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_a_countrys_success
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_spillover_effect }
+		prerequisite = { focus = FRA_when_happiness_knocks }
+		x = 9
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_focus_on_backward_areas
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { 
+			focus = FRA_planned_economic_reforms 
+			focus = FRA_let_nature_take_its_course 
+		}
+		mutually_exclusive = { focus = FRA_expanding_economic_advantages }
+		x = 9
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_border_area_economic_reconstruction
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_focus_on_backward_areas }
+		x = 9
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_economic_seminar_committee
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_abandonment_is_not_desertion }
+		prerequisite = { focus = FRA_bordeaux_model }
+		x = -5
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_new_apprenticeships
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_older_with_newer }
+		prerequisite = { focus = FRA_borrow_from_model }
+		x = -1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_spontaneous_marketing_activities
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_institutionalized_catching_up }
+		prerequisite = { focus = FRA_border_area_economic_reconstruction }
+		x = 6
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	#war-industry
+	focus = {
+		id = FRA_prepare_for_the_next_war
+		icon = GFX_focus_
+		x = 32
+		y = 8
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_centralized_military_factory
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_prepare_for_the_next_war }
+		mutually_exclusive = { focus = FRA_matching_local_industry }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_matching_local_industry
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_prepare_for_the_next_war }
+		mutually_exclusive = { focus = FRA_centralized_military_factory }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
 
 }
