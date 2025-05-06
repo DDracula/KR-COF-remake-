@@ -4,7 +4,6 @@ Cof_politics = {
         icon = eng_trade_unions_support
 		allowed = { original_tag = FRA }
 		visible = { always = yes }
-		ai_will_do = { factor = 0 }
 		days_re_enable = 0
 		complete_effect = {
 			if = {
@@ -14,97 +13,4 @@ Cof_politics = {
 			else = { clr_country_flag = Cofpolitics_detail_hidden }
 		}
     }
-
-	Cof_politics_faction_introduction = {
-		icon = ger_mefo_bills
-		allowed = { original_tag = FRA }
-		visible = { always = yes }
-		ai_will_do = { factor = 0 }
-		days_re_enable = 0
-		complete_effect = {
-			country_event = cofpolitics.1
-		}
-	}
-}
-
-#### 社会阶层 ####
-Cof_social_class = {
-	Cof_social_class_show_detail = {
-		icon = eng_trade_unions_support
-		allowed = { original_tag = FRA }
-		visible = { always = yes }
-		ai_will_do = { factor = 0 }
-		days_re_enable = 0
-		complete_effect = {
-			if = {
-				limit = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
-				set_country_flag = Cofpolitics_class_detail_hidden
-			}
-			else = { clr_country_flag = Cofpolitics_class_detail_hidden }
-		}
-	}
-}
-
-#### 公社经济 ####
-Cof_economy = {
-	Cof_economy_period_change = {
-		icon = ger_mefo_bills
-		allowed = {
-			always = no
-			tag = FRA
-		}
-		available = { always = no }
-		is_good = yes
-		fixed_random_seed = no
-		days_mission_timeout = 30
-		timeout_effect = {
-			hidden_effect = { activate_mission = Cof_economy_period_change }		
-		}
-	}
-	Cof_economy_show_detail = {
-		icon = eng_trade_unions_support
-		allowed = { original_tag = FRA }
-		visible = { always = yes }
-		ai_will_do = { factor = 0 }
-		days_re_enable = 0
-		complete_effect = {
-			if = {
-				limit = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
-				set_country_flag = Cofeconomy_detail_hidden
-			}
-			else = { clr_country_flag = Cofeconomy_detail_hidden }
-		}
-	}
-}
-
-#### 军事改革 ####
-Cof_militray_reform = {
-	Cof_militray_reform_period_change = {
-		icon = ger_mefo_bills
-		allowed = {
-			always = no
-			tag = FRA
-		}
-		available = { always = no }
-		is_good = yes
-		fixed_random_seed = no
-		days_mission_timeout = 90
-		timeout_effect = {
-			hidden_effect = { activate_mission = Cof_militray_reform_period_change }		
-		}
-	}
-	Cof_army_class_show_detail = {
-		icon = eng_trade_unions_support
-		allowed = { original_tag = FRA }
-		visible = { always = yes }
-		ai_will_do = { factor = 0 }
-		days_re_enable = 0
-		complete_effect = {
-			if = {
-				limit = { NOT = { has_country_flag = Cofarmy_class_detail_hidden } }
-				set_country_flag = Cofarmy_class_detail_hidden
-			}
-			else = { clr_country_flag = Cofarmy_class_detail_hidden }
-		}
-	}
 }
