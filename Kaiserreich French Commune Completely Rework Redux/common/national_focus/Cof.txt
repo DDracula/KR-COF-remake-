@@ -11,7 +11,7 @@ focus_tree = {
 		}  
 	}
 	default = no
-	continuous_focus_position = { x = 200 y = 2000 }
+	continuous_focus_position = { x = 200 y = 3000 }
 
     ### economy
 	#CGT
@@ -393,13 +393,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_from_shoreline_to_shoreline 
+		id = FRA_from_shoreline_to_shoreline
 		icon = GFX_focus_
 		relative_position_id = FRA_expand_Paris_metro
 		prerequisite = { 
-			focus = FRA_strengthen_ties_with_british
 			focus = FRA_expand_Atlantic_trade
 			focus = FRA_build_best_port_of_Mediterranean
+			focus = FRA_expand_Atlantic_trade
 		}
 		x = 7
 		y = 1
@@ -410,15 +410,26 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_brittanys_maritime_economy
+		id = FRA_naval_expansion_in_brittany
 		icon = GFX_focus_
-		relative_position_id = FRA_expand_Paris_metro
-		prerequisite = { 
-			focus = FRA_strengthen_ties_with_british
-			focus = FRA_expand_Atlantic_trade
-		}
-		x = 9
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_prepare_for_the_next_war }
+		x = -1
 		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_new_shipbuilding_program
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_naval_expansion_in_brittany }
+		prerequisite = { focus = FRA_from_shoreline_to_shoreline }
+		x = -2
+		y = 2
 		cost = 1
 		completion_reward = {
 
@@ -658,7 +669,7 @@ focus_tree = {
 			focus = FRA_build_best_port_of_Mediterranean
 		}
 		mutually_exclusive = { focus = FRA_focus_on_agricultural_functions }
-		x = 9
+		x = 8
 		y = 2
 		cost = 1
 		completion_reward = {
@@ -691,7 +702,10 @@ focus_tree = {
 		id = FRA_encouraging_commodity_agriculture
 		icon = GFX_focus_
 		relative_position_id = FRA_expand_Paris_metro
-		prerequisite = { focus = FRA_subsidizing_subsistence_farmers }
+		prerequisite = { 
+			focus = FRA_subsidizing_subsistence_farmers 
+			focus = FRA_new_frontier_program 
+		}
 		mutually_exclusive = { focus = FRA_get_out_of_the_field }
 		x = 5
 		y = 4
@@ -731,10 +745,26 @@ focus_tree = {
 		id = FRA_get_out_of_the_field
 		icon = GFX_focus_
 		relative_position_id = FRA_expand_Paris_metro
-		prerequisite = { focus = FRA_subsidizing_subsistence_farmers }
+		prerequisite = { 
+			focus = FRA_subsidizing_subsistence_farmers 
+			focus = FRA_new_frontier_program 
+		}
 		mutually_exclusive = { focus = FRA_encouraging_commodity_agriculture }
-		x = 7
+		x = 9
 		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_large_scale_mechanized_agriculture
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_get_out_of_the_field }
+		x = 9
+		y = 6
 		cost = 1
 		completion_reward = {
 
@@ -750,8 +780,34 @@ focus_tree = {
 			focus = FRA_focus_on_agricultural_functions
 		}
 		mutually_exclusive = { focus = FRA_subsidizing_subsistence_farmers }
-		x = 8
+		x = 7
 		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_industrialized_rural
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_new_frontier_program }
+		x = 7
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_up_to_mountains_down_to_countryside
+		icon = GFX_focus_
+		relative_position_id = FRA_expand_Paris_metro
+		prerequisite = { focus = FRA_new_frontier_program }
+		x = 7
+		y = 6
 		cost = 1
 		completion_reward = {
 
@@ -762,7 +818,7 @@ focus_tree = {
 	focus = {
 		id = FRA_first_five_years_plan
 		icon = GFX_focus_
-		x = 21
+		x = 25
 		y = 0
 		cost = 1
 		completion_reward = {
@@ -776,7 +832,7 @@ focus_tree = {
 		relative_position_id = FRA_first_five_years_plan
 		prerequisite = { focus = FRA_first_five_years_plan }
 		mutually_exclusive = { focus = FRA_step_by_step }
-		x = 4
+		x = 6
 		y = 1
 		cost = 1
 		completion_reward = {
@@ -790,7 +846,7 @@ focus_tree = {
 		relative_position_id = FRA_first_five_years_plan
 		prerequisite = { focus = FRA_first_five_years_plan }
 		mutually_exclusive = { focus = FRA_long_term_economic_planning }
-		x = -1
+		x = 0
 		y = 1
 		cost = 1
 		completion_reward = {
@@ -803,21 +859,8 @@ focus_tree = {
 		icon = GFX_focus_
 		relative_position_id = FRA_first_five_years_plan
 		prerequisite = { focus = FRA_step_by_step }
-		x = 0
-		y = 2
-		cost = 1
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = FRA_banning_the_black_market
-		icon = GFX_focus_
-		relative_position_id = FRA_first_five_years_plan
-		prerequisite = { focus = FRA_non_directive_assistance }
-		x = -1
-		y = 4
+		x = 2
+		y = 3
 		cost = 1
 		completion_reward = {
 
@@ -826,19 +869,6 @@ focus_tree = {
 
 	focus = {
 		id = FRA_massive_tax_cuts
-		icon = GFX_focus_
-		relative_position_id = FRA_first_five_years_plan
-		prerequisite = { focus = FRA_non_directive_assistance }
-		x = 0
-		y = 5
-		cost = 1
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = FRA_preventive_economic_protection
 		icon = GFX_focus_
 		relative_position_id = FRA_first_five_years_plan
 		prerequisite = { focus = FRA_non_directive_assistance }
@@ -851,15 +881,55 @@ focus_tree = {
 	}
 
 	focus = {
+		id = FRA_relaxation_of_business_standards
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_non_directive_assistance }
+		x = 0 
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_piece_rate_economy
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_relaxation_of_business_standards }
+		prerequisite = { focus = FRA_preventive_economic_protection }
+		x = 1
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_preventive_economic_protection
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_non_directive_assistance }
+		x = 2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
 		id = FRA_pragmatic_foreign_trade 
 		icon = GFX_focus_
 		relative_position_id = FRA_first_five_years_plan
 		prerequisite = { 
-			focus = FRA_from_shoreline_to_shoreline 
-			focus = FRA_brittanys_maritime_economy
+			focus = FRA_step_by_step
+			focus = FRA_long_term_economic_planning  
 		}
 		mutually_exclusive = { focus = FRA_self_sufficiency_program  }
-		x = 2
+		x = 3
 		y = 2
 		cost = 1
 		completion_reward = {
@@ -872,8 +942,60 @@ focus_tree = {
 		icon = GFX_focus_
 		relative_position_id = FRA_first_five_years_plan
 		prerequisite = { focus = FRA_pragmatic_foreign_trade }
-		x = 2
+		x = 4
 		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_cake_for_everyone
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_government_is_not_people }
+		x = 3
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_acquiescence_to_german_smugglers
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_government_is_not_people }
+		x = 5
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_south_american_oil_partnership
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_pragmatic_foreign_trade }
+		x = 5
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_opportunities_in_the_central_south_peninsula
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_pragmatic_foreign_trade }
+		x = 3
+		y = 4
 		cost = 1
 		completion_reward = {
 
@@ -886,7 +1008,7 @@ focus_tree = {
 		relative_position_id = FRA_first_five_years_plan
 		prerequisite = { focus = FRA_long_term_economic_planning }
 		mutually_exclusive = { focus = FRA_pragmatic_foreign_trade  }
-		x = 4
+		x = 6
 		y = 2
 		cost = 1
 		completion_reward = {
@@ -899,7 +1021,7 @@ focus_tree = {
 		icon = GFX_focus_
 		relative_position_id = FRA_first_five_years_plan
 		prerequisite = { focus = FRA_self_sufficiency_program }
-		x = 4
+		x = 6
 		y = 4
 		cost = 1
 		completion_reward = {
@@ -912,7 +1034,7 @@ focus_tree = {
 		icon = GFX_focus_
 		relative_position_id = FRA_first_five_years_plan
 		prerequisite = { focus = FRA_revo_synthetic_refinery }
-		x = 4
+		x = 6
 		y = 5
 		cost = 1
 		completion_reward = {
@@ -924,9 +1046,25 @@ focus_tree = {
 		id = FRA_comprehensive_education_program
 		icon = GFX_focus_
 		relative_position_id = FRA_first_five_years_plan
-		prerequisite = { focus = FRA_first_five_years_plan }
+		prerequisite = { 
+			focus = FRA_step_by_step
+			focus = FRA_long_term_economic_planning  
+		}
 		mutually_exclusive = { focus = FRA_rural_education_subsidy }
-		x = 3
+		x = 1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_all_rounder
+		icon = GFX_focus_
+		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_comprehensive_education_program }
+		x = 0
 		y = 3
 		cost = 1
 		completion_reward = {
@@ -938,10 +1076,13 @@ focus_tree = {
 		id = FRA_rural_education_subsidy
 		icon = GFX_focus_
 		relative_position_id = FRA_first_five_years_plan
-		prerequisite = { focus = FRA_first_five_years_plan }
+		prerequisite = { 
+			focus = FRA_step_by_step
+			focus = FRA_long_term_economic_planning  
+		}
 		mutually_exclusive = { focus = FRA_comprehensive_education_program }
-		x = -2
-		y = 3
+		x = -1
+		y = 2
 		cost = 1
 		completion_reward = {
 
@@ -949,15 +1090,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_industrialized_rural
+		id = FRA_up_to_mountains_down_to_countryside
 		icon = GFX_focus_
 		relative_position_id = FRA_first_five_years_plan
 		prerequisite = { focus = FRA_rural_education_subsidy }
-		prerequisite = { focus = FRA_rural_infrastructure_development }
-		prerequisite = { focus = FRA_new_frontier_program }
-		prerequisite = { focus = FRA_get_out_of_the_field }
-		x = -3
-		y = 5
+		x = -1
+		y = 6
 		cost = 1
 		completion_reward = {
 
@@ -965,13 +1103,16 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_the_anarchic_landscape
+		id = FRA_dream_without_king_or_master
 		icon = GFX_focus_
 		relative_position_id = FRA_first_five_years_plan
+		prerequisite = { focus = FRA_rural_infrastructure_development }
 		prerequisite = { focus = FRA_industrialized_rural }
-		prerequisite = { focus = FRA_massive_tax_cuts }
-		x = -2
-		y = 6
+		prerequisite = { focus = FRA_large_scale_mechanized_agriculture }
+		prerequisite = { focus = FRA_up_to_mountains_down_to_countryside }
+		prerequisite = { focus = FRA_piece_rate_economy }
+		x = -8 
+		y = 7
 		cost = 1
 		completion_reward = {
 
@@ -983,7 +1124,7 @@ focus_tree = {
 		id = FRA_planned_economic_reforms
 		icon = GFX_focus_
 		mutually_exclusive = { focus = FRA_let_nature_take_its_course }
-		x = 32
+		x = 38
 		y = 0
 		cost = 1
 		completion_reward = {
@@ -1072,24 +1213,23 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_world_center_for_revolutionary_science
+		id = FRA_breakthroughs_in_frontier_science
 		icon = GFX_focus_
 		relative_position_id = FRA_planned_economic_reforms
 		prerequisite = { focus = FRA_peoples_academy_of_sciences }
-		prerequisite = { focus = FRA_comprehensive_education_program }
 		x = -4
 		y = 5
 		cost = 1
 		completion_reward = {
 
 		}
-	}
+	} 
 
 	focus = {
 		id = FRA_let_nature_take_its_course
 		icon = GFX_focus_
 		mutually_exclusive = { focus = FRA_planned_economic_reforms }
-		x = 38
+		x = 44
 		y = 0
 		cost = 1
 		completion_reward = {
@@ -1243,26 +1383,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_institutionalized_catching_up
-		icon = GFX_focus_
-		relative_position_id = FRA_normalization_of_the_national_economy
-		prerequisite = { focus = FRA_voluntary_commodity_exchanges }
-		x = 5
-		y = 3
-		cost = 1
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
 		id = FRA_socialist_market
 		icon = GFX_focus_
 		relative_position_id = FRA_normalization_of_the_national_economy
-		prerequisite = { focus = FRA_institutionalized_catching_up }
-		prerequisite = { focus = FRA_let_nature_take_its_course }
-		x = 3
-		y = 5
+		prerequisite = { focus = FRA_voluntary_commodity_exchanges }
+		x = 4
+		y = 4
 		cost = 1
 		completion_reward = {
 
@@ -1379,19 +1505,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_whats_not_a_co_op
-		icon = GFX_focus_
-		relative_position_id = FRA_normalization_of_the_national_economy
-		prerequisite = { focus = FRA_rejecting_headless_co_ops }
-		x = 1
-		y = 7
-		cost = 1
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
 		id = FRA_abandonment_of_backward_industries
 		icon = GFX_focus_
 		relative_position_id = FRA_planned_economic_reforms
@@ -1473,7 +1586,6 @@ focus_tree = {
 		icon = GFX_focus_
 		relative_position_id = FRA_planned_economic_reforms
 		prerequisite = { focus = FRA_expanding_economic_advantages }
-		prerequisite = { focus = FRA_downsizing_tiny_communes }
 		x = 5
 		y = 4
 		cost = 1
@@ -1510,12 +1622,52 @@ focus_tree = {
 	}
 
 	focus = {
+		id = FRA_great_leap_forward
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_centrally_planned_economy }
+		x = -1
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_more_than_just_the_future
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_centrally_planned_economy }
+		x = 1
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_each_takes_what_needs
+		icon = GFX_focus_
+		relative_position_id = FRA_planned_economic_reforms
+		prerequisite = { focus = FRA_centrally_planned_economy }
+		x = -3
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
 		id = FRA_spillover_effect
 		icon = GFX_focus_
 		relative_position_id = FRA_planned_economic_reforms
 		prerequisite = { focus = FRA_monopolization_of_justice }
-		x = 7
-		y = 5
+		prerequisite = { focus = FRA_socialist_market }
+		x = 6
+		y = 6
 		cost = 1
 		completion_reward = {
 
@@ -1526,9 +1678,9 @@ focus_tree = {
 		id = FRA_a_countrys_success
 		icon = GFX_focus_
 		relative_position_id = FRA_planned_economic_reforms
-		prerequisite = { focus = FRA_spillover_effect }
 		prerequisite = { focus = FRA_when_happiness_knocks }
-		x = 9
+		prerequisite = { focus = FRA_proud_to_be_human_being }
+		x = 10
 		y = 6
 		cost = 1
 		completion_reward = {
@@ -1595,11 +1747,24 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_spontaneous_marketing_activities
+		id = FRA_gift_of_nothin_in_return
 		icon = GFX_focus_
 		relative_position_id = FRA_normalization_of_the_national_economy
-		prerequisite = { focus = FRA_institutionalized_catching_up }
+		prerequisite = { focus = FRA_voluntary_commodity_exchanges }
 		prerequisite = { focus = FRA_border_area_economic_reconstruction }
+		x = 5
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_proud_to_be_human_being
+		icon = GFX_focus_
+		relative_position_id = FRA_normalization_of_the_national_economy
+		prerequisite = { focus = FRA_gift_of_nothin_in_return }
 		x = 6
 		y = 4
 		cost = 1
@@ -1612,7 +1777,210 @@ focus_tree = {
 	focus = {
 		id = FRA_prepare_for_the_next_war
 		icon = GFX_focus_
-		x = 32
+		x = 21
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_rearmament_of_the_capital
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_prepare_for_the_next_war }
+		x = -3
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+ 
+	focus = {
+		id = FRA_lyon_arsenal
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_prepare_for_the_next_war }
+		x = 2
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_military_industry
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_prepare_for_the_next_war }
+		prerequisite = { 
+			focus = FRA_step_by_step
+			focus = FRA_long_term_economic_planning  
+		}
+		x = 1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_decentralized_rural_military_industries
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_rural_infrastructure_development }
+		prerequisite = { focus = FRA_military_industry }
+		x = -3
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_new_arms_research_institute
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_comprehensive_education_program }
+		prerequisite = { focus = FRA_military_industry }
+		x = 2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_ark_project
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_new_shipbuilding_program }
+		prerequisite = { focus = FRA_military_industry }
+		x = -2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_semi_armed_factories
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_military_industry }
+		x = 0
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_intensive_agriculture
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_military_industry }
+		x = -1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_abundance_rationing
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_intensive_agriculture }
+		x = -1
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_more_faster_better
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_military_industry }
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_excess_arms_trade
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_more_faster_better }
+		x = 0
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_economics_of_war
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_more_faster_better }
+		x = 1
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_pilot_mechanized_assembly
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_more_faster_better }
+		prerequisite = { focus = FRA_new_arms_research_institute }
+		x = 2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_pioneer_model
+		icon = GFX_focus_
+		relative_position_id = FRA_prepare_for_the_next_war
+		prerequisite = { focus = FRA_abundance_rationing }
+		prerequisite = { focus = FRA_economics_of_war }
+		x = 0
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	#军事改革
+	focus = {
+		id = FRA_commune_army_council
+		icon = GFX_focus_
+		x = 36
 		y = 8
 		cost = 1
 		completion_reward = {
@@ -1621,11 +1989,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_centralized_military_factory
+		id = FRA_central_brain
 		icon = GFX_focus_
-		relative_position_id = FRA_prepare_for_the_next_war
-		prerequisite = { focus = FRA_prepare_for_the_next_war }
-		mutually_exclusive = { focus = FRA_matching_local_industry }
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_commune_army_council }
+		mutually_exclusive = { focus = FRA_flexible_joints }
+		mutually_exclusive = { focus = FRA_peripheral_nerve }
 		x = 1
 		y = 1
 		cost = 1
@@ -1635,11 +2004,469 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_matching_local_industry
+		id = FRA_strike_wherever_one_points
 		icon = GFX_focus_
-		relative_position_id = FRA_prepare_for_the_next_war
-		prerequisite = { focus = FRA_prepare_for_the_next_war }
-		mutually_exclusive = { focus = FRA_centralized_military_factory }
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_take_over_the_chain_of_command }
+		x = 0
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_take_over_the_chain_of_command
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_central_brain }
+		x = 0
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_beat_the_enemy_with_single_blow
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_central_brain }
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_operating_table_war
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_beat_the_enemy_with_single_blow }
+		prerequisite = { focus = FRA_strike_wherever_one_points }
+		x = 1
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_national_military_academy
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { 
+			focus = FRA_central_brain 
+			focus = FRA_flexible_joints 
+		}
+		x = 2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_flexible_joints
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_commune_army_council }
+		mutually_exclusive = { focus = FRA_central_brain }
+		mutually_exclusive = { focus = FRA_peripheral_nerve }
+		x = 5
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_decentralized_chain_of_command
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_flexible_joints }
+		x = 5
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_organic_army
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_flexible_joints }
+		x = 4
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_comprehensive_information_network
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_flexible_joints }
+		x = 3
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_reform_promotion_mechanism
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { 
+			focus = FRA_peripheral_nerve 
+			focus = FRA_flexible_joints 
+		}
+		x = 7
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_peripheral_nerve
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_commune_army_council }
+		mutually_exclusive = { focus = FRA_central_brain }
+		mutually_exclusive = { focus = FRA_central_brain }
+		x = 10
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_rejecting_military_bullying
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_peripheral_nerve }
+		x = 9
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_everyone_a_political_commissar
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_peripheral_nerve }
+		x = 10
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_break_up_the_whole_into_pieces
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_peripheral_nerve }
+		x = 11
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_safety_in_numbers
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { 
+			focus = FRA_central_brain 
+			focus = FRA_flexible_joints 
+			focus = FRA_peripheral_nerve 
+		}
+		mutually_exclusive = { focus = FRA_elite_soldiers }
+		x = 6
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_regularization_of_the_militia
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_safety_in_numbers }
+		x = 4
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_cultivating_comradeship
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_safety_in_numbers }
+		x = 5
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_allow_non_frenchs_join_army
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_safety_in_numbers }
+		x = 3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_elite_soldiers
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { 
+			focus = FRA_central_brain 
+			focus = FRA_flexible_joints 
+			focus = FRA_peripheral_nerve 
+		}
+		mutually_exclusive = { focus = FRA_safety_in_numbers }
+		x = 8
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_fully_equipped
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_elite_soldiers }
+		x = 9
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_construction_corps
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_elite_soldiers }
+		x = 10
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_raising_bar_for_joining_military
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_elite_soldiers }
+		x = 11
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_ensuring_quality_of_integrated_training
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { 
+			focus = FRA_safety_in_numbers
+			focus = FRA_elite_soldiers
+		}
+		x = 7
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_special_military_category
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_ensuring_quality_of_integrated_training }
+		x = 8
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_across_the_ocean
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_special_military_category }
+		x = 9
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_vanguard_task_force
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_special_military_category }
+		x = 5
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_conquering_the_hills
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_special_military_category }
+		x = 7
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_appraisal_advancement
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_ensuring_quality_of_integrated_training }
+		x = 6
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_reflections_from_the_great_war
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_commune_army_council }
+		x = 12
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_coordinate_with_three_armed_forces
+		icon = GFX_focus_
+		relative_position_id = FRA_reflections_from_the_great_war
+		prerequisite = { 
+			focus = FRA_learning_from_barricades 
+			focus = FRA_lightning_war 
+		}
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_lightning_war
+		icon = GFX_focus_
+		relative_position_id = FRA_reflections_from_the_great_war
+		prerequisite = { focus = FRA_reflections_from_the_great_war }
+		mutually_exclusive = { focus = FRA_defensive_counterattack }
+		x = 4
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_instant_victory_theory
+		icon = GFX_focus_
+		relative_position_id = FRA_machine_war
+		prerequisite = { focus = FRA_lightning_war }
+		x = -2
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_travel_thousand_miles_a_day
+		icon = GFX_focus_
+		relative_position_id = FRA_reflections_from_the_great_war
+		prerequisite = { focus = FRA_lightning_war }
+		prerequisite = { focus = FRA_sport_combat }
+		x = 2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_learning_from_barricades
+		icon = GFX_focus_
+		prerequisite = { focus = FRA_reflections_from_the_great_war }
+		relative_position_id = FRA_reflections_from_the_great_war
+		mutually_exclusive = { focus = FRA_lightning_war }
 		x = -1
 		y = 1
 		cost = 1
@@ -1648,5 +2475,1555 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = FRA_put_to_our_advantage
+		icon = GFX_focus_
+		relative_position_id = FRA_reflections_from_the_great_war
+		prerequisite = { focus = FRA_learning_from_barricades }
+		x = -4
+		y = 2
+		cost = 1
+		completion_reward = {
 
+		}
+	}
+
+	focus = {
+		id = FRA_triumph_of_will
+		icon = GFX_focus_
+		relative_position_id = FRA_reflections_from_the_great_war
+		prerequisite = { focus = FRA_learning_from_barricades }
+		x = -1
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_rock_firm
+		icon = GFX_focus_
+		relative_position_id = FRA_reflections_from_the_great_war
+		prerequisite = { focus = FRA_learning_from_barricades }
+		prerequisite = { focus = FRA_construction_corps }
+		x = -2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_when_attack_ture_vulnerable
+		icon = GFX_focus_
+		relative_position_id = FRA_reflections_from_the_great_war
+		prerequisite = { focus = FRA_learning_from_barricades }
+		prerequisite = { focus = FRA_appraisal_advancement }
+		x = -6
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_man_can_conquer_nature
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_commune_army_council }
+		mutually_exclusive = { focus = FRA_machine_war }
+		x = 13
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_chameleon_warfare
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_man_can_conquer_nature }
+		x = 13
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_pursui_oriented_guerrilla_warfare
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_chameleon_warfare }
+		prerequisite = { focus = FRA_break_up_the_whole_into_pieces }
+		x = 13
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_flexible_and_mobile
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { 
+			focus = FRA_man_can_conquer_nature 
+			focus = FRA_machine_war 
+		}
+		x = 15
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_dominant_firepower
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_artillery_dynamics }
+		prerequisite = { focus = FRA_flexible_and_mobile }
+		x = 16
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_ultra_long_range_artillery
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_dominant_firepower }
+		x = 15
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_shower_of_artillery
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_dominant_firepower }
+		x = 17
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_sport_combat
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_man_can_conquer_nature }
+		prerequisite = { focus = FRA_flexible_and_mobile }
+		x = 14
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_artillery_dynamics
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { 
+			focus = FRA_man_can_conquer_nature 
+			focus = FRA_machine_war 
+		}
+		x = 16
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_precision_killing
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_machine_war }
+		prerequisite = { focus = FRA_artillery_dynamics }
+		x = 17
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_machine_war
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_commune_army_council }
+		mutually_exclusive = { focus = FRA_man_can_conquer_nature }
+		x = 17
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_armor_research_development_funding
+		icon = GFX_focus_
+		relative_position_id = FRA_machine_war
+		prerequisite = { focus = FRA_machine_war }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_secondary_armor
+		icon = GFX_focus_
+		relative_position_id = FRA_machine_war
+		prerequisite = { focus = FRA_armor_research_development_funding }
+		x = 2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_steel_flood
+		icon = GFX_focus_
+		relative_position_id = FRA_machine_war
+		prerequisite = { focus = FRA_armor_research_development_funding }
+		x = 1
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_red_thunder
+		icon = GFX_focus_
+		relative_position_id = FRA_machine_war
+		prerequisite = { focus = FRA_steel_flood }
+		prerequisite = { focus = FRA_lightning_war }
+		x = 0
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_renseignements_generaux
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_commune_army_council }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_expanding_intelligence_services
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_renseignements_generaux }
+		x = -1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_logistics_is_the_true_war
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_commune_army_council }
+		x = -4
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_nationalism_drives_fight_willing
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_logistics_is_the_true_war }
+		x = -5
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_battlefield_angels
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_logistics_is_the_true_war }
+		x = -4
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_rapid_support_forces
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_logistics_is_the_true_war }
+		x = -2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_radio_advantage
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_rapid_support_forces }
+		prerequisite = { focus = FRA_expanding_intelligence_services }
+		x = -1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+ 
+	focus = {
+		id = FRA_elite_field_engineer_regiment
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_rapid_support_forces }
+		x = -2
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_soldiers_stomach_is_generals_sword
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_logistics_is_the_true_war }
+		x = -3
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_battlefield_lifeline
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		prerequisite = { focus = FRA_soldiers_stomach_is_generals_sword }
+		x = -3
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	#外交
+	focus = {
+		id = FRA_white_paper_on_world_revolution
+		icon = GFX_focus_
+		x = 22
+		y = 8
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_department_revolutionary_ideal
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		icon = GFX_focus_
+		x = -2
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_problem_with_neibour
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		x = 0
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_rooster_strategy
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_problem_with_neibour }
+		mutually_exclusive = { focus = FRA_sleeping_lion_strategy }
+		icon = GFX_focus_
+		x = -2
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_operation_northrend
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_rooster_strategy }
+		prerequisite = { focus = FRA_red_ice }
+		icon = GFX_focus_
+		x = -3
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_prepare_for_a_low_ground_attack
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_rooster_strategy }
+		icon = GFX_focus_
+		x = -1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_alpine_surprise_attack
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_rooster_strategy }
+		icon = GFX_focus_
+		x = -5
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_german_collaborators
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { 
+			focus = FRA_operation_northrend 
+			focus = FRA_prepare_for_a_low_ground_attack 
+			focus = FRA_alpine_surprise_attack 
+		}
+		icon = GFX_focus_
+		x = -6
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_fury_of_revenge
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { 
+			focus = FRA_operation_northrend 
+			focus = FRA_prepare_for_a_low_ground_attack 
+			focus = FRA_alpine_surprise_attack 
+		}
+		icon = GFX_focus_
+		x = -4
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_no_more_european_gendarmes
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_the_fury_of_revenge }
+		icon = GFX_focus_
+		x = -3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_turn_the_danube_red
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_the_fury_of_revenge }
+		icon = GFX_focus_
+		x = -5
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_burn_down_the_sun
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_the_fury_of_revenge }
+		mutually_exclusive = { focus = FRA_fight_for_glory_on_two_days }
+		icon = GFX_focus_
+		x = -7
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_sleeping_lion_strategy
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_problem_with_neibour }
+		mutually_exclusive = { focus = FRA_rooster_strategy }
+		icon = GFX_focus_
+		x = 2
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_fortress_of_verdun
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_sleeping_lion_strategy }
+		icon = GFX_focus_
+		x = 2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_studded_red_nail
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_fortress_of_verdun }
+		icon = GFX_focus_
+		x = -1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_waiting_for_rabbits
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_fortress_of_verdun }
+		icon = GFX_focus_
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_antiwar_propaganda
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_waiting_for_rabbits }
+		icon = GFX_focus_
+		x = 2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_evoking_class_hatred
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_waiting_for_rabbits }
+		icon = GFX_focus_
+		x = 0
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_spartacist_uprising
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_antiwar_propaganda }
+		prerequisite = { focus = FRA_evoking_class_hatred }
+		icon = GFX_focus_
+		x = 1
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_lowland_defense
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { focus = FRA_fortress_of_verdun }
+		icon = GFX_focus_
+		x = 3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_scalar_economy
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { 
+			focus = FRA_rooster_strategy 
+			focus = FRA_sleeping_lion_strategy
+		}
+		icon = GFX_focus_
+		x = 1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_contacts_with_russia
+		relative_position_id = FRA_problem_with_neibour
+		prerequisite = { 
+			focus = FRA_rooster_strategy 
+			focus = FRA_sleeping_lion_strategy
+		}
+		icon = GFX_focus_
+		x = 0
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_redden_island_of_green
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		icon = GFX_focus_
+		x = -5
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_second_unification_movement
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		icon = GFX_focus_
+		x = -6
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_barcelona_revolutionary_movement
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		icon = GFX_focus_
+		x = -7
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_socialist_iberia
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_barcelona_revolutionary_movement }
+		icon = GFX_focus_
+		x = -7
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_red_ice
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		icon = GFX_focus_
+		x = -4
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_kangaroos_also_want_revolution
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		icon = GFX_focus_
+		x = -14
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_china_game
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		icon = GFX_focus_
+		x = -12
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_fight_for_glory_on_two_days
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_the_china_game }
+		mutually_exclusive = { focus = FRA_burn_down_the_sun }
+		icon = GFX_focus_
+		x = -12
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_righteous_man_ejaculating_the_sun
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_the_china_game }
+		prerequisite = { focus = FRA_world_anti_colonial_committee }
+		icon = GFX_focus_
+		x = -14
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_fall_of_shah
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		icon = GFX_focus_
+		x = -10
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_turning_powder_keg_into_friendship
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		icon = GFX_focus_
+		x = 3
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_second_danube_national_revolution
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_turning_powder_keg_into_friendship }
+		icon = GFX_focus_
+		x = 3
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_new_world
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		icon = GFX_focus_
+		x = 4
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_worker_rome_in_the_americas
+		relative_position_id = FRA_the_new_world
+		prerequisite = { focus = FRA_the_new_world }
+		icon = GFX_focus_
+		x = 2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_chicago_paris
+		relative_position_id = FRA_the_new_world
+		prerequisite = { focus = FRA_the_new_world }
+		icon = GFX_focus_
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_afterglow_of_the_british_empire
+		relative_position_id = FRA_the_new_world
+		prerequisite = { 
+			focus = FRA_chicago_paris 
+			focus = FRA_worker_rome_in_the_americas 
+		}
+		icon = GFX_focus_
+		x = 1
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = FRA_south_vertebrae_revolution
+		relative_position_id = FRA_the_new_world
+		prerequisite = { focus = FRA_the_new_world }
+		icon = GFX_focus_
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_colombian_dream
+		relative_position_id = FRA_the_new_world
+		prerequisite = { focus = FRA_the_new_world }
+		icon = GFX_focus_
+		x = 3
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_land_of_the_undivided
+		relative_position_id = FRA_the_new_world
+		prerequisite = { focus = FRA_the_new_world }
+		icon = GFX_focus_
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_partners_of_the_nile
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		icon = GFX_focus_
+		x = -9
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_investing_in_desert_wars
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_partners_of_the_nile }
+		icon = GFX_focus_
+		x = -9
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_desert_corps_of_officers
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_partners_of_the_nile }
+		icon = GFX_focus_
+		x = -8
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_arabian_spring
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_against_sudan }
+		prerequisite = { focus = FRA_investing_in_desert_wars }
+		prerequisite = { focus = FRA_fall_of_shah }
+		icon = GFX_focus_
+		x = -10
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_international_column
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		prerequisite = { focus = FRA_commune_army_council }
+		x = 6
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_from_the_lab_to_the_battlefield
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_international_column }
+		x = 7
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_revolutionary_bases_abroad
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_international_column }
+		x = 5
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_veteran_of_hundreds_wars
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_revolutionary_bases_abroad }
+		x = 6
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_revolution_from_heaven
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_revolutionary_bases_abroad }
+		x = 5
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_national_land_recovery_authority
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		prerequisite = { focus = FRA_nationalism_drives_fight_willing }
+		x = 8
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_dunkirk_issue
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_national_land_recovery_authority }
+		x = 6
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_insularity_in_the_mediterranean
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_national_land_recovery_authority }
+		x = 7
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_demand_haute_savoie
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_national_land_recovery_authority }
+		x = 9
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_dont_forget_alsace_lorraine
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_national_land_recovery_authority }
+		x = 8
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_walloon_frenchspeaking_people
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_national_land_recovery_authority }
+		x = 10
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_natural_boundaries_of_france
+		icon = GFX_focus_
+		relative_position_id = FRA_white_paper_on_world_revolution
+		prerequisite = { focus = FRA_dunkirk_issue }
+		prerequisite = { focus = FRA_insularity_in_the_mediterranean }
+		prerequisite = { focus = FRA_demand_haute_savoie }
+		prerequisite = { focus = FRA_dont_forget_alsace_lorraine }
+		prerequisite = { focus = FRA_walloon_frenchspeaking_people }
+		x = 8
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	#pha
+	focus = {
+		id = FRA_the_congress_of_the_internationale
+		icon = GFX_focus_
+		x = 3
+		y = 8
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_international_avant_garde
+		icon = GFX_focus_
+		relative_position_id = FRA_the_congress_of_the_internationale
+		prerequisite = { focus = FRA_the_congress_of_the_internationale }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_found_the_phalanstere_international
+		icon = GFX_focus_
+		relative_position_id = FRA_the_congress_of_the_internationale
+		prerequisite = { focus = FRA_the_congress_of_the_internationale }
+		x = -2
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_revolutionary_aid_construction
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_found_the_phalanstere_international }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_international_union_of_socialist_students
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_found_the_phalanstere_international }
+		x = -2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_abolition_of_bourgeois_jurisdiction
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_found_the_phalanstere_international }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_literacy_expeditionary_force
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_found_the_phalanstere_international }
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_damocles_project
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_found_the_phalanstere_international }
+		x = -3
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_international_open_laboratory
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_abolition_of_bourgeois_jurisdiction }
+		prerequisite = { focus = FRA_literacy_expeditionary_force }
+		prerequisite = { focus = FRA_international_union_of_socialist_students }
+		x = -1
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_inner_circle_of_socialism
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_found_the_phalanstere_international }
+		x = 2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_made_in_france
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_inner_circle_of_socialism }
+		prerequisite = { focus = FRA_revolutionary_aid_construction }
+		x = 1
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_import_raw_materials_from_india
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_inner_circle_of_socialism }
+		prerequisite = { focus = FRA_indian_revolutionary_program }
+		x = 3
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_restoration_of_the_fakoshi_link
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_inner_circle_of_socialism }
+		prerequisite = { focus = FRA_contacts_with_indochina }
+		x = 5
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_agreement_with_the_spice_islands
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_inner_circle_of_socialism }
+		prerequisite = { focus = FRA_archipelagic_dream }
+		x = 4
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_african_mining_agreement
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_inner_circle_of_socialism }
+		prerequisite = { focus = FRA_unlocking_the_cage_continent }
+		x = 6
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_economic_exchanges_with_china
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_inner_circle_of_socialism }
+		prerequisite = { focus = FRA_the_china_game }
+		x = 8
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_world_anti_colonial_committee
+		icon = GFX_focus_
+		relative_position_id = FRA_the_congress_of_the_internationale
+		prerequisite = { focus = FRA_white_paper_on_world_revolution }
+		prerequisite = { focus = FRA_the_congress_of_the_internationale }
+		x = 3
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_contacts_with_indochina
+		icon = GFX_focus_
+		relative_position_id = FRA_the_congress_of_the_internationale
+		prerequisite = { focus = FRA_world_anti_colonial_committee }
+		x = 3
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_archipelagic_dream
+		icon = GFX_focus_
+		relative_position_id = FRA_the_congress_of_the_internationale
+		prerequisite = { focus = FRA_contacts_with_indochina }
+		x = 2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_indian_revolutionary_program
+		icon = GFX_focus_
+		relative_position_id = FRA_the_congress_of_the_internationale
+		prerequisite = { focus = FRA_world_anti_colonial_committee }
+		x = 1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_unlocking_the_cage_continent
+		icon = GFX_focus_
+		relative_position_id = FRA_the_congress_of_the_internationale
+		prerequisite = { focus = FRA_world_anti_colonial_committee }
+		x = 4
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_against_sudan
+		icon = GFX_focus_
+		relative_position_id = FRA_the_congress_of_the_internationale
+		prerequisite = { focus = FRA_world_anti_colonial_committee }
+		x = 8
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_more_than_economic_alliance
+		icon = GFX_focus_
+		relative_position_id = FRA_found_the_phalanstere_international
+		prerequisite = { focus = FRA_international_open_laboratory }
+		prerequisite = { focus = FRA_made_in_france }
+		x = 0
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_concerted_defense_alliance
+		icon = GFX_focus_
+		relative_position_id = FRA_more_than_economic_alliance
+		prerequisite = { focus = FRA_more_than_economic_alliance }
+		x = 0
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_joint_military_exercise
+		icon = GFX_focus_
+		relative_position_id = FRA_more_than_economic_alliance
+		prerequisite = { focus = FRA_more_than_economic_alliance }
+		x = 1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_transnational_staff_department
+		icon = GFX_focus_
+		relative_position_id = FRA_more_than_economic_alliance
+		prerequisite = { focus = FRA_more_than_economic_alliance }
+		x = -1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_international_red_army
+		icon = GFX_focus_
+		relative_position_id = FRA_more_than_economic_alliance
+		prerequisite = { focus = FRA_transnational_staff_department }
+		prerequisite = { focus = FRA_joint_military_exercise }
+		x = 0
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_red_sky_fighter
+		icon = GFX_focus_
+		relative_position_id = FRA_more_than_economic_alliance
+		prerequisite = { focus = FRA_more_than_economic_alliance }
+		x = 2
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_united_red_navy
+		icon = GFX_focus_
+		relative_position_id = FRA_more_than_economic_alliance
+		prerequisite = { focus = FRA_more_than_economic_alliance }
+		x = -2
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
 }
