@@ -1,8 +1,8 @@
 ﻿l_simp_chinese:
   Cof_politics:0 "公社政治"
-  Cof_politics_detail1_key:0 "法兰西公社是由36000多个公社的代表组成的联邦制工团共和国。\n§Y劳工总议会(Bourse Générale du Travail)§!\n是她的立法机构，理论上最高的国家机关。根据法兰西的人口分布，以及对各个行业的合理划分，我们最后确立了一个650席的人民议会；我们所有的法案都需要经过§Y劳动总议会§!的表决，而任意一项的法案至少需要326票(即50%+1票)才能通过。\n\n而§Y公共安全委员会(Comité de Salut Public)§!\n是人民意志的执行机关，§Y公安委§!的选举则是与§Y总议会§!平行的，但按照惯例，§Y总议会§!的选举会在§Y公安委§!之后再进行。但由于§Y公安委§!实际上可以拒绝承认§Y总议会§!的选举结果并进行新的选举，因此公社实际上最高的国家机关是§Y公安委§!。不过，§Y公安委§!依然在立法上受制于§Y总议会§!，§Y劳工总议会§!主席对§Y总议会§!的影响力使得§Y公共安全委员会§!主席的权力得到了一定的制衡。§Y公共安全委员会§!的各事物代表在他们所在的领域都有很大的影响力，但又因为公社在很大程度上是“各个大城市的联合”，在地方落实的内容依旧依要取决于当地领袖的选择。\n\n"
-  Cof_politics_detail2_key:0 "\n1936年的法兰西公社的政治现状是比较复杂的，在依托§Y总工会(CGT)§!而长时间把握政权的§Y革命工团委员会(Comité Syndical Révolutionnaire)§!与§Y联邦无政府主义者协会(Association des Fédéralistes Anarchistes)§!因为§Y“诉CGT案”§!而决裂后，总的来说，公社的内部政治划分可以分为以§Y革工委(CSR)§!为核心的§r工团派§!，由§Y联安协(AFA)§!与§Y工农共产党(Parti Communiste Ouvrier et Paysan)§!因为反对极权主义集团同时反对工团建制派而联合的§R工农反对派§!，团结在§Y马赛尔·戴亚§!同志身边的§Y法国社会党(Parti Socialiste de France)§!以及一系列技官运动支持者为主的§x雅各宾派§!，最后是以法国革命者§Y乔治·索雷尔§!组建的§Y国家工团主义联盟(Confédération Nationale-Syndicaliste)§!为组织的§o索雷尔派§!。\n\n每个派系都渴望属于自己意识形态的乌托邦，然而，现实政治大概率并不能让这些理性主义者得偿所愿，派系之间的争斗与妥协，最终塑造了整个法兰西的未来。当一个派系对公社的影响力大于50%时，派系斗争的烈度便会逐渐降低；而当越多的派系实力相当的时候，他们就会觉得自己才是那个“被赐福的人”，派系斗争的烈度由此便会上升。§R一个内斗的国家是不会有光辉的未来的。§!\n"
-  Cof_politics_desc:0 "[Cof_politics_detail1]§Y公共安全委员会(CSP)：\n公安委主导派系：§![dominant_faction_loc]\n\n公共安全委员会主席：[CCSP_leader_loc]\n外交事务代表：[DFA_leader_loc]\n经济事物代表：[DED_leader_loc]\n内部安全事物代表：[DIS_leader_loc]\n总情报委员会主管：[DSRG_leader_loc]\n公社军队总参谋长：[CGSC_leader_loc]\n\n§Y劳工总议会(BGT)：\n总共席位：650§!\n劳工总议会主席：[CBGT_leader_loc]\n\n§r工团派：§![?seat_synd|Y.0]\n§r-温和派：§![?seat_synd_mode|Y.0][vote_agree_synd_mode_loc]\n§r-激进派：§![?seat_synd_radi|Y.0][vote_agree_synd_radi_loc]\n\n§R工农反对派：§![?seat_oppo|Y.0]\n§R-共产党派：§![?seat_oppo_comm|Y.0][vote_agree_oppo_comm_loc]\n§R-无政府派：§![?seat_oppo_anar|Y.0][vote_agree_oppo_anar_loc]\n\n§x雅各宾派：§![?seat_jaco|Y.0]\n§x-新社会主义派：§![?seat_jaco_neos|Y.0][vote_agree_jaco_neos_loc]\n§x-革命行动派：§![?seat_jaco_revo|Y.0][vote_agree_jaco_revo_loc]\n\n§o索雷尔派：§![?seat_sore|Y.0]\n§o-守旧派：§![?seat_sore_oldl|Y.0][vote_agree_sore_oldl_loc]\n§o-青年派：§![?seat_sore_yout|Y.0][vote_agree_sore_yout_loc]\n\n权力倾向：§Y[Cof_BGT_vs_CSP_detail]§!([?Cof_BGT_vs_CSP_value|.0])\n[Cof_politics_detail2]\n派系之争\n对公社的影响力(派系实力)\n§r工团派：[?infulence_synd|.1%%]§!\n§R工农反对派：[?infulence_oppo|.1%%]§!\n§x雅各宾派：[?infulence_jaco|.1%%]§!\n§o索雷尔派：[?infulence_sore|.1%%]§!\n\n§Y派系斗争烈度：[?Cof_politics_intensity_of_struggle|.1]§!"
+  Cof_politics_detail1_key:0 "法兰西公社是由36000多个公社的代表组成的联邦制工团共和国。§Y劳工总议会(Bourse Générale du Travail)§!是她的立法机构，理论上最高的国家机关。根据法兰西的人口分布，以及对各个行业的合理划分，我们最后确立了一个650席的人民议会；我们所有的法案都需要经过§Y劳动总议会§!的表决，而任意一项的法案至少需要326票(即50%+1票)才能通过。\n而§Y公共安全委员会(Comité de Salut Public)§!是人民意志的执行机关，§Y公安委§!的选举则是与§Y总议会§!平行的，但按照惯例，§Y总议会§!的选举会在§Y公安委§!之后再进行。但由于§Y公安委§!实际上可以拒绝承认§Y总议会§!的选举结果并进行新的选举，因此公社实际上最高的国家机关是§Y公安委§!。不过，§Y公安委§!依然在立法上受制于§Y总议会§!，§Y劳工总议会§!主席对§Y总议会§!的影响力使得§Y公共安全委员会§!主席的权力得到了一定的制衡。§Y公共安全委员会§!的各事物代表在他们所在的领域都有很大的影响力，但又因为公社在很大程度上是“各个大城市的联合”，在地方落实的内容依旧依要取决于当地领袖的选择。\n\n"
+  Cof_politics_detail2_key:0 "\n1936年的法兰西公社的政治现状是比较复杂的，在依托§Y总工会(CGT)§!而长时间把握政权的§Y革命工团委员会(Comité Syndical Révolutionnaire)§!与§Y联邦无政府主义者协会(Association des Fédéralistes Anarchistes)§!因为§Y“诉CGT案”§!而决裂后，总的来说，公社的内部政治划分可以分为以§Y革工委(CSR)§!为核心的§r工团派§!，由§Y联安协(AFA)§!与§Y工农共产党(Parti Communiste Ouvrier et Paysan)§!因为反对极权主义集团同时反对工团建制派而联合的§R工农反对派§!，团结在§Y马赛尔·戴亚§!同志身边的§Y法国社会党(Parti Socialiste de France)§!以及一系列技官运动支持者为主的§x雅各宾派§!，最后是以法国革命者§Y乔治·索雷尔§!组建的§Y国家工团主义联盟(Confédération Nationale-Syndicaliste)§!为组织的§o索雷尔派§!。\n\n每个派系都渴望属于自己意识形态的乌托邦，然而，现实政治大概率并不能让这些理性主义者得偿所愿，派系之间的争斗与妥协，最终塑造了整个法兰西的未来。§g当一个派系对公社的影响力大于50%时，派系斗争的烈度便会逐渐降低；而当越多的派系实力相当的时候，他们就会觉得自己才是那个“被赐福的人”，派系斗争的烈度由此便会上升。§!§r一个内斗的国家是不会有光辉的未来的。§!\n"
+  Cof_politics_desc:0 "[Cof_politics_detail1]§Y公共安全委员会(CSP)：\n公安委主导派系：§![dominant_faction_loc]\n\n公共安全委员会主席：[CCSP_leader_loc]\n外交事务代表：[DFA_leader_loc]\n经济事物代表：[DED_leader_loc]\n内部安全事物代表：[DIS_leader_loc]\n总情报委员会主管：[DSRG_leader_loc]\n公社军队总参谋长：[CGSC_leader_loc]\n\n§Y劳工总议会(BGT)：\n总共席位：650§!\n劳工总议会主席：[CBGT_leader_loc]\n\n§r工团派：§![?seat_synd|Y.0]\n§r-温和派：§![?seat_synd_mode|Y.0][vote_agree_synd_mode_loc]\n§r-激进派：§![?seat_synd_radi|Y.0][vote_agree_synd_radi_loc]\n\n§R工农反对派：§![?seat_oppo|Y.0]\n§R-共产党派：§![?seat_oppo_comm|Y.0][vote_agree_oppo_comm_loc]\n§R-无政府派：§![?seat_oppo_anar|Y.0][vote_agree_oppo_anar_loc]\n\n§x雅各宾派：§![?seat_jaco|Y.0]\n§x-新社会主义派：§![?seat_jaco_neos|Y.0][vote_agree_jaco_neos_loc]\n§x-革命行动派：§![?seat_jaco_revo|Y.0][vote_agree_jaco_revo_loc]\n\n§o索雷尔派：§![?seat_sore|Y.0]\n§o-守旧派：§![?seat_sore_oldl|Y.0][vote_agree_sore_oldl_loc]\n§o-青年派：§![?seat_sore_yout|Y.0][vote_agree_sore_yout_loc]\n\n权力倾向：§Y[Cof_BGT_vs_CSP_detail]§!([?Cof_BGT_vs_CSP_value|.0])\n[Cof_politics_detail2]\n派系之争\n对公社的影响力(派系实力)\n$faction_synd$：[?infulence_synd|Y.1%%]\n$faction_oppo$：[?infulence_oppo|Y.1%%]\n$faction_jaco$：[?infulence_jaco|Y.1%%]\n$faction_sore$：[?infulence_sore|Y.1%%]\n\n派系斗争烈度：[?Cof_politics_intensity_of_struggle|Y.1]"
   Cof_politics_show_or_hide_detail:0 "显示/隐藏说明"
 
   BGT_vs_CSP_towards_CSP5:0 "公安委霸权"
@@ -60,67 +60,76 @@
 
   Cof_politics_faction_introduction:0 "派系介绍"
 
-  cofpolitics.1.title:0 ""
+  cofpolitics.1.title:0 "法兰西政治现状"
   cofpolitics.1.desc:0 ""
   cofpolitics.1.a:0 ""
   cofpolitics.1.b:0 ""
   cofpolitics.1.c:0 ""
   cofpolitics.1.d:0 ""
 
-  cofpolitics.2.title:0 ""
+  cofpolitics.2.title:0 "工团派"
   cofpolitics.2.desc:0 ""
   cofpolitics.2.a:0 ""
   cofpolitics.2.b:0 ""
 
-  cofpolitics.3.title:0 ""
+  cofpolitics.3.title:0 "温和派"
   cofpolitics.3.desc:0 ""
   cofpolitics.3.a:0 ""
 
-  cofpolitics.4.title:0 ""
+  cofpolitics.4.title:0 "激进派"
   cofpolitics.4.desc:0 ""
   cofpolitics.4.a:0 ""
 
-  cofpolitics.5.title:0 ""
+  cofpolitics.5.title:0 "工农反对派"
   cofpolitics.5.desc:0 ""
   cofpolitics.5.a:0 ""
   cofpolitics.5.b:0 ""
 
-  cofpolitics.6.title:0 ""
+  cofpolitics.6.title:0 "共产党派"
   cofpolitics.6.desc:0 ""
   cofpolitics.6.a:0 ""
 
-  cofpolitics.7.title:0 ""
+  cofpolitics.7.title:0 "无政府派"
   cofpolitics.7.desc:0 ""
   cofpolitics.7.a:0 ""
 
-  cofpolitics.8.title:0 ""
+  cofpolitics.8.title:0 "雅各宾派"
   cofpolitics.8.desc:0 ""
   cofpolitics.8.a:0 ""
   cofpolitics.8.b:0 ""
 
-  cofpolitics.9.title:0 ""
+  cofpolitics.9.title:0 "新社会主义派"
   cofpolitics.9.desc:0 ""
   cofpolitics.9.a:0 ""
 
-  cofpolitics.10.title:0 ""
+  cofpolitics.10.title:0 "革命行动派"
   cofpolitics.10.desc:0 ""
   cofpolitics.10.a:0 ""
 
-  cofpolitics.11.title:0 ""
+  cofpolitics.11.title:0 "索雷尔派"
   cofpolitics.11.desc:0 ""
   cofpolitics.11.a:0 ""
   cofpolitics.11.b:0 ""
 
-  cofpolitics.12.title:0 ""
+  cofpolitics.12.title:0 "守旧派"
   cofpolitics.12.desc:0 ""
   cofpolitics.12.a:0 ""
 
-  cofpolitics.13.title:0 ""
+  cofpolitics.13.title:0 "青年派"
   cofpolitics.13.desc:0 ""
   cofpolitics.13.a:0 ""
 
   Cof_social_class:0 "社会阶层"
-  Cof_social_class_desc:0 "社会平均满意度：[?pop_satisfaction|Y.1%%]\n\n$class_pop_workers$：[?pop_workers|Y.1%%]\n满意度：[?pop_satisfaction_workers|Y.1%%]\n主导支持派系：[Cof_politics_workers_tendency]\n[Cof_politics_class_workers]\n\n$class_pop_peasants$：[?pop_peasants|Y.1%%]\n满意度：[?pop_satisfaction_peasants|Y.1%%]\n主导支持派系：[Cof_politics_peasants_tendency]\n[Cof_politics_class_peasants]\n\n$class_pop_merchants$：[?pop_merchants|Y.1%%]\n满意度：[?pop_satisfaction_merchants|Y.1%%]\n主导支持派系：[Cof_politics_merchants_tendency]\n[Cof_politics_class_merchants]\n\n$class_pop_scholars$：[?pop_scholars|Y.1%%]\n满意度：[?pop_satisfaction_scholars|Y.1%%]\n主导支持派系：[Cof_politics_scholars_tendency]\n[Cof_politics_class_scholars]\n\n$class_pop_bureaucrats$：[?pop_bureaucrats|Y.1%%]\n满意度：[?pop_satisfaction_bureaucrats|Y.1%%]\n主导支持派系：[Cof_politics_bureaucrats_tendency]\n[Cof_politics_class_bureaucrats]\n\n$class_pop_army$：[?pop_army|Y.1%%]\n满意度：[?pop_satisfaction_army|Y.1%%]\n主导支持派系：[Cof_politics_army_tendency]\n[Cof_politics_class_army]\n"
+  Cof_social_class_detail1_key:0 "即使我们推翻了反动的大资产阶级的统治，也不意味着人民就一劳永逸地满意了，社会各阶层的人们依旧有着自己的诉求，甚至往往会和其他的阶层的诉求产生冲突。但无论如何，是这些诉求各异的群体组建成了我们的国家，他们的满意与不满都会投射在我们社会的方方面面，从经济到军事，从政治到文化。\n§g(社会平均满意度将影响我们的$MODIFIER_STABILITY_FACTOR$，阶层的影响力决定了他们影响的事物与倍率，而满意度决定了他们影响的具体数值。)§!\n"
+  Cof_social_class_detail_w_key:0 "$class_pop_workers$是公社体制下最大的收益群体，并且展现出对政治的浓厚兴趣，虽然大多数$class_pop_workers$都会拥护§Y总工会§!的统治，但也有一部分工人，特别是在其他派系执政地区的工人，则会表现出明显的地域主义倾向。不过，在§Y“诉CGT案”§!后，$class_pop_workers$群体也产生了一部分分化，尤其是不是§Y总工会§!成员的$class_pop_workers$，开始转向其他的解决方案。\n§g(他们的满意度会影响$MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR$与$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$。如果他们的影响力>35%，则还会影响$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$)§!\n"
+  Cof_social_class_detail_p_key:0 "很多$class_pop_peasants$对当前的公社政权并没有太多的好感，由于十分明显的对于$class_pop_workers$的偏袒，$class_pop_peasants$在革命中并没有得到太多的“解放”。加上法国农村基督教势力的根生蒂固，这使得部分$class_pop_peasants$群体有着很浓的宗教情结与对威权的崇拜。尽管法兰西是一个工业大国，$class_pop_peasants$仍占据着人口的多数地位，旷阔土地上的乡村厌倦了巴黎的蔑视，这使得大多数的$class_pop_peasants$都选择支持$faction_oppo$。\n§g(他们的满意度会影响$MODIFIER_LOCAL_RESOURCES_FACTOR$与$MODIFIER_CONSCRIPTION_TOTAL_FACTOR$。如果他们的影响力>35%，则还会影响$MODIFIER_SUPPLY_CONSUMPTION_FACTOR$)§!\n"
+  Cof_social_class_detail_m_key:0 "在一些人眼里，$class_pop_merchants$是需要被“清除”的存在，不过事实是，革命前一些进步的$class_pop_merchants$与革命后一部分富足的$class_pop_workers$共同组成了这个公社中略微显得不那么“正确”的群体。这一群体的范围是很广泛的，从某个工厂的管理者到只不过是农村集市上的小商贩都被划入到了$class_pop_merchants$。因此，这个群体的内部差异很大，不过总的来说，他们当然会更加支持能让他们生活过的更好的派系。\n§g(他们的满意度会影响$modifier_production_speed_industrial_complex_factor$与$modifier_production_speed_infrastructure_factor$。如果他们的影响力>35%，则还会影响$MODIFIER_CONSUMER_GOODS_FACTOR$)§!\n"
+  Cof_social_class_detail_s_key:0 "法兰西的$class_pop_scholars$一直是世界思想界的瑰宝，在革命后更是如此。推翻反动的大资产阶级通统治后，我们的$class_pop_scholars$终于可以直抒胸臆了，虽然在某些情况会不符合我们的意愿。$class_pop_scholars$由教授、学生与文艺工作者组成，他们是我们国家的未来，很大程度上引领着我们国家的方向。他们对于政治有一套自己的看法，但总归是希望变革的。沉闷的旧空气注定会让$class_pop_scholars$用纸和笔进行反叛。\n§g(他们的满意度会影响$MODIFIER_RESEARCH_SPEED_FACTOR$与$MODIFIER_COMPLIANCE_GROWTH$。如果他们的影响力>35%，则还会影响$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$)§!\n"
+  Cof_social_class_detail_b_key:0 "$class_pop_bureaucrats$是维护整个国家正常运行的中流砥柱，如果没有他们，我们几乎就不可能进行任何变革。不过，$class_pop_bureaucrats$体系的固有弊病即使在我们的革命下也无法撼动太多。腐败、权钱交易以及那些资产阶级国家会出现的种种，我们的$class_pop_bureaucrats$也大抵无法避免。$class_pop_bureaucrats$虽然只是我们最高意志的执行者，但他们归根结底依旧是人，他们同样有自己的思想，处于不同位置的人或许会想着不同的事情，但是对于$class_pop_bureaucrats$来说，有一件事基本是共识的：扩大$class_pop_bureaucrats$们的权力。\n§g(他们的满意度会影响$MODIFIER_POLITICAL_POWER_FACTOR$与$political_advisor_cost_factor$。如果他们的影响力>35%，则还会影响$MODIFIER_POLITICAL_POWER_GAIN$)§!\n"
+  Cof_social_class_detail_a_key:0 "$class_pop_army$是一个体系化的地方，虽然军人以服从命令为天职，但若不是当年我们反对了资产阶级的命令，我们又怎么能建立起一个革命政权呢？$class_pop_army$内部同样有着$class_pop_army_officers$、$class_pop_army_ncos$和$class_pop_army_soldiers$的阶级划分，甚至比起外面的社会更加严酷，但整个$class_pop_army$还是坚信公社是值得他们每一个人抛头颅洒热血的地方，除非他们不得已要挽救自己的祖国。\n§g(他们的满意度会影响三个子阶层的效果实现，在军事改革中详见。如果他们的影响力>35%，则还会影响$MODIFIERS_ARMY_ATTACK_FACTOR$)§!\n"
+  Cof_social_class_detail2_key:0 "\n\n§g各个阶层的影响力与对派系的支持度会影响对应派系的政治实力，同时对应阶层的影响力和满意度也会导致相关的经济改革、军事改革的数值变化。而国策、事件或决议有可能导致一个阶层的影响力与满意度影响新的事物。当某一个阶层的影响力大于10%且满意度低于30%，就意味着一个有足购势力的阶层被惹怒了，这将带来可怖的后果！§!"
+  Cof_social_class_desc:0 "[Cof_social_class_detail1]社会平均满意度：[?pop_satisfaction|Y.1%%]\n\n[Cof_social_class_detail_w]$class_pop_workers$：[?pop_workers|Y.1%%]\n满意度：[?pop_satisfaction_workers|Y.1%%]\n主导支持派系：[Cof_politics_workers_tendency]\n[Cof_politics_class_workers]\n\n[Cof_social_class_detail_p]$class_pop_peasants$：[?pop_peasants|Y.1%%]\n满意度：[?pop_satisfaction_peasants|Y.1%%]\n主导支持派系：[Cof_politics_peasants_tendency]\n[Cof_politics_class_peasants]\n\n[Cof_social_class_detail_m]$class_pop_merchants$：[?pop_merchants|Y.1%%]\n满意度：[?pop_satisfaction_merchants|Y.1%%]\n主导支持派系：[Cof_politics_merchants_tendency]\n[Cof_politics_class_merchants]\n\n[Cof_social_class_detail_s]$class_pop_scholars$：[?pop_scholars|Y.1%%]\n满意度：[?pop_satisfaction_scholars|Y.1%%]\n主导支持派系：[Cof_politics_scholars_tendency]\n[Cof_politics_class_scholars]\n\n[Cof_social_class_detail_b]$class_pop_bureaucrats$：[?pop_bureaucrats|Y.1%%]\n满意度：[?pop_satisfaction_bureaucrats|Y.1%%]\n主导支持派系：[Cof_politics_bureaucrats_tendency]\n[Cof_politics_class_bureaucrats]\n\n[Cof_social_class_detail_a]$class_pop_army$：[?pop_army|Y.1%%]\n满意度：[?pop_satisfaction_army|Y.1%%]\n主导支持派系：[Cof_politics_army_tendency]\n[Cof_politics_class_army][Cof_social_class_detail2]"
+
   Cof_politics_class_workers_key:0 "详细支持占比：\n$faction_synd$：[?pop_workers_synd|Y.1%%]\n$faction_oppo$：[?pop_workers_oppo|Y.1%%]\n$faction_jaco$：[?pop_workers_jaco|Y.1%%]\n$faction_sore$：[?pop_workers_sore|Y.1%%]"
   Cof_politics_class_peasants_key:0 "详细支持占比：\n$faction_synd$：[?pop_peasants_synd|Y.1%%]\n$faction_oppo$：[?pop_peasants_oppo|Y.1%%]\n$faction_jaco$：[?pop_peasants_jaco|Y.1%%]\n$faction_sore$：[?pop_peasants_sore|Y.1%%]"
   Cof_politics_class_merchants_key:0 "详细支持占比：\n$faction_synd$：[?pop_merchants_synd|Y.1%%]\n$faction_oppo$：[?pop_merchants_oppo|Y.1%%]\n$faction_jaco$：[?pop_merchants_jaco|Y.1%%]\n$faction_sore$：[?pop_merchants_sore|Y.1%%]"

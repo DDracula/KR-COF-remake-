@@ -187,6 +187,7 @@ set_popularities = {
 }
 
 add_ideas = FRA_communard_spirit 
+add_ideas = FRA_leader_of_socialism
 
 country_event = { id = comfrance.28 days = 77 }
 country_event = { id = iwo.23 days = 90 }

@@ -483,6 +483,120 @@ defined_text = {
     text = { localization_key = faction_no }
 }
 
+#class detail
+defined_text = {
+	name = Cof_social_class_detail1
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail1_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail_w
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail_w_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail_p
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail_p_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail_m
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail_m_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail_s
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail_s_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail_b
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail_b_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail_a
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail_a_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail2
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail2_key
+    }
+}
+
+#economy detail
+defined_text = {
+	name = Cof_economy_detail1
+    text = {
+        trigger = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
+        localization_key = Cof_economy_detail1_key
+    }
+}
+
+defined_text = {
+	name = Cof_economy_detail2
+    text = {
+        trigger = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
+        localization_key = Cof_economy_detail2_key
+    }
+}
+
+defined_text = {
+	name = Cof_economy_detail3
+    text = {
+        trigger = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
+        localization_key = Cof_economy_detail3_key
+    }
+}
+
+defined_text = {
+	name = Cof_economy_detail4
+    text = {
+        trigger = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
+        localization_key = Cof_economy_detail4_key
+    }
+}
+
+defined_text = {
+	name = Cof_economy_detail5
+    text = {
+        trigger = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
+        localization_key = Cof_economy_detail5_key
+    }
+}
+
+defined_text = {
+	name = Cof_economy_detail6
+    text = {
+        trigger = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
+        localization_key = Cof_economy_detail6_key
+    }
+}
+
 #投票/voting
 
 defined_text = {
@@ -657,6 +771,45 @@ defined_text = {
         }
 		localization_key = cof_economy_situation_bad5
 	}
+}
+
+defined_text = {
+    name = Cof_economy_model
+    text = {
+		trigger = { 
+            check_variable = { Cof_economy_model_co_ops > Cof_economy_model_market } 
+            check_variable = { Cof_economy_model_co_ops > Cof_economy_model_plan } 
+            check_variable = { Cof_economy_model_co_ops > Cof_economy_model_order } 
+        }
+		localization_key = Cof_economy_model_co_ops
+	}
+    text = {
+		trigger = { 
+            check_variable = { Cof_economy_model_market > Cof_economy_model_co_ops } 
+            check_variable = { Cof_economy_model_market > Cof_economy_model_plan } 
+            check_variable = { Cof_economy_model_market > Cof_economy_model_order } 
+        }
+		localization_key = Cof_economy_model_market
+	}
+    text = {
+		trigger = { 
+            check_variable = { Cof_economy_model_plan > Cof_economy_model_market } 
+            check_variable = { Cof_economy_model_plan > Cof_economy_model_co_ops } 
+            check_variable = { Cof_economy_model_plan > Cof_economy_model_order } 
+        }
+		localization_key = Cof_economy_model_plan
+	}
+    text = {
+		trigger = { 
+            check_variable = { Cof_economy_model_order > Cof_economy_model_market } 
+            check_variable = { Cof_economy_model_order > Cof_economy_model_plan } 
+            check_variable = { Cof_economy_model_order > Cof_economy_model_co_ops } 
+        }
+		localization_key = Cof_economy_model_order
+	}
+    text = {
+        localization_key = Cof_economy_model_mixed
+    }
 }
 
 #csp/bgt

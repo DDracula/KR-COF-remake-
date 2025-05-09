@@ -109,6 +109,11 @@ on_actions = {
                 set_variable = { econ_equal = 49 }
                 set_variable = { econ_link = 23 }
                 set_variable = { econ_innovate = 36 }
+
+                set_variable = { Cof_economy_model_co_ops = 0 }
+                set_variable = { Cof_economy_model_market = 0 }
+                set_variable = { Cof_economy_model_plan = 0 }
+                set_variable = { Cof_economy_model_order = 0 }
             }
         }
     }

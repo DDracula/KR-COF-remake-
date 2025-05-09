@@ -1,0 +1,10 @@
+ideas = {
+    country = {
+        FRA_leader_of_socialism = {
+            picture = leader_of_socialism
+            modifier = {
+                political_power_gain = 0.5
+            }
+        }
+    }
+}

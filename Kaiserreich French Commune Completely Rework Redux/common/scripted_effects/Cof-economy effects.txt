@@ -1,0 +1,25 @@
+Cof_economy_model_change = {
+    if = { limit = { check_variable = { ecc < 1 } } }
+	else = {
+		add_to_variable = { Cof_economy_model_co_ops = ecc }
+		custom_effect_tooltip = Cof_economy_model_co_ops_change_tips
+	}
+
+    if = { limit = { check_variable = { emc < 1 } } }
+	else = {
+		add_to_variable = { Cof_economy_model_market = emc }
+		custom_effect_tooltip = Cof_economy_model_market_change_tips
+	}
+
+    if = { limit = { check_variable = { epc < 1 } } }
+	else = {
+		add_to_variable = { Cof_economy_model_plan = epc }
+		custom_effect_tooltip = Cof_economy_model_plan_change_tips
+	}
+
+    if = { limit = { check_variable = { eoc < 1 } } }
+	else = {
+		add_to_variable = { Cof_economy_model_order = eoc }
+		custom_effect_tooltip = Cof_economy_model_order_change_tips
+	}
+}

@@ -11,7 +11,7 @@ focus_tree = {
 		}  
 	}
 	default = no
-	continuous_focus_position = { x = 200 y = 3000 }
+	continuous_focus_position = { x = 1300 y = 1850 }
 
     ### economy
 	#CGT
@@ -4021,6 +4021,2662 @@ focus_tree = {
 		prerequisite = { focus = FRA_more_than_economic_alliance }
 		x = -2
 		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	#海空军
+	focus = {
+		id = FRA_toulon_naval_declaration
+		icon = GFX_focus_
+		relative_position_id = FRA_commune_army_council
+		x = 22
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_mediterranean_naval_base
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { focus = FRA_toulon_naval_declaration }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_british_naval_cooperation
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { focus = FRA_toulon_naval_declaration }
+		x = 2
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_wolf_combat
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { 
+			focus = FRA_mediterranean_naval_base 
+			focus = FRA_british_naval_cooperation 
+		}
+		mutually_exclusive = { focus = FRA_seagull_project }
+		mutually_exclusive = { focus = FRA_new_navy_old_school }
+		x = 1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_maritime_sabotage_network
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { focus = FRA_wolf_combat }
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_guerrilla_warfare_at_sea
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { focus = FRA_maritime_sabotage_network }
+		x = 0
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_block_the_lifeblood_of_capitalism
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { focus = FRA_maritime_sabotage_network }
+		x = 2
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_network_of_mines
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { focus = FRA_maritime_sabotage_network }
+		x = 3
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_new_navy_old_school
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { 
+			focus = FRA_mediterranean_naval_base 
+			focus = FRA_british_naval_cooperation 
+		}
+		mutually_exclusive = { focus = FRA_seagull_project }
+		mutually_exclusive = { focus = FRA_wolf_combat }
+		x = -2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_brest_naval_college
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { focus = FRA_new_navy_old_school }
+		x = -2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_handling_butchers_cleaver_with_ease 
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { focus = FRA_brest_naval_college }
+		x = -2
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_decisive_battle
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { focus = FRA_handling_butchers_cleaver_with_ease }
+		x = -3
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_seagull_project
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { 
+			focus = FRA_mediterranean_naval_base 
+			focus = FRA_british_naval_cooperation 
+		}
+		mutually_exclusive = { focus = FRA_wolf_combat }
+		mutually_exclusive = { focus = FRA_new_navy_old_school }
+		x = 4
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_birds_nest_on_the_sea
+		icon = GFX_focus_
+		relative_position_id = FRA_seagull_project
+		prerequisite = { focus = FRA_seagull_project }
+		x = 0
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_big_fish_eats_small_fish
+		icon = GFX_focus_
+		relative_position_id = FRA_seagull_project
+		prerequisite = { focus = FRA_birds_nest_on_the_sea }
+		x = 0
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_firepower_is_justice
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { 
+			focus = FRA_new_navy_old_school 
+			focus = FRA_wolf_combat 
+			focus = FRA_seagull_project 
+		}
+		x = 0
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_multifleet_operation
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { 
+			focus = FRA_new_navy_old_school 
+			focus = FRA_wolf_combat 
+			focus = FRA_seagull_project 
+		}
+		x = 2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_wild_goose_breakthrough
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { focus = FRA_multifleet_operation }
+		x = 3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_coordinated_action_land_and_sea
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { 
+			focus = FRA_new_navy_old_school 
+			focus = FRA_wolf_combat 
+			focus = FRA_seagull_project 
+		}
+		x = -1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_land_cruiser
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { focus = FRA_coordinated_action_land_and_sea }
+		prerequisite = { focus = FRA_secondary_armor }
+		x = -3
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_theft_of_military_technology_from_germany
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { 
+			focus = FRA_commune_army_council 
+			focus = FRA_toulon_naval_declaration 
+			focus = FRA_central_fluid_power_research_institute 
+		}
+		x = -3
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_radio_refinement
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { 
+			focus = FRA_toulon_naval_declaration 
+			focus = FRA_central_fluid_power_research_institute 
+		}
+		x = 4
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_peoples_water_army
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { 
+			focus = FRA_big_fish_eats_small_fish 
+			focus = FRA_block_the_lifeblood_of_capitalism 
+			focus = FRA_handling_butchers_cleaver_with_ease 
+		}
+		mutually_exclusive = { focus = FRA_guardians_of_the_oceans }
+		x = 3
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_guardians_of_the_oceans
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		prerequisite = { 
+			focus = FRA_big_fish_eats_small_fish 
+			focus = FRA_block_the_lifeblood_of_capitalism 
+			focus = FRA_handling_butchers_cleaver_with_ease 
+		}
+		mutually_exclusive = { focus = FRA_peoples_water_army }
+		x = 0
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_central_fluid_power_research_institute
+		icon = GFX_focus_
+		relative_position_id = FRA_toulon_naval_declaration
+		x = 8
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_alpine_hollow_experimental_base
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_central_fluid_power_research_institute }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_vehicle_concept
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_central_fluid_power_research_institute }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_operational_seaplane
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_vehicle_concept }
+		prerequisite = { focus = FRA_seagull_project }
+		x = -1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_obliquewingairplane
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_vehicle_concept }
+		prerequisite = { focus = FRA_alpine_hollow_experimental_base }
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_air_battleship
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_vehicle_concept }
+		prerequisite = { focus = FRA_alpine_hollow_experimental_base }
+		x = 2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_ground_effect_vehicle
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_vehicle_concept }
+		prerequisite = { focus = FRA_alpine_hollow_experimental_base }
+		x = 4
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_sky_mothership
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_vehicle_concept }
+		prerequisite = { focus = FRA_alpine_hollow_experimental_base }
+		x = 6
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_beyond_the_speed_of_sound
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_futurism_and_flight }
+		prerequisite = { focus = FRA_alpine_hollow_experimental_base }
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_independence_of_the_air_force
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_central_fluid_power_research_institute }
+		x = -2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_wrap_around_air_sea_combat
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_independence_of_the_air_force }
+		prerequisite = { focus = FRA_seagull_project }
+		x = -3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_hill_top_air_force_academy
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_independence_of_the_air_force }
+		x = 2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_lead_the_battlefield
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_hill_top_air_force_academy }
+		mutually_exclusive = { focus = FRA_destabilize_warfare }
+		x = 2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_earth_shattering
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_lead_the_battlefield }
+		x = 1
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_wings_of_liberty
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_lead_the_battlefield }
+		prerequisite = { focus = FRA_ace_of_the_air }
+		x = 3
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+
+	focus = {
+		id = FRA_destabilize_warfare
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_independence_of_the_air_force }
+		mutually_exclusive = { focus = FRA_lead_the_battlefield }
+		x = -2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_fire_dawn
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_destabilize_warfare }
+		x = -1
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_marine_support_aircraft
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_destabilize_warfare }
+		prerequisite = { focus = FRA_wrap_around_air_sea_combat }
+		x = -3
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_saturation_bombing
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { 
+			focus = FRA_destabilize_warfare 
+			focus = FRA_lead_the_battlefield 
+		}
+		x = 0
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_ace_of_the_air
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_hill_top_air_force_academy }
+		prerequisite = { focus = FRA_futurism_and_flight }
+		x = 3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_amazonian_sky_fighter
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_hill_top_air_force_academy }
+		x = 4
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_stealth_parachuting
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_hill_top_air_force_academy }
+		x = 5
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_futurism_and_flight
+		icon = GFX_focus_
+		relative_position_id = FRA_central_fluid_power_research_institute
+		prerequisite = { focus = FRA_independence_of_the_air_force }
+		x = 0
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	#politics
+	focus = {
+		id = FRA_another_victory_for_syndicalists
+		icon = GFX_focus_
+		x = 5
+		y = 17
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_to_unite_sacrifice_first
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_another_victory_for_syndicalists }
+		mutually_exclusive = { focus = FRA_to_be_change_unity_first }
+		x = -6
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_composite_worker_education_program
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_to_unite_sacrifice_first }
+		x = -7
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_extreme_tactics_against_extreme_groups
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_to_unite_sacrifice_first }
+		x = -5
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_contact_with_the_anarchist_right
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_extreme_tactics_against_extreme_groups }
+		x = -6
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_recalling_vulnerable_groups
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_contact_with_the_anarchist_right }
+		x = -7
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_redefining_commonwealth_of_communes
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_extreme_tactics_against_extreme_groups }
+		prerequisite = { 
+			focus = FRA_workers_direct_administration 
+			focus = FRA_workers_picket_system 
+		}
+		x = -5
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_platform_model
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_redefining_commonwealth_of_communes }
+		prerequisite = { focus = FRA_contact_with_the_anarchist_right }
+		x = -6
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_zero_amendment_to_the_constitution
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_redefining_commonwealth_of_communes }
+		x = -4
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_administrativeization_of_CGT
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { 
+			focus = FRA_to_unite_sacrifice_first 
+			focus = FRA_to_be_change_unity_first 
+		}
+		x = -3
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_workers_direct_administration
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_administrativeization_of_CGT }
+		mutually_exclusive = { focus = FRA_workers_direct_administration }
+		x = -4
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_workers_picket_system
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_administrativeization_of_CGT }
+		mutually_exclusive = { focus = FRA_workers_direct_administration }
+		x = -2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_radical_union_democracy
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { 
+			focus = FRA_workers_direct_administration 
+			focus = FRA_workers_picket_system 
+		}
+		x = -3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_to_be_change_unity_first
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_another_victory_for_syndicalists }
+		mutually_exclusive = { focus = FRA_to_unite_sacrifice_first }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_revolutionary_tents
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_to_be_change_unity_first }
+		x = -1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_midway_society
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_revolutionary_tents }
+		prerequisite = { 
+			focus = FRA_workers_direct_administration 
+			focus = FRA_workers_picket_system 
+		}
+		x = -1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_trade_union_empowerment_bill
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_midway_society }
+		x = -2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_great_national_plan
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_trade_union_empowerment_bill }
+		prerequisite = { focus = FRA_declaration_of_the_new_normal }
+		x = -1
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_cutting_dangerous_people
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_revolutionary_tents }
+		prerequisite = { focus = FRA_old_alliance }
+		x = 0
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_declaration_of_the_new_normal
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_cutting_dangerous_people }
+		x = 0
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_old_alliance
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { 
+			focus = FRA_another_victory_for_syndicalists 
+			focus = FRA_purer_model_of_revolution 
+		}
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_opposition_goes_against_the_grain
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		x = 20
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_outside_the_BGT_and_CSP
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_the_opposition_goes_against_the_grain }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_no_more_proletarian_proletariat
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_libertarian_socialist_principles }
+		x = 5
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_ignorance_of_origin_bill
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_no_more_proletarian_proletariat }
+		x = 6
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_pragmatic_changes
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_outside_the_BGT_and_CSP }
+		mutually_exclusive = { focus = FRA_idealistic_fire }
+		x = 4
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_idealistic_fire
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_outside_the_BGT_and_CSP }
+		mutually_exclusive = { focus = FRA_pragmatic_changes }
+		x = -1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_militia_workers_peasants
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_idealistic_fire }
+		x = 0
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_self_contained_villages_and_towns
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_idealistic_fire }
+		x = -1
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_university_of_footloose
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_self_contained_villages_and_towns }
+		prerequisite = { focus = FRA_letter_of_recommendation_for_talent }
+		x = 2
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_individual_collectivism
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_self_contained_villages_and_towns }
+		x = -2
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_bottom_up_solidarity
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_self_contained_villages_and_towns }
+		x = 0
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_direct_democracy
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_bottom_up_solidarity }
+		x = -1
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_dont_matter_about_politics
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_bottom_up_solidarity }
+		x = 1
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_libertarian_socialist_principles
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_the_opposition_goes_against_the_grain }
+		x = 5
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_complete_freedom_of_expression
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_libertarian_socialist_principles }
+		mutually_exclusive = { focus = FRA_bottom_line_on_expression }
+		mutually_exclusive = { focus = FRA_doing_rather_than_saying }
+		x = 6
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_grass_roots_self_governance_system
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { 
+			focus = FRA_idealistic_fire
+			focus = FRA_pragmatic_changes
+		}
+		x = 1
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_letter_of_recommendation_for_talent
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_grass_roots_self_governance_system }
+		x = 1
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_parallel_management_administration
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_grass_roots_self_governance_system }
+		x = 2
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_wage_war_on_corruption
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_parallel_management_administration }
+		prerequisite = { focus = FRA_supervisory_committee }
+		x = 3
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_a_more_correct_constitution
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_wage_war_on_corruption }
+		prerequisite = { focus = FRA_anti_power_checks_and_balances }
+		x = 4
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_alliance_with_left_peasant_front
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_reaffirmation_of_freedom_of_religion }
+		prerequisite = { focus = FRA_outside_the_BGT_and_CSP }
+		x = -3
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_find_amusement_in_own_way
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_alliance_with_left_peasant_front }
+		prerequisite = { focus = FRA_idealistic_fire }
+		x = -2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_bring_in_the_reformers
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_pragmatic_changes }
+		x = 3
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_supervisory_committee
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_pragmatic_changes }
+		x = 4
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_anti_power_checks_and_balances
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { focus = FRA_supervisory_committee }
+		prerequisite = { focus = FRA_ignorance_of_origin_bill }
+		x = 5
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_french_styke_revolution
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		x = 14
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_administrative_technocrats
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_french_styke_revolution }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_all_it_takes_is_action
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { 
+			focus = FRA_support_for_BGT 
+			focus = FRA_relying_on_CSP 
+		}
+		prerequisite = { focus = FRA_french_styke_revolution }
+		mutually_exclusive = { focus = FRA_presence_is_reason }
+		mutually_exclusive = { focus = FRA_harmonization_executive_legislative_powers }
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_benevolent_dictatorship
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_all_it_takes_is_action }
+		mutually_exclusive = { focus = FRA_first_line_feedback }
+		x = 2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_cult_of_reason
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_state_atheism }
+		prerequisite = { focus = FRA_benevolent_dictatorship }
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_class_struggle_as_program
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_benevolent_dictatorship }
+		x = 3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_acting_is_better_than_thinking
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_the_cult_of_reason }
+		prerequisite = { focus = FRA_class_struggle_as_program }
+		x = 2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_first_line_feedback
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_all_it_takes_is_action }
+		mutually_exclusive = { focus = FRA_benevolent_dictatorship }
+		x = -2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_constructing_revolutionary_manifesto
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_first_line_feedback }
+		x = -3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_new_cooperation_theory
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_first_line_feedback }
+		prerequisite = { focus = FRA_administrative_technocrats }
+		x = -1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_cybernetic_society
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_constructing_revolutionary_manifesto }
+		prerequisite = { focus = FRA_new_cooperation_theory }
+		x = -2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_lessons_from_robespierre
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { 
+			focus = FRA_first_line_feedback 
+			focus = FRA_benevolent_dictatorship 
+		}
+		x = 0
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_solidarity_front
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_lessons_from_robespierre }
+		x = -4
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_anti_democratic_alliance
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_solidarity_front }
+		prerequisite = { focus = FRA_a_republic_not_a_democracy }
+		x = -3
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_window_of_injustice
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_solidarity_front }
+		x = -5
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_a_republic_not_a_democracy
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_lessons_from_robespierre }
+		x = -1
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_remove_a_tumor
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_a_republic_not_a_democracy }
+		x = -2
+		y = 8
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_order_order_order
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_a_republic_not_a_democracy }
+		x = -1
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_reward_of_the_loyalist
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_a_republic_not_a_democracy }
+		x = 0
+		y = 8
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_peoples_education_program
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_lessons_from_robespierre }
+		x = 2
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_thousands_paths_to_technician
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_peoples_education_program }
+		x = 1
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_new_man_project
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_principle_of_orthodoxy }
+		prerequisite = { focus = FRA_thousands_paths_to_technician }
+		x = 2
+		y = 8
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_principle_of_orthodoxy
+		icon = GFX_focus_
+		relative_position_id = FRA_french_styke_revolution
+		prerequisite = { focus = FRA_peoples_education_program }
+		x = 3
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_purer_model_of_revolution
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		x = 4
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_new_friend
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_old_alliance }
+		prerequisite = { focus = FRA_real_revolutionary_labor_unionists }
+		x = 1
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_proletarian_model_of_education
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_real_revolutionary_labor_unionists }
+		x = 2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_totalitarian_cooperation
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_new_friend }
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_integrationist_nationalist
+		icon = GFX_focus_
+		relative_position_id = FRA_another_victory_for_syndicalists
+		prerequisite = { focus = FRA_totalitarian_cooperation }
+		x = 2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_real_revolutionary_labor_unionists
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_purer_model_of_revolution }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_radical_cultural_propaganda
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_real_revolutionary_labor_unionists }
+		x = -1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_from_past_to_future
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_radical_cultural_propaganda }
+		mutually_exclusive = { focus = FRA_a_real_revolution }
+		x = -1
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_messianic_moment
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_from_past_to_future }
+		x = -4
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_philosophy_of_transcendence
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_from_past_to_future }
+		x = -3
+		y = 8
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_camels_lions_babies
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_from_past_to_future }
+		x = -2
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_myth_of_the_future
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_from_past_to_future }
+		x = 0
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_subverting_the_symbol_system
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_from_past_to_future }
+		x = 1
+		y = 8
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_sisyphus_and_don_quixote
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_from_past_to_future }
+		x = 2
+		y = 7
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_ultimate_answer
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_camels_lions_babies }
+		prerequisite = { focus = FRA_myth_of_the_future }
+		x = -1
+		y = 8
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_workers_nation_revolution
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_purer_model_of_revolution }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_harmonization_executive_legislative_powers
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { 
+			focus = FRA_support_for_BGT 
+			focus = FRA_relying_on_CSP 
+		}
+		prerequisite = { focus = FRA_purer_model_of_revolution }
+		mutually_exclusive = { focus = FRA_presence_is_reason }
+		mutually_exclusive = { focus = FRA_all_it_takes_is_action }
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_interim_supreme_authority_authorization_act
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_harmonization_executive_legislative_powers }
+		x = 0
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_quick_sword_cuts_through_tangled_hemp
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_interim_supreme_authority_authorization_act }
+		x = 1
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_one_goal
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_quick_sword_cuts_through_tangled_hemp }
+		x = 0
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_one_leader
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_quick_sword_cuts_through_tangled_hemp }
+		x = 2
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_one_class
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_quick_sword_cuts_through_tangled_hemp }
+		x = 4
+		y = 5
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_a_real_revolution
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_one_goal }
+		prerequisite = { focus = FRA_one_leader }
+		prerequisite = { focus = FRA_one_class }
+		mutually_exclusive = { focus = FRA_from_past_to_future }
+		x = 3
+		y = 6
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_committees_are_lower_than_parliaments
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_harmonization_executive_legislative_powers }
+		x = 2
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_reduction_of_local_autonomy
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { focus = FRA_committees_are_lower_than_parliaments }
+		x = 3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_reaffirmation_of_freedom_of_religion
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { 
+			focus = FRA_another_victory_for_syndicalists 
+			focus = FRA_the_opposition_goes_against_the_grain 
+			focus = FRA_french_styke_revolution 
+			focus = FRA_purer_model_of_revolution 
+		}
+		mutually_exclusive = { focus = FRA_state_atheism }
+		x = -3
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_state_atheism
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		prerequisite = { 
+			focus = FRA_another_victory_for_syndicalists 
+			focus = FRA_the_opposition_goes_against_the_grain 
+			focus = FRA_french_styke_revolution 
+			focus = FRA_purer_model_of_revolution 
+		}
+		mutually_exclusive = { focus = FRA_reaffirmation_of_freedom_of_religion }
+		x = -5
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_relying_on_CSP
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { 
+			focus = FRA_another_victory_for_syndicalists 
+			focus = FRA_the_opposition_goes_against_the_grain 
+			focus = FRA_french_styke_revolution 
+			focus = FRA_purer_model_of_revolution 
+		}
+		mutually_exclusive = { focus = FRA_support_for_BGT }
+		x = 7
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_support_for_BGT
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { 
+			focus = FRA_another_victory_for_syndicalists 
+			focus = FRA_the_opposition_goes_against_the_grain 
+			focus = FRA_french_styke_revolution 
+			focus = FRA_purer_model_of_revolution 
+		}
+		mutually_exclusive = { focus = FRA_relying_on_CSP }
+		x = 3
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_presence_is_reason
+		icon = GFX_focus_
+		relative_position_id = FRA_purer_model_of_revolution
+		prerequisite = { 
+			focus = FRA_support_for_BGT 
+			focus = FRA_relying_on_CSP 
+		}
+		mutually_exclusive = { focus = FRA_harmonization_executive_legislative_powers }
+		mutually_exclusive = { focus = FRA_all_it_takes_is_action }
+		x = 5
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_reform_for_revolution
+		icon = GFX_focus_
+		relative_position_id = FRA_presence_is_reason
+		prerequisite = { focus = FRA_presence_is_reason }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_principle_of_stability
+		icon = GFX_focus_
+		relative_position_id = FRA_presence_is_reason
+		prerequisite = { focus = FRA_presence_is_reason }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_performance_legitimacy
+		icon = GFX_focus_
+		relative_position_id = FRA_presence_is_reason
+		prerequisite = { focus = FRA_reform_for_revolution }
+		prerequisite = { focus = FRA_principle_of_stability }
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	#第二次德雷福斯案
+	focus = {
+		id = FRA_second_dreyfus_case
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		x = 8
+		y = -1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_tightening_immigration_bill
+		icon = GFX_focus_
+		relative_position_id = FRA_second_dreyfus_case
+		prerequisite = { focus = FRA_second_dreyfus_case }
+		mutually_exclusive = { focus = FRA_anti_ethnic_discrimination_policy }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_national_counterintelligence_act
+		icon = GFX_focus_
+		relative_position_id = FRA_second_dreyfus_case
+		prerequisite = { focus = FRA_ten_year_model }
+		prerequisite = { focus = FRA_tightening_immigration_bill }
+		x = 3
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_anti_ethnic_discrimination_policy
+		icon = GFX_focus_
+		relative_position_id = FRA_second_dreyfus_case
+		prerequisite = { focus = FRA_second_dreyfus_case }
+		mutually_exclusive = { focus = FRA_tightening_immigration_bill }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_bottom_line_on_expression
+		icon = GFX_focus_
+		relative_position_id = FRA_complete_freedom_of_expression
+		prerequisite = { focus = FRA_second_dreyfus_case }
+		mutually_exclusive = { focus = FRA_complete_freedom_of_expression }
+		mutually_exclusive = { focus = FRA_doing_rather_than_saying }
+		x = 2
+		y = 0
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_doing_rather_than_saying
+		icon = GFX_focus_
+		relative_position_id = FRA_ten_year_model
+		prerequisite = { focus = FRA_ten_year_model }
+		mutually_exclusive = { focus = FRA_bottom_line_on_expression }
+		mutually_exclusive = { focus = FRA_complete_freedom_of_expression }
+		x = -2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_womens_day_parade
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		x = 12
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_glorious_mother
+		icon = GFX_focus_
+		relative_position_id = FRA_womens_day_parade
+		prerequisite = { focus = FRA_womens_day_parade }
+		mutually_exclusive = { focus = FRA_progressive_women }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_progressive_women
+		icon = GFX_focus_
+		relative_position_id = FRA_womens_day_parade
+		prerequisite = { focus = FRA_womens_day_parade }
+		mutually_exclusive = { focus = FRA_glorious_mother }
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_free_assembly
+		icon = GFX_focus_
+		relative_position_id = FRA_complete_freedom_of_expression
+		prerequisite = { 
+			focus = FRA_complete_freedom_of_expression 
+			focus = FRA_bottom_line_on_expression 
+		}
+		prerequisite = { focus = FRA_womens_day_parade }
+		mutually_exclusive = { focus = FRA_assembly_declaration_system }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_assembly_declaration_system
+		icon = GFX_focus_
+		relative_position_id = FRA_bottom_line_on_expression
+		prerequisite = { 
+			focus = FRA_doing_rather_than_saying 
+			focus = FRA_bottom_line_on_expression 
+		}
+		prerequisite = { focus = FRA_womens_day_parade }
+		mutually_exclusive = { focus = FRA_free_assembly }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	#1941
+	focus = {
+		id = FRA_enemy_at_the_gates
+		icon = GFX_focus_
+		relative_position_id = FRA_the_opposition_goes_against_the_grain
+		x = 14
+		y = -1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_ten_year_model
+		icon = GFX_focus_
+		relative_position_id = FRA_enemy_at_the_gates
+		prerequisite = { focus = FRA_enemy_at_the_gates }
+		mutually_exclusive = { focus = FRA_post_war_democracy_commitments }
+		x = -2
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_integrated_politics
+		icon = GFX_focus_
+		relative_position_id = FRA_ten_year_model
+		prerequisite = { focus = FRA_ten_year_model }
+		x = 1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_post_war_democracy_commitments
+		icon = GFX_focus_
+		relative_position_id = FRA_enemy_at_the_gates
+		prerequisite = { focus = FRA_enemy_at_the_gates }
+		mutually_exclusive = { focus = FRA_ten_year_model }
+		x = 2
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_on_the_main_contradiction
+		icon = GFX_focus_
+		relative_position_id = FRA_post_war_democracy_commitments
+		prerequisite = { 
+			focus = FRA_ten_year_model 
+			focus = FRA_post_war_democracy_commitments 
+		}
+		x = -1
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_is_revenge
+		icon = GFX_focus_
+		relative_position_id = FRA_post_war_democracy_commitments
+		prerequisite = { focus = FRA_on_the_main_contradiction }
+		x = -2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_is_emancipation
+		icon = GFX_focus_
+		relative_position_id = FRA_post_war_democracy_commitments
+		prerequisite = { focus = FRA_on_the_main_contradiction }
+		x = -1
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_is_honor
+		icon = GFX_focus_
+		relative_position_id = FRA_post_war_democracy_commitments
+		prerequisite = { focus = FRA_on_the_main_contradiction }
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_democratic_principle
+		icon = GFX_focus_
+		relative_position_id = FRA_enemy_at_the_gates
+		x = 8
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_pro_establishment
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { 
+			focus = FRA_democratic_principle 
+			focus = FRA_post_war_democracy_commitments 
+		}
+		x = -5
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_draft_reform_of_trade_unions
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { 
+			focus = FRA_five_more_years 
+			focus = FRA_political_legacy 
+		}
+		prerequisite = { focus = FRA_pro_establishment }
+		x = -5
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_labor_club
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { focus = FRA_draft_reform_of_trade_unions }
+		x = -5
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+
+	focus = {
+		id = FRA_genius_or_madman
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { 
+			focus = FRA_democratic_principle 
+			focus = FRA_post_war_democracy_commitments 
+		}
+		x = -3
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_stronger_presidential_orders
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { 
+			focus = FRA_five_more_years 
+			focus = FRA_political_legacy 
+		}
+		prerequisite = { focus = FRA_genius_or_madman }
+		x = -3
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_national_honors_program
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { focus = FRA_stronger_presidential_orders }
+		x = -3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_theoretical_actionist
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { 
+			focus = FRA_democratic_principle 
+			focus = FRA_post_war_democracy_commitments 
+		}
+		x = 3
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_professionalization_of_the_civil_service
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { 
+			focus = FRA_five_more_years 
+			focus = FRA_political_legacy 
+		}
+		prerequisite = { focus = FRA_theoretical_actionist }
+		x = 3
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_remain_silent_and_work_hard
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { focus = FRA_professionalization_of_the_civil_service }
+		x = 3
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_guy_whos_against_everything
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { 
+			focus = FRA_democratic_principle 
+			focus = FRA_post_war_democracy_commitments 
+		}
+		x = 5
+		y = 1
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_no_one_is_left_behind_bill
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { 
+			focus = FRA_five_more_years 
+			focus = FRA_political_legacy 
+		}
+		prerequisite = { focus = FRA_guy_whos_against_everything }
+		x = 5
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_right_to_be_questioned
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { focus = FRA_no_one_is_left_behind_bill }
+		x = 5
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_five_more_years
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { 
+			focus = FRA_pro_establishment 
+			focus = FRA_genius_or_madman 
+			focus = FRA_theoretical_actionist 
+			focus = FRA_guy_whos_against_everything 
+		}
+		mutually_exclusive = { focus = FRA_political_legacy }
+		mutually_exclusive = { focus = FRA_usher_out_old_greet_new }
+		x = -2
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_usher_out_old_greet_new
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { 
+			focus = FRA_pro_establishment 
+			focus = FRA_genius_or_madman 
+			focus = FRA_theoretical_actionist 
+			focus = FRA_guy_whos_against_everything 
+		}
+		mutually_exclusive = { focus = FRA_political_legacy }
+		mutually_exclusive = { focus = FRA_five_more_years }
+		x = 0
+		y = 2
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_calm_anger
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { focus = FRA_usher_out_old_greet_new }
+		x = 1
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_neutralize_hostility
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { focus = FRA_usher_out_old_greet_new }
+		x = -1
+		y = 3
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_get_back_on_track
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { focus = FRA_calm_anger }
+		prerequisite = { focus = FRA_neutralize_hostility }
+		x = 0
+		y = 4
+		cost = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FRA_political_legacy
+		icon = GFX_focus_
+		relative_position_id = FRA_democratic_principle
+		prerequisite = { 
+			focus = FRA_pro_establishment 
+			focus = FRA_genius_or_madman 
+			focus = FRA_theoretical_actionist 
+			focus = FRA_guy_whos_against_everything 
+		}
+		mutually_exclusive = { focus = FRA_usher_out_old_greet_new }
+		mutually_exclusive = { focus = FRA_five_more_years }
+		x = 2
+		y = 2
 		cost = 1
 		completion_reward = {
 
