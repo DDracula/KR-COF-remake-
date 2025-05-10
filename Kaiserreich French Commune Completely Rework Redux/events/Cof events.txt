@@ -7,7 +7,7 @@ add_namespace = int
 country_event = {
 	id = cofpolitics.0
 	option = {
-		
+        politics_pop_impact_count = yes
 	}
 }
 

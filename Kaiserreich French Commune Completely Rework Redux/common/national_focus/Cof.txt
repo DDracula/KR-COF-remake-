@@ -14,7 +14,7 @@ focus_tree = {
 	continuous_focus_position = { x = 1300 y = 1850 }
 
     ### economy
-	#CGT
+	#CGT 
 	focus = {
 		id = FRA_expand_CGT
 		icon = GFX_focus_
@@ -3646,7 +3646,7 @@ focus_tree = {
 		icon = GFX_focus_
 		x = 3
 		y = 8
-		cost = 1
+		cost = 0
 		completion_reward = {
 
 		}

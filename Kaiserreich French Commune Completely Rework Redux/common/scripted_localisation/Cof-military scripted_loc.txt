@@ -1,0 +1,94 @@
+###详细信息
+defined_text = {
+	name = Cof_militray_reform_detail1
+    text = {
+        trigger = { NOT = { has_country_flag = Cofarmy_class_detail_hidden } }
+        localization_key = Cof_militray_reform_detail1_key
+    }
+}
+
+defined_text = {
+	name = Cof_militray_reform_detail1
+    text = {
+        trigger = { NOT = { has_country_flag = Cofarmy_class_detail_hidden } }
+        localization_key = Cof_militray_reform_detail1_key
+    }
+}
+
+defined_text = {
+	name = Cof_militray_reform_detail2
+    text = {
+        trigger = { NOT = { has_country_flag = Cofarmy_class_detail_hidden } }
+        localization_key = Cof_militray_reform_detail2_key
+    }
+}
+
+defined_text = {
+	name = Cof_militray_reform_detail3
+    text = {
+        trigger = { NOT = { has_country_flag = Cofarmy_class_detail_hidden } }
+        localization_key = Cof_militray_reform_detail3_key
+    }
+}
+
+defined_text = {
+	name = Cof_militray_reform_detail4
+    text = {
+        trigger = { NOT = { has_country_flag = Cofarmy_class_detail_hidden } }
+        localization_key = Cof_militray_reform_detail4_key
+    }
+}
+
+defined_text = {
+	name = Cof_militray_reform_detail5
+    text = {
+        trigger = { NOT = { has_country_flag = Cofarmy_class_detail_hidden } }
+        localization_key = Cof_militray_reform_detail5_key
+    }
+}
+
+defined_text = {
+	name = Cof_militray_reform_detail6
+    text = {
+        trigger = { NOT = { has_country_flag = Cofarmy_class_detail_hidden } }
+        localization_key = Cof_militray_reform_detail6_key
+    }
+}
+
+###学说
+defined_text = {
+	name = Cof_army_theory
+    text = {
+        trigger = { Cof_army_theory_panzer_group_advtanage = yes }
+        localization_key = Cof_army_theory_panzer_group
+    }
+    text = {
+        trigger = { Cof_army_theory_blitz_delite_advtanage = yes }
+        localization_key = Cof_army_theory_blitz_delite
+    }
+    text = {
+        trigger = { Cof_army_theory_motorization_advtanage = yes }
+        localization_key = Cof_army_theory_motorization
+    }
+    text = {
+        trigger = { Cof_army_theory_infanty_artillery_advtanage = yes }
+        localization_key = Cof_army_theory_infanty_artillery
+    }
+    text = {
+        trigger = { Cof_army_theory_centrailed_command_advtanage = yes }
+        localization_key = Cof_army_theory_centrailed_command
+    }
+    text = {
+        trigger = { Cof_army_theory_defensive_countattack_advtanage = yes }
+        localization_key = Cof_army_theory_defensive_countattack
+    }
+    text = {
+        trigger = { Cof_army_theory_nco_initiative_advtanage = yes }
+        localization_key = Cof_army_theory_nco_initiative
+    }
+    text = {
+        trigger = { Cof_army_theory_small_combat_advtanage = yes }
+        localization_key = Cof_army_theory_small_combat
+    }
+    text = { localization_key = Cof_army_theory_no }
+}

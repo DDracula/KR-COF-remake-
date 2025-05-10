@@ -1,0 +1,659 @@
+defined_text = {
+	name = Cof_politics_detail1
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_detail_hidden } }
+        localization_key = Cof_politics_detail1_key
+    }
+}
+
+defined_text = {
+	name = Cof_politics_detail2
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_detail_hidden } }
+        localization_key = Cof_politics_detail2_key
+    }
+}
+
+defined_text = {
+    name = class_tendency_target_pop
+    text = {
+        trigger = { check_variable = { pop_target = 1 } }
+        localization_key = class_pop_workers
+    }
+    text = {
+        trigger = { check_variable = { pop_target = 2 } }
+        localization_key = class_pop_peasants
+    }
+    text = {
+        trigger = { check_variable = { pop_target = 3 } }
+        localization_key = class_pop_merchants
+    }
+    text = {
+        trigger = { check_variable = { pop_target = 4 } }
+        localization_key = class_pop_scholars
+    }
+    text = {
+        trigger = { check_variable = { pop_target = 5 } }
+        localization_key = class_pop_bureaucrats
+    }
+    text = {
+        trigger = { check_variable = { pop_target = 6 } }
+        localization_key = class_pop_officers
+    }
+    text = {
+        trigger = { check_variable = { pop_target = 7 } }
+        localization_key = class_pop_ncos
+    }
+    text = {
+        trigger = { check_variable = { pop_target = 8 } }
+        localization_key = class_pop_soldiers
+    }
+}
+
+defined_text = {
+    name = dominant_faction_loc
+    text = {
+		trigger = {
+			check_variable = { dominant_faction_synd > var:FRA.dominant_faction_anar }
+			check_variable = { dominant_faction_synd > var:FRA.dominant_faction_jaco }
+			check_variable = { dominant_faction_synd > var:FRA.dominant_faction_sore }
+		}
+		localization_key = faction_synd
+	}
+	text = {
+		trigger = {
+			check_variable = { dominant_faction_anar > var:FRA.dominant_faction_synd }
+			check_variable = { dominant_faction_anar > var:FRA.dominant_faction_jaco }
+			check_variable = { dominant_faction_anar > var:FRA.dominant_faction_sore }
+		}
+		localization_key = faction_oppo
+	}
+	text = {
+		trigger = {
+			check_variable = { dominant_faction_jaco > var:FRA.dominant_faction_anar }
+			check_variable = { dominant_faction_jaco > var:FRA.dominant_faction_synd }
+			check_variable = { dominant_faction_jaco > var:FRA.dominant_faction_sore }
+		}
+		localization_key = faction_jaco
+	}
+	text = {
+		trigger = {
+			check_variable = { dominant_faction_sore > var:FRA.dominant_faction_anar }
+			check_variable = { dominant_faction_sore > var:FRA.dominant_faction_jaco }
+			check_variable = { dominant_faction_sore > var:FRA.dominant_faction_synd }
+		}
+		localization_key = faction_sore
+	}
+	text = { localization_key = faction_no }
+}
+
+defined_text = {
+	name = Cof_politics_class_workers
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_politics_class_workers_key
+    }
+}
+defined_text = {
+	name = Cof_politics_workers_tendency
+    text = {
+        trigger = { pop_tendency_workers_synd = yes }
+        localization_key = faction_synd
+    }
+    text = {
+        trigger = { pop_tendency_workers_oppo = yes }
+        localization_key = faction_oppo
+    }
+    text = {
+        trigger = { pop_tendency_workers_jaco = yes }
+        localization_key = faction_jaco
+    }
+    text = {
+        trigger = { pop_tendency_workers_sore = yes }
+        localization_key = faction_sore
+    }
+    text = { localization_key = faction_no }
+}
+
+defined_text = {
+	name = Cof_politics_class_peasants
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_politics_class_peasants_key
+    }
+}
+defined_text = {
+	name = Cof_politics_peasants_tendency
+    text = {
+        trigger = { pop_tendency_peasants_synd = yes }
+        localization_key = faction_synd
+    }
+    text = {
+        trigger = { pop_tendency_peasants_oppo = yes }
+        localization_key = faction_oppo
+    }
+    text = {
+        trigger = { pop_tendency_peasants_jaco = yes }
+        localization_key = faction_jaco
+    }
+    text = {
+        trigger = { pop_tendency_peasants_sore = yes }
+        localization_key = faction_sore
+    }
+    text = { localization_key = faction_no }
+}
+
+defined_text = {
+	name = Cof_politics_class_merchants
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_politics_class_merchants_key
+    }
+}
+defined_text = {
+	name = Cof_politics_merchants_tendency
+    text = {
+        trigger = { pop_tendency_merchants_synd = yes }
+        localization_key = faction_synd
+    }
+    text = {
+        trigger = { pop_tendency_merchants_oppo = yes }
+        localization_key = faction_oppo
+    }
+    text = {
+        trigger = { pop_tendency_merchants_jaco = yes }
+        localization_key = faction_jaco
+    }
+    text = {
+        trigger = { pop_tendency_merchants_sore = yes }
+        localization_key = faction_sore
+    }
+    text = { localization_key = faction_no }
+}
+
+defined_text = {
+	name = Cof_politics_class_scholars
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_politics_class_scholars_key
+    }
+}
+defined_text = {
+	name = Cof_politics_scholars_tendency
+    text = {
+        trigger = { pop_tendency_scholars_synd = yes }
+        localization_key = faction_synd
+    }
+    text = {
+        trigger = { pop_tendency_scholars_oppo = yes }
+        localization_key = faction_oppo
+    }
+    text = {
+        trigger = { pop_tendency_scholars_jaco = yes }
+        localization_key = faction_jaco
+    }
+    text = {
+        trigger = { pop_tendency_scholars_sore = yes }
+        localization_key = faction_sore
+    }
+    text = { localization_key = faction_no }
+}
+
+defined_text = {
+	name = Cof_politics_class_bureaucrats
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_politics_class_bureaucrats_key
+    }
+}
+defined_text = {
+	name = Cof_politics_bureaucrats_tendency
+    text = {
+        trigger = { pop_tendency_bureaucrats_synd = yes }
+        localization_key = faction_synd
+    }
+    text = {
+        trigger = { pop_tendency_bureaucrats_oppo = yes }
+        localization_key = faction_oppo
+    }
+    text = {
+        trigger = { pop_tendency_bureaucrats_jaco = yes }
+        localization_key = faction_jaco
+    }
+    text = {
+        trigger = { pop_tendency_bureaucrats_sore = yes }
+        localization_key = faction_sore
+    }
+    text = { localization_key = faction_no }
+}
+
+defined_text = {
+	name = Cof_politics_class_army
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_politics_class_army_key
+    }
+}
+defined_text = {
+	name = Cof_politics_army_tendency
+    text = {
+        trigger = { pop_tendency_army_synd = yes }
+        localization_key = faction_synd
+    }
+    text = {
+        trigger = { pop_tendency_army_oppo = yes }
+        localization_key = faction_oppo
+    }
+    text = {
+        trigger = { pop_tendency_army_jaco = yes }
+        localization_key = faction_jaco
+    }
+    text = {
+        trigger = { pop_tendency_army_sore = yes }
+        localization_key = faction_sore
+    }
+    text = { localization_key = faction_no }
+}
+
+defined_text = {
+	name = Cof_politics_class_officers
+    text = {
+        trigger = { NOT = { has_country_flag = Cofarmy_class_detail_hidden } }
+        localization_key = Cof_politics_class_officers_key
+    }
+}
+defined_text = {
+	name = Cof_politics_officers_tendency
+    text = {
+        trigger = { pop_tendency_officers_synd = yes }
+        localization_key = faction_synd
+    }
+    text = {
+        trigger = { pop_tendency_officers_oppo = yes }
+        localization_key = faction_oppo
+    }
+    text = {
+        trigger = { pop_tendency_officers_jaco = yes }
+        localization_key = faction_jaco
+    }
+    text = {
+        trigger = { pop_tendency_officers_sore = yes }
+        localization_key = faction_sore
+    }
+    text = { localization_key = faction_no }
+}
+
+defined_text = {
+	name = Cof_politics_class_ncos
+    text = {
+        trigger = { NOT = { has_country_flag = Cofarmy_class_detail_hidden } }
+        localization_key = Cof_politics_class_ncos_key
+    }
+}
+defined_text = {
+	name = Cof_politics_ncos_tendency
+    text = {
+        trigger = { pop_tendency_ncos_synd = yes }
+        localization_key = faction_synd
+    }
+    text = {
+        trigger = { pop_tendency_ncos_oppo = yes }
+        localization_key = faction_oppo
+    }
+    text = {
+        trigger = { pop_tendency_ncos_jaco = yes }
+        localization_key = faction_jaco
+    }
+    text = {
+        trigger = { pop_tendency_ncos_sore = yes }
+        localization_key = faction_sore
+    }
+    text = { localization_key = faction_no }
+}
+
+defined_text = {
+	name = Cof_politics_class_soldiers
+    text = {
+        trigger = { NOT = { has_country_flag = Cofarmy_class_detail_hidden } }
+        localization_key = Cof_politics_class_soldiers_key
+    }
+}
+defined_text = {
+	name = Cof_politics_soldiers_tendency
+    text = {
+        trigger = { pop_tendency_soldiers_synd = yes }
+        localization_key = faction_synd
+    }
+    text = {
+        trigger = { pop_tendency_soldiers_oppo = yes }
+        localization_key = faction_oppo
+    }
+    text = {
+        trigger = { pop_tendency_soldiers_jaco = yes }
+        localization_key = faction_jaco
+    }
+    text = {
+        trigger = { pop_tendency_soldiers_sore = yes }
+        localization_key = faction_sore
+    }
+    text = { localization_key = faction_no }
+}
+
+#class detail
+defined_text = {
+	name = Cof_social_class_detail1
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail1_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail_w
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail_w_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail_p
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail_p_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail_m
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail_m_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail_s
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail_s_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail_b
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail_b_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail_a
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail_a_key
+    }
+}
+
+defined_text = {
+	name = Cof_social_class_detail2
+    text = {
+        trigger = { NOT = { has_country_flag = Cofpolitics_class_detail_hidden } }
+        localization_key = Cof_social_class_detail2_key
+    }
+}
+
+#buff显示
+defined_text = {
+	name = Cof_politics_pop_impact_w
+    text = {
+        trigger = { 
+            OR = {
+                check_variable = { pop_workers > 35 } 
+                check_variable = { pop_workers = 35 } 
+            }
+        }
+        localization_key = Cof_politics_pop_impact_w_t
+    }
+}
+
+defined_text = {
+	name = Cof_politics_pop_impact_p
+    text = {
+        trigger = { 
+            OR = {
+                check_variable = { pop_peasants > 35 } 
+                check_variable = { pop_peasants = 35 } 
+            }
+        }
+        localization_key = Cof_politics_pop_impact_p_t
+    }
+}
+
+defined_text = {
+	name = Cof_politics_pop_impact_m
+    text = {
+        trigger = { 
+            OR = {
+                check_variable = { pop_merchants > 35 } 
+                check_variable = { pop_merchants = 35 } 
+            }
+        }
+        localization_key = Cof_politics_pop_impact_m_t
+    }
+}
+
+defined_text = {
+	name = Cof_politics_pop_impact_s
+    text = {
+        trigger = { 
+            OR = {
+                check_variable = { pop_scholars > 35 } 
+                check_variable = { pop_scholars = 35 } 
+            }
+        }
+        localization_key = Cof_politics_pop_impact_s_t
+    }
+}
+
+defined_text = {
+	name = Cof_politics_pop_impact_b
+    text = {
+        trigger = { 
+            OR = {
+                check_variable = { pop_bureaucrats > 35 } 
+                check_variable = { pop_bureaucrats = 35 } 
+            }
+        }
+        localization_key = Cof_politics_pop_impact_b_t
+    }
+}
+
+defined_text = {
+	name = Cof_politics_pop_impact_a
+    text = {
+        trigger = { 
+            OR = {
+                check_variable = { pop_army > 35 } 
+                check_variable = { pop_army = 35 } 
+            }
+        }
+        localization_key = Cof_politics_pop_impact_a_t
+    }
+}
+
+#投票/voting
+defined_text = {
+	name = vote_agree_synd_mode_loc
+	text = {
+		trigger = { has_country_flag = voting_time }
+		localization_key = vote_agree_synd_mode_key
+	}
+}
+
+defined_text = {
+	name = vote_agree_synd_radi_loc
+	text = {
+		trigger = { has_country_flag = voting_time }
+		localization_key = vote_agree_synd_radi_key
+	}
+}
+
+defined_text = {
+	name = vote_agree_oppo_comm_loc
+	text = {
+		trigger = { has_country_flag = voting_time }
+		localization_key = vote_agree_oppo_comm_key
+	}
+}
+
+defined_text = {
+	name = vote_agree_oppo_anar_loc
+	text = {
+		trigger = { has_country_flag = voting_time }
+		localization_key = vote_agree_oppo_anar_key
+	}
+}
+
+defined_text = {
+	name = vote_agree_jaco_neos_loc
+	text = {
+		trigger = { has_country_flag = voting_time }
+		localization_key = vote_agree_jaco_neos_key
+	}
+}
+
+defined_text = {
+	name = vote_agree_jaco_revo_loc
+	text = {
+		trigger = { has_country_flag = voting_time }
+		localization_key = vote_agree_jaco_revo_key
+	}
+}
+
+defined_text = {
+	name = vote_agree_sore_oldl_loc
+	text = {
+		trigger = { has_country_flag = voting_time }
+		localization_key = vote_agree_sore_oldl_key
+	}
+}
+
+defined_text = {
+	name = vote_agree_sore_yout_loc
+	text = {
+		trigger = { has_country_flag = voting_time }
+		localization_key = vote_agree_sore_yout_key
+	}
+}
+
+#csp/bgt
+defined_text = {
+    name = Cof_BGT_vs_CSP_detail
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { Cof_BGT_vs_CSP_value > 90 } 
+                check_variable = { Cof_BGT_vs_CSP_value = 90 } 
+            }
+        }
+		localization_key = BGT_vs_CSP_towards_CSP5
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { Cof_BGT_vs_CSP_value > 70 } 
+                check_variable = { Cof_BGT_vs_CSP_value = 70 } 
+            }
+            check_variable = { Cof_BGT_vs_CSP_value < 90 } 
+        }
+		localization_key = BGT_vs_CSP_towards_CSP4
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { Cof_BGT_vs_CSP_value > 50 } 
+                check_variable = { Cof_BGT_vs_CSP_value = 50 } 
+            }
+            check_variable = { Cof_BGT_vs_CSP_value < 70 } 
+        }
+		localization_key = BGT_vs_CSP_towards_CSP3
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { Cof_BGT_vs_CSP_value > 30 } 
+                check_variable = { Cof_BGT_vs_CSP_value = 30 } 
+            }
+            check_variable = { Cof_BGT_vs_CSP_value < 50 } 
+        }
+		localization_key = BGT_vs_CSP_towards_CSP2
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { Cof_BGT_vs_CSP_value > 10 } 
+                check_variable = { Cof_BGT_vs_CSP_value = 10 } 
+            }
+            check_variable = { Cof_BGT_vs_CSP_value < 30 } 
+        }
+		localization_key = BGT_vs_CSP_towards_CSP1
+	}
+    text = {
+		trigger = { 
+            check_variable = { Cof_BGT_vs_CSP_value > -10 } 
+            check_variable = { Cof_BGT_vs_CSP_value < 10 } 
+        }
+		localization_key = BGT_vs_CSP_balance
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { Cof_BGT_vs_CSP_value < -10 } 
+                check_variable = { Cof_BGT_vs_CSP_value = -10 } 
+            }
+            check_variable = { Cof_BGT_vs_CSP_value > -30 } 
+        }
+		localization_key = BGT_vs_CSP_towards_BGT1
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { Cof_BGT_vs_CSP_value < -30 } 
+                check_variable = { Cof_BGT_vs_CSP_value = -30 } 
+            }
+            check_variable = { Cof_BGT_vs_CSP_value > -50 } 
+        }
+		localization_key = BGT_vs_CSP_towards_BGT2
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { Cof_BGT_vs_CSP_value < -50 } 
+                check_variable = { Cof_BGT_vs_CSP_value = -50 } 
+            }
+            check_variable = { Cof_BGT_vs_CSP_value > -70 } 
+        }
+		localization_key = BGT_vs_CSP_towards_BGT3
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { Cof_BGT_vs_CSP_value < -70 } 
+                check_variable = { Cof_BGT_vs_CSP_value = -70 } 
+            }
+            check_variable = { Cof_BGT_vs_CSP_value > -90 } 
+        }
+		localization_key = BGT_vs_CSP_towards_BGT4
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { Cof_BGT_vs_CSP_value < -90 } 
+                check_variable = { Cof_BGT_vs_CSP_value = -90 } 
+            }
+        }
+		localization_key = BGT_vs_CSP_towards_BGT5
+	}
+}

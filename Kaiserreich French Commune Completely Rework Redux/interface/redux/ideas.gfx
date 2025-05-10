@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_dybamic_modifier_Cof_politics_pop_impact"
+		texturefile = "gfx/interface/ideas/Cof_politics_pop_impact.dds"
+	}
+
+}

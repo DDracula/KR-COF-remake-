@@ -1,0 +1,333 @@
+###人群主导派系
+#工人
+pop_tendency_workers_synd = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_workers_synd_tt
+        check_variable = { pop_workers_synd > pop_workers_oppo }
+        check_variable = { pop_workers_synd > pop_workers_jaco }
+        check_variable = { pop_workers_synd > pop_workers_sore }    
+    }
+}
+
+pop_tendency_workers_oppo = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_workers_oppo_tt
+        check_variable = { pop_workers_oppo > pop_workers_synd }
+        check_variable = { pop_workers_oppo > pop_workers_jaco }
+        check_variable = { pop_workers_oppo > pop_workers_sore }  
+    }
+}
+
+pop_tendency_workers_jaco = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_workers_jaco_tt
+        check_variable = { pop_workers_jaco > pop_workers_oppo }
+        check_variable = { pop_workers_jaco > pop_workers_synd }
+        check_variable = { pop_workers_jaco > pop_workers_sore }    
+    }
+}
+
+pop_tendency_workers_sore = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_workers_oppo_tt
+        check_variable = { pop_workers_sore > pop_workers_synd }
+        check_variable = { pop_workers_sore > pop_workers_jaco }
+        check_variable = { pop_workers_sore > pop_workers_oppo }  
+    }
+}
+
+#农民
+pop_tendency_peasants_synd = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_peasants_synd_tt
+        check_variable = { pop_peasants_synd > pop_peasants_oppo }
+        check_variable = { pop_peasants_synd > pop_peasants_jaco }
+        check_variable = { pop_peasants_synd > pop_peasants_sore }    
+    }
+}
+
+pop_tendency_peasants_oppo = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_peasants_oppo_tt
+        check_variable = { pop_peasants_oppo > pop_peasants_synd }
+        check_variable = { pop_peasants_oppo > pop_peasants_jaco }
+        check_variable = { pop_peasants_oppo > pop_peasants_sore }  
+    }
+}
+
+pop_tendency_peasants_jaco = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_peasants_jaco_tt
+        check_variable = { pop_peasants_jaco > pop_peasants_oppo }
+        check_variable = { pop_peasants_jaco > pop_peasants_synd }
+        check_variable = { pop_peasants_jaco > pop_peasants_sore }    
+    }
+}
+
+pop_tendency_peasants_sore = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_peasants_oppo_tt
+        check_variable = { pop_peasants_sore > pop_peasants_synd }
+        check_variable = { pop_peasants_sore > pop_peasants_jaco }
+        check_variable = { pop_peasants_sore > pop_peasants_oppo }  
+    }
+}
+
+#小资产阶级
+pop_tendency_merchants_synd = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_merchants_synd_tt
+        check_variable = { pop_merchants_synd > pop_merchants_oppo }
+        check_variable = { pop_merchants_synd > pop_merchants_jaco }
+        check_variable = { pop_merchants_synd > pop_merchants_sore }    
+    }
+}
+
+pop_tendency_merchants_oppo = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_merchants_oppo_tt
+        check_variable = { pop_merchants_oppo > pop_merchants_synd }
+        check_variable = { pop_merchants_oppo > pop_merchants_jaco }
+        check_variable = { pop_merchants_oppo > pop_merchants_sore }  
+    }
+}
+
+pop_tendency_merchants_jaco = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_merchants_jaco_tt
+        check_variable = { pop_merchants_jaco > pop_merchants_oppo }
+        check_variable = { pop_merchants_jaco > pop_merchants_synd }
+        check_variable = { pop_merchants_jaco > pop_merchants_sore }    
+    }
+}
+
+pop_tendency_merchants_sore = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_merchants_oppo_tt
+        check_variable = { pop_merchants_sore > pop_merchants_synd }
+        check_variable = { pop_merchants_sore > pop_merchants_jaco }
+        check_variable = { pop_merchants_sore > pop_merchants_oppo }  
+    }
+}
+
+#知识分子
+pop_tendency_scholars_synd = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_scholars_synd_tt
+        check_variable = { pop_scholars_synd > pop_scholars_oppo }
+        check_variable = { pop_scholars_synd > pop_scholars_jaco }
+        check_variable = { pop_scholars_synd > pop_scholars_sore }    
+    }
+}
+
+pop_tendency_scholars_oppo = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_scholars_oppo_tt
+        check_variable = { pop_scholars_oppo > pop_scholars_synd }
+        check_variable = { pop_scholars_oppo > pop_scholars_jaco }
+        check_variable = { pop_scholars_oppo > pop_scholars_sore }  
+    }
+}
+
+pop_tendency_scholars_jaco = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_scholars_jaco_tt
+        check_variable = { pop_scholars_jaco > pop_scholars_oppo }
+        check_variable = { pop_scholars_jaco > pop_scholars_synd }
+        check_variable = { pop_scholars_jaco > pop_scholars_sore }    
+    }
+}
+
+pop_tendency_scholars_sore = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_scholars_oppo_tt
+        check_variable = { pop_scholars_sore > pop_scholars_synd }
+        check_variable = { pop_scholars_sore > pop_scholars_jaco }
+        check_variable = { pop_scholars_sore > pop_scholars_oppo }  
+    }
+}
+
+#官僚
+pop_tendency_bureaucrats_synd = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_bureaucrats_synd_tt
+        check_variable = { pop_bureaucrats_synd > pop_bureaucrats_oppo }
+        check_variable = { pop_bureaucrats_synd > pop_bureaucrats_jaco }
+        check_variable = { pop_bureaucrats_synd > pop_bureaucrats_sore }    
+    }
+}
+
+pop_tendency_bureaucrats_oppo = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_bureaucrats_oppo_tt
+        check_variable = { pop_bureaucrats_oppo > pop_bureaucrats_synd }
+        check_variable = { pop_bureaucrats_oppo > pop_bureaucrats_jaco }
+        check_variable = { pop_bureaucrats_oppo > pop_bureaucrats_sore }  
+    }
+}
+
+pop_tendency_bureaucrats_jaco = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_bureaucrats_jaco_tt
+        check_variable = { pop_bureaucrats_jaco > pop_bureaucrats_oppo }
+        check_variable = { pop_bureaucrats_jaco > pop_bureaucrats_synd }
+        check_variable = { pop_bureaucrats_jaco > pop_bureaucrats_sore }    
+    }
+}
+
+pop_tendency_bureaucrats_sore = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_bureaucrats_oppo_tt
+        check_variable = { pop_bureaucrats_sore > pop_bureaucrats_synd }
+        check_variable = { pop_bureaucrats_sore > pop_bureaucrats_jaco }
+        check_variable = { pop_bureaucrats_sore > pop_bureaucrats_oppo }  
+    }
+}
+
+#军队
+pop_tendency_army_synd = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_army_synd_tt
+        check_variable = { pop_army_synd > pop_army_oppo }
+        check_variable = { pop_army_synd > pop_army_jaco }
+        check_variable = { pop_army_synd > pop_army_sore }    
+    }
+}
+
+pop_tendency_army_oppo = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_army_oppo_tt
+        check_variable = { pop_army_oppo > pop_army_synd }
+        check_variable = { pop_army_oppo > pop_army_jaco }
+        check_variable = { pop_army_oppo > pop_army_sore }  
+    }
+}
+
+pop_tendency_army_jaco = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_army_jaco_tt
+        check_variable = { pop_army_jaco > pop_army_oppo }
+        check_variable = { pop_army_jaco > pop_army_synd }
+        check_variable = { pop_army_jaco > pop_army_sore }    
+    }
+}
+
+pop_tendency_army_sore = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_army_oppo_tt
+        check_variable = { pop_army_sore > pop_army_synd }
+        check_variable = { pop_army_sore > pop_army_jaco }
+        check_variable = { pop_army_sore > pop_army_oppo }  
+    }
+}
+
+#军官
+pop_tendency_officers_synd = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_officers_synd_tt
+        check_variable = { pop_officers_synd > pop_officers_oppo }
+        check_variable = { pop_officers_synd > pop_officers_jaco }
+        check_variable = { pop_officers_synd > pop_officers_sore }    
+    }
+}
+
+pop_tendency_officers_oppo = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_officers_oppo_tt
+        check_variable = { pop_officers_oppo > pop_officers_synd }
+        check_variable = { pop_officers_oppo > pop_officers_jaco }
+        check_variable = { pop_officers_oppo > pop_officers_sore }  
+    }
+}
+
+pop_tendency_officers_jaco = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_officers_jaco_tt
+        check_variable = { pop_officers_jaco > pop_officers_oppo }
+        check_variable = { pop_officers_jaco > pop_officers_synd }
+        check_variable = { pop_officers_jaco > pop_officers_sore }    
+    }
+}
+
+pop_tendency_officers_sore = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_officers_oppo_tt
+        check_variable = { pop_officers_sore > pop_officers_synd }
+        check_variable = { pop_officers_sore > pop_officers_jaco }
+        check_variable = { pop_officers_sore > pop_officers_oppo }  
+    }
+}
+
+#士官
+pop_tendency_ncos_synd = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_ncos_synd_tt
+        check_variable = { pop_ncos_synd > pop_ncos_oppo }
+        check_variable = { pop_ncos_synd > pop_ncos_jaco }
+        check_variable = { pop_ncos_synd > pop_ncos_sore }    
+    }
+}
+
+pop_tendency_ncos_oppo = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_ncos_oppo_tt
+        check_variable = { pop_ncos_oppo > pop_ncos_synd }
+        check_variable = { pop_ncos_oppo > pop_ncos_jaco }
+        check_variable = { pop_ncos_oppo > pop_ncos_sore }  
+    }
+}
+
+pop_tendency_ncos_jaco = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_ncos_jaco_tt
+        check_variable = { pop_ncos_jaco > pop_ncos_oppo }
+        check_variable = { pop_ncos_jaco > pop_ncos_synd }
+        check_variable = { pop_ncos_jaco > pop_ncos_sore }    
+    }
+}
+
+pop_tendency_ncos_sore = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_ncos_oppo_tt
+        check_variable = { pop_ncos_sore > pop_ncos_synd }
+        check_variable = { pop_ncos_sore > pop_ncos_jaco }
+        check_variable = { pop_ncos_sore > pop_ncos_oppo }  
+    }
+}
+
+#士兵
+pop_tendency_soldiers_synd = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_soldiers_synd_tt
+        check_variable = { pop_soldiers_synd > pop_soldiers_oppo }
+        check_variable = { pop_soldiers_synd > pop_soldiers_jaco }
+        check_variable = { pop_soldiers_synd > pop_soldiers_sore }    
+    }
+}
+
+pop_tendency_soldiers_oppo = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_soldiers_oppo_tt
+        check_variable = { pop_soldiers_oppo > pop_soldiers_synd }
+        check_variable = { pop_soldiers_oppo > pop_soldiers_jaco }
+        check_variable = { pop_soldiers_oppo > pop_soldiers_sore }  
+    }
+}
+
+pop_tendency_soldiers_jaco = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_soldiers_jaco_tt
+        check_variable = { pop_soldiers_jaco > pop_soldiers_oppo }
+        check_variable = { pop_soldiers_jaco > pop_soldiers_synd }
+        check_variable = { pop_soldiers_jaco > pop_soldiers_sore }    
+    }
+}
+
+pop_tendency_soldiers_sore = {
+    custom_trigger_tooltip = {
+        tooltip = pop_tendency_soldiers_oppo_tt
+        check_variable = { pop_soldiers_sore > pop_soldiers_synd }
+        check_variable = { pop_soldiers_sore > pop_soldiers_jaco }
+        check_variable = { pop_soldiers_sore > pop_soldiers_oppo }  
+    }
+}

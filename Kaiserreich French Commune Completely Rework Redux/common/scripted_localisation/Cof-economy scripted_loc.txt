@@ -1,0 +1,182 @@
+###详细信息
+defined_text = {
+	name = Cof_economy_detail1
+    text = {
+        trigger = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
+        localization_key = Cof_economy_detail1_key
+    }
+}
+
+defined_text = {
+	name = Cof_economy_detail2
+    text = {
+        trigger = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
+        localization_key = Cof_economy_detail2_key
+    }
+}
+
+defined_text = {
+	name = Cof_economy_detail3
+    text = {
+        trigger = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
+        localization_key = Cof_economy_detail3_key
+    }
+}
+
+defined_text = {
+	name = Cof_economy_detail4
+    text = {
+        trigger = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
+        localization_key = Cof_economy_detail4_key
+    }
+}
+
+defined_text = {
+	name = Cof_economy_detail5
+    text = {
+        trigger = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
+        localization_key = Cof_economy_detail5_key
+    }
+}
+
+defined_text = {
+	name = Cof_economy_detail6
+    text = {
+        trigger = { NOT = { has_country_flag = Cofeconomy_detail_hidden } }
+        localization_key = Cof_economy_detail6_key
+    }
+}
+
+###经济指标
+defined_text = {
+    name = cof_economy_situation
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { cof_econ_values > 90 } 
+                check_variable = { cof_econ_values = 90 } 
+            }
+        }
+		localization_key = cof_economy_situation_good5
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { cof_econ_values > 70 } 
+                check_variable = { cof_econ_values = 70 } 
+            }
+            check_variable = { cof_econ_values < 90 } 
+        }
+		localization_key = cof_economy_situation_good4
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { cof_econ_values > 50 } 
+                check_variable = { cof_econ_values = 50 } 
+            }
+            check_variable = { cof_econ_values < 70 } 
+        }
+		localization_key = cof_economy_situation_good3
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { cof_econ_values > 30 } 
+                check_variable = { cof_econ_values = 30 } 
+            }
+            check_variable = { cof_econ_values < 50 } 
+        }
+		localization_key = cof_economy_situation_good2
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { cof_econ_values > 10 } 
+                check_variable = { cof_econ_values = 10 } 
+            }
+            check_variable = { cof_econ_values < 30 } 
+        }
+		localization_key = cof_economy_situation_good1
+	}
+    text = {
+		trigger = { 
+            check_variable = { cof_econ_values > -10 } 
+            check_variable = { cof_econ_values < 10 } 
+        }
+		localization_key = cof_economy_situation_soso
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { cof_econ_values < -10 } 
+                check_variable = { cof_econ_values = -10 } 
+            }
+            check_variable = { cof_econ_values > -30 } 
+        }
+		localization_key = cof_economy_situation_bad1
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { cof_econ_values < -30 } 
+                check_variable = { cof_econ_values = -30 } 
+            }
+            check_variable = { cof_econ_values > -50 } 
+        }
+		localization_key = cof_economy_situation_bad2
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { cof_econ_values < -50 } 
+                check_variable = { cof_econ_values = -50 } 
+            }
+            check_variable = { cof_econ_values > -70 } 
+        }
+		localization_key = cof_economy_situation_bad3
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { cof_econ_values < -70 } 
+                check_variable = { cof_econ_values = -70 } 
+            }
+            check_variable = { cof_econ_values > -90 } 
+        }
+		localization_key = cof_economy_situation_bad4
+	}
+    text = {
+		trigger = { 
+            OR = {
+                check_variable = { cof_econ_values < -90 } 
+                check_variable = { cof_econ_values = -90 } 
+            }
+        }
+		localization_key = cof_economy_situation_bad5
+	}
+}
+
+###经济模式
+defined_text = {
+    name = Cof_economy_model
+    text = {
+		trigger = {  Cof_economy_model_co_ops_advtanage = yes }
+		localization_key = Cof_economy_model_co_ops
+	}
+    text = {
+		trigger = {  Cof_economy_model_market_advtanage = yes }
+		localization_key = Cof_economy_model_market
+	}
+    text = {
+		trigger = {  Cof_economy_model_plan_advtanage = yes }
+		localization_key = Cof_economy_model_plan
+	}
+    text = {
+		trigger = {  Cof_economy_model_order_advtanage = yes }
+		localization_key = Cof_economy_model_order
+	}
+    text = {
+        localization_key = Cof_economy_model_mixed
+    }
+}

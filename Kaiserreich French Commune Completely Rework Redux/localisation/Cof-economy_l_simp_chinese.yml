@@ -31,6 +31,11 @@
   Cof_economy_model_plan_change_tips:0 "我们经济模式更加倾向$Cof_economy_model_plan$"
   Cof_economy_model_order_change_tips:0 "我们经济模式更加倾向$Cof_economy_model_order$"
 
+  Cof_economy_model_co_ops_advtanage:0 "$Cof_economy_model_co_ops$为我们的主流经济模式"
+  Cof_economy_model_market_advtanage:0 "$Cof_economy_model_market$为我们的主流经济模式"
+  Cof_economy_model_plan_advtanage:0 "$Cof_economy_model_plan$为我们的主流经济模式"
+  Cof_economy_model_order_advtanage:0 "$Cof_economy_model_order$为我们的主流经济模式"
+
   Cof_economy_period_change:0 "经济周期变化"
   Cof_economy_show_detail:0 "显示/隐藏经济详细信息"
 

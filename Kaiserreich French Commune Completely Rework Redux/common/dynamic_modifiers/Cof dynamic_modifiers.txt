@@ -1,0 +1,32 @@
+Cof_politics_pop_impact = {
+    icon = "GFX_dybamic_modifier_Cof_politics_pop_impact"
+    custom_modifier_tooltip = Cof_politics_pop_impact_tt
+
+    
+    stability_factor = pop_stability_factor
+
+    production_factory_start_efficiency_factor = pop_production_factory_start_efficiency_factor
+    production_factory_efficiency_gain_factor = pop_production_factory_efficiency_gain_factor
+    industrial_capacity_factory = pop_industrial_capacity_factory
+
+    local_resources_factor = pop_local_resources_factor
+    conscription_factor = pop_conscription_factor
+    supply_consumption_factor = pop_supply_consumption_factor
+
+    production_speed_industrial_complex_factor = pop_production_speed_industrial_complex_factor
+    production_speed_infrastructure_factor = pop_production_speed_infrastructure_factor
+    consumer_goods_factor = pop_consumer_goods_factor
+
+    research_speed_factor = pop_research_speed_factor
+    compliance_gain = pop_compliance_gain
+    production_factory_max_efficiency_factor = pop_production_factory_max_efficiency_factor
+
+    political_power_factor = pop_political_power_factor
+    political_advisor_cost_factor = pop_political_advisor_cost_factor
+    political_power_gain = pop_political_power_gain
+
+    max_planning = pop_max_planning
+    army_org_factor = pop_army_org_factor
+    org_loss_when_moving = pop_org_loss_when_moving
+    army_attack_factor = pop_army_attack_factor
+}

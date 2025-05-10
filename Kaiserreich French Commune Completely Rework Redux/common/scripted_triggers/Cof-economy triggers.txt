@@ -1,0 +1,35 @@
+Cof_economy_model_co_ops_advtanage = {
+    custom_trigger_tooltip = {
+        tooltip = Cof_economy_model_co_ops_advtanage
+        check_variable = { Cof_economy_model_co_ops > Cof_economy_model_market } 
+        check_variable = { Cof_economy_model_co_ops > Cof_economy_model_plan } 
+        check_variable = { Cof_economy_model_co_ops > Cof_economy_model_order } 
+    }
+}
+
+Cof_economy_model_market_advtanage = {
+    custom_trigger_tooltip = {
+        tooltip = Cof_economy_model_market_advtanage
+        check_variable = { Cof_economy_model_market > Cof_economy_model_co_ops } 
+        check_variable = { Cof_economy_model_market > Cof_economy_model_plan } 
+        check_variable = { Cof_economy_model_market > Cof_economy_model_order } 
+    }
+}
+
+Cof_economy_model_plan_advtanage = {
+    custom_trigger_tooltip = {
+        tooltip = Cof_economy_model_plan_advtanage
+        check_variable = { Cof_economy_model_plan > Cof_economy_model_market } 
+        check_variable = { Cof_economy_model_plan > Cof_economy_model_co_ops } 
+        check_variable = { Cof_economy_model_plan > Cof_economy_model_order } 
+    }
+}
+
+Cof_economy_model_order_advtanage = {
+    custom_trigger_tooltip = {
+        tooltip = Cof_economy_model_order_advtanage
+        check_variable = { Cof_economy_model_order > Cof_economy_model_market } 
+        check_variable = { Cof_economy_model_order > Cof_economy_model_plan } 
+        check_variable = { Cof_economy_model_order > Cof_economy_model_co_ops } 
+    }
+}

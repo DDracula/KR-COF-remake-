@@ -82,6 +82,8 @@ on_actions = {
 
                 army_faction_tendency_change = yes
                 class_pop_satisfactions_change = yes
+                add_dynamic_modifier = { modifier = Cof_politics_pop_impact }
+                politics_pop_impact_count = yes
                 
                 set_variable = { ecnomy_synd = 28 }
                 set_variable = { ecnomy_oppo = 24 }
@@ -114,6 +116,15 @@ on_actions = {
                 set_variable = { Cof_economy_model_market = 0 }
                 set_variable = { Cof_economy_model_plan = 0 }
                 set_variable = { Cof_economy_model_order = 0 }
+
+                set_variable = { Cof_army_theory_panzer_group = 0 }
+                set_variable = { Cof_army_theory_blitz_delite = 0 }
+                set_variable = { Cof_army_theory_motorization = 0 }
+                set_variable = { Cof_army_theory_infanty_artillery = 0 }
+                set_variable = { Cof_army_theory_nco_initiative = 0 }
+                set_variable = { Cof_army_theory_small_combat = 0 }
+                set_variable = { Cof_army_theory_centrailed_command = 0 }
+                set_variable = { Cof_army_theory_defensive_countattack = 0 }
             }
         }
     }

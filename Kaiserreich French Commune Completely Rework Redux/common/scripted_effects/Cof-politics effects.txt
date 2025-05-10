@@ -932,5 +932,264 @@ army_faction_tendency_change = {
     add_to_variable = { pop_army_sore = officers_tendc }
     add_to_variable = { pop_army_sore = ncos_tendc }
     add_to_variable = { pop_army_sore = soldiers_tendc }
+}
 
+politics_pop_impact_count = {
+    set_temp_variable = { popc_st = pop_satisfaction }
+    set_temp_variable = { popc_w = pop_workers }
+    set_temp_variable = { popc_sw = pop_satisfaction_workers }
+    set_temp_variable = { popc_p = pop_peasants }
+    set_temp_variable = { popc_sp = pop_satisfaction_peasants }
+    set_temp_variable = { popc_m = pop_merchants }
+    set_temp_variable = { popc_sm = pop_satisfaction_merchants }
+    set_temp_variable = { popc_s = pop_scholars }
+    set_temp_variable = { popc_ss = pop_satisfaction_scholars }
+    set_temp_variable = { popc_b = pop_bureaucrats }
+    set_temp_variable = { popc_sb = pop_satisfaction_bureaucrats }
+    set_temp_variable = { popc_a = pop_army }
+    set_temp_variable = { popc_sa = pop_satisfaction_army }
+
+    ####总共
+
+    set_temp_variable = { t1 = popc_st }
+    multiply_temp_variable = { t1 = 0.01 }
+    multiply_temp_variable = { t1 = 0.5 }
+    add_to_temp_variable = { t1 = -0.3 }
+
+    set_variable = { pop_stability_factor = t1 }
+
+    ####工人
+
+    set_temp_variable = { w1 = popc_sw }
+    multiply_temp_variable = { w1 = 0.01 }
+    add_to_temp_variable = { w1 = -0.5 }
+    multiply_temp_variable = { w1 = popc_w }
+    multiply_temp_variable = { w1 = 0.01 }
+    multiply_temp_variable = { w1 = 2 }
+    set_variable = { pop_production_factory_start_efficiency_factor = w1 }
+    #
+    set_temp_variable = { w2 = popc_sw }
+    multiply_temp_variable = { w2 = 0.01 }
+    add_to_temp_variable = { w2 = -0.5 }
+    multiply_temp_variable = { w2 = popc_w }
+    multiply_temp_variable = { w2 = 0.01 }
+    multiply_temp_variable = { w2 = 1 }
+    set_variable = { pop_production_factory_efficiency_gain_factor = w2 }
+    #
+    if = {
+        limit = {
+            OR = {
+                check_variable = { pop_workers > 35 } 
+                check_variable = { pop_workers = 35 } 
+            }
+        }
+        set_temp_variable = { w3 = popc_sw }
+        multiply_temp_variable = { w3 = 0.01 }
+        add_to_temp_variable = { w3 = -0.5 }
+        multiply_temp_variable = { w3 = popc_w }
+        multiply_temp_variable = { w3 = 0.01 }
+        multiply_temp_variable = { w3 = 1 }
+    }
+    else = { w3 = 0 }
+    set_variable = { pop_industrial_capacity_factory = w3 }
+
+    ####农民
+
+    set_temp_variable = { p1 = popc_sp }
+    multiply_temp_variable = { p1 = 0.01 }
+    add_to_temp_variable = { p1 = -0.5 }
+    multiply_temp_variable = { p1 = popc_p }
+    multiply_temp_variable = { p1 = 0.01 }
+    multiply_temp_variable = { p1 = 2 }
+    set_variable = { pop_local_resources_factor = p1 }
+    #
+    set_temp_variable = { p2 = popc_sp }
+    multiply_temp_variable = { p2 = 0.01 }
+    add_to_temp_variable = { p2 = -0.5 }
+    multiply_temp_variable = { p2 = popc_p }
+    multiply_temp_variable = { p2 = 0.01 }
+    multiply_temp_variable = { p2 = 1.5 }
+    set_variable = { pop_conscription_factor = p2 }
+    #
+    if = {
+        limit = {
+            OR = {
+                check_variable = { pop_peasants > 35 } 
+                check_variable = { pop_peasants = 35 } 
+            }
+        }
+        set_temp_variable = { p3 = popc_sp }
+        multiply_temp_variable = { p3 = 0.01 }
+        add_to_temp_variable = { p3 = -0.5 }
+        multiply_temp_variable = { p3 = popc_p }
+        multiply_temp_variable = { p3 = 0.01 }
+        multiply_temp_variable = { p3 = -1 }
+    }
+    else = { p3 = 0 }
+    set_variable = { pop_supply_consumption_factor = p3 }
+
+    ####小资产阶级
+    
+    set_temp_variable = { m1 = popc_sm }
+    multiply_temp_variable = { m1 = 0.01 }
+    add_to_temp_variable = { m1 = -0.5 }
+    multiply_temp_variable = { m1 = popc_m }
+    multiply_temp_variable = { m1 = 0.01 }
+    multiply_temp_variable = { m1 = 2 }
+    set_variable = { pop_production_speed_industrial_complex_factor = m1 }
+    #
+    set_temp_variable = { m2 = popc_sm }
+    multiply_temp_variable = { m2 = 0.01 }
+    add_to_temp_variable = { m2 = -0.5 }
+    multiply_temp_variable = { m2 = popc_m }
+    multiply_temp_variable = { m2 = 0.01 }
+    multiply_temp_variable = { m2 = 2 }
+    set_variable = { pop_production_speed_infrastructure_factor = m2 }
+    #
+    if = { 
+        limit = {
+             OR = {
+                check_variable = { pop_merchants > 35 } 
+                check_variable = { pop_merchants = 35 } 
+            }
+        }
+        set_temp_variable = { m3 = popc_sm }
+        multiply_temp_variable = { m3 = 0.01 }
+        add_to_temp_variable = { m3 = -0.5 }
+        multiply_temp_variable = { m3 = popc_m }
+        multiply_temp_variable = { m3 = 0.01 }
+        multiply_temp_variable = { m3 = -1.5 }
+    }
+    else = { m3 = 0 }
+    set_variable = { pop_consumer_goods_factor = m3 }
+
+    ####知识分子
+
+    set_temp_variable = { s1 = popc_ss }
+    multiply_temp_variable = { s1 = 0.01 }
+    add_to_temp_variable = { s1 = -0.5 }
+    multiply_temp_variable = { s1 = popc_s }
+    multiply_temp_variable = { s1 = 0.01 }
+    multiply_temp_variable = { s1 = 2 }
+    set_variable = { pop_research_speed_factor = s1 }
+    #
+    set_temp_variable = { s2 = popc_ss }
+    multiply_temp_variable = { s2 = 0.01 }
+    add_to_temp_variable = { s2 = -0.5 }
+    multiply_temp_variable = { s2 = popc_s }
+    multiply_temp_variable = { s2 = 0.01 }
+    multiply_temp_variable = { s2 = 1.5 }
+    set_variable = { pop_compliance_gain = s2 }
+    #
+    if = {
+        limit = {
+            OR = {
+                check_variable = { pop_scholars > 35 } 
+                check_variable = { pop_scholars = 35 } 
+            }
+        }
+        set_temp_variable = { s3 = popc_ss }
+        multiply_temp_variable = { s3 = 0.01 }
+        add_to_temp_variable = { s3 = -0.5 }
+        multiply_temp_variable = { s3 = popc_s }
+        multiply_temp_variable = { s3 = 0.01 }
+        multiply_temp_variable = { s3 = 1 }
+    }
+    else = { s3 = 0 }
+    set_variable = { pop_production_factory_max_efficiency_factor = s3 }
+
+    ####官僚
+    
+    set_temp_variable = { b1 = popc_sb }
+    multiply_temp_variable = { b1 = 0.01 }
+    add_to_temp_variable = { b1 = -0.5 }
+    multiply_temp_variable = { b1 = popc_b }
+    multiply_temp_variable = { b1 = 0.01 }
+    multiply_temp_variable = { b1 = 2.5 }
+    set_variable = { pop_political_power_factor = b1 }
+    #
+    set_temp_variable = { b2 = popc_sb }
+    multiply_temp_variable = { b2 = 0.01 }
+    add_to_temp_variable = { b2 = -0.5 }
+    multiply_temp_variable = { b2 = popc_b }
+    multiply_temp_variable = { b2 = 0.01 }
+    multiply_temp_variable = { b2 = -3 }
+    set_variable = { pop_political_advisor_cost_factor = b2 }
+    #
+    if = {
+        limit = {
+            OR = {
+                check_variable = { pop_bureaucrats > 35 } 
+                check_variable = { pop_bureaucrats = 35 } 
+            }
+        }
+        set_temp_variable = { b3 = popc_sb }
+        multiply_temp_variable = { b3 = 0.01 }
+        add_to_temp_variable = { b3 = -0.5 }
+        multiply_temp_variable = { b3 = popc_b }
+        multiply_temp_variable = { b3 = 0.01 }
+        multiply_temp_variable = { b3 = 10 }
+    }
+    else = { b3 = 0 }
+    set_variable = { pop_political_power_gain = b3 }
+
+    ####军队
+
+    set_temp_variable = { popc_ao = pop_army_officers }
+    set_temp_variable = { popc_an = pop_army_ncos }
+    set_temp_variable = { popc_as = pop_army_soldier }
+
+    ##军官
+    set_temp_variable = { ao1 = popc_sa }
+    multiply_temp_variable = { ao1 = 0.01 }
+    add_to_temp_variable = { ao1 = -0.5 }
+    multiply_temp_variable = { ao1 = popc_a }
+    multiply_temp_variable = { ao1 = 0.01 }
+    multiply_temp_variable = { ao1 = popc_ao }
+    multiply_temp_variable = { ao1 = 0.01 }
+    multiply_temp_variable = { ao1 = 5 }
+    set_variable = { pop_max_planning = ao1 }
+
+    ##士官
+    set_temp_variable = { an1 = popc_sa }
+    multiply_temp_variable = { an1 = 0.01 }
+    add_to_temp_variable = { an1 = -0.5 }
+    multiply_temp_variable = { an1 = popc_a }
+    multiply_temp_variable = { an1 = 0.01 }
+    multiply_temp_variable = { an1 = popc_an }
+    multiply_temp_variable = { an1 = 0.01 }
+    multiply_temp_variable = { an1 = 5 }
+    set_variable = { pop_army_org_factor = an1 }
+
+    ##士兵
+    set_temp_variable = { as1 = popc_sa }
+    multiply_temp_variable = { as1 = 0.01 }
+    add_to_temp_variable = { as1 = -0.5 }
+    multiply_temp_variable = { as1 = popc_a }
+    multiply_temp_variable = { as1 = 0.01 }
+    multiply_temp_variable = { as1 = popc_as }
+    multiply_temp_variable = { as1 = 0.01 }
+    multiply_temp_variable = { as1 = -5 }
+    set_variable = { pop_org_loss_when_moving = as1 }
+
+    #
+    if = {
+        limit = {
+            OR = {
+                check_variable = { pop_army > 35 } 
+                check_variable = { pop_army = 35 } 
+            }
+        }
+        set_temp_variable = { a1 = popc_sa }
+        multiply_temp_variable = { a1 = 0.01 }
+        add_to_temp_variable = { a1 = -0.5 }
+        multiply_temp_variable = { a1 = popc_a }
+        multiply_temp_variable = { a1 = 0.01 }
+        multiply_temp_variable = { a1 = 2 }
+    }
+    else = { a1 = 0 }
+    set_variable = { pop_army_attack_factor = a1 }
+
+    ####
+    force_update_dynamic_modifier = yes
 }
