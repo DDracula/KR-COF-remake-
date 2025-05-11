@@ -1,32 +1,82 @@
 Cof_politics_pop_impact = {
     icon = "GFX_dybamic_modifier_Cof_politics_pop_impact"
     custom_modifier_tooltip = Cof_politics_pop_impact_tt
-
-    
+    #平均
     stability_factor = pop_stability_factor
-
+    #工人
     production_factory_start_efficiency_factor = pop_production_factory_start_efficiency_factor
     production_factory_efficiency_gain_factor = pop_production_factory_efficiency_gain_factor
-    industrial_capacity_factory = pop_industrial_capacity_factory
-
+    industrial_capacity_factory = pop_industrial_capacity_factory #影响>35%
+    #农民
     local_resources_factor = pop_local_resources_factor
     conscription_factor = pop_conscription_factor
-    supply_consumption_factor = pop_supply_consumption_factor
-
+    supply_consumption_factor = pop_supply_consumption_factor #影响>35%
+    #小资产阶级
     production_speed_industrial_complex_factor = pop_production_speed_industrial_complex_factor
     production_speed_infrastructure_factor = pop_production_speed_infrastructure_factor
-    consumer_goods_factor = pop_consumer_goods_factor
-
+    consumer_goods_factor = pop_consumer_goods_factor #影响>35%
+    #知识分子
     research_speed_factor = pop_research_speed_factor
     compliance_gain = pop_compliance_gain
-    production_factory_max_efficiency_factor = pop_production_factory_max_efficiency_factor
-
+    production_factory_max_efficiency_factor = pop_production_factory_max_efficiency_factor #影响>35%
+    #官僚
     political_power_factor = pop_political_power_factor
     political_advisor_cost_factor = pop_political_advisor_cost_factor
-    political_power_gain = pop_political_power_gain
+    political_power_gain = pop_political_power_gain #影响>35%
+    #军队
+    max_planning = pop_max_planning #军官
+    army_org_factor = pop_army_org_factor #士官
+    org_loss_when_moving = pop_org_loss_when_moving #士兵
+    army_attack_factor = pop_army_attack_factor #影响>35%
+}
 
-    max_planning = pop_max_planning
-    army_org_factor = pop_army_org_factor
-    org_loss_when_moving = pop_org_loss_when_moving
-    army_attack_factor = pop_army_attack_factor
+Cof_economy_impact = {
+    icon = "GFX_dybamic_modifier_Cof_economy_impact"
+    custom_modifier_tooltip = Cof_economy_impact_tt
+    ##经济模式
+    #混合经济 +基建建设 +民工建设
+    production_speed_infrastructure_factor = econ_production_speed_infrastructure_factor
+
+    #合作社经济 +基础生产 +生产增长 
+    production_factory_start_efficiency_factor = econ_production_factory_start_efficiency_factor
+    production_factory_efficiency_gain_factor = econ_production_factory_efficiency_gain_factor
+
+    #市场经济 -生活消费品 +民工建设
+    consumer_goods_factor = econ_consumer_goods_factor
+    production_speed_industrial_complex_factor = econ_production_speed_industrial_complex_factor
+
+    #计划经济 +生产上限 +工厂产出 -生产增长
+    production_factory_max_efficiency_factor = econ_production_factory_max_efficiency_factor
+    industrial_capacity_factory = econ_industrial_capacity_factory
+
+    #统制经济 +军工建设 +资源效率
+    production_speed_arms_factory_factor = econ_production_speed_arms_factory_factor
+    local_resources_factor = econ_local_resources_factor
+
+    ##工业指标
+    #管理经验 +生产上限
+
+    #组织能力 +生产保持
+    line_change_production_efficiency_factor = econ_line_change_production_efficiency_factor
+    #机械工艺 +生产增长
+
+    ##农业指标
+    #机械化 +人口修正
+    conscription_factor = econ_conscription_factor
+    #化工生产 -补给消耗
+    supply_consumption_factor = econ_supply_consumption_factor
+    #农副产业链 -生活消费品
+
+    ##其他指标
+    #经济平等 -稳定度 -生产上限 +生活消费品
+    stability_factor = econ_stability_factor
+    #产业协作 +生产上限 +生产增长 +基础生产
+
+    #创新能力 +科研速度
+    research_speed_factor = econ_research_speed_factor
+}
+
+Cof_military_reform_impact = {
+    icon = "GFX_dybamic_modifier_Cof_military_reform_impact"
+    custom_modifier_tooltip = Cof_military_reform_impact_tt
 }

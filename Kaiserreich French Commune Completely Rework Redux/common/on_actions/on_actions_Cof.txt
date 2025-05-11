@@ -85,10 +85,10 @@ on_actions = {
                 add_dynamic_modifier = { modifier = Cof_politics_pop_impact }
                 politics_pop_impact_count = yes
                 
-                set_variable = { ecnomy_synd = 28 }
-                set_variable = { ecnomy_oppo = 24 }
-                set_variable = { ecnomy_jaco = 26 }
-                set_variable = { ecnomy_sore = 22 }
+                set_variable = { economy_synd = 28 }
+                set_variable = { economy_oppo = 24 }
+                set_variable = { economy_jaco = 26 }
+                set_variable = { economy_sore = 22 }
 
                 set_variable = { military_synd = 22 }
                 set_variable = { military_oppo = 26 }
@@ -96,7 +96,6 @@ on_actions = {
                 set_variable = { military_sore = 38 }
 
                 faction_infulences_count = yes
-
 
                 set_variable = { Cof_BGT_vs_CSP_value = 18 }
                 set_variable = { Cof_politics_intensity_of_struggle = 36 }
@@ -111,6 +110,10 @@ on_actions = {
                 set_variable = { econ_equal = 49 }
                 set_variable = { econ_link = 23 }
                 set_variable = { econ_innovate = 36 }
+
+                activate_mission = Cof_economy_period_change
+                add_dynamic_modifier = { modifier = Cof_economy_impact }
+                Cof_economy_impact_count = yes
 
                 set_variable = { Cof_economy_model_co_ops = 0 }
                 set_variable = { Cof_economy_model_market = 0 }

@@ -332,21 +332,21 @@ faction_infulences_count = {
     add_to_variable = { infulence_sore = class_pop_temp }
 
     #economy
-    set_temp_variable = { ecnomy_temp = ecnomy_synd }
-    multiply_temp_variable = { ecnomy_temp = 0.2 }
-    add_to_variable = { infulence_synd = ecnomy_temp }
+    set_temp_variable = { economy_temp = economy_synd }
+    multiply_temp_variable = { economy_temp = 0.2 }
+    add_to_variable = { infulence_synd = economy_temp }
 
-    set_temp_variable = { ecnomy_temp = ecnomy_oppo }
-    multiply_temp_variable = { ecnomy_temp = 0.2 }
-    add_to_variable = { infulence_oppo = ecnomy_temp }
+    set_temp_variable = { economy_temp = economy_oppo }
+    multiply_temp_variable = { economy_temp = 0.2 }
+    add_to_variable = { infulence_oppo = economy_temp }
 
-    set_temp_variable = { ecnomy_temp = ecnomy_jaco }
-    multiply_temp_variable = { ecnomy_temp = 0.2 }
-    add_to_variable = { infulence_jaco = ecnomy_temp }
+    set_temp_variable = { economy_temp = economy_jaco }
+    multiply_temp_variable = { economy_temp = 0.2 }
+    add_to_variable = { infulence_jaco = economy_temp }
 
-    set_temp_variable = { ecnomy_temp = ecnomy_sore }
-    multiply_temp_variable = { ecnomy_temp = 0.2 }
-    add_to_variable = { infulence_sore = ecnomy_temp }
+    set_temp_variable = { economy_temp = economy_sore }
+    multiply_temp_variable = { economy_temp = 0.2 }
+    add_to_variable = { infulence_sore = economy_temp }
 
     #army
     set_temp_variable = { military_temp = military_synd }
@@ -477,6 +477,16 @@ csp_position_change = {
     faction_infulences_count = yes
 }
 
+###     阶层席位变化
+#		set_temp_variable = { smc = 0 }
+#		set_temp_variable = { src = 0 }
+#		set_temp_variable = { occ = 0 }
+#		set_temp_variable = { oac = 0 }
+#		set_temp_variable = { jnc = 0 }
+#		set_temp_variable = { jrc = 0 }
+#		set_temp_variable = { soc = 0 }
+#		set_temp_variable = { syc = 0 }
+#		bgt_seat_change = yes
 bgt_seat_change = {
     if = { limit = { check_variable = { smc = 0 } } }
 	else = {
@@ -533,6 +543,14 @@ bgt_seat_change = {
     faction_infulences_count = yes
 }
 
+###     阶层好感度变化
+#		set_temp_variable = { wc = 0 }
+#		set_temp_variable = { pc = 0 }
+#		set_temp_variable = { mc = 0 }
+#		set_temp_variable = { sc = 0 }
+#		set_temp_variable = { bc = 0 }
+#		set_temp_variable = { ac = 0 }
+#		class_pop_satisfactions_change = yes
 class_pop_satisfactions_change = {
     if = { limit = { check_variable = { wc = 0 } }	}
 	else = {
@@ -657,6 +675,13 @@ class_pop_change = {
     faction_infulences_count = yes
 }
 
+###     阶层倾向变化
+#		set_temp_variable = { pop_target = 0 }    #1工人2农民3小资4知识5官僚6军官7士官8士兵
+#		set_temp_variable = { pop_syndc = 0 }
+#		set_temp_variable = { pop_oppoc = 0 }
+#		set_temp_variable = { pop_jacoc = 0 }
+#		set_temp_variable = { pop_sorec = 0 }
+#		class_pop_faction_tendency_change = yes
 class_pop_faction_tendency_change = {
     if = {
         limit = { check_variable = { pop_target = 1 } } #workers 
@@ -955,7 +980,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { t1 = 0.01 }
     multiply_temp_variable = { t1 = 0.5 }
     add_to_temp_variable = { t1 = -0.3 }
-
+    set_variable = { t1_show = t1 }
     set_variable = { pop_stability_factor = t1 }
 
     ####工人
@@ -966,6 +991,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { w1 = popc_w }
     multiply_temp_variable = { w1 = 0.01 }
     multiply_temp_variable = { w1 = 2 }
+    set_variable = { w1_show = w1 }
     set_variable = { pop_production_factory_start_efficiency_factor = w1 }
     #
     set_temp_variable = { w2 = popc_sw }
@@ -974,6 +1000,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { w2 = popc_w }
     multiply_temp_variable = { w2 = 0.01 }
     multiply_temp_variable = { w2 = 1 }
+    set_variable = { w2_show = w2 }
     set_variable = { pop_production_factory_efficiency_gain_factor = w2 }
     #
     if = {
@@ -989,8 +1016,9 @@ politics_pop_impact_count = {
         multiply_temp_variable = { w3 = popc_w }
         multiply_temp_variable = { w3 = 0.01 }
         multiply_temp_variable = { w3 = 1 }
+        set_variable = { w3_show = w3 }
     }
-    else = { w3 = 0 }
+    else = { set_temp_variable = { w3 = 0 } }
     set_variable = { pop_industrial_capacity_factory = w3 }
 
     ####农民
@@ -1001,6 +1029,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { p1 = popc_p }
     multiply_temp_variable = { p1 = 0.01 }
     multiply_temp_variable = { p1 = 2 }
+    set_variable = { p1_show = p1 }
     set_variable = { pop_local_resources_factor = p1 }
     #
     set_temp_variable = { p2 = popc_sp }
@@ -1009,6 +1038,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { p2 = popc_p }
     multiply_temp_variable = { p2 = 0.01 }
     multiply_temp_variable = { p2 = 1.5 }
+    set_variable = { p2_show = p2 }
     set_variable = { pop_conscription_factor = p2 }
     #
     if = {
@@ -1024,8 +1054,9 @@ politics_pop_impact_count = {
         multiply_temp_variable = { p3 = popc_p }
         multiply_temp_variable = { p3 = 0.01 }
         multiply_temp_variable = { p3 = -1 }
+        set_variable = { p3_show = p3 }
     }
-    else = { p3 = 0 }
+    else = { set_temp_variable = { p3 = 0 } }
     set_variable = { pop_supply_consumption_factor = p3 }
 
     ####小资产阶级
@@ -1036,6 +1067,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { m1 = popc_m }
     multiply_temp_variable = { m1 = 0.01 }
     multiply_temp_variable = { m1 = 2 }
+    set_variable = { m1_show = m1 }
     set_variable = { pop_production_speed_industrial_complex_factor = m1 }
     #
     set_temp_variable = { m2 = popc_sm }
@@ -1044,6 +1076,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { m2 = popc_m }
     multiply_temp_variable = { m2 = 0.01 }
     multiply_temp_variable = { m2 = 2 }
+    set_variable = { m2_show = m2 }
     set_variable = { pop_production_speed_infrastructure_factor = m2 }
     #
     if = { 
@@ -1059,8 +1092,9 @@ politics_pop_impact_count = {
         multiply_temp_variable = { m3 = popc_m }
         multiply_temp_variable = { m3 = 0.01 }
         multiply_temp_variable = { m3 = -1.5 }
+        set_variable = { m3_show = m3 }
     }
-    else = { m3 = 0 }
+    else = { set_temp_variable = { m3 = 0 } }
     set_variable = { pop_consumer_goods_factor = m3 }
 
     ####知识分子
@@ -1071,6 +1105,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { s1 = popc_s }
     multiply_temp_variable = { s1 = 0.01 }
     multiply_temp_variable = { s1 = 2 }
+    set_variable = { s1_show = s1 }
     set_variable = { pop_research_speed_factor = s1 }
     #
     set_temp_variable = { s2 = popc_ss }
@@ -1079,6 +1114,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { s2 = popc_s }
     multiply_temp_variable = { s2 = 0.01 }
     multiply_temp_variable = { s2 = 1.5 }
+    set_variable = { s2_show = s2 }
     set_variable = { pop_compliance_gain = s2 }
     #
     if = {
@@ -1094,8 +1130,9 @@ politics_pop_impact_count = {
         multiply_temp_variable = { s3 = popc_s }
         multiply_temp_variable = { s3 = 0.01 }
         multiply_temp_variable = { s3 = 1 }
+        set_variable = { s3_show = s3 }
     }
-    else = { s3 = 0 }
+    else = { set_temp_variable = { s3 = 0 } }
     set_variable = { pop_production_factory_max_efficiency_factor = s3 }
 
     ####官僚
@@ -1106,6 +1143,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { b1 = popc_b }
     multiply_temp_variable = { b1 = 0.01 }
     multiply_temp_variable = { b1 = 2.5 }
+    set_variable = { b1_show = b1 }
     set_variable = { pop_political_power_factor = b1 }
     #
     set_temp_variable = { b2 = popc_sb }
@@ -1114,6 +1152,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { b2 = popc_b }
     multiply_temp_variable = { b2 = 0.01 }
     multiply_temp_variable = { b2 = -3 }
+    set_variable = { b2_show = b2 }
     set_variable = { pop_political_advisor_cost_factor = b2 }
     #
     if = {
@@ -1129,8 +1168,9 @@ politics_pop_impact_count = {
         multiply_temp_variable = { b3 = popc_b }
         multiply_temp_variable = { b3 = 0.01 }
         multiply_temp_variable = { b3 = 10 }
+        set_variable = { b3_show = b3 }
     }
-    else = { b3 = 0 }
+    else = { set_temp_variable = { b3 = 0 } }
     set_variable = { pop_political_power_gain = b3 }
 
     ####军队
@@ -1148,6 +1188,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { ao1 = popc_ao }
     multiply_temp_variable = { ao1 = 0.01 }
     multiply_temp_variable = { ao1 = 5 }
+    set_variable = { ao1_show = ao1 }
     set_variable = { pop_max_planning = ao1 }
 
     ##士官
@@ -1159,6 +1200,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { an1 = popc_an }
     multiply_temp_variable = { an1 = 0.01 }
     multiply_temp_variable = { an1 = 5 }
+    set_variable = { an1_show = an1 }
     set_variable = { pop_army_org_factor = an1 }
 
     ##士兵
@@ -1170,6 +1212,7 @@ politics_pop_impact_count = {
     multiply_temp_variable = { as1 = popc_as }
     multiply_temp_variable = { as1 = 0.01 }
     multiply_temp_variable = { as1 = -5 }
+    set_variable = { as1_show = as1 }
     set_variable = { pop_org_loss_when_moving = as1 }
 
     #
@@ -1186,8 +1229,9 @@ politics_pop_impact_count = {
         multiply_temp_variable = { a1 = popc_a }
         multiply_temp_variable = { a1 = 0.01 }
         multiply_temp_variable = { a1 = 2 }
+        set_variable = { a1_show = a1 }
     }
-    else = { a1 = 0 }
+    else = { set_temp_variable = { a1 = 0 } }
     set_variable = { pop_army_attack_factor = a1 }
 
     ####

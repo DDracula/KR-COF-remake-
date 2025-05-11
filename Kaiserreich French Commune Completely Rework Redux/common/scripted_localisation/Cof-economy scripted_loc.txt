@@ -180,3 +180,70 @@ defined_text = {
         localization_key = Cof_economy_model_mixed
     }
 }
+
+defined_text = {
+    name = Cof_economy_model_buff
+    text = {
+		trigger = {  Cof_economy_model_co_ops_advtanage = yes }
+		localization_key = Cof_economy_model_buff_co_ops
+	}
+    text = {
+		trigger = {  Cof_economy_model_market_advtanage = yes }
+		localization_key = Cof_economy_model_buff_market
+	}
+    text = {
+		trigger = {  Cof_economy_model_plan_advtanage = yes }
+		localization_key = Cof_economy_model_buff_plan
+	}
+    text = {
+		trigger = {  Cof_economy_model_order_advtanage = yes }
+		localization_key = Cof_economy_model_buff_order
+	}
+    text = {
+        localization_key = Cof_economy_model_buff_mixed
+    }
+}
+
+defined_text = {
+    name = econ_target_variable
+    text = {
+		trigger = { check_variable = { target_t = 0 } }
+		localization_key = cof_econ_values
+	}
+    text = {
+		trigger = { check_variable = { target_t = 1 } }
+		localization_key = econ_industry_manage
+	}
+    text = {
+		trigger = { check_variable = { target_t = 2 } }
+		localization_key = econ_industry_organize
+	}
+    text = {
+		trigger = { check_variable = { target_t = 3 } }
+		localization_key = econ_industry_machine
+	}
+    text = {
+		trigger = { check_variable = { target_t = 4 } }
+		localization_key = econ_agriculture_mechanized
+	}
+    text = {
+		trigger = { check_variable = { target_t = 5 } }
+		localization_key = econ_agriculture_chemical
+	}
+    text = {
+		trigger = { check_variable = { target_t = 6 } }
+		localization_key = econ_agriculture_chain
+	}
+    text = {
+		trigger = { check_variable = { target_t = 7 } }
+		localization_key = econ_equal
+	}
+    text = {
+		trigger = { check_variable = { target_t = 8 } }
+		localization_key = econ_link
+	}
+    text = {
+		trigger = { check_variable = { target_t = 9 } }
+		localization_key = econ_innovate
+	}
+}

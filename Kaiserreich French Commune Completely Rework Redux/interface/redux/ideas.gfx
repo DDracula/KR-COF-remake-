@@ -4,4 +4,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/Cof_politics_pop_impact.dds"
 	}
 
+	spriteType = {
+		name = "GFX_dybamic_modifier_Cof_economy_impact"
+		texturefile = "gfx/interface/ideas/Cof_economy_impact.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dybamic_modifier_Cof_military_reform_impact"
+		texturefile = "gfx/interface/ideas/Cof_military_reform_impact.png"
+	}
+
 }

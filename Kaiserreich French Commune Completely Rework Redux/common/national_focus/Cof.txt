@@ -16,14 +16,16 @@ focus_tree = {
     ### economy
 	#CGT 
 	focus = {
-		id = FRA_expand_CGT
-		icon = GFX_focus_
+		id = FRA_expand_CGT 
+		icon = GFX_focus_ 
 		mutually_exclusive = { focus = FRA_weaken_CGT }
+		available = {
+			
+		}
 		x = 1
 		y = 0
 		cost = 1
 		completion_reward = {
-
 		}
 	}
 

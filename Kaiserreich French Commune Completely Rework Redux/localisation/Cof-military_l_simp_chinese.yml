@@ -33,3 +33,6 @@
 
   Cof_militray_reform_period_change:0 "军事周期变化"
   Cof_army_class_show_detail:0 "显示/隐藏军队详细信息"
+
+  Cof_military_reform_impact:0 "公社军队"
+  Cof_military_reform_impact_tt:0 "根据[Cof_army_theory]学说的[?Cof_army_theory_implementation|G.1%%]落实度\n[Cof_army_theory_buff]"

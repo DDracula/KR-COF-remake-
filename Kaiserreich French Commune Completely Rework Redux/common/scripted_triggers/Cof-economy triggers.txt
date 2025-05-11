@@ -33,3 +33,11 @@ Cof_economy_model_order_advtanage = {
         check_variable = { Cof_economy_model_order > Cof_economy_model_co_ops } 
     }
 }
+
+cof_econ_target_more_than_x = {
+    custom_trigger_tooltip = {
+        tooltip = econ_target_more_than_x
+        cof_econ_target_choose = yes
+        check_variable = { target_v > target_num }
+    }
+}

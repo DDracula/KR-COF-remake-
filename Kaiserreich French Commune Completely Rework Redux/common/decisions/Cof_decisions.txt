@@ -58,6 +58,7 @@ Cof_economy = {
 		fixed_random_seed = no
 		days_mission_timeout = 30
 		timeout_effect = {
+			economy_econ_values_period_change = yes
 			hidden_effect = { activate_mission = Cof_economy_period_change }		
 		}
 	}
