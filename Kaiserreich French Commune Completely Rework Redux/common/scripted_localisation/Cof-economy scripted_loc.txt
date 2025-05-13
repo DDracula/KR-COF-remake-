@@ -246,4 +246,21 @@ defined_text = {
 		trigger = { check_variable = { target_t = 9 } }
 		localization_key = econ_innovate
 	}
+
+    text = {
+		trigger = { check_variable = { target_t = 11 } }
+		localization_key = economy_synd
+	}
+    text = {
+		trigger = { check_variable = { target_t = 12 } }
+		localization_key = economy_oppo
+	}
+    text = {
+		trigger = { check_variable = { target_t = 13 } }
+		localization_key = economy_jaco
+	}
+    text = {
+		trigger = { check_variable = { target_t = 14 } }
+		localization_key = economy_sore
+	}
 }

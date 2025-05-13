@@ -5,25 +5,25 @@
 #		set_temp_variable = { eoc = 0 }
 #		Cof_economy_model_change = yes
 Cof_economy_model_change = {
-    if = { limit = { check_variable = { ecc < 1 } } }
+    if = { limit = { check_variable = { ecc = 0 } } }
 	else = {
 		add_to_variable = { Cof_economy_model_co_ops = ecc }
 		custom_effect_tooltip = Cof_economy_model_co_ops_change_tips
 	}
 
-    if = { limit = { check_variable = { emc < 1 } } }
+    if = { limit = { check_variable = { emc = 0 } } }
 	else = {
 		add_to_variable = { Cof_economy_model_market = emc }
 		custom_effect_tooltip = Cof_economy_model_market_change_tips
 	}
 
-    if = { limit = { check_variable = { epc < 1 } } }
+    if = { limit = { check_variable = { epc = 0 } } }
 	else = {
 		add_to_variable = { Cof_economy_model_plan = epc }
 		custom_effect_tooltip = Cof_economy_model_plan_change_tips
 	}
 
-    if = { limit = { check_variable = { eoc < 1 } } }
+    if = { limit = { check_variable = { eoc = 0 } } }
 	else = {
 		add_to_variable = { Cof_economy_model_order = eoc }
 		custom_effect_tooltip = Cof_economy_model_order_change_tips
@@ -295,6 +295,23 @@ cof_econ_target_choose = {
 		limit = { check_variable = { target_t = 9 } }
 		set_temp_variable = { target_v = econ_innovate }
 	}
+
+	else_if = { 
+		limit = { check_variable = { target_t = 11 } }
+		set_temp_variable = { target_v = economy_synd }
+	}
+	else_if = { 
+		limit = { check_variable = { target_t = 12 } }
+		set_temp_variable = { target_v = economy_oppo }
+	}
+	else_if = { 
+		limit = { check_variable = { target_t = 13 } }
+		set_temp_variable = { target_v = economy_jaco }
+	}
+	else_if = { 
+		limit = { check_variable = { target_t = 14 } }
+		set_temp_variable = { target_v = economy_sore }
+	}
 }
 
 ###		经济数值改变
@@ -363,6 +380,59 @@ cof_econ_target_change = {
 		add_to_variable = { econ_agriculture_chain = eic }
 		custom_effect_tooltip = econ_innovate_change_tips
 	}
+
+	clamp_variable = {
+        var = cof_econ_values
+        max = 100
+        min = -100
+    }
+	clamp_variable = {
+        var = econ_industry_manage
+        max = 100
+        min = 0
+    }
+	clamp_variable = {
+        var = econ_industry_organize
+        max = 100
+        min = 0
+    }
+	clamp_variable = {
+        var = econ_industry_machine
+        max = 100
+        min = 0
+    }
+
+	clamp_variable = {
+        var = econ_agriculture_mechanized
+        max = 100
+        min = 0
+    }
+	clamp_variable = {
+        var = econ_agriculture_chemical
+        max = 100
+        min = 0
+    }
+	clamp_variable = {
+        var = econ_agriculture_chain
+        max = 100
+        min = 0
+    }
+
+	clamp_variable = {
+        var = econ_equal
+        max = 100
+        min = 0
+    }
+	clamp_variable = {
+        var = econ_link
+        max = 100
+        min = 0
+    }
+	clamp_variable = {
+        var = econ_agriculture_chain
+        max = 100
+        min = 0
+    }
 }
 
 ###		派系经济影响力变化

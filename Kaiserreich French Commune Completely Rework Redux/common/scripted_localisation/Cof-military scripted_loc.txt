@@ -93,3 +93,80 @@ defined_text = {
     text = { localization_key = Cof_army_theory_no }
 }
 
+defined_text = {
+	name = Cof_army_theory_buff
+    text = {
+        trigger = { Cof_army_theory_panzer_group_advtanage = yes }
+        localization_key = Cof_army_theory_panzer_group_buff
+    }
+    text = {
+        trigger = { Cof_army_theory_blitz_delite_advtanage = yes }
+        localization_key = Cof_army_theory_blitz_delite_buff
+    }
+    text = {
+        trigger = { Cof_army_theory_motorization_advtanage = yes }
+        localization_key = Cof_army_theory_motorization_buff
+    }
+    text = {
+        trigger = { Cof_army_theory_infanty_artillery_advtanage = yes }
+        localization_key = Cof_army_theory_infanty_artillery_buff
+    }
+    text = {
+        trigger = { Cof_army_theory_centrailed_command_advtanage = yes }
+        localization_key = Cof_army_theory_centrailed_command_buff
+    }
+    text = {
+        trigger = { Cof_army_theory_defensive_countattack_advtanage = yes }
+        localization_key = Cof_army_theory_defensive_countattack_buff
+    }
+    text = {
+        trigger = { Cof_army_theory_nco_initiative_advtanage = yes }
+        localization_key = Cof_army_theory_nco_initiative_buff
+    }
+    text = {
+        trigger = { Cof_army_theory_small_combat_advtanage = yes }
+        localization_key = Cof_army_theory_small_combat_buff
+    }
+    text = { localization_key = Cof_army_theory_no_buff }
+}
+
+defined_text = {
+    name = mili_target_variable
+    text = {
+		trigger = { check_variable = { target_t = 1 } }
+		localization_key = Cof_army_autonomy
+	}
+    text = {
+		trigger = { check_variable = { target_t = 2 } }
+		localization_key = Cof_army_willing
+	}
+    text = {
+		trigger = { check_variable = { target_t = 3 } }
+		localization_key = Cof_army_training
+	}
+    text = {
+		trigger = { check_variable = { target_t = 4 } }
+		localization_key = Cof_army_equpiment
+	}
+    text = {
+		trigger = { check_variable = { target_t = 5 } }
+		localization_key = Cof_army_passionate
+	}
+
+    text = {
+		trigger = { check_variable = { target_t = 11 } }
+		localization_key = military_synd
+	}
+    text = {
+		trigger = { check_variable = { target_t = 12 } }
+		localization_key = military_oppo
+	}
+    text = {
+		trigger = { check_variable = { target_t = 13 } }
+		localization_key = military_jaco
+	}
+    text = {
+		trigger = { check_variable = { target_t = 14 } }
+		localization_key = military_sore
+	}
+}

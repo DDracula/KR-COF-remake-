@@ -2,9 +2,9 @@
   Cof_economy:0 "公社经济"
   Cof_economy_detail1_key:0 "很多事情不是一句革命胜利就能解决的，经济尤其如此，废墟和残骸不会自己变出崭新的工厂。面对被大战摧残的旧共和国，五花八门的经济流派都想将这片漂白后的羊皮纸染上自己的颜色，高度自治的地方公社以及政治派别的势均力敌使得我们的经济模式并没有在过去的革命岁月里得到一个确定的答案。不过，是时候该给这件问题画上句号了，没有经济体系的确定，就无法确保我们的政治果实不被敌人夺取。\n§g经济现状(经济活力)反应了我们经济的总体水平，当经济现状越好，我们就将得到越高的效果，我们的人民也将更加赞同我们的领导。§!\n"
   Cof_economy_detail2_key:0 "\n§g经济事物代表很大程度上代表了人民意志在经济事物上的态度，其所支持的经济改革政策我们很容易通过，但若是违背经济事务代表的意志，我们的改革就很有可能受挫。各个派系对于经济也拥有自己的影响力，虽然我们的经济改革政策能削弱其中的一些派系，但要是惹到了影响力大的派系，他们绝对不会善罢甘休。§!\n"
-  Cof_economy_detail3_key:0 "\n§g经济模式决定了我们可以进行什么样的经济活动，但经济活动也会影响我们的经济模式，甚至可以将我们的经济模式从一个转向另一个。无论是博采众长还是坚定不易地进行经济体制改革，我们的最终目的依旧是经济的增长。不同的经济模式将给我们不同的增益以及可解锁的经济活动，但同时，也会使得其他经济派别的人减少对我们的支持。不过，只要民众因为我们的经济改革而收益，他们就会主动拥护我们。经济活力将影响经济模式带来的效果。§!"
-  Cof_economy_detail4_key:0 "\n§g工业水平基本体现了一个国家的经济能力。虽然我们继承了旧共和国的工厂，但我们所实行的工团模式对于所有人来说都是一套全新的经济管理组织模式。即使我们承认所有工人平等，但是我们仍需要一些中层管理者来进行运转，他们的管理经验将影响$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$，基层工人的组织能力将影响$MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$。从纺纱机开始，机器就在劳动生产中扮演着重要的作用，那些无意义的重复劳动不应该由我们的人民来承受，对于工业机械的研发将影响$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$，但这种自动化也会导致一部分工人的失业，进而导致他们的不满。我们需要在机械与人类之间寻找到完美的平衡点，又或者不。\n§!"
-  Cof_economy_detail5_key:0 "\n§g如果说工业是经济的枝干，农业便是经济的根，我们首先得解决面包的问题，其次才是理想与未来。法兰西是一个农业大国，这片土地上孕育了无数的生命，很多人理所当然地享受自己的食物，却不知道田野的生活有多么幸苦。我们对于农业忽视的太久，以至于这片土地上原本沉默寡言的人们都要说出自己的声音。靠天吃饭的日子将一去不复返了，机械化能解放更多的劳动力，不再从事繁琐而低效的农业活动，这将影响$MODIFIER_CONSCRIPTION_TOTAL_FACTOR$。化肥工业则会使得亩产攀升，我们的人民将得到更富足的食物，这将影响$MODIFIER_SUPPLY_CONSUMPTION_FACTOR$。但仅仅是出售这些原生的事物并不能给农民带来更多的利益，延长产业链，不仅我们的农民会收益，我们的经济也会节节攀升。这将影响$MODIFIER_CONSUMER_GOODS_FACTOR$\n§!"
+  Cof_economy_detail3_key:0 "\n$Cof_economy_model_co_ops$得分：[?Cof_economy_model_co_ops|Y.0]\n$Cof_economy_model_market$得分：[?Cof_economy_model_market|Y.0]\n$Cof_economy_model_plan$得分：[?Cof_economy_model_plan|Y.0]\n$Cof_economy_model_order$得分：[?Cof_economy_model_order|Y.0]\n\n§g经济模式决定了我们可以进行什么样的经济活动，但经济活动也会影响我们的经济模式，甚至可以将我们的经济模式从一个转向另一个。无论是博采众长还是坚定不易地进行经济体制改革，我们的最终目的依旧是经济的增长。不同的经济模式将给我们不同的增益以及可解锁的经济活动，但同时，也会使得其他经济派别的人减少对我们的支持。不过，只要民众因为我们的经济改革而收益，他们就会主动拥护我们。经济活力将影响经济模式带来的效果。§!"
+  Cof_economy_detail4_key:0 "\n§g工业水平基本体现了一个国家的经济能力。虽然我们继承了旧共和国的工厂，但我们所实行的工团模式对于所有人来说都是一套全新的经济管理组织模式。从纺纱机开始，机器就在劳动生产中扮演着重要的作用，那些无意义的重复劳动不应该由我们的人民来承受，但这种自动化也会导致一部分工人的失业，进而导致他们的不满。我们需要在机械与人类之间寻找到完美的平衡点，又或者不。\n§!"
+  Cof_economy_detail5_key:0 "\n§g如果说工业是经济的枝干，农业便是经济的根，我们首先得解决面包的问题，其次才是理想与未来。法兰西是一个农业大国，这片土地上孕育了无数的生命，很多人理所当然地享受自己的食物，却不知道田野的生活有多么幸苦。我们对于农业忽视的太久，以至于这片土地上原本沉默寡言的人们都要说出自己的声音。靠天吃饭的日子将一去不复返了，机械化能解放更多的劳动力，不再从事繁琐而低效的农业活动。化肥工业则会使得亩产攀升，我们的人民将得到更富足的食物。但仅仅是出售这些原生的事物并不能给农民带来更多的利益，延长产业链，不仅我们的农民会收益，我们的经济也会节节攀升。\n"
   Cof_economy_detail6_key:0 "\n§g法兰西作为一个国家而言，经济中心一直富集在几个大城市之间，这那些贪婪的商人和堕落的贵族来说或许是一件好事情，但我们的人民选择说不。经济平等不仅仅是一种态度，而且是一种迫切的需要，没有人理应生活在痛苦中，即使我们已经宣称社会主义革命的胜利，但城乡的贫富差异依旧告诫着我们仍有需要奋斗之事。\n产业链与供应链是经济的重要组成部分，但由于我们过去对于经济的混乱态度，这使得我们各产业之间的联系并不紧密，这会带来很多损耗，工人的心血也有可能付之一炬。好在我们的改革可以挽回我们分崩离析的产业布局。\n在很多经济学看来，经济完全是一个静态的模型，丝毫没有在意到变革之风，这也是为什么封建主义被资本主义甩在后面，而社会主义也应该将资本主义甩在后面。创新能力是最好体现我们社会主义优越性的表现，当资本主义的发明者还在逐利的时候，他们就恰恰会错过那些对人类真正有益的东西，而这些东西，理应由我们带来。§!"
   Cof_economy_desc:0 "[Cof_economy_detail1]$cof_econ_values$：[cof_economy_situation] ([?cof_econ_values|+=.1])\n\n经济事物代表：[DED_leader_loc][Cof_economy_detail2]\n\n经济派系影响力：\n$faction_synd$：[?economy_synd|Y.1%%]\n$faction_oppo$：[?economy_oppo|Y.1%%]\n$faction_jaco$：[?economy_jaco|Y.1%%]\n$faction_sore$：[?economy_sore|Y.1%%]\n\n经济模式倾向：[Cof_economy_model][Cof_economy_detail3]\n\n经济活力指标：\n工业：\n-$econ_industry_manage$：[?econ_industry_manage|Y.1]\n-$econ_industry_organize$：[?econ_industry_organize|Y.1]\n-$econ_industry_machine$：[?econ_industry_machine|Y.1][Cof_economy_detail4]\n\n农业：\n-$econ_agriculture_mechanized$：[?econ_agriculture_mechanized|Y.1]\n-$econ_agriculture_chemical$：[?econ_agriculture_chemical|Y.1]\n-$econ_agriculture_chain$：[?econ_agriculture_chain|Y.1][Cof_economy_detail5]\n\n$econ_equal$：[?econ_equal|Y.1]\n$econ_link$：[?econ_link|Y.1]\n$econ_innovate$：[?econ_innovate|Y.1][Cof_economy_detail6]"
 
@@ -19,6 +19,10 @@
   econ_equal:0 "§Y经济平等§!"
   econ_link:0 "§Y产业联系§!"
   econ_innovate:0 "§Y创新能力§!"
+  economy_synd:0 "$faction_synd$对经济的影响力"
+  economy_oppo:0 "$faction_oppo$对经济的影响力"
+  economy_jaco:0 "$faction_jaco$对经济的影响力"
+  economy_sore:0 "$faction_sore$对经济的影响力"
 
   econ_values_change_tips:0 "$cof_econ_values$改变[?evc|+=.1]"
   econ_industry_manage_change_tips:0 "$econ_industry_manage$改变[?einc|+=.1]"
@@ -54,10 +58,12 @@
   economy_jaco_change_tips:0 "$faction_jaco$对经济的影响力改变[?ejacoc|.1%%+=]"
   economy_sore_change_tips:0 "$faction_sore$对经济的影响力改变[?esorec|.1%%+=]"
 
-  Cof_economy_model_co_ops_change_tips:0 "我们经济模式更加倾向$Cof_economy_model_co_ops$"
-  Cof_economy_model_market_change_tips:0 "我们经济模式更加倾向$Cof_economy_model_market$"
-  Cof_economy_model_plan_change_tips:0 "我们经济模式更加倾向$Cof_economy_model_plan$"
-  Cof_economy_model_order_change_tips:0 "我们经济模式更加倾向$Cof_economy_model_order$"
+  cof_econ_faction_influence_more_than_x:0 "$faction_synd$对经济的影响力大于"
+
+  Cof_economy_model_co_ops_change_tips:0 "我们经济模式更加倾向$Cof_economy_model_co_ops$([?ecc|+=.0])"
+  Cof_economy_model_market_change_tips:0 "我们经济模式更加倾向$Cof_economy_model_market$([?emc|+=.0])"
+  Cof_economy_model_plan_change_tips:0 "我们经济模式更加倾向$Cof_economy_model_plan$([?epc|+=.0])"
+  Cof_economy_model_order_change_tips:0 "我们经济模式更加倾向$Cof_economy_model_order$([?eoc|+=.0])"
 
   Cof_economy_model_co_ops_advtanage:0 "$Cof_economy_model_co_ops$为我们的主流经济模式"
   Cof_economy_model_market_advtanage:0 "$Cof_economy_model_market$为我们的主流经济模式"

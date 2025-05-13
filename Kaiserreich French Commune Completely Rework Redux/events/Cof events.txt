@@ -8,10 +8,7 @@ country_event = {
 	id = cofpolitics.0
 	is_triggered_only = yes
 	option = {
-		activate_mission = Cof_economy_period_change
-
-		politics_pop_impact_count = yes
-        Cof_economy_impact_count = yes
+		
 	}
 }
 

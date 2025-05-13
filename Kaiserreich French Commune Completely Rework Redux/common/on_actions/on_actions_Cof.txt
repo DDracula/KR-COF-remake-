@@ -124,10 +124,16 @@ on_actions = {
                 set_variable = { Cof_army_theory_blitz_delite = 0 }
                 set_variable = { Cof_army_theory_motorization = 0 }
                 set_variable = { Cof_army_theory_infanty_artillery = 0 }
-                set_variable = { Cof_army_theory_nco_initiative = 0 }
-                set_variable = { Cof_army_theory_small_combat = 0 }
                 set_variable = { Cof_army_theory_centrailed_command = 0 }
                 set_variable = { Cof_army_theory_defensive_countattack = 0 }
+                set_variable = { Cof_army_theory_nco_initiative = 0 }
+                set_variable = { Cof_army_theory_small_combat = 0 }
+
+                set_variable = { Cof_army_autonomy = 57 }
+                set_variable = { Cof_army_willing = 62 }
+                set_variable = { Cof_army_training = 31 }
+                set_variable = { Cof_army_equpiment = 44 }
+                set_variable = { Cof_army_passionate = 28 }
             }
         }
     }

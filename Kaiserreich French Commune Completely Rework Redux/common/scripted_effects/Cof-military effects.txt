@@ -1,0 +1,386 @@
+###     军队学说改变
+#		set_temp_variable = { atsynd1c = 0 }
+#		set_temp_variable = { atsynd2c = 0 }
+#		set_temp_variable = { atoppo1c = 0 }
+#		set_temp_variable = { atoppo2c = 0 }
+#		set_temp_variable = { atjaco1c = 0 }
+#		set_temp_variable = { atjaco2c = 0 }
+#		set_temp_variable = { atsore1c = 0 }
+#		set_temp_variable = { atsore2c = 0 }
+#		Cof_army_theory_change = yes
+Cof_army_theory_change = {
+    if = { limit = { check_variable = { atsynd1c = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_theory_panzer_group = atsynd1c }
+        custom_effect_tooltip = Cof_army_theory_change_tips1
+    }
+    if = { limit = { check_variable = { atsynd2c = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_theory_blitz_delite = atsynd2c }
+        custom_effect_tooltip = Cof_army_theory_change_tips2
+    }
+
+    if = { limit = { check_variable = { atoppo1c = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_theory_motorization = atoppo1c }
+        custom_effect_tooltip = Cof_army_theory_change_tips3
+    }
+    if = { limit = { check_variable = { atoppo2c = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_theory_infanty_artillery = atoppo2c }
+        custom_effect_tooltip = Cof_army_theory_change_tips4
+    }
+
+    if = { limit = { check_variable = { atjaco1c = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_theory_centrailed_command = atjaco1c }
+        custom_effect_tooltip = Cof_army_theory_change_tips5
+    }
+    if = { limit = { check_variable = { atjaco2c = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_theory_defensive_countattack = atjaco2c }
+        custom_effect_tooltip = Cof_army_theory_change_tips6
+    }
+
+    if = { limit = { check_variable = { atsore1c = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_theory_nco_initiative = atsore1c }
+        custom_effect_tooltip = Cof_army_theory_change_tips7
+    }
+    if = { limit = { check_variable = { atsore2c = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_theory_small_combat = atsore2c }
+        custom_effect_tooltip = Cof_army_theory_change_tips8
+    }
+
+    Cof_army_theory_implementation_judge = yes
+}
+
+Cof_army_theory_implementation_change_this = {
+    if = { limit = { check_variable = { atimpc = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_theory_implementation = atimpc }
+        custom_effect_tooltip = Cof_army_theory_implementation_change_this_tips
+        if = {
+            limit = { Cof_army_theory_panzer_group_advtanage = yes }
+            set_variable = { atimp1 = Cof_army_theory_implementation }
+        }
+        else_if = { 
+            limit = { Cof_army_theory_blitz_delite_advtanage = yes }
+            set_variable = { atimp2 = Cof_army_theory_implementation }
+        }
+        else_if = { 
+            limit = { Cof_army_theory_motorization_advtanage = yes }
+            set_variable = { atimp3 = Cof_army_theory_implementation }
+        }
+        else_if = { 
+            limit = { Cof_army_theory_infanty_artillery_advtanage = yes }
+            set_variable = { atimp4 = Cof_army_theory_implementation }
+        }
+        else_if = { 
+            limit = { Cof_army_theory_centrailed_command_advtanage = yes }
+            set_variable = { atimp5 = Cof_army_theory_implementation }
+        }
+        else_if = { 
+            limit = { Cof_army_theory_defensive_countattack_advtanage = yes }
+            set_variable = { atimp6 = Cof_army_theory_implementation }
+        }
+        else_if = { 
+            limit = { Cof_army_theory_nco_initiative_advtanage = yes }
+            set_variable = { atimp7 = Cof_army_theory_implementation }
+        }
+        else_if = { 
+            limit = { Cof_army_theory_small_combat_advtanage = yes }
+            set_variable = { atimp8 = Cof_army_theory_implementation }
+        }
+        else = { set_variable = { atimp0 = Cof_army_theory_implementation } }
+    }
+}
+
+Cof_army_theory_implementation_change = {
+    Cof_army_theory_implementation_change_this = yes
+    
+    if = { limit = { check_variable = { atimp1c = 0 } } }
+    else = {
+        add_to_variable = { atimp1 = atimp1c }
+        custom_effect_tooltip = Cof_army_theory_implementation_change_tips1
+    }
+
+    if = { limit = { check_variable = { atimp2c = 0 } } }
+    else = {
+        add_to_variable = { atimp2 = atimp2c }
+        custom_effect_tooltip = Cof_army_theory_implementation_change_tips2
+    }
+
+    if = { limit = { check_variable = { atimp3c = 0 } } }
+    else = {
+        add_to_variable = { atimp3 = atimp3c }
+        custom_effect_tooltip = Cof_army_theory_implementation_change_tips3
+    }
+
+    if = { limit = { check_variable = { atimp4c = 0 } } }
+    else = {
+        add_to_variable = { atimp4 = atimp4c }
+        custom_effect_tooltip = Cof_army_theory_implementation_change_tips4
+    }
+
+    if = { limit = { check_variable = { atimp5c = 0 } } }
+    else = {
+        add_to_variable = { atimp5 = atimp5c }
+        custom_effect_tooltip = Cof_army_theory_implementation_change_tips5
+    }
+
+    if = { limit = { check_variable = { atimp6c = 0 } } }
+    else = {
+        add_to_variable = { atimp6 = atimp6c }
+        custom_effect_tooltip = Cof_army_theory_implementation_change_tips6
+    }
+
+    if = { limit = { check_variable = { atimp7c = 0 } } }
+    else = {
+        add_to_variable = { atimp7 = atimp7c }
+        custom_effect_tooltip = Cof_army_theory_implementation_change_tips7
+    }
+
+    if = { limit = { check_variable = { atimp8c = 0 } } }
+    else = {
+        add_to_variable = { atimp7 = atimp8c }
+        custom_effect_tooltip = Cof_army_theory_implementation_change_tips8
+    }
+}
+
+Cof_army_theory_implementation_judge = {
+    if = {
+        limit = { Cof_army_theory_panzer_group_advtanage = yes }
+        set_variable = { Cof_army_theory_implementation = atimp1 }
+    }
+    else_if = { 
+        limit = { Cof_army_theory_blitz_delite_advtanage = yes }
+        set_variable = { Cof_army_theory_implementation = atimp2 }
+    }
+    else_if = { 
+        limit = { Cof_army_theory_motorization_advtanage = yes }
+        set_variable = { Cof_army_theory_implementation = atimp3 }
+    }
+    else_if = { 
+        limit = { Cof_army_theory_infanty_artillery_advtanage = yes }
+        set_variable = { Cof_army_theory_implementation = atimp4 }
+    }
+    else_if = { 
+        limit = { Cof_army_theory_centrailed_command_advtanage = yes }
+        set_variable = { Cof_army_theory_implementation = atimp5 }
+    }
+    else_if = { 
+        limit = { Cof_army_theory_defensive_countattack_advtanage = yes }
+        set_variable = { Cof_army_theory_implementation = atimp6 }
+    }
+    else_if = { 
+        limit = { Cof_army_theory_nco_initiative_advtanage = yes }
+        set_variable = { Cof_army_theory_implementation = atimp7 }
+    }
+    else_if = { 
+        limit = { Cof_army_theory_small_combat_advtanage = yes }
+        set_variable = { Cof_army_theory_implementation = atimp8 }
+    }
+    else = {
+        set_variable = { Cof_army_theory_implementation = atimp0 }
+    }
+}
+
+
+
+###     军事改革数值变化
+#		set_temp_variable = { aac = 0 }
+#		set_temp_variable = { awc = 0 }
+#		set_temp_variable = { atc = 0 }
+#		set_temp_variable = { aec = 0 }
+#		set_temp_variable = { apc = 0 }
+#		Cof_army_reform_values_change = yes
+Cof_army_reform_values_change = {
+    if = { limit = { check_variable = { aac = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_autonomy = aac }
+        custom_effect_tooltip = Cof_army_autonomy_change_tips
+    }
+
+    if = { limit = { check_variable = { awc = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_willing = awc }
+        custom_effect_tooltip = Cof_army_willing_change_tips
+    }
+
+    if = { limit = { check_variable = { atc = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_training = atc }
+        custom_effect_tooltip = Cof_army_training_change_tips
+    }
+
+    if = { limit = { check_variable = { aec = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_equpiment = aec }
+        custom_effect_tooltip = Cof_army_equpiment_change_tips
+    }
+
+    if = { limit = { check_variable = { apc = 0 } } }
+    else = {
+        add_to_variable = { Cof_army_passionate = apc }
+        custom_effect_tooltip =  Cof_army_passionate_change_tips
+    }
+
+    clamp_variable = {
+        var = Cof_army_autonomy
+        max = 100
+        min = 0
+    }
+    clamp_variable = {
+        var = Cof_army_willing
+        max = 100
+        min = 0
+    }
+    clamp_variable = {
+        var = Cof_army_training
+        max = 100
+        min = 0
+    }
+    clamp_variable = {
+        var = Cof_army_equpiment
+        max = 100
+        min = 0
+    }
+    clamp_variable = {
+        var = Cof_army_passionate
+        max = 100
+        min = 0
+    }
+}
+
+cof_mili_target_choose = {
+    if = {
+        limit = { check_variable = { target_t = 1 } }
+		set_temp_variable = { target_v = Cof_army_autonomy }
+    }
+    else_if = {
+        limit = { check_variable = { target_t = 2 } }
+		set_temp_variable = { target_v = Cof_army_willing }
+    }
+    else_if = {
+        limit = { check_variable = { target_t = 3 } }
+		set_temp_variable = { target_v = Cof_army_training }
+    }
+    else_if = {
+        limit = { check_variable = { target_t = 4 } }
+		set_temp_variable = { target_v = Cof_army_equpiment }
+    }
+    else_if = {
+        limit = { check_variable = { target_t = 5 } }
+		set_temp_variable = { target_v = Cof_army_passionate }
+    }
+
+    else_if = { 
+		limit = { check_variable = { target_t = 11 } }
+		set_temp_variable = { target_v = military_synd }
+	}
+	else_if = { 
+		limit = { check_variable = { target_t = 12 } }
+		set_temp_variable = { target_v = military_oppo }
+	}
+	else_if = { 
+		limit = { check_variable = { target_t = 13 } }
+		set_temp_variable = { target_v = military_jaco }
+	}
+	else_if = { 
+		limit = { check_variable = { target_t = 14 } }
+		set_temp_variable = { target_v = military_sore }
+	}
+}
+
+Cof_military_reform_impact_count = {
+    set_temp_variable = { ati = Cof_army_theory_implementation }
+    set_temp_variable = { aa = Cof_army_autonomy }
+    set_temp_variable = { aw = Cof_army_willing }
+    set_temp_variable = { at = Cof_army_training }
+    set_temp_variable = { ae = Cof_army_equpiment }
+    set_temp_variable = { ap = Cof_army_passionate }
+
+    #军事理论
+    if = { #综合理论
+        limit = {
+            Cof_army_theory_panzer_group_advtanage = no
+            Cof_army_theory_blitz_delite_advtanage = no
+            Cof_army_theory_motorization_advtanage = no
+            Cof_army_theory_infanty_artillery_advtanage = no
+            Cof_army_theory_centrailed_command_advtanage = no
+            Cof_army_theory_defensive_countattack_advtanage = no
+            Cof_army_theory_nco_initiative_advtanage = no
+            Cof_army_theory_small_combat_advtanage = no
+        }
+        set_temp_variable = { atno1 = ati }
+
+    }
+    else = {
+
+        if = {#装甲集群
+            limit = { Cof_army_theory_panzer_group_advtanage = yes }
+
+        }
+        else = {
+
+        }
+
+        if = {#精锐闪电战
+            limit = { Cof_army_theory_blitz_delite_advtanage = yes }
+
+        }
+        else = {
+            
+        }
+
+        if = {#机动摩托化
+            limit = { Cof_army_theory_motorization_advtanage = yes }
+
+        }
+        else = {
+            
+        }
+
+        if = {#步火协同
+            limit = { Cof_army_theory_infanty_artillery_advtanage = yes }
+
+        }
+        else = {
+            
+        }
+
+        if = {#集中化指挥部
+            limit = { Cof_army_theory_centrailed_command_advtanage = yes }
+
+        }
+        else = {
+            
+        }
+
+        if = {#防守反击
+            limit = { Cof_army_theory_defensive_countattack_advtanage = yes }
+
+        }
+        else = {
+            
+        }
+
+        if = {#士官主动性
+            limit = { Cof_army_theory_nco_initiative_advtanage = yes }
+
+        }
+        else = {
+            
+        }
+
+        if = {#小兵团作战
+            limit = { Cof_army_theory_small_combat_advtanage = yes }
+
+        }
+        else = {
+            
+        }
+    }
+}

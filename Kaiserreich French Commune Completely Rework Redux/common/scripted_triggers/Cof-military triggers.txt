@@ -101,3 +101,11 @@ Cof_army_theory_defensive_countattack_advtanage = {
         check_variable = { Cof_army_theory_defensive_countattack > Cof_army_theory_panzer_group }
     }
 }
+
+cof_military_target_more_than_x = {
+    custom_trigger_tooltip = {
+        tooltip = mili_target_more_than_x
+        cof_mili_target_choose = yes
+        check_variable = { target_v > target_num }
+    }
+}
