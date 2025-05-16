@@ -1,29 +1,93 @@
 leader_traits = {
-    FRA_general_architect_of_neosocialism = {
+    ###工团派
+    #温和派
+    #政治顾问
+    FRA_loyal_federal_syndicators = {
         sprite = 13
 		random = no
 
-		stability_factor = -0.05
-        industrial_capacity_factory = 0.1
+		production_factory_start_efficiency_factor = 0.2	
+        production_factory_max_efficiency_factor = 0.05
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_moderate_social_reformers = {
+        sprite = 13
+		random = no
+
+        political_power_factor = 0.05
+        stability_weekly = 0.005
+        war_support_weekly = 0.005
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_antiwar_pacifist = {
+        sprite = 13
+		random = no
+
+        war_support_factor = -0.05
+        stability_factor = 0.15
+        syndicalist_drift = 0.01
+        radical_socialist_drift = 0.01
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_carpenter_fighter = {
+        sprite = 13
+		random = no
+
+        industry_repair_factor = 0.5
+        production_speed_infrastructure_factor = 0.1
+        production_speed_industrial_complex_factor = 0.05
+
+        ai_will_do = { factor = 1 }
+    }
+
+    #激进派
+    #政治顾问
+    FRA_supporters_of_sound_economy = {
+        sprite = 13
+		random = no
+
+        stability_factor = 0.05
+        production_speed_industrial_complex_factor = 0.1
         consumer_goods_factor = -0.1
 
-        ai_will_do = { factor = 2 }
+        ai_will_do = { factor = 1 }
     }
-    FRA_technocratic_supporter = {
+    FRA_school_socialist = {
         sprite = 13
 		random = no
 
-		political_power_factor = 0.1
-        political_advisor_cost_factor = -0.66
+        research_speed_factor = 0.15
+        sickness_chance = -0.5
 
-        ai_will_do = { factor = 2 }
+        ai_will_do = { factor = 1 }
     }
+    FRA_cycliste_salengro = {
+        sprite = 13
+		random = no
+
+        army_speed_factor = 0.05
+        equipment_bonus = {
+		    support_equipment = {
+			    build_cost_ic = -0.25
+			    instant = yes		
+            }
+        }
+        
+        ai_will_do = { factor = 1 }        
+    }
+
+
+    ###工农反对派
+    #共产党派
+    #政治顾问
     FRA_pragmatic_reformers = {
         sprite = 13
 		random = no
 
-		stability_factor = 0.1
-        political_power_factor = 0.05
+        political_power_factor = 0.1
         mobilization_laws_cost_factor = -0.25
         trade_laws_cost_factor  = -0.25
         economy_cost_factor = -0.25
@@ -31,12 +95,14 @@ leader_traits = {
 
         ai_will_do = { factor = 2 }
     }
-    FRA_loyal_federal_syndicators = {
+    FRA_military_mayors = {
         sprite = 13
 		random = no
 
-		production_factory_start_efficiency_factor = 0.15	
-        production_factory_max_efficiency_factor = 0.1
+        production_speed_arms_factory_factor = 0.125
+        experience_gain_army_factor = 0.05
+        experience_gain_navy_factor = 0.05
+        experience_gain_air_factor = 0.05
 
         ai_will_do = { factor = 1 }
     }
@@ -47,17 +113,17 @@ leader_traits = {
 		political_power_factor = -0.1
         global_building_slots_factor = 0.15
         local_resources_factor = 0.15
-        production_speed_buildings_factor = 0.05	
+        production_speed_buildings_factor = 0.05
 
         ai_will_do = { factor = 1 }
     }
-    FRA_supporters_of_sound_economy = {
+    FRA_proletarian_democracy_advocate = {
         sprite = 13
 		random = no
 
-        stability_factor = 0.05
-        production_speed_industrial_complex_factor = 0.2
-        production_speed_arms_factory_factor = 0.05
+        political_power_factor = 0.1
+        line_change_production_efficiency_factor = 0.2
+        party_popularity_stability_factor = 0.25
 
         ai_will_do = { factor = 1 }
     }
@@ -72,34 +138,24 @@ leader_traits = {
 
         ai_will_do = { factor = 1 }
     }
-    FRA_antiwar_pacifist = {
+    FRA_peasant_teachers = {
         sprite = 13
 		random = no
 
-        war_support_factor = -0.05
-        syndicalist_drift = 0.01
-        radical_socialist_drift = 0.01
-        production_speed_buildings_factor = 0.15
+        research_speed_factor = 0.1
+        conscription_factor = 0.1
+        local_resources_factor = 0.15
 
         ai_will_do = { factor = 1 }
     }
-    FRA_moderate_social_reformers = {
+    FRA_pioneer_economics_supporters = {
         sprite = 13
 		random = no
 
-        political_power_factor = 0.05
-        stability_weekly = 0.005
-        war_support_weekly = 0.005
-
-        ai_will_do = { factor = 1 }
-    }
-    FRA_school_socialist = {
-        sprite = 13
-		random = no
-
-        research_speed_factor = 0.15
-        sickness_chance = -0.5
-        production_factory_start_efficiency_factor = 0.05
+        stability_factor = -0.15
+        industrial_capacity_factory = 0.1
+        production_factory_start_efficiency_factor = -0.1
+        production_factory_max_efficiency_factor = 0.15
 
         ai_will_do = { factor = 1 }
     }
@@ -108,30 +164,36 @@ leader_traits = {
 		random = no
 
         required_garrison_factor = -0.25
-        resistance_decay = 0.15
-        compliance_growth = 0.15
+        resistance_decay = 0.25
+        compliance_growth = 0.25
 
         ai_will_do = { factor = 1 }
     }
-    FRA_proletarian_democracy_advocate = {
+    #军事顾问
+    FRA_army_chief_workers_dragoons = {
         sprite = 13
 		random = no
 
-        political_power_factor = 0.1
-        line_change_production_efficiency_factor = 0.2
-        party_popularity_stability_factor = 0.25
+        army_artillery_attack_factor = 0.1
+        initiative_factor = 0.05
+        army_speed_factor = 0.15
+
+        command_cap_increase = 30
 
         ai_will_do = { factor = 1 }
     }
+
+    #无政府派
+    #政治顾问
     FRA_anti_marxist_anarchist = {
         sprite = 13
 		random = no
 
         stability_factor = -0.05
         radical_socialist_drift = 0.01
-        production_factory_efficiency_gain_factor = 0.25
-        modifier_army_sub_unit_militia_attack_factor = 0.15
-        modifier_army_sub_unit_militia_defence_factor = 0.15
+        production_factory_efficiency_gain_factor = 0.3
+        modifier_army_sub_unit_militia_attack_factor = 0.2
+        modifier_army_sub_unit_militia_defence_factor = 0.2
 
         ai_will_do = { factor = 1 }
     }
@@ -141,7 +203,17 @@ leader_traits = {
 
         stability_factor = 0.1
         war_support_factor = -0.05
-        line_change_production_efficiency_factor = 0.1
+        line_change_production_efficiency_factor = 0.15
+
+        ai_will_do = { factor = 1 }
+    }
+    FRA_feminist_in_defence_of_the_family = {
+        sprite = 13
+		random = no
+
+        stability_factor = 0.05
+        production_factory_max_efficiency_factor = 0.05
+        monthly_population = 0.8
 
         ai_will_do = { factor = 1 }
     }
@@ -155,26 +227,87 @@ leader_traits = {
 
         ai_will_do = { factor = 1 }
     }
-    FRA_feminist_in_defence_of_the_family = {
+    FRA_radical_anarchist_activist = {
         sprite = 13
 		random = no
 
-        stability_factor = 0.05
-        production_factory_max_efficiency_factor = 0.05
-        conscription_factor = 0.15
+        local_factory_sabotage = -0.75
+        resistance_growth_on_our_occupied_states = 0.75
+        boost_resistance_factor = 0.5
+        enemy_intel_network_gain_factor_over_occupied_tag = -0.5
+
+        ai_will_do = { factor = 1 }        
+    }
+    FRA_moral_anarchist = {
+        sprite = 13
+		random = no
+
+        stability_factor = 0.15
+        local_supplies = 0.15
+        consumer_goods_factor = -0.1
 
         ai_will_do = { factor = 1 }
+    }
+    #军事顾问
+    FRA_decentralized_commander = {
+        sprite = 13
+		random = no
+
+        recon_factor = 0.25
+        combat_width_factor = -0.05
+        no_supply_grace = 48
+        initiative_factor = 0.05
+
+        command_cap_increase = 30
+
+        ai_will_do = { factor = 1 }
+    }
+
+    ###雅各宾派
+    #新社会主义派
+    #政治顾问
+    FRA_general_architect_of_neosocialism = {
+        sprite = 13
+		random = no
+
+		stability_factor = -0.05
+        industrial_capacity_factory = 0.15
+        consumer_goods_factor = -0.15
+
+        ai_will_do = { factor = 2 }
     }
     FRA_planned_economy_economist = {
         sprite = 13
 		random = no
 
         production_factory_max_efficiency_factor = 0.1
-        industrial_capacity_factory = 0.025
-        production_factory_efficiency_gain_factor = -0.05
+        industrial_capacity_factory = 0.05
+        production_factory_efficiency_gain_factor = -0.1
 
         ai_will_do = { factor = 1 }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    FRA_technocratic_supporter = {
+        sprite = 13
+		random = no
+
+		political_power_factor = 0.1
+        political_advisor_cost_factor = -0.66
+
+        ai_will_do = { factor = 2 }
+    }
+
     FRA_double_edged_and_smooth = {
         sprite = 13
 		random = no
@@ -196,28 +329,8 @@ leader_traits = {
 
         ai_will_do = { factor = 1 }
     }
-    FRA_pioneer_economics_supporters = {
-        sprite = 13
-		random = no
 
-        stability_factor = -0.1
-        industrial_capacity_factory = 0.15
-        production_factory_start_efficiency_factor = -0.1
-        production_factory_max_efficiency_factor = 0.15
 
-        ai_will_do = { factor = 1 }
-    }
-    FRA_military_mayors = {
-        sprite = 13
-		random = no
-
-        production_speed_arms_factory_factor = 0.15
-        experience_gain_army_factor = 0.05
-        experience_gain_navy_factor = 0.05
-        experience_gain_air_factor = 0.05
-
-        ai_will_do = { factor = 1 }
-    }
     FRA_genius_economist = {
         sprite = 13
 		random = no

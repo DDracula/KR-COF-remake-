@@ -56,6 +56,17 @@ Cof_army_theory_change = {
     Cof_army_theory_implementation_judge = yes
 }
 
+###     军事理论落实度改变
+#		set_temp_variable = { atimpc = 0 }
+#		set_temp_variable = { atimp1c = 0 }
+#		set_temp_variable = { atimp2c = 0 }
+#		set_temp_variable = { atimp3c = 0 }
+#		set_temp_variable = { atimp4c = 0 }
+#		set_temp_variable = { atimp5c = 0 }
+#		set_temp_variable = { atimp6c = 0 }
+#		set_temp_variable = { atimp7c = 0 }
+#		set_temp_variable = { atimp8c = 0 }
+#		Cof_army_theory_implementation_change = yes
 Cof_army_theory_implementation_change_this = {
     if = { limit = { check_variable = { atimpc = 0 } } }
     else = {
@@ -187,7 +198,36 @@ Cof_army_theory_implementation_judge = {
     }
 }
 
+###		派系军事影响力变化
+#		set_temp_variable = { msyndc = 0 }
+#		set_temp_variable = { moppoc = 0 }
+#		set_temp_variable = { mjacoc = 0 }
+#		set_temp_variable = { msorec = 0 }
+#		mili_faction_influence_change = yes
+mili_faction_influence_change = {
+	if = { limit = { check_variable = { msyndc = 0 } } }
+	else = {
+		add_to_variable = { military_synd = msyndc }
+		custom_effect_tooltip = military_synd_change_tips
+	}
+	if = { limit = { check_variable = { moppoc = 0 } } }
+	else = {
+		add_to_variable = { military_oppo = moppoc }
+		custom_effect_tooltip = military_oppo_change_tips
+	}
+	if = { limit = { check_variable = { mjacoc = 0 } } }
+	else = {
+		add_to_variable = { military_jaco = mjacoc }
+		custom_effect_tooltip = military_jaco_change_tips
+	}
+	if = { limit = { check_variable = { msorec = 0 } } }
+	else = {
+		add_to_variable = { military_sore = msorec }
+		custom_effect_tooltip = military_sore_change_tips
+	}
 
+	faction_infulences_count = yes
+}
 
 ###     军事改革数值变化
 #		set_temp_variable = { aac = 0 }
@@ -295,7 +335,6 @@ cof_mili_target_choose = {
 }
 
 Cof_military_reform_impact_count = {
-    set_temp_variable = { ati = Cof_army_theory_implementation }
     set_temp_variable = { aa = Cof_army_autonomy }
     set_temp_variable = { aw = Cof_army_willing }
     set_temp_variable = { at = Cof_army_training }
@@ -314,73 +353,330 @@ Cof_military_reform_impact_count = {
             Cof_army_theory_nco_initiative_advtanage = no
             Cof_army_theory_small_combat_advtanage = no
         }
-        set_temp_variable = { atno1 = ati }
+        set_temp_variable = { atno1 = atimp0 }
+        multiply_temp_variable = { atno1 = 0.01 }
+        multiply_temp_variable = { atno1 = 0.3 }
+        set_variable = { atno1_show = atno1 }
+        set_variable = { mili_experience_gain_army_factor = atno1 }
 
+        set_temp_variable = { atno2 = atimp0 }
+        multiply_temp_variable = { atno2 = 0.01 }
+        multiply_temp_variable = { atno2 = -0.4 }
+        set_variable = { atno2_show = atno2 }
+        set_variable = { mili_training_time_factor = atno2 }
+
+        set_temp_variable = { atno3 = atimp0 }
+        multiply_temp_variable = { atno3 = 0.01 }
+        multiply_temp_variable = { atno3 = 0.1 }
+        set_variable = { atno3_show = atno3 }
+        set_variable = { mili_army_core_attack_factor = atno3 }
+
+        set_temp_variable = { atno4 = atimp0 }
+        multiply_temp_variable = { atno4 = 0.01 }
+        multiply_temp_variable = { atno4 = 0.15 }
+        set_variable = { atno4_show = atno4 }
+        set_variable = { mili_army_core_defence_factor = atno4 }
     }
     else = {
+        set_variable = { mili_experience_gain_army_factor = 0 }
+        set_variable = { mili_training_time_factor = 0 }
+        set_variable = { mili_army_core_attack_factor = 0 }
+        set_variable = { mili_army_core_defence_factor = 0 }
 
         if = {#装甲集群
             limit = { Cof_army_theory_panzer_group_advtanage = yes }
+            set_temp_variable = { atsynd1t1 = atimp1 }
+            multiply_temp_variable = { atsynd1t1 = 0.01 }
+            multiply_temp_variable = { atsynd1t1 = 0.3 }
+            set_variable = { atsynd1t1_show = atsynd1t1 }
+            set_variable = { mili_army_armor_attack_factor = atsynd1t1 }
 
+            set_temp_variable = { atsynd1t2 = atimp1 }
+            multiply_temp_variable = { atsynd1t2 = 0.01 }
+            multiply_temp_variable = { atsynd1t2 = 0.3 }
+            set_variable = { atsynd1t2_show = atsynd1t2 }
+            set_variable = { mili_army_armor_defence_factor = atsynd1t2 }
         }
         else = {
-
+            set_variable = { mili_army_armor_attack_factor = 0 }
+            set_variable = { mili_army_armor_defence_factor = 0 }
         }
 
         if = {#精锐闪电战
             limit = { Cof_army_theory_blitz_delite_advtanage = yes }
+            set_temp_variable = { atsynd2t1 = atimp2 }
+            multiply_temp_variable = { atsynd2t1 = 0.01 }
+            multiply_temp_variable = { atsynd2t1 = 0.4 }
+            set_variable = { atsynd2t1_show = atsynd2t1 }
+            set_variable = { mili_army_armor_speed_factor = atsynd2t1 }
 
+            set_temp_variable = { atsynd2t2 = atimp2 }
+            multiply_temp_variable = { atsynd2t2 = 0.01 }
+            multiply_temp_variable = { atsynd2t2 = 0.5 }
+            set_variable = { atsynd2t2_show = atsynd2t2 }
+            set_variable = { mili_breakthrough_factor = atsynd2t2 }            
         }
         else = {
-            
+            set_variable = { mili_army_armor_speed_factor = 0 }
+            set_variable = { mili_breakthrough_factor = 0 }
         }
 
         if = {#机动摩托化
             limit = { Cof_army_theory_motorization_advtanage = yes }
+            set_temp_variable = { atoppo1t1 = atimp3 }
+            multiply_temp_variable = { atoppo1t1 = 0.01 }
+            multiply_temp_variable = { atoppo1t1 = 0.25 }
+            set_variable = { atoppo1t1_show = atoppo1t1 }
+            set_variable = { mili_army_speed_factor = atoppo1t1 }
 
+            set_temp_variable = { atoppo1t2 = atimp3 }
+            multiply_temp_variable = { atoppo1t2 = 0.01 }
+            multiply_temp_variable = { atoppo1t2 = -0.2 }
+            set_variable = { atoppo1t2_show = atoppo1t2 }
+            set_variable = { mili_attrition = atoppo1t2 }
+
+            set_temp_variable = { atoppo1t3 = atimp3 }
+            multiply_temp_variable = { atoppo1t3 = 0.01 }
+            multiply_temp_variable = { atoppo1t3 = -0.2 }
+            set_variable = { atoppo1t3_show = atoppo1t3 }
+            set_variable = { mili_supply_consumption_factor = atoppo1t3 }            
         }
         else = {
-            
+            set_variable = { mili_army_speed_factor = 0 }
+            set_variable = { mili_attrition = 0 }
+            set_variable = { mili_supply_consumption_factor = 0 }
         }
 
         if = {#步火协同
             limit = { Cof_army_theory_infanty_artillery_advtanage = yes }
+            set_temp_variable = { atoppo2t1 = atimp4 }
+            multiply_temp_variable = { atoppo2t1 = 0.01 }
+            multiply_temp_variable = { atoppo2t1 = 0.25 }
+            set_variable = { atoppo2t1_show = atoppo2t1 }
+            set_variable = { mili_army_infantry_attack_factor = atoppo2t1 }
 
+            set_temp_variable = { atoppo2t2 = atimp4 }
+            multiply_temp_variable = { atoppo2t2 = 0.01 }
+            multiply_temp_variable = { atoppo2t2 = 0.3 }
+            set_variable = { atoppo2t2_show = atoppo2t2 }
+            set_variable = { mili_army_infantry_defence_factor = atoppo2t2 }
+
+            set_temp_variable = { atoppo2t3 = atimp4 }
+            multiply_temp_variable = { atoppo2t3 = 0.01 }
+            multiply_temp_variable = { atoppo2t3 = 0.25 }
+            set_variable = { atoppo2t3_show = atoppo2t3 }
+            set_variable = { mili_army_artillery_attack_factor = atoppo2t3 } 
+
+            set_temp_variable = { atoppo2t4 = atimp4 }
+            multiply_temp_variable = { atoppo2t4 = 0.01 }
+            multiply_temp_variable = { atoppo2t4 = 0.3 }
+            set_variable = { atoppo2t4_show = atoppo2t4 }
+            set_variable = { mili_army_artillery_defence_factor = atoppo2t4 }
         }
         else = {
-            
+            set_variable = { mili_army_infantry_attack_factor = 0 }
+            set_variable = { mili_army_infantry_defence_factor = 0 }
+            set_variable = { mili_army_artillery_attack_factor = 0 }
+            set_variable = { mili_army_artillery_defence_factor = 0 }
         }
 
         if = {#集中化指挥部
             limit = { Cof_army_theory_centrailed_command_advtanage = yes }
+            set_temp_variable = { atjaco1t1 = atimp4 }
+            multiply_temp_variable = { atjaco1t1 = 0.01 }
+            multiply_temp_variable = { atjaco1t1 = 0.2 }
+            set_variable = { atjaco1t1_show = atjaco1t1 }
+            set_variable = { mili_max_planning = atjaco1t1 }
 
+            set_temp_variable = { atjaco1t2 = atimp4 }
+            multiply_temp_variable = { atjaco1t2 = 0.01 }
+            multiply_temp_variable = { atjaco1t2 = 0.3 }
+            set_variable = { atjaco1t2_show = atjaco1t2 }
+            set_variable = { mili_planning_speed = atjaco1t2 }            
         }
         else = {
-            
+            set_variable = { mili_max_planning = 0 } 
+            set_variable = { mili_planning_speed = 0 }            
         }
 
         if = {#防守反击
             limit = { Cof_army_theory_defensive_countattack_advtanage = yes }
+            set_temp_variable = { atjaco2t1 = atimp4 }
+            multiply_temp_variable = { atjaco2t1 = 0.01 }
+            multiply_temp_variable = { atjaco2t1 = 0.3 }
+            set_variable = { atjaco2t1_show = atjaco2t1 }
+            set_variable = { mili_max_dig_in_factor = atjaco2t1 }
 
+            set_temp_variable = { atjaco2t2 = atimp4 }
+            multiply_temp_variable = { atjaco2t2 = 0.01 }
+            multiply_temp_variable = { atjaco2t2 = 0.35 }
+            set_variable = { atjaco2t2_show = atjaco2t2 }
+            set_variable = { mili_dig_in_speed_factor = atjaco2t2 }    
+
+            set_temp_variable = { atjaco2t3 = atimp4 }
+            multiply_temp_variable = { atjaco2t3 = 0.05 }
+            set_variable = { atjaco2t3_show = atjaco2t3 }
+            set_variable = { mili_max_dig_in = atjaco2t3 }
         }
         else = {
-            
+            set_variable = { mili_max_dig_in_factor = 0 }          
+            set_variable = { mili_dig_in_speed_factor = 0 }     
+            set_variable = { mili_max_dig_in = 0 }   
         }
 
         if = {#士官主动性
             limit = { Cof_army_theory_nco_initiative_advtanage = yes }
+            set_temp_variable = { atsore1t1 = atimp4 }
+            multiply_temp_variable = { atsore1t1 = 0.01 }
+            multiply_temp_variable = { atsore1t1 = 0.25 }
+            set_variable = { atsore1t1_show = atsore1t1 }
+            set_variable = { mili_army_org_factor = atsore1t1 }
 
+            set_temp_variable = { atsore1t2 = atimp4 }
+            multiply_temp_variable = { atsore1t2 = 0.01 }
+            multiply_temp_variable = { atsore1t2 = 0.3 }
+            set_variable = { atsore1t2_show = atsore1t2 }
+            set_variable = { mili_army_org_regain = atsore1t2 }    
+
+            set_temp_variable = { atsore1t3 = atimp4 }
+            multiply_temp_variable = { atsore1t3 = 0.01 }
+            multiply_temp_variable = { atsore1t3 = -0.25 }
+            set_variable = { atsore1t3_show = atsore1t3 }
+            set_variable = { mili_org_loss_when_moving = atsore1t3 }
+
+            set_temp_variable = { atsore1t4 = atimp4 }
+            multiply_temp_variable = { atsore1t4 = 0.01 }
+            multiply_temp_variable = { atsore1t4 = 0.3 }
+            set_variable = { atsore1t4_show = atsore1t4 }
+            set_variable = { mili_initiative_factor = atsore1t4 }             
         }
         else = {
-            
+            set_variable = { mili_army_org_factor = 0 }
+            set_variable = { mili_army_org_regain = 0 }
+            set_variable = { mili_org_loss_when_moving = 0 }
+            set_variable = { mili_initiative_factor = 0 }
         }
 
         if = {#小兵团作战
             limit = { Cof_army_theory_small_combat_advtanage = yes }
+            set_temp_variable = { atsore2t1 = atimp4 }
+            multiply_temp_variable = { atsore2t1 = 0.01 }
+            multiply_temp_variable = { atsore2t1 = -0.25 }
+            set_variable = { atsore2t1_show = atsore2t1 }
+            set_variable = { mili_combat_width_factor = atsore2t1 }
 
+            set_temp_variable = { atsore2t2 = atimp4 }
+            multiply_temp_variable = { atsore2t2 = 0.01 }
+            multiply_temp_variable = { atsore2t2 = 0.25 }
+            set_variable = { atsore2t2_show = atsore2t2 }
+            set_variable = { mili_terrain_penalty_reduction = atsore2t2 }
         }
         else = {
-            
+            set_variable = { mili_combat_width_factor = 0 }
+            set_variable = { mili_terrain_penalty_reduction = 0 }
         }
     }
+
+    ###
+    #
+    set_temp_variable = { aa1 = aa }
+    add_to_temp_variable = { aa1 = -40 }
+    multiply_temp_variable = { aa1 = 0.01 }
+    multiply_temp_variable = { aa1 = 0.5 }
+    set_variable = { aa1_show = aa1 }
+    set_variable = { mili_stability_factor = aa1 }    
+
+    set_temp_variable = { aa2 = aa }
+    add_to_temp_variable = { aa2 = -40 }
+    multiply_temp_variable = { aa2 = 0.01 }
+    multiply_temp_variable = { aa2 = 0.5 }
+    set_variable = { aa2_show = aa2 }
+    set_variable = { mili_war_support_factor = aa2 } 
+
+    #
+    set_temp_variable = { aw1 = aw }
+    add_to_temp_variable = { aw1 = -40 }
+    multiply_temp_variable = { aw1 = 0.01 }
+    multiply_temp_variable = { aw1 = 0.5 }
+    set_variable = { aw1_show = aw1 }
+    set_variable = { mili_land_reinforce_rate = aw1 }   
+
+    #
+    set_temp_variable = { at1 = at }
+    add_to_temp_variable = { at1 = -40 }
+    multiply_temp_variable = { at1 = 0.01 }
+    multiply_temp_variable = { at1 = -0.5 }
+    set_variable = { at1_show = at1 }
+    set_variable = { mili_pocket_penalty = at1 }       
+
+    #装备
+    hidden_effect = {
+        remove_ideas = {
+            Cof_army_equpiment_buff1
+            Cof_army_equpiment_buff2
+            Cof_army_equpiment_buff3
+            Cof_army_equpiment_buff4
+            Cof_army_equpiment_buff5
+            Cof_army_equpiment_buff6
+            Cof_army_equpiment_buff7
+            Cof_army_equpiment_buff8
+            Cof_army_equpiment_buff9
+            Cof_army_equpiment_buff10
+        }
+    }
+    if = {
+        limit = { check_variable = { ae < 10 } }
+        hidden_effect = { add_ideas = Cof_army_equpiment_buff1 }
+    }
+    else_if = {
+        limit = { check_variable = { ae < 20 } }
+        hidden_effect = { add_ideas = Cof_army_equpiment_buff2 }
+    }
+    else_if = {
+        limit = { check_variable = { ae < 30 } }
+        hidden_effect = { add_ideas = Cof_army_equpiment_buff3 }
+    }
+    else_if = {
+        limit = { check_variable = { ae < 40 } }
+        hidden_effect = { add_ideas = Cof_army_equpiment_buff4 }
+    }
+    else_if = {
+        limit = { check_variable = { ae < 50 } }
+        hidden_effect = { add_ideas = Cof_army_equpiment_buff5 }
+    }
+    else_if = {
+        limit = { check_variable = { ae < 60 } }
+        hidden_effect = { add_ideas = Cof_army_equpiment_buff6 }
+    }
+    else_if = {
+        limit = { check_variable = { ae < 70 } }
+        hidden_effect = { add_ideas = Cof_army_equpiment_buff7 }
+    }
+    else_if = {
+        limit = { check_variable = { ae < 80 } }
+        hidden_effect = { add_ideas = Cof_army_equpiment_buff8 }
+    }
+    else_if = {
+        limit = { check_variable = { ae < 90 } }
+        hidden_effect = { add_ideas = Cof_army_equpiment_buff9 }
+    }
+    else = { hidden_effect = { add_ideas = Cof_army_equpiment_buff10 } }
+
+    #
+    set_temp_variable = { ap1 = ap }
+    add_to_temp_variable = { ap1 = -40 }
+    multiply_temp_variable = { ap1 = 0.01 }
+    multiply_temp_variable = { ap1 = 0.5 }
+    set_variable = { ap1_show = ap1 }
+    set_variable = { mili_conscription_factor = ap1 }       
+
+    set_temp_variable = { ap2 = ap }
+    add_to_temp_variable = { ap2 = -40 }
+    multiply_temp_variable = { ap2 = 0.01 }
+    multiply_temp_variable = { ap2 = 0.5 }
+    set_variable = { ap2_show = ap2 }
+    set_variable = { mili_mobilization_speed = ap2 }     
+
+    ####
+    force_update_dynamic_modifier = yes
 }

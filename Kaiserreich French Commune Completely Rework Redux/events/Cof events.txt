@@ -8,7 +8,27 @@ country_event = {
 	id = cofpolitics.0
 	is_triggered_only = yes
 	option = {
-		
+		set_temp_variable = { atsynd1c = 0 }
+		set_temp_variable = { atsynd2c = 2 }
+		set_temp_variable = { atoppo1c = 0 }
+		set_temp_variable = { atoppo2c = 0 }
+		set_temp_variable = { atjaco1c = 0 }
+		set_temp_variable = { atjaco2c = 0 }
+		set_temp_variable = { atsore1c = 0 }
+		set_temp_variable = { atsore2c = 0 }
+		Cof_army_theory_change = yes
+		Cof_military_reform_impact_count = yes
+
+		set_temp_variable = { atimpc = 0 }
+		set_temp_variable = { atimp1c = 0 }
+		set_temp_variable = { atimp2c = 0 }
+		set_temp_variable = { atimp3c = 0 }
+		set_temp_variable = { atimp4c = 0 }
+		set_temp_variable = { atimp5c = 0 }
+		set_temp_variable = { atimp6c = 0 }
+		set_temp_variable = { atimp7c = 0 }
+		set_temp_variable = { atimp8c = 0 }
+		Cof_army_theory_implementation_change = yes
 	}
 }
 

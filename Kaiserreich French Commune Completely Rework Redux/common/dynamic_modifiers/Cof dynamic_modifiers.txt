@@ -1,33 +1,36 @@
+### +意味增益 -意味减益 与后续buff数值增减无关
 Cof_politics_pop_impact = {
     icon = "GFX_dybamic_modifier_Cof_politics_pop_impact"
     custom_modifier_tooltip = Cof_politics_pop_impact_tt
-    #平均
+    #平均 +稳定
     stability_factor = pop_stability_factor
-    #工人 
+    #工人 +生产基础 +效率增长 35%+工厂产出
     production_factory_start_efficiency_factor = pop_production_factory_start_efficiency_factor
     production_factory_efficiency_gain_factor = pop_production_factory_efficiency_gain_factor
     industrial_capacity_factory = pop_industrial_capacity_factory #影响>35%
-    #农民
+    #农民 +资源获取 +适役人口 35%+补给消耗
     local_resources_factor = pop_local_resources_factor
     conscription_factor = pop_conscription_factor
     supply_consumption_factor = pop_supply_consumption_factor #影响>35%
-    #小资产阶级
+    #小资产阶级 +民工建设 +基建建设 35%+生活消费品
     production_speed_industrial_complex_factor = pop_production_speed_industrial_complex_factor
     production_speed_infrastructure_factor = pop_production_speed_infrastructure_factor
     consumer_goods_factor = pop_consumer_goods_factor #影响>35%
-    #知识分子
+    #知识分子 +研究速度 +合作度增长 35%+效率上限
     research_speed_factor = pop_research_speed_factor
     compliance_gain = pop_compliance_gain
     production_factory_max_efficiency_factor = pop_production_factory_max_efficiency_factor #影响>35%
-    #官僚
+    #官僚 +政治点百分比获取 +政治顾问消耗 35%+政治点增长
     political_power_factor = pop_political_power_factor
     political_advisor_cost_factor = pop_political_advisor_cost_factor
     political_power_gain = pop_political_power_gain #影响>35%
-    #军队
+    #军队 军官+最大计划 士官+组织度 士兵+移动组织度损失 35%+陆军攻击
     max_planning = pop_max_planning #军官
     army_org_factor = pop_army_org_factor #士官
     org_loss_when_moving = pop_org_loss_when_moving #士兵
     army_attack_factor = pop_army_attack_factor #影响>35%
+
+
 }
 
 Cof_economy_impact = {
@@ -41,7 +44,7 @@ Cof_economy_impact = {
     production_factory_start_efficiency_factor = econ_production_factory_start_efficiency_factor
     production_factory_efficiency_gain_factor = econ_production_factory_efficiency_gain_factor
 
-    #市场经济 -生活消费品 +民工建设
+    #市场经济 +生活消费品 +民工建设
     consumer_goods_factor = econ_consumer_goods_factor
     production_speed_industrial_complex_factor = econ_production_speed_industrial_complex_factor
 
@@ -63,12 +66,12 @@ Cof_economy_impact = {
     ##农业指标
     #机械化 +人口修正
     conscription_factor = econ_conscription_factor
-    #化工生产 -补给消耗
+    #化工生产 +补给消耗
     supply_consumption_factor = econ_supply_consumption_factor
-    #农副产业链 -生活消费品
+    #农副产业链 +生活消费品
 
     ##其他指标
-    #经济平等 -稳定度 -生产上限 +生活消费品
+    #经济平等 +稳定度 +生产上限 +生活消费品
     stability_factor = econ_stability_factor
     #产业协作 +生产上限 +生产增长 +基础生产
 
@@ -80,8 +83,8 @@ Cof_military_reform_impact = {
     icon = "GFX_dybamic_modifier_Cof_military_reform_impact"
     custom_modifier_tooltip = Cof_military_reform_impact_tt
     ##军事理论
-    #综合学说 +陆军xp -训练时间 +核心攻击
-    experience_gain_army = mili_experience_gain_army
+    #综合学说 +陆军xp +训练时间 +核心攻击
+    experience_gain_army_factor = mili_experience_gain_army_factor
     training_time_factor = mili_training_time_factor
     army_core_attack_factor = mili_army_core_attack_factor
     army_core_defence_factor = mili_army_core_defence_factor
@@ -90,7 +93,7 @@ Cof_military_reform_impact = {
     army_armor_defence_factor = mili_army_armor_defence_factor
     #精锐闪电战 +装甲速度 +突破
     army_armor_speed_factor = mili_army_armor_speed_factor
-    breakthrough_factor= mili_breakthrough_factor
+    breakthrough_factor = mili_breakthrough_factor
     #机动摩托化 +陆军速度 -补给消耗 -损耗
     army_speed_factor= mili_army_speed_factor
     attrition = mili_attrition
@@ -122,10 +125,11 @@ Cof_military_reform_impact = {
     war_support_factor = mili_war_support_factor
     #战斗意愿 +增援率
     land_reinforce_rate = mili_land_reinforce_rate
-    #训练质量 +陆军防御
-    army_defence_factor = mili_army_defence_factor
-    #军事装备 +陆军进攻 
-    army_attack_factor = mili_army_attack_factor
-    #参军热情 +适役人口修正
+    #训练质量 +包围惩罚
+    pocket_penalty = mili_pocket_penalty
+    #军事装备 +步枪生产
+
+    #参军热情 +适役人口修正 +动员速度
     conscription_factor = mili_conscription_factor
+    mobilization_speed = mili_mobilization_speed
 }

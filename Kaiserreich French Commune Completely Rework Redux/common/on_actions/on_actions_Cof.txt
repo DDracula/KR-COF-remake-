@@ -2,6 +2,15 @@ on_actions = {
     on_startup = {
         effect = {
             FRA = {
+                remove_targeted_decision = { target = FRA decision = FRA_invite_serbia }
+                remove_targeted_decision = { target = FRA decision = FRA_end_the_algiers_regime }
+                remove_targeted_decision = { target = FRA decision = FRA_help_SWF }
+                remove_targeted_decision = { target = FRA decision = FRA_help_CHL }
+                remove_targeted_decision = { target = FRA decision = FRA_mobilise_the_reserves }
+                remove_targeted_decision = { target = FRA decision = FRA_join_phalanstere }
+                remove_targeted_decision = { target = FRA decision = FRA_invade_liberation_target }
+                remove_targeted_decision = { target = FRA decision = FRA_Develop_Country }
+
                 set_country_flag = CCSP_oppo
                 set_country_flag = DED_synd
                 set_country_flag = DFA_synd
@@ -134,6 +143,20 @@ on_actions = {
                 set_variable = { Cof_army_training = 31 }
                 set_variable = { Cof_army_equpiment = 44 }
                 set_variable = { Cof_army_passionate = 28 }
+
+                set_variable = { Cof_army_theory_implementation = 40 }
+                set_variable = { atimp0 = 40 }
+                set_variable = { atimp1 = 0 }
+                set_variable = { atimp2 = 0 }
+                set_variable = { atimp3 = 0 }
+                set_variable = { atimp4 = 0 }
+                set_variable = { atimp5 = 0 }
+                set_variable = { atimp6 = 0 }
+                set_variable = { atimp7 = 0 }
+                set_variable = { atimp8 = 0 }
+
+                add_dynamic_modifier = { modifier = Cof_military_reform_impact }
+                Cof_military_reform_impact_count = yes
             }
         }
     }

@@ -1237,3 +1237,11 @@ politics_pop_impact_count = {
     ####
     force_update_dynamic_modifier = yes
 }
+
+###     权力倾向改变
+#       set_temp_variable = { ppvc = 0 }
+#       cof_politics_BGT_vs_CSP_values_change = yes
+cof_politics_BGT_vs_CSP_values_change = {
+    add_to_variable = { Cof_BGT_vs_CSP_value = ppvc }
+    custom_effect_tooltip = cof_politics_BGT_vs_CSP_values_change_tips
+}

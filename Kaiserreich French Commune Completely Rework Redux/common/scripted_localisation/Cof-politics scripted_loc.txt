@@ -657,3 +657,15 @@ defined_text = {
 		localization_key = BGT_vs_CSP_towards_BGT5
 	}
 }
+
+defined_text = {
+	name = cof_politics_BvsC_values_change
+	text = {
+		trigger = { check_variable = { ppvc > 0 } }
+		localization_key = to_CSP
+	}
+    text = {
+		trigger = { check_variable = { ppvc < 0 } }
+		localization_key = to_BGT
+	}
+}

@@ -170,3 +170,48 @@ defined_text = {
 		localization_key = military_sore
 	}
 }
+
+defined_text = {
+    name = Cof_army_equpiment_buff_infantry_equipment
+    text = {
+		trigger = { has_idea = Cof_army_equpiment_buff1 }
+		localization_key = Cof_army_equpiment_buff_infantry_equipment1
+	}
+    text = {
+		trigger = { has_idea = Cof_army_equpiment_buff2 }
+		localization_key = Cof_army_equpiment_buff_infantry_equipment2
+	}
+    text = {
+		trigger = { has_idea = Cof_army_equpiment_buff3 }
+		localization_key = Cof_army_equpiment_buff_infantry_equipment3
+	}
+    text = {
+		trigger = { has_idea = Cof_army_equpiment_buff4 }
+		localization_key = Cof_army_equpiment_buff_infantry_equipment4
+	}
+    text = {
+		trigger = { has_idea = Cof_army_equpiment_buff5 }
+		localization_key = Cof_army_equpiment_buff_infantry_equipment5
+	}
+    text = {
+		trigger = { has_idea = Cof_army_equpiment_buff6 }
+		localization_key = Cof_army_equpiment_buff_infantry_equipment6
+	}
+    text = {
+		trigger = { has_idea = Cof_army_equpiment_buff7 }
+		localization_key = Cof_army_equpiment_buff_infantry_equipment7
+	}
+    text = {
+		trigger = { has_idea = Cof_army_equpiment_buff8 }
+		localization_key = Cof_army_equpiment_buff_infantry_equipment8
+	}
+    text = {
+		trigger = { has_idea = Cof_army_equpiment_buff9 }
+		localization_key = Cof_army_equpiment_buff_infantry_equipment9
+	}
+    text = {
+		trigger = { has_idea = Cof_army_equpiment_buff10 }
+		localization_key = Cof_army_equpiment_buff_infantry_equipment10
+	}
+}
+
