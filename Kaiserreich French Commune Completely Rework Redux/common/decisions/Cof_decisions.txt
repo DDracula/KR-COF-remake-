@@ -25,6 +25,51 @@ Cof_politics = {
 			country_event = cofpolitics.1
 		}
 	}
+
+	Cof_politics_period_change = {
+		icon = ger_mefo_bills
+		allowed = {
+			always = no
+			tag = FRA
+		}
+		available = { always = no }
+		is_good = yes
+		fixed_random_seed = no
+		days_mission_timeout = 30
+		timeout_effect = {
+			custom_effect_tooltip = intensity_of_struggle_effect
+			set_temp_variable = { t1 = Cof_politics_intensity_of_struggle }
+			multiply_temp_variable = { t1 = 0.01 }
+			multiply_temp_variable = { t1 = -0.05 }
+			add_stability = t1
+
+			set_temp_variable = { t2 = Cof_politics_intensity_of_struggle }
+			multiply_temp_variable = { t2 = -0.3 }
+			add_political_power = t2
+
+			intensity_of_struggle_period_change = yes
+			hidden_effect = { activate_mission = Cof_politics_period_change }		
+		}
+	}
+
+	Cof_voting_time_for_bill = {
+		icon = ger_mefo_bills
+		activation = { always = no }
+		allowed = {
+			has_country_flag = bill_for_voting
+			tag = FRA
+		}
+		available = { always = no }
+		is_good = yes
+		fixed_random_seed = no
+		days_mission_timeout = 30
+		timeout_effect = {
+			custom_effect_tooltip = current_bill_content
+			custom_effect_tooltip = bill_agree_vote_count
+			bill_to_judge = yes
+		}
+	}
+
 }
 
 #### 社会阶层 ####
@@ -62,6 +107,7 @@ Cof_economy = {
 			hidden_effect = { activate_mission = Cof_economy_period_change }		
 		}
 	}
+
 	Cof_economy_show_detail = {
 		icon = eng_trade_unions_support
 		allowed = { original_tag = FRA }
@@ -108,4 +154,16 @@ Cof_militray_reform = {
 			else = { clr_country_flag = Cofarmy_class_detail_hidden }
 		}
 	}
+}
+
+Cof_hidden = {
+	FRA_end_the_algiers_regime = { visible = { always = no } }
+	FRA_invite_serbia = { visible = { always = no } }
+	FRA_help_SWF = { visible = { always = no } }
+	FRA_help_CHL = { visible = { always = no } }
+	FRA_mobilise_the_reserves = { visible = { always = no } }
+	FRA_join_phalanstere = { visible = { always = no } }
+	FRA_Develop_Country = { visible = { always = no } }
+	FRA_invade_liberation_target = { visible = { always = no } }
+	SRI_join_the_intl = { visible = { always = no } }
 }

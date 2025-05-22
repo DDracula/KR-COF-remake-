@@ -1,11 +1,16 @@
 ideas = {
     country = {
-        FRA_leader_of_socialism = {
-            picture = leader_of_socialism
-            modifier = {
+        FRA_communard_spirit = {
+			modifier = {
                 political_power_gain = 0.5
-            }
-        }
+				army_core_defence_factor = 0.2
+				compliance_growth_on_our_occupied_states = -0.5
+				resistance_target_on_our_occupied_states = 0.5
+			}
+		}
+
+
+
     }
 
     hidden_ideas = {

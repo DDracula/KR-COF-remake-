@@ -109,4 +109,44 @@ spriteTypes = {
 		texturefile = "gfx/interface/advisors/FRA_georges_malraux.png"
 	}
 
+	spriteType = {
+		name = "GFX_portrait_FRA_louis_saillant_civilian_small"
+		texturefile = "gfx/interface/advisors/FRA_louis_saillant.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_FRA_roger_salengro_civilian_small"
+		texturefile = "gfx/interface/advisors/FRA_roger_salengro.png"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_FRA_marceau_pivert_civilian_small"
+		texturefile = "gfx/interface/advisors/FRA_marceau_pivert.png"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_FRA_rene_fremont_civilian_small"
+		texturefile = "gfx/interface/advisors/FRA_rene_fremont.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_FRA_emile_armand_civilian_small"
+		texturefile = "gfx/interface/advisors/FRA_emile_armand.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_FRA_pierre_renaudel_civilian_small"
+		texturefile = "gfx/interface/advisors/FRA_pierre_renaudel.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_FRA_pierre_celor_civilian_small"
+		texturefile = "gfx/interface/advisors/FRA_pierre_celor.png"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_FRA_jean_fontenoy_civilian_small"
+		texturefile = "gfx/interface/advisors/FRA_jean_fontenoy.png"
+	}
+
 }

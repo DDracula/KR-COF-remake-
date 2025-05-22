@@ -21,3 +21,8 @@ Cof_militray_reform = {
 	allowed = { original_tag = FRA }
 	priority = 9
 }
+
+Cof_hidden = {
+	allowed = { original_tag = FRA }
+	priority = 0
+}

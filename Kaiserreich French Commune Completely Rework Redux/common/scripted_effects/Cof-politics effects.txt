@@ -22,19 +22,19 @@ faction_infulences_count = {
     }
 
     if = {
-        limit = { has_country_flag = DED_synd }
+        limit = { has_country_flag = DEA_synd }
         add_to_variable = { infulence_synd = 2.4 }
     }
     if = {
-        limit = { has_country_flag = DED_oppo }
+        limit = { has_country_flag = DEA_oppo }
         add_to_variable = { infulence_oppo = 2.4 }
     }
     if = {
-        limit = { has_country_flag = DED_jaco }
+        limit = { has_country_flag = DEA_jaco }
         add_to_variable = { infulence_jaco = 2.4 }
     }
     if = {
-        limit = { has_country_flag = DED_sore }
+        limit = { has_country_flag = DEA_sore }
         add_to_variable = { infulence_sore = 2.4 }
     }
 
@@ -390,19 +390,19 @@ csp_position_change = {
     }
 
     if = {
-        limit = { has_country_flag = DED_synd }
+        limit = { has_country_flag = DEA_synd }
         add_to_variable = { dominant_faction_synd = 1 }
     }
     if = {
-        limit = { has_country_flag = DED_oppo }
+        limit = { has_country_flag = DEA_oppo }
         add_to_variable = { dominant_faction_oppo = 1 }
     }
     if = {
-        limit = { has_country_flag = DED_jaco }
+        limit = { has_country_flag = DEA_jaco }
         add_to_variable = { dominant_faction_jaco = 1 }
     }
     if = {
-        limit = { has_country_flag = DED_sore }
+        limit = { has_country_flag = DEA_sore }
         add_to_variable = { dominant_faction_sore = 1 }
     }
 
@@ -623,6 +623,17 @@ class_pop_satisfactions_change = {
     divide_variable = { pop_satisfaction = 6 }
 }
 
+###     阶层影响力变化
+#       set_temp_variable = { pop_wc = 0 }
+#       set_temp_variable = { pop_pc = 0 }
+#       set_temp_variable = { pop_mc = 0 }
+#       set_temp_variable = { pop_sc = 0 }
+#       set_temp_variable = { pop_bc = 0 }
+#       set_temp_variable = { pop_ac = 0 }
+#       set_temp_variable = { pop_aoc = 0 }
+#       set_temp_variable = { pop_anc = 0 }
+#       set_temp_variable = { pop_asc = 0 }
+#       class_pop_change = yes
 class_pop_change = {
     if = { limit = { check_variable = { pop_wc = 0 } } }
 	else = {
@@ -675,8 +686,8 @@ class_pop_change = {
     faction_infulences_count = yes
 }
 
-###     阶层倾向变化
-#		set_temp_variable = { pop_target = 0 }    #1工人2农民3小资4知识5官僚6军官7士官8士兵
+###     阶层倾向变化    #1工人2农民3小资4知识5官僚6军官7士官8士兵
+#		set_temp_variable = { pop_target = 0 }    
 #		set_temp_variable = { pop_syndc = 0 }
 #		set_temp_variable = { pop_oppoc = 0 }
 #		set_temp_variable = { pop_jacoc = 0 }
@@ -1244,4 +1255,420 @@ politics_pop_impact_count = {
 cof_politics_BGT_vs_CSP_values_change = {
     add_to_variable = { Cof_BGT_vs_CSP_value = ppvc }
     custom_effect_tooltip = cof_politics_BGT_vs_CSP_values_change_tips
+}
+
+cof_politics_target_choose = {
+    #影响力
+    if = { 
+	    limit = { check_variable = { target_t = 1 } }
+	    set_temp_variable = { target_v = infulence_synd }
+    }
+    else_if = { 
+	    limit = { check_variable = { target_t = 2 } }
+	    set_temp_variable = { target_v = infulence_oppo }
+    }
+    else_if = { 
+	    limit = { check_variable = { target_t = 3 } }
+	    set_temp_variable = { target_v = infulence_jaco }
+	}
+	else_if = { 	
+        limit = { check_variable = { target_t = 4 } }
+	    set_temp_variable = { target_v = infulence_sore }
+	}    
+}
+
+###     斗争烈度变化
+intensity_of_struggle_period_change = {
+    set_temp_variable = { iosc = 5 }
+
+    set_temp_variable = { t1 = infulence_synd }
+    multiply_temp_variable = { t1 = -1 }
+    add_to_temp_variable = { t1 = 50 }
+    divide_temp_variable = { t1 = 25 }
+
+    set_temp_variable = { t2 = infulence_oppo }
+    multiply_temp_variable = { t2 = -1 }
+    add_to_temp_variable = { t2 = 50 }
+    divide_temp_variable = { t2 = 25 }
+
+    set_temp_variable = { t3 = infulence_jaco }
+    multiply_temp_variable = { t3 = -1 }
+    add_to_temp_variable = { t3 = 50 }
+    divide_temp_variable = { t3 = 25 }
+
+    set_temp_variable = { t4 = infulence_sore }
+    multiply_temp_variable = { t4 = -1 }
+    add_to_temp_variable = { t4 = 50 }
+    divide_temp_variable = { t4 = 25 }
+
+    multiply_temp_variable = { iosc = t1 }
+    multiply_temp_variable = { iosc = t2 }
+    multiply_temp_variable = { iosc = t3 }
+    multiply_temp_variable = { iosc = t4 }
+
+    add_to_variable = { Cof_politics_intensity_of_struggle = iosc }
+    custom_effect_tooltip = intensity_of_struggle_change_tips
+}
+
+#       set_temp_variable = { iosc = 0 }
+#       intensity_of_struggle_change = yes
+intensity_of_struggle_change = {
+    if = { limit = { check_variable = { iosc = 0 } } }
+    else = {
+        add_to_variable = { Cof_politics_intensity_of_struggle = iosc }
+        custom_effect_tooltip = intensity_of_struggle_change_tips
+    }
+}
+
+###     议案投票
+#       set_temp_variable = { vta_smc = 0 }
+#       set_temp_variable = { vta_src = 0 }
+#       set_temp_variable = { vta_occ = 0 }
+#       set_temp_variable = { vta_oac = 0 }
+#       set_temp_variable = { vta_jnc = 0 }
+#       set_temp_variable = { vta_jrc = 0 }
+#       set_temp_variable = { vta_soc = 0 }
+#       set_temp_variable = { vta_syc = 0 }
+#       Cof_politics_faction_agree_vote_change = yes
+Cof_politics_faction_agree_vote_change = {
+    if = { limit = { check_variable = { vta_smc = 0 } } }
+    else = {
+        set_temp_variable = { t = agree_synd_mode }
+        add_to_temp_variable = { t = vta_smc }
+        if = { 
+			limit = { check_variable = { t > seat_synd_mode } } 
+			subtract_from_temp_variable = { vta_smc = t }
+			add_to_temp_variable = { vta_smc = seat_synd_mode }
+			add_to_variable = { agree_synd_mode = vta_smc }
+			custom_effect_tooltip = agree_synd_mode_change
+		}
+		else_if = { 
+			limit = { check_variable = { t < 0 } } 
+			subtract_from_temp_variable = { vta_smc = t }
+			add_to_variable = { agree_synd_mode = vta_smc }
+			custom_effect_tooltip = agree_synd_mode_change
+		}
+		else = {
+			add_to_variable = { agree_synd_mode = vta_smc }
+			custom_effect_tooltip = agree_synd_mode_change
+		}
+    }
+
+    if = { limit = { check_variable = { vta_src = 0 } } }
+    else = {
+        set_temp_variable = { t = agree_synd_radi }
+        add_to_temp_variable = { t = vta_src }
+        if = { 
+			limit = { check_variable = { t > seat_synd_radi } } 
+			subtract_from_temp_variable = { vta_src = t }
+			add_to_temp_variable = { vta_src = seat_synd_radi }
+			add_to_variable = { agree_synd_radi = vta_src }
+			custom_effect_tooltip = agree_synd_radi_change
+		}
+		else_if = { 
+			limit = { check_variable = { t < 0 } } 
+			subtract_from_temp_variable = { vta_src = t }
+			add_to_variable = { agree_synd_radi = vta_src }
+			custom_effect_tooltip = agree_synd_radi_change
+		}
+		else = {
+			add_to_variable = { agree_synd_radi = vta_src }
+			custom_effect_tooltip = agree_synd_radi_change
+		}
+    }
+
+    if = { limit = { check_variable = { vta_occ = 0 } } }
+    else = {
+        set_temp_variable = { t = agree_oppo_comm }
+        add_to_temp_variable = { t = vta_occ }
+        if = { 
+			limit = { check_variable = { t > seat_oppo_comm } } 
+			subtract_from_temp_variable = { vta_occ = t }
+			add_to_temp_variable = { vta_occ = seat_oppo_comm }
+			add_to_variable = { agree_oppo_comm = vta_occ }
+			custom_effect_tooltip = agree_oppo_comm_change
+		}
+		else_if = { 
+			limit = { check_variable = { t < 0 } } 
+			subtract_from_temp_variable = { vta_occ = t }
+			add_to_variable = { agree_oppo_comm = vta_occ }
+			custom_effect_tooltip = agree_oppo_comm_change
+		}
+		else = {
+			add_to_variable = { agree_oppo_comm = vta_occ }
+			custom_effect_tooltip = agree_oppo_comm_change
+		}
+    }
+
+    if = { limit = { check_variable = { vta_oac = 0 } } }
+    else = {
+        set_temp_variable = { t = agree_oppo_anar }
+        add_to_temp_variable = { t = vta_oac }
+        if = { 
+			limit = { check_variable = { t > seat_oppo_anar } } 
+			subtract_from_temp_variable = { vta_oac = t }
+			add_to_temp_variable = { vta_oac = seat_oppo_anar }
+			add_to_variable = { agree_oppo_anar = vta_oac }
+			custom_effect_tooltip = agree_oppo_anar_change
+		}
+		else_if = { 
+			limit = { check_variable = { t < 0 } } 
+			subtract_from_temp_variable = { vta_oac = t }
+			add_to_variable = { agree_oppo_anar = vta_oac }
+			custom_effect_tooltip = agree_oppo_anar_change
+		}
+		else = {
+			add_to_variable = { agree_oppo_anar = vta_oac }
+			custom_effect_tooltip = agree_oppo_anar_change
+		}
+    }
+
+    if = { limit = { check_variable = { vta_jnc = 0 } } }
+    else = {
+        set_temp_variable = { t = agree_jaco_neos }
+        add_to_temp_variable = { t = vta_jnc }
+        if = { 
+			limit = { check_variable = { t > seat_jaco_neos } } 
+			subtract_from_temp_variable = { vta_jnc = t }
+			add_to_temp_variable = { vta_jnc = seat_jaco_neos }
+			add_to_variable = { agree_jaco_neos = vta_jnc }
+			custom_effect_tooltip = agree_jaco_neos_change
+		}
+		else_if = { 
+			limit = { check_variable = { t < 0 } } 
+			subtract_from_temp_variable = { vta_jnc = t }
+			add_to_variable = { agree_jaco_neos = vta_jnc }
+			custom_effect_tooltip = agree_jaco_neos_change
+		}
+		else = {
+			add_to_variable = { agree_jaco_neos = vta_jnc }
+			custom_effect_tooltip = agree_jaco_neos_change
+		}
+    }
+
+    if = { limit = { check_variable = { vta_jrc = 0 } } }
+    else = {
+        set_temp_variable = { t = agree_jaco_revo }
+        add_to_temp_variable = { t = vta_jrc }
+        if = { 
+			limit = { check_variable = { t > seat_jaco_revo } } 
+			subtract_from_temp_variable = { vta_jrc = t }
+			add_to_temp_variable = { vta_jrc = seat_jaco_revo }
+			add_to_variable = { agree_jaco_revo = vta_jrc }
+			custom_effect_tooltip = agree_jaco_revo_change
+		}
+		else_if = { 
+			limit = { check_variable = { t < 0 } } 
+			subtract_from_temp_variable = { vta_jrc = t }
+			add_to_variable = { agree_jaco_revo = vta_jrc }
+			custom_effect_tooltip = agree_jaco_revo_change
+		}
+		else = {
+			add_to_variable = { agree_jaco_revo = vta_jrc }
+			custom_effect_tooltip = agree_jaco_revo_change
+		}
+    }
+
+    if = { limit = { check_variable = { vta_soc = 0 } } }
+    else = {
+        set_temp_variable = { t = agree_sore_oldl }
+        add_to_temp_variable = { t = vta_soc }
+        if = { 
+			limit = { check_variable = { t > seat_sore_oldl } } 
+			subtract_from_temp_variable = { vta_soc = t }
+			add_to_temp_variable = { vta_soc = seat_sore_oldl }
+			add_to_variable = { agree_sore_oldl = vta_soc }
+			custom_effect_tooltip = agree_sore_oldl_change
+		}
+		else_if = { 
+			limit = { check_variable = { t < 0 } } 
+			subtract_from_temp_variable = { vta_soc = t }
+			add_to_variable = { agree_sore_oldl = vta_soc }
+			custom_effect_tooltip = agree_sore_oldl_change
+		}
+		else = {
+			add_to_variable = { agree_sore_oldl = vta_soc }
+			custom_effect_tooltip = agree_sore_oldl_change
+		}
+    }
+
+    if = { limit = { check_variable = { vta_syc = 0 } } }
+    else = {
+        set_temp_variable = { t = agree_sore_yout }
+        add_to_temp_variable = { t = vta_syc }
+        if = { 
+			limit = { check_variable = { t > seat_sore_yout } } 
+			subtract_from_temp_variable = { vta_syc = t }
+			add_to_temp_variable = { vta_syc = seat_sore_yout }
+			add_to_variable = { agree_sore_yout = vta_syc }
+			custom_effect_tooltip = agree_sore_yout_change
+		}
+		else_if = { 
+			limit = { check_variable = { t < 0 } } 
+			subtract_from_temp_variable = { vta_syc = t }
+			add_to_variable = { agree_sore_yout = vta_syc }
+			custom_effect_tooltip = agree_sore_yout_change
+		}
+		else = {
+			add_to_variable = { agree_sore_yout = vta_syc }
+			custom_effect_tooltip = agree_sore_yout_change
+		}
+    }
+
+    Cof_politics_voting_for_bill_agree_count = yes
+}
+
+Cof_politics_voting_for_bill_agree_count = {
+    set_variable = { agree_vote = 0 }
+    add_to_variable = { agree_vote = agree_synd_mode }
+    add_to_variable = { agree_vote = agree_synd_radi }
+    add_to_variable = { agree_vote = agree_oppo_comm }
+    add_to_variable = { agree_vote = agree_oppo_anar }
+    add_to_variable = { agree_vote = agree_jaco_neos }
+    add_to_variable = { agree_vote = agree_jaco_revo }
+    add_to_variable = { agree_vote = agree_sore_oldl }
+    add_to_variable = { agree_vote = agree_sore_yout }
+}
+
+###     预设投票    # 0 0%-10% 1 10%-20% ... 9 90%-100%
+#       set_temp_variable = { vtl1 = 0 }
+#       set_temp_variable = { vtl2 = 0 }
+#       set_temp_variable = { vtl3 = 0 }
+#       set_temp_variable = { vtl4 = 0 }
+#       set_temp_variable = { vtl5 = 0 }
+#       set_temp_variable = { vtl6 = 0 }
+#       set_temp_variable = { vtl7 = 0 }
+#       set_temp_variable = { vtl8 = 0 }
+#       Cof_politics_voting_set = yes
+Cof_politics_voting_set = {  
+    set_temp_variable = { t1 = vtl1 }    
+    multiply_temp_variable = { t1 = 0.1 }
+    set_temp_variable = { tt1 = t1 }
+    add_to_temp_variable = { tt1 = 0.1 }
+    set_variable_to_random = {
+		var = vtlt1
+        min = t1
+		max = tt1
+	}
+    set_variable = { agree_synd_mode = seat_synd_mode }
+	multiply_variable = { agree_synd_mode = vtlt1 }
+	round_variable = agree_synd_mode
+
+    set_temp_variable = { t2 = vtl2 }    
+    multiply_temp_variable = { t2 = 0.1 }
+    set_temp_variable = { tt2 = t2 }
+    add_to_temp_variable = { tt2 = 0.1 }
+    set_variable_to_random = {
+		var = vtlt2
+        min = t2
+		max = tt2
+	}
+    set_variable = { agree_synd_radi = seat_synd_radi }
+	multiply_variable = { agree_synd_radi = vtlt2 }
+	round_variable = agree_synd_radi
+
+    set_temp_variable = { t3 = vtl3 }    
+    multiply_temp_variable = { t3 = 0.1 }
+    set_temp_variable = { tt3 = t3 }
+    add_to_temp_variable = { tt3 = 0.1 }
+    set_variable_to_random = {
+		var = vtlt3
+        min = t3
+		max = tt3
+	}
+    set_variable = { agree_oppo_comm = seat_oppo_comm }
+	multiply_variable = { agree_oppo_comm = vtlt3 }
+	round_variable = agree_oppo_comm
+
+    set_temp_variable = { t4 = vtl4 }    
+    multiply_temp_variable = { t4 = 0.1 }
+    set_temp_variable = { tt4 = t4 }
+    add_to_temp_variable = { tt4 = 0.1 }
+    set_variable_to_random = {
+		var = vtlt4
+        min = t4
+		max = tt4
+	}
+    set_variable = { agree_oppo_anar = seat_oppo_anar }
+	multiply_variable = { agree_oppo_anar = vtlt4 }
+	round_variable = agree_oppo_anar
+
+    set_temp_variable = { t5 = vtl5 }    
+    multiply_temp_variable = { t5 = 0.1 }
+    set_temp_variable = { tt5 = t5 }
+    add_to_temp_variable = { tt5 = 0.1 }
+    set_variable_to_random = {
+		var = vtlt5
+        min = t5
+		max = tt5
+	}
+    set_variable = { agree_jaco_neos = seat_jaco_neos }
+	multiply_variable = { agree_jaco_neos = vtlt5 }
+	round_variable = agree_jaco_neos
+
+    set_temp_variable = { t6 = vtl6 }    
+    multiply_temp_variable = { t6 = 0.1 }
+    set_temp_variable = { tt6 = t6 }
+    add_to_temp_variable = { tt6 = 0.1 }
+    set_variable_to_random = {
+		var = vtlt6
+        min = t6
+		max = tt6
+	}
+    set_variable = { agree_jaco_revo = seat_jaco_revo }
+	multiply_variable = { agree_jaco_revo = vtlt6 }
+	round_variable = agree_jaco_revo
+
+    set_temp_variable = { t7 = vtl7 }    
+    multiply_temp_variable = { t7 = 0.1 }
+    set_temp_variable = { tt7 = t7 }
+    add_to_temp_variable = { tt7 = 0.1 }
+    set_variable_to_random = {
+		var = vtlt7
+        min = t7
+		max = tt7
+	}
+    set_variable = { agree_sore_oldl = seat_sore_oldl }
+	multiply_variable = { agree_sore_oldl = vtlt7 }
+	round_variable = agree_sore_oldl
+
+    set_temp_variable = { t8 = vtl8 }    
+    multiply_temp_variable = { t8 = 0.1 }
+    set_temp_variable = { tt8 = t8 }
+    add_to_temp_variable = { tt8 = 0.1 }
+    set_variable_to_random = {
+		var = vtlt8
+        min = t8
+		max = tt8
+	}
+    set_variable = { agree_sore_yout = seat_sore_yout }
+	multiply_variable = { agree_sore_yout = vtlt8 }
+	round_variable = agree_sore_yout
+
+    Cof_politics_voting_for_bill_agree_count = yes
+}
+
+bill_to_judge = {
+    if = {
+        limit = { check_variable = { agree_vote > 326 } }
+        custom_effect_tooltip = bill_pass
+        hidden_effect = { bill_pass_effect = yes }
+    }
+    else = { 
+        custom_effect_tooltip = bill_not_pass 
+        hidden_effect = { bill_not_pass_effect = yes }
+    }
+    clr_country_flag = bill_for_voting
+}
+
+bill_pass_effect = {
+    if = { 
+        limit = { has_country_flag = bill_impeachment_marceau_pivert }
+        country_event = comfrance.5
+        clr_country_flag = bill_impeachment_marceau_pivert
+    }
+}
+
+bill_not_pass_effect = {
+
 }

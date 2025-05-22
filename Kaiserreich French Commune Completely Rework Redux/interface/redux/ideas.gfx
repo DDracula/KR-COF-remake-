@@ -14,4 +14,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/Cof_military_reform_impact.png"
 	}
 
+	spriteType = {
+		name = "GFX_ideas_Cof_leader_of_socialism"
+		texturefile = "gfx/interface/ideas/Cof_leader_of_socialism.png"
+	}
+	
+
 }

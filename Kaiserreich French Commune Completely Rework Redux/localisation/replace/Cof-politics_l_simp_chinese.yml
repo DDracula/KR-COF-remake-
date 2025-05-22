@@ -1,9 +1,15 @@
 ﻿l_simp_chinese:
   Cof_politics:0 "公社政治"
   Cof_politics_detail1_key:0 "法兰西公社是由36000多个公社的代表组成的联邦制工团共和国。§Y劳工总议会(Bourse Générale du Travail)§!是她的立法机构，理论上最高的国家机关。根据法兰西的人口分布，以及对各个行业的合理划分\n我们最后确立了一个650席的人民议会；我们所有的法案都需要经过§Y劳动总议会§!的表决，而任意一项的法案至少需要326票(即50%+1票)才能通过。\n而§Y公共安全委员会(Comité de Salut Public)§!是人民意志的执行机关，§Y公安委§!的选举则是与§Y总议会§!平行的，但按照惯例，§Y总议会§!的选举会在§Y公安委§!之后再进行。但由于§Y公安委§!实际上可以拒绝承认§Y总议会§!的选举结果并进行新的选举，因此公社实际上最高的国家机关是§Y公安委§!。不过，§Y公安委§!依然在立法上受制于§Y总议会§!，§Y劳工总议会§!主席对§Y总议会§!的影响力使得§Y公共安全委员会§!主席的权力得到了一定的制衡。§Y公共安全委员会§!的各事物代表在他们所在的领域都有很大的影响力，但又因为公社在很大程度上是“各个大城市的联合”，在地方落实的内容依旧依要取决于当地领袖的选择。\n\n"
-  Cof_politics_detail2_key:0 "\n1936年的法兰西公社的政治现状是比较复杂的，在依托§Y总工会(CGT)§!而长时间把握政权的§Y革命工团委员会(Comité Syndical Révolutionnaire)§!与§Y联邦无政府主义者协会(Association des Fédéralistes Anarchistes)§!因为§Y“诉CGT案”§!而决裂后，总的来说，公社的内部政治划分可以分为以§Y革工委(CSR)§!为核心的§r工团派§!，由§Y联安协(AFA)§!与§Y工农共产党(Parti Communiste Ouvrier et Paysan)§!因为反对极权主义集团同时反对工团建制派而联合的§R工农反对派§!，团结在§Y马赛尔·戴亚§!同志身边的§Y法国社会党(Parti Socialiste de France)§!以及一系列技官运动支持者为主的§x雅各宾派§!，最后是以法国革命者§Y乔治·索雷尔§!组建的§Y国家工团主义联盟(Confédération Nationale- Syndicaliste)§!为组织的§o索雷尔派§!。\n\n每个派系都渴望属于自己意识形态的乌托邦，然而，现实政治大概率并不能让这些理性主义者得偿所愿，派系之间的争斗与妥协，最终塑造了整个法兰西的未来。§g当一个派系对公社的影响力大于50%时，派系斗争的烈度便会逐渐降低；而当越多的派系实力相当的时候，他们就会觉得自己才是那个“被赐福的人”，派系斗争的烈度由此便会上升。§!§r一个内斗的国家是不会有光辉的未来的。§!\n"
-  Cof_politics_desc:0 "[Cof_politics_detail1]§Y公共安全委员会(CSP)：\n公安委主导派系：§![dominant_faction_loc]\n\n公共安全委员会主席：[CCSP_leader_loc]\n外交事务代表：[DFA_leader_loc]\n经济事物代表：[DED_leader_loc]\n内部安全事物代表：[DIS_leader_loc]\n总情报委员会主管：[DSRG_leader_loc]\n公社军队总参谋长：[CGSC_leader_loc]\n\n§Y劳工总议会(BGT)：\n总共席位：650§!\n劳工总议会主席：[CBGT_leader_loc]\n\n§r工团派：§![?seat_synd|Y.0]\n§r- 温和派：§![?seat_synd_mode|Y.0][vote_agree_synd_mode_loc]\n§r- 激进派：§![?seat_synd_radi|Y.0][vote_agree_synd_radi_loc]\n\n§R工农反对派：§![?seat_oppo|Y.0]\n§R- 共产党派：§![?seat_oppo_comm|Y.0][vote_agree_oppo_comm_loc]\n§R- 无政府派：§![?seat_oppo_anar|Y.0][vote_agree_oppo_anar_loc]\n\n§x雅各宾派：§![?seat_jaco|Y.0]\n§x- 新社会主义派：§![?seat_jaco_neos|Y.0][vote_agree_jaco_neos_loc]\n§x- 革命行动派：§![?seat_jaco_revo|Y.0][vote_agree_jaco_revo_loc]\n\n§o索雷尔派：§![?seat_sore|Y.0]\n§o- 守旧派：§![?seat_sore_oldl|Y.0][vote_agree_sore_oldl_loc]\n§o- 青年派：§![?seat_sore_yout|Y.0][vote_agree_sore_yout_loc]\n\n权力倾向：§Y[Cof_BGT_vs_CSP_detail]§!([?Cof_BGT_vs_CSP_value|Y.0])\n[Cof_politics_detail2]\n派系之争\n对公社的影响力(派系实力)\n$faction_synd$：[?infulence_synd|Y.1%%]\n$faction_oppo$：[?infulence_oppo|Y.1%%]\n$faction_jaco$：[?infulence_jaco|Y.1%%]\n$faction_sore$：[?infulence_sore|Y.1%%]\n\n派系斗争烈度：[?Cof_politics_intensity_of_struggle|Y.1]"
-  Cof_politics_show_or_hide_detail:0 "显示/隐藏说明"
+  Cof_politics_detail2_key:0 "\n1936年的法兰西公社的政治现状是比较复杂的，在依托§Y总工会(CGT)§!而长时间把握政权的§Y革命工团委员会(Comité Syndical Révolutionnaire)§!与§Y联邦无政府主义者协会(Association des Fédéralistes Anarchistes)§!因为§Y“诉CGT案”§!而决裂后，总的来说，公社的内部政治划分可以分为以§Y革工委(CSR)§!为核心的§r工团派§!，由§Y联安协(AFA)§!与§Y工农共产党(Parti Communiste Ouvrier et Paysan)§!因为反对极权主义集团同时反对工团建制派而联合的§R工农反对派§!，团结在§Y马赛尔·戴亚§!同志身边的§Y法国社会党(Parti Socialiste de France)§!以及一系列技官运动支持者为主的§x雅各宾派§!，最后是以法国革命者§Y乔治·索雷尔§!组建的§Y国家工团主义联盟(Confédération Nationale- Syndicaliste)§!为组织的§o索雷尔派§!。\n"
+  Cof_politics_desc:0 "[Cof_politics_detail1]§Y公共安全委员会(CSP)：\n公安委主导派系：§![dominant_faction_loc]\n\n公共安全委员会主席：§Y[CCSP_leader_loc]§!  ([CCSP_faction_loc])\n外交事务代表：§Y[DFA_leader_loc]§!  ([DFA_faction_loc])\n经济事物代表：§Y[DEA_leader_loc]§!  ([DEA_faction_loc])\n内部安全事物代表：§Y[DIS_leader_loc]§!  ([DIS_faction_loc])\n总情报委员会主管：§Y[DSRG_leader_loc]§!  ([DSRG_faction_loc])\n公社军队总参谋长：§Y[CGSC_leader_loc]§!  ([CGSC_faction_loc])\n\n§Y劳工总议会(BGT)：\n总共席位：650§!\n劳工总议会主席：§Y[CBGT_leader_loc]§!  ([CBGT_faction_loc])\n\n§r工团派：§![?seat_synd|Y.0]\n§r- 温和派：§![?seat_synd_mode|Y.0][vote_agree_synd_mode_loc]\n§r- 激进派：§![?seat_synd_radi|Y.0][vote_agree_synd_radi_loc]\n\n§R工农反对派：§![?seat_oppo|Y.0]\n§R- 共产党派：§![?seat_oppo_comm|Y.0][vote_agree_oppo_comm_loc]\n§R- 无政府派：§![?seat_oppo_anar|Y.0][vote_agree_oppo_anar_loc]\n\n§x雅各宾派：§![?seat_jaco|Y.0]\n§x- 新社会主义派：§![?seat_jaco_neos|Y.0][vote_agree_jaco_neos_loc]\n§x- 革命行动派：§![?seat_jaco_revo|Y.0][vote_agree_jaco_revo_loc]\n\n§o索雷尔派：§![?seat_sore|Y.0]\n§o- 守旧派：§![?seat_sore_oldl|Y.0][vote_agree_sore_oldl_loc]\n§o- 青年派：§![?seat_sore_yout|Y.0][vote_agree_sore_yout_loc]\n\n权力倾向：§Y[Cof_BGT_vs_CSP_detail]§!([?Cof_BGT_vs_CSP_value|Y.0])\n[Cof_politics_detail2]\n派系之争\n对公社的影响力(派系实力)\n$faction_synd$：[?infulence_synd|Y.1%%]\n$faction_oppo$：[?infulence_oppo|Y.1%%]\n$faction_jaco$：[?infulence_jaco|Y.1%%]\n$faction_sore$：[?infulence_sore|Y.1%%]\n\n派系斗争烈度：[?Cof_politics_intensity_of_struggle|Y.1]"
+  Cof_politics_show_or_hide_detail:0 "显示/隐藏政治详细信息"
+
+  Cof_politics_period_change:0 "政治斗争周期"
+  Cof_politics_period_change_desc:0 "每个派系都渴望属于自己意识形态的乌托邦，然而，现实政治大概率并不能让这些理想主义者得偿所愿，派系之间的争斗与妥协，最终塑造了整个法兰西的未来。\n\n当一个派系对公社的影响力大于50%时，派系斗争的烈度便会逐渐降低；而当越多的派系实力相当的时候，他们就会觉得自己才是那个“被赐福的人”，派系斗争的烈度由此便会上升。§r一个内斗的国家是不会有光辉的未来的。§!"
+  Cof_politics_intensity_of_struggle:0 "§Y派系斗争烈度§!"
+  intensity_of_struggle_change_tips:0 "$Cof_politics_intensity_of_struggle$改变[?iosc|-=.1]"
+  intensity_of_struggle_effect:0 "由于[?Cof_politics_intensity_of_struggle|Y.1]的$Cof_politics_intensity_of_struggle$，我们将得到如下效果：\n"
 
   BGT_vs_CSP_towards_CSP5:0 "公安委霸权"
   BGT_vs_CSP_towards_CSP4:0 "公安委专政"
@@ -25,15 +31,26 @@
   faction_synd:0 "§r工团派§!"
   faction_synd_mode:0 "§r温和派§!"
   faction_synd_radi:0 "§r激进派§!"
+  faction_synd_mode_detail:0 "$faction_synd$-$faction_synd_mode$"
+  faction_synd_radi_detail:0 "$faction_synd$-$faction_synd_radi$"
+
   faction_oppo:0 "§R工农反对派§!"
   faction_oppo_comm:0 "§R共产党派§!"
   faction_oppo_anar:0 "§R无政府派§!"
+  faction_oppo_comm_detail:0 "$faction_oppo$-$faction_oppo_comm$"
+  faction_oppo_anar_detail:0 "$faction_oppo$-$faction_oppo_anar$"
+
   faction_jaco:0 "§x雅各宾派§!"
   faction_jaco_neos:0 "§x新社会主义派§!"
   faction_jaco_revo:0 "§x革命行动派§!"
+  faction_jaco_neos_detail:0 "$faction_jaco$-$faction_jaco_neos$"
+  faction_jaco_revo_detail:0 "$faction_jaco$-$faction_jaco_revo$"
+
   faction_sore:0 "§o索雷尔派§!"
   faction_sore_oldl:0 "§o守旧派§!"
   faction_sore_yout:0 "§o青年派§!"
+  faction_sore_oldl_detail:0 "$faction_sore$-$faction_sore_oldl$"
+  faction_sore_yout_detail:0 "$faction_sore$-$faction_sore_yout$"
 
   seat_synd_mode_change_tips:0 "这将导致§r温和派§!的席位[?smc|+=.0]"
   seat_synd_radi_change_tips:0 "这将导致§r激进派§!的席位[?src|+=.0]"
@@ -53,75 +70,39 @@
   vote_agree_sore_oldl_key:0 "§g(赞同票数：[?agree_sore_oldl|G.0])§!"
   vote_agree_sore_yout_key:0 "§g(赞同票数：[?agree_sore_yout|G.0])§!"
 
-  synd_mode_seat_greater_than_x:0 "§r温和派§!的席位大于[?bgt_seat_target|Y.0]席"
-  synd_radi_seat_greater_than_x:0 "§r激进派§!的席位大于[?bgt_seat_target|Y.0]席"
-  oppo_comm_seat_greater_than_x:0 "§R共产党派§!的席位大于[?bgt_seat_target|Y.0]席"
-  oppo_anar_seat_greater_than_x:0 "§R无政府派§!的席位大于[?bgt_seat_target|Y.0]席"
-  jaco_neos_seat_greater_than_x:0 "§x新社会主义派§!的席位大于[?bgt_seat_target|Y.0]席"
-  jaco_revo_seat_greater_than_x:0 "§x革命行动派§!的席位大于[?bgt_seat_target|Y.0]席"
-  sore_oldl_seat_greater_than_x:0 "§o守旧派§!的席位大于[?bgt_seat_target|Y.0]席"
-  sore_yout_seat_greater_than_x:0 "§o青年派§!的席位大于[?bgt_seat_target|Y.0]席"
+  agree_synd_mode_change:0 "[?vta_smc|+=.0]来自$faction_synd_mode$的赞同票"
+  agree_synd_radi_change:0 "[?vta_src|+=.0]来自$faction_synd_radi$的赞同票"
+  agree_oppo_comm_change:0 "[?vta_occ|+=.0]来自$faction_oppo_comm$的赞同票"
+  agree_oppo_anar_change:0 "[?vta_oac|+=.0]来自$faction_oppo_anar$的赞同票"
+  agree_jaco_neos_change:0 "[?vta_jnc|+=.0]来自$faction_jaco_neos$的赞同票"
+  agree_jaco_revo_change:0 "[?vta_jrc|+=.0]来自$faction_jaco_revo$的赞同票"
+  agree_sore_oldl_change:0 "[?vta_soc|+=.0]来自$faction_sore_oldl$的赞同票"
+  agree_sore_yout_change:0 "[?vta_syc|+=.0]来自$faction_sore_yout$的赞同票"
+
+  politics_target_more_than_x:0 "[cof_politics_more_than_x_target]大于[?target_num|.1%%]"
+  politics_target_more_than_x_NOT:0 "[cof_politics_more_than_x_target]小于[?target_num|.1%%]"
+  infulence_synd:0 "$faction_synd$的影响力"
+  infulence_oppo:0 "$faction_oppo$的影响力"
+  infulence_jaco:0 "$faction_jaco$的影响力"
+  infulence_sore:0 "$faction_sore$的影响力"
+
+  synd_seat_greater_than_x:0 "$faction_synd$的席位大于[?bgt_seat_target|Y.0]席"
+  synd_mode_seat_greater_than_x:0 "$faction_synd_mode$的席位大于[?bgt_seat_target|Y.0]席"
+  synd_radi_seat_greater_than_x:0 "$faction_synd_radi$的席位大于[?bgt_seat_target|Y.0]席"
+
+  oppo_seat_greater_than_x:0 "$faction_oppo$的席位大于[?bgt_seat_target|Y.0]席"
+  oppo_comm_seat_greater_than_x:0 "$faction_oppo_comm$的席位大于[?bgt_seat_target|Y.0]席"
+  oppo_anar_seat_greater_than_x:0 "$faction_oppo_anar$的席位大于[?bgt_seat_target|Y.0]席"
+
+  jaco_seat_greater_than_x:0 "$faction_jaco$的席位大于[?bgt_seat_target|Y.0]席"
+  jaco_neos_seat_greater_than_x:0 "$faction_jaco_neos$的席位大于[?bgt_seat_target|Y.0]席"
+  jaco_revo_seat_greater_than_x:0 "$faction_jaco_revo$的席位大于[?bgt_seat_target|Y.0]席"
+
+  sore_seat_greater_than_x:0 "$faction_sore$的席位大于[?bgt_seat_target|Y.0]席"
+  sore_oldl_seat_greater_than_x:0 "$faction_sore_oldl$的席位大于[?bgt_seat_target|Y.0]席"
+  sore_yout_seat_greater_than_x:0 "$faction_sore_oldl$的席位大于[?bgt_seat_target|Y.0]席"
 
   Cof_politics_faction_introduction:0 "派系介绍"
-
-  cofpolitics.1.title:0 "法兰西政治现状"
-  cofpolitics.1.desc:0 ""
-  cofpolitics.1.a:0 ""
-  cofpolitics.1.b:0 ""
-  cofpolitics.1.c:0 ""
-  cofpolitics.1.d:0 ""
-
-  cofpolitics.2.title:0 "工团派"
-  cofpolitics.2.desc:0 ""
-  cofpolitics.2.a:0 ""
-  cofpolitics.2.b:0 ""
-
-  cofpolitics.3.title:0 "温和派"
-  cofpolitics.3.desc:0 ""
-  cofpolitics.3.a:0 ""
-
-  cofpolitics.4.title:0 "激进派"
-  cofpolitics.4.desc:0 ""
-  cofpolitics.4.a:0 ""
-
-  cofpolitics.5.title:0 "工农反对派"
-  cofpolitics.5.desc:0 ""
-  cofpolitics.5.a:0 ""
-  cofpolitics.5.b:0 ""
-
-  cofpolitics.6.title:0 "共产党派"
-  cofpolitics.6.desc:0 ""
-  cofpolitics.6.a:0 ""
-
-  cofpolitics.7.title:0 "无政府派"
-  cofpolitics.7.desc:0 ""
-  cofpolitics.7.a:0 ""
-
-  cofpolitics.8.title:0 "雅各宾派"
-  cofpolitics.8.desc:0 ""
-  cofpolitics.8.a:0 ""
-  cofpolitics.8.b:0 ""
-
-  cofpolitics.9.title:0 "新社会主义派"
-  cofpolitics.9.desc:0 ""
-  cofpolitics.9.a:0 ""
-
-  cofpolitics.10.title:0 "革命行动派"
-  cofpolitics.10.desc:0 ""
-  cofpolitics.10.a:0 ""
-
-  cofpolitics.11.title:0 "索雷尔派"
-  cofpolitics.11.desc:0 ""
-  cofpolitics.11.a:0 ""
-  cofpolitics.11.b:0 ""
-
-  cofpolitics.12.title:0 "守旧派"
-  cofpolitics.12.desc:0 ""
-  cofpolitics.12.a:0 ""
-
-  cofpolitics.13.title:0 "青年派"
-  cofpolitics.13.desc:0 ""
-  cofpolitics.13.a:0 ""
 
   Cof_social_class:0 "社会阶层"
   Cof_social_class_detail1_key:0 "即使我们推翻了反动的大资产阶级的统治，也不意味着人民就一劳永逸地满意了，社会各阶层的人们依旧有着自己的诉求，甚至往往会和其他的阶层的诉求产生冲突。但无论如何，是这些诉求各异的群体组建成了我们的国家，他们的满意与不满都会投射在我们社会的方方面面，从经济到军事，从政治到文化。\n§g(社会平均满意度将影响我们的$MODIFIER_STABILITY_FACTOR$，阶层的影响力决定了他们影响的事物与倍率，而满意度决定了他们影响的具体数值。)§!\n"
@@ -140,7 +121,7 @@
   Cof_politics_class_scholars_key:0 "详细支持占比：\n$faction_synd$：[?pop_scholars_synd|Y.1%%]\n$faction_oppo$：[?pop_scholars_oppo|Y.1%%]\n$faction_jaco$：[?pop_scholars_jaco|Y.1%%]\n$faction_sore$：[?pop_scholars_sore|Y.1%%]"
   Cof_politics_class_bureaucrats_key:0 "详细支持占比：\n$faction_synd$：[?pop_bureaucrats_synd|Y.1%%]\n$faction_oppo$：[?pop_bureaucrats_oppo|Y.1%%]\n$faction_jaco$：[?pop_bureaucrats_jaco|Y.1%%]\n$faction_sore$：[?pop_bureaucrats_sore|Y.1%%]"
   Cof_politics_class_army_key:0 "详细支持占比：\n$faction_synd$：[?pop_army_synd|Y.1%%]\n$faction_oppo$：[?pop_army_oppo|Y.1%%]\n$faction_jaco$：[?pop_army_jaco|Y.1%%]\n$faction_sore$：[?pop_army_sore|Y.1%%]"
-  Cof_social_class_show_detail:0 "显示/隐藏详细信息"
+  Cof_social_class_show_detail:0 "显示/隐藏社会详细信息"
 
   class_pop_workers:0 "§O工人§!"
   class_pop_peasants:0 "§7农民§!"
@@ -228,3 +209,135 @@
   Cof_politics_pop_impact_s_t:0 "\n由于$class_pop_scholars$的影响力大于35%\n$- MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$：[?s3_show|.2%+=]"
   Cof_politics_pop_impact_b_t:0 "\n由于$class_pop_bureaucrats$的影响力大于35%\n- $MODIFIER_POLITICAL_POWER_GAIN$：[?b3_show|.2+=]"
   Cof_politics_pop_impact_a_t:0 "\n由于$class_pop_army$的影响力大于35%\n- $MODIFIERS_ARMY_ATTACK_FACTOR$：[?a1_show|.1%+=]"
+
+  effect_politics:0 "§Y政治影响§!"
+  effect_society:0 "§Y社会影响§!"
+  effect_economy:0 "§Y经济影响§!"
+  effect_military:0 "§Y军事影响§!"
+
+  release_woman_parade_debuff:0 "§G完成这个国策可以减轻§Y$FRA_womens_day_parade$§!带来的问题§!"
+
+  Cof_voting_time_for_bill:0 "审议议案"
+  Cof_voting_time_for_bill_desc:0 "[current_bill_intro]"
+  current_bill_content:0 "§Y当前议案§!：§Y[current_bill_name]§!\n§Y效果§!：[current_bill_effect]"
+  bill_agree_vote_count:0 "§Y总赞成票§!：[?agree_vote|.0G]"
+  bill_pass:0 "§G议案将通过§!"
+  bill_not_pass:0 "§R议案将被否决§!"
+
+  bill_impeachment_marceau_pivert:0 "弹劾$FRA_marceau_pivert$"
+  bill_impeachment_marceau_pivert_effect:0 "$FRA_marceau_pivert$将被弹劾，新一届公安委选举与总议会选举将提前进行"
+  bill_impeachment_marceau_pivert_intro:0 "尽管在去年5月时成功组织了一场第三国际代表大会，但是皮韦尔的政府班子却因面对德意志帝国主义者残酷镇压国内工会活动时三缄其口而饱受批评。劳工总议会内部的反对派已经对皮韦尔发起了一项不信任案。"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  cofpolitics.1.title:0 "法兰西政治现状"
+  cofpolitics.1.desc:0 ""
+  cofpolitics.1.a:0 ""
+  cofpolitics.1.b:0 ""
+  cofpolitics.1.c:0 ""
+  cofpolitics.1.d:0 ""
+
+  cofpolitics.2.title:0 "工团派"
+  cofpolitics.2.desc:0 ""
+  cofpolitics.2.a:0 ""
+  cofpolitics.2.b:0 ""
+
+  cofpolitics.3.title:0 "温和派"
+  cofpolitics.3.desc:0 ""
+  cofpolitics.3.a:0 ""
+
+  cofpolitics.4.title:0 "激进派"
+  cofpolitics.4.desc:0 ""
+  cofpolitics.4.a:0 ""
+
+  cofpolitics.5.title:0 "工农反对派"
+  cofpolitics.5.desc:0 ""
+  cofpolitics.5.a:0 ""
+  cofpolitics.5.b:0 ""
+
+  cofpolitics.6.title:0 "共产党派"
+  cofpolitics.6.desc:0 ""
+  cofpolitics.6.a:0 ""
+
+  cofpolitics.7.title:0 "无政府派"
+  cofpolitics.7.desc:0 ""
+  cofpolitics.7.a:0 ""
+
+  cofpolitics.8.title:0 "雅各宾派"
+  cofpolitics.8.desc:0 ""
+  cofpolitics.8.a:0 ""
+  cofpolitics.8.b:0 ""
+
+  cofpolitics.9.title:0 "新社会主义派"
+  cofpolitics.9.desc:0 ""
+  cofpolitics.9.a:0 ""
+
+  cofpolitics.10.title:0 "革命行动派"
+  cofpolitics.10.desc:0 ""
+  cofpolitics.10.a:0 ""
+
+  cofpolitics.11.title:0 "索雷尔派"
+  cofpolitics.11.desc:0 ""
+  cofpolitics.11.a:0 ""
+  cofpolitics.11.b:0 ""
+
+  cofpolitics.12.title:0 "守旧派"
+  cofpolitics.12.desc:0 ""
+  cofpolitics.12.a:0 ""
+
+  cofpolitics.13.title:0 "青年派"
+  cofpolitics.13.desc:0 ""
+  cofpolitics.13.a:0 ""

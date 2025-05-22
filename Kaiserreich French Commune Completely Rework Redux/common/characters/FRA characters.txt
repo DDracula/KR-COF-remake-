@@ -1,4 +1,20 @@
 characters = {
+	FRA_confederation_general_du_travail = {
+		name = FRA_confederation_general_du_travail
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FRA_confederation_general_du_travail_civilian_small
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = FRA_confederation_general_du_travail_sic
+			traits = { FRA_the_great_union }
+			cost = 0
+			can_be_fired = no
+		}
+	}
+
 	#synd-mode
 	FRA_leon_jouhaux = { #莱昂·儒奥
 		name = FRA_leon_jouhaux
@@ -1084,7 +1100,6 @@ characters = {
 
 	FRA_rene_fremont = { #勒内·弗雷蒙
 		name = FRA_rene_fremont
-		gender = female
 		portraits = {
 			civilian = {
 				small = GFX_portrait_FRA_rene_fremont_civilian_small
@@ -1132,7 +1147,7 @@ characters = {
 		}
 		advisor = {
 			slot = army_chief
-			idea_token = FFRA_gaston_leval_political_advisor
+			idea_token = FRA_gaston_leval_army_chief
 			allowed = { 
 				custom_trigger_tooltip = {
 					tooltip	= oppo_anar_seat_greater_than_x
@@ -1348,6 +1363,28 @@ characters = {
 		}
 	}	
 
+	FRA_pierre_renaudel = { #皮埃尔·雷诺德尔
+		name = FRA_pierre_renaudel
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FRA_pierre_renaudel_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_pierre_renaudel
+			available = {
+				set_temp_variable = { bgt_seat_target = 80 }
+				custom_trigger_tooltip = {
+					tooltip	= jaco_neos_seat_greater_than_x
+					check_variable = { seat_jaco_neos > bgt_seat_target }
+				}
+			}
+			traits = { FRA_humanitarian_reformist }
+			desc = FRA_pierre_renaudel_advisor_desc
+		}
+	}
+
 	FRA_adrien_marquet = { #阿德里安·马凯
 		name = FRA_adrien_marquet
 		portraits = {
@@ -1372,31 +1409,9 @@ characters = {
 				}
 			}
 			traits = { FRA_technocratic_supporter }
+			desc = FRA_adrien_marquet_advisor_desc
 		}
 	}
-
-	FRA_henri_barbe = { #亨利·巴比
-		name = FRA_henri_barbe
-		portraits = {
-			civilian = {
-				small = GFX_portrait_FRA_henri_barbe_civilian_small
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = FRA_henri_barbe
-			available = {
-				set_temp_variable = { bgt_seat_target = 80 }
-				custom_trigger_tooltip = {
-					tooltip	= jaco_neos_seat_greater_than_x
-					check_variable = { seat_jaco_neos > bgt_seat_target }
-				}
-			}
-			traits = { KR_secret_police_chief }
-		}
-	}
-
-
 
 	FRA_georges_albertini = {	#乔治·阿尔贝蒂尼    
 		name = FRA_georges_albertini
@@ -1417,41 +1432,434 @@ characters = {
 				}
 			}
 			traits = { FRA_double_edged_and_smooth }
+			desc = FRA_georges_albertini_advisor_desc
 		}
 	}	
 
-	#jaco-revo
-	FRA_andre_breton = {	#安德烈·布勒东
-		name = FRA_andre_breton
+	FRA_ernest_pezet = { #欧内斯特·佩泽
+		name = FRA_ernest_pezet
+		portraits = {
+			army = {
+				small = GFX_portrait_FRA_ernest_pezet_army_small
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FRA_ernest_pezet_army_chief
+			allowed = { 
+				custom_trigger_tooltip = {
+					tooltip	= jaco_neos_seat_greater_than_x
+					check_variable = { seat_jaco_neos > bgt_seat_target }
+				}
+			}
+			traits = { FRA_voix_du_combattant }
+			desc = FRA_ernest_pezet_army_chief_desc
+			on_add = {
+				set_temp_variable = { msyndc = 0 }
+				set_temp_variable = { moppoc = 0 }
+				set_temp_variable = { mjacoc = 2.5 }
+				set_temp_variable = { msorec = 0 }
+				mili_faction_influence_change = yes
+
+				set_temp_variable = { atsynd1c = 0 }
+				set_temp_variable = { atsynd2c = 0 }
+				set_temp_variable = { atoppo1c = 0 }
+				set_temp_variable = { atoppo2c = 0 }
+				set_temp_variable = { atjaco1c = 0 }
+				set_temp_variable = { atjaco2c = 0 }
+				set_temp_variable = { atsore1c = 0 }
+				set_temp_variable = { atsore2c = 0 }
+				Cof_army_theory_change = yes
+
+				set_temp_variable = { atimpc = 0 }
+				set_temp_variable = { atimp1c = 0 }
+				set_temp_variable = { atimp2c = 0 }
+				set_temp_variable = { atimp3c = 0 }
+				set_temp_variable = { atimp4c = 0 }
+				set_temp_variable = { atimp5c = 5 }
+				set_temp_variable = { atimp6c = 0 }
+				set_temp_variable = { atimp7c = 0 }
+				set_temp_variable = { atimp8c = 0 }
+				Cof_army_theory_implementation_change = yes					
+			}
+		}
+	}
+
+	FRA_georges_catroux = { #乔治·卡特鲁
+		name = FRA_georges_catroux
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_georges_catroux_army_large
+				small = GFX_portrait_FRA_georges_catroux_army_small
+			}
+		}
+		field_marshal = {
+			desc = FRA_georges_catroux_commander_desc
+			traits = { organizer logistics_wizard }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FRA_georges_catroux
+			traits = { KR_army_chief_planning_2 }
+			desc = FRA_georges_catroux_army_chief_desc
+			cost = 100
+			on_add = {
+				set_temp_variable = { msyndc = 0 }
+				set_temp_variable = { moppoc = 0 }
+				set_temp_variable = { mjacoc = 5 }
+				set_temp_variable = { msorec = 0 }
+				mili_faction_influence_change = yes
+
+				set_temp_variable = { atsynd1c = 0 }
+				set_temp_variable = { atsynd2c = 0 }
+				set_temp_variable = { atoppo1c = 0 }
+				set_temp_variable = { atoppo2c = 0 }
+				set_temp_variable = { atjaco1c = 1 }
+				set_temp_variable = { atjaco2c = 0 }
+				set_temp_variable = { atsore1c = 0 }
+				set_temp_variable = { atsore2c = 0 }
+				Cof_army_theory_change = yes
+
+				set_temp_variable = { atimpc = 0 }
+				set_temp_variable = { atimp1c = 0 }
+				set_temp_variable = { atimp2c = 0 }
+				set_temp_variable = { atimp3c = 0 }
+				set_temp_variable = { atimp4c = 0 }
+				set_temp_variable = { atimp5c = 10 }
+				set_temp_variable = { atimp6c = 0 }
+				set_temp_variable = { atimp7c = 0 }
+				set_temp_variable = { atimp8c = 0 }
+				Cof_army_theory_implementation_change = yes		
+			}
+		}
+	}
+
+	FRA_gabriel_lafaye = {	#加布里埃尔·拉费
+		name = FRA_gabriel_lafaye
 		portraits = {
 			civilian = {
-				small = GFX_portrait_FRA_andre_breton_civilian_small
+				small = GFX_portrait_FRA_gabriel_lafaye_civilian_small
 			}
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = FRA_andre_breton
+			idea_token = FRA_gabriel_lafaye
 			available = {
 				set_temp_variable = { bgt_seat_target = 80 }
-				is_country_leader = no
+				custom_trigger_tooltip = {
+					tooltip	= jaco_neos_seat_greater_than_x
+					check_variable = { seat_jaco_neos > bgt_seat_target }
+				}
+			}
+			traits = { KR_railway_magnate }
+			desc = FRA_gabriel_lafaye_advisor_desc
+		}
+	}
+
+	FRA_joseph_paul_boncour = { #约瑟夫·保罗-邦库尔
+		name = FRA_joseph_paul_boncour
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FRA_joseph_paul_boncour_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_joseph_paul_boncour
+			available = {
+				set_temp_variable = { bgt_seat_target = 80 }
+				custom_trigger_tooltip = {
+					tooltip	= jaco_neos_seat_greater_than_x
+					check_variable = { seat_jaco_neos > bgt_seat_target }
+				}
+			}
+			traits = { KR_man_of_the_people }
+			desc = FRA_joseph_paul_boncour_advisor_desc
+		}
+	}
+
+	#jaco_revo
+	FRA_jacques_doriot = { #雅克·多里奥特
+		name = FRA_jacques_doriot
+		portraits = {
+			civilian = {
+				large = GFX_portrait_FRA_jacques_doriot_civilian_large
+				small = GFX_portrait_FRA_jacques_doriot_civilian_small
+			}
+		}
+		country_leader = {
+			desc = FRA_jacques_doriot_leader_desc
+			ideology = totalist_subtype
+			traits = { FRA_national_communist }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_jacques_doriot
+			available = {
+				set_temp_variable = { bgt_seat_target = 80 }
 				custom_trigger_tooltip = {
 					tooltip	= jaco_revo_seat_greater_than_x
 					check_variable = { seat_jaco_revo > bgt_seat_target }
 				}
 			}
-			traits = { FRA_surrealist_leninist }
+			traits = { FRA_national_communist }
+			desc = FRA_jacques_doriot_advisor_desc
 		}
-	}	
+	}
+
+	FRA_pierre_celor = { #皮埃尔·赛洛
+		name = FRA_pierre_celor
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FRA_pierre_celor_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_pierre_celor
+			available = {
+				set_temp_variable = { bgt_seat_target = 80 }
+				custom_trigger_tooltip = {
+					tooltip	= jaco_revo_seat_greater_than_x
+					check_variable = { seat_jaco_revo > bgt_seat_target }
+				}
+			}
+			traits = { FRA_rebel_economy_advocates }
+			desc = FRA_pierre_celor_advisor_desc
+			on_add = {
+				set_temp_variable = { esyndc = 0 }
+				set_temp_variable = { eoppoc = 0 }
+				set_temp_variable = { ejacoc = 5 }
+				set_temp_variable = { esorec = 0 }
+				econ_faction_influence_change = yes
+				
+				set_temp_variable = { ecc = 0 }
+				set_temp_variable = { emc = 0 }
+				set_temp_variable = { epc = 1 }
+				set_temp_variable = { eoc = 1 }
+				Cof_economy_model_change = yes
+				
+				set_temp_variable = { evc = 6 }
+				set_temp_variable = { einc = 0 }
+				set_temp_variable = { eioc = 0}
+				set_temp_variable = { eiac = 0 }
+				set_temp_variable = { eamc = 0 }
+				set_temp_variable = { eaec = 0 }
+				set_temp_variable = { eaac = 0 }
+				set_temp_variable = { eqc = -3 }
+				set_temp_variable = { elc = 0 }
+				set_temp_variable = { eic = 0 }
+				cof_econ_target_change = yes					
+			}
+		}
+	}
+
+	FRA_jean_fontenoy = { #让·丰特努瓦
+		name = FRA_jean_fontenoy
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FRA_jean_fontenoy_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_jean_fontenoy
+			available = {
+				set_temp_variable = { bgt_seat_target = 80 }
+				custom_trigger_tooltip = {
+					tooltip	= jaco_revo_seat_greater_than_x
+					check_variable = { seat_jaco_revo > bgt_seat_target }
+				}
+			}
+			traits = { FRA_diligent_diplomat }
+			desc = FRA_jean_fontenoy_advisor_desc
+		}
+	}
+
+	FRA_henri_barbe = { #亨利·巴比
+		name = FRA_henri_barbe
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FRA_henri_barbe_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_henri_barbe
+			available = {
+				set_temp_variable = { bgt_seat_target = 80 }
+				custom_trigger_tooltip = {
+					tooltip	= jaco_revo_seat_greater_than_x
+					check_variable = { seat_jaco_revo > bgt_seat_target }
+				}
+			}
+			traits = { KR_secret_police_chief }
+			desc = FRA_henri_barbe_advisor_desc
+		}
+	}
+
+	FRA_simon_sabiani = { #西蒙·萨比亚尼
+		name = FRA_simon_sabiani
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FRA_simon_sabiani_civilian_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FRA_simon_sabiani
+			available = {
+				set_temp_variable = { bgt_seat_target = 80 }
+				custom_trigger_tooltip = {
+					tooltip	= jaco_revo_seat_greater_than_x
+					check_variable = { seat_jaco_revo > bgt_seat_target }
+				}
+			}
+			cost = 150
+			traits = { FRA_le_lion_de_largonne }
+			desc = FRA_simon_sabiani_high_command_desc
+			on_add = {
+				set_temp_variable = { msyndc = 0 }
+				set_temp_variable = { moppoc = 0 }
+				set_temp_variable = { mjacoc = 5 }
+				set_temp_variable = { msorec = 0 }
+				mili_faction_influence_change = yes
+
+				set_temp_variable = { atsynd1c = 0 }
+				set_temp_variable = { atsynd2c = 0 }
+				set_temp_variable = { atoppo1c = 0 }
+				set_temp_variable = { atoppo2c = 0 }
+				set_temp_variable = { atjaco1c = 1 }
+				set_temp_variable = { atjaco2c = 0 }
+				set_temp_variable = { atsore1c = 1 }
+				set_temp_variable = { atsore2c = 0 }
+				Cof_army_theory_change = yes
+
+				set_temp_variable = { atimpc = 0 }
+				set_temp_variable = { atimp1c = 0 }
+				set_temp_variable = { atimp2c = 0 }
+				set_temp_variable = { atimp3c = 0 }
+				set_temp_variable = { atimp4c = 0 }
+				set_temp_variable = { atimp5c = 10 }
+				set_temp_variable = { atimp6c = 0 }
+				set_temp_variable = { atimp7c = 5 }
+				set_temp_variable = { atimp8c = 0 }
+				Cof_army_theory_implementation_change = yes					
+			}
+		}
+	}
+
+	FRA_victor_barthelemy = { #维克多·巴泰勒米
+		name = FRA_victor_barthelemy
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FRA_victor_barthelemy_civilian_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FRA_victor_barthelemy
+			available = {
+				set_temp_variable = { bgt_seat_target = 80 }
+				custom_trigger_tooltip = {
+					tooltip	= jaco_revo_seat_greater_than_x
+					check_variable = { seat_jaco_revo > bgt_seat_target }
+				}
+			}
+			cost = 150
+			traits = { FRA_friends_of_the_red_army_brigade }
+			desc = FRA_victor_barthelemy_high_command_desc
+			on_add = {
+				set_temp_variable = { msyndc = 0 }
+				set_temp_variable = { moppoc = 0 }
+				set_temp_variable = { mjacoc = 5 }
+				set_temp_variable = { msorec = 0 }
+				mili_faction_influence_change = yes
+
+				set_temp_variable = { atsynd1c = 0 }
+				set_temp_variable = { atsynd2c = 0 }
+				set_temp_variable = { atoppo1c = 0 }
+				set_temp_variable = { atoppo2c = 0 }
+				set_temp_variable = { atjaco1c = 1 }
+				set_temp_variable = { atjaco2c = 1 }
+				set_temp_variable = { atsore1c = 0 }
+				set_temp_variable = { atsore2c = 0 }
+				Cof_army_theory_change = yes
+
+				set_temp_variable = { atimpc = 0 }
+				set_temp_variable = { atimp1c = 0 }
+				set_temp_variable = { atimp2c = 0 }
+				set_temp_variable = { atimp3c = 0 }
+				set_temp_variable = { atimp4c = 0 }
+				set_temp_variable = { atimp5c = 5 }
+				set_temp_variable = { atimp6c = 10 }
+				set_temp_variable = { atimp7c = 0 }
+				set_temp_variable = { atimp8c = 0 }
+				Cof_army_theory_implementation_change = yes					
+			}
+		}
+	}
 
 
+	FRA_rene_olry = { #亨利·弗勒奈
+		name = FRA_rene_olry
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_rene_olry_army_large
+				small = GFX_portrait_FRA_rene_olry_army_small
+			}
+		}
+		corps_commander = {
+			desc = FRA_rene_olry_commander_desc
+			traits = { trait_mountaineer artillery_officer artillery_specialist }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FRA_rene_olry
+			ledger = army
+			traits = { KR_MHC_artillery_2 }
+			desc = FRA_henri_frenay_high_command_desc
+			cost = 100
+			on_add = {
+				set_temp_variable = { msyndc = 0 }
+				set_temp_variable = { moppoc = 0 }
+				set_temp_variable = { mjacoc = 2.5 }
+				set_temp_variable = { msorec = 0 }
+				mili_faction_influence_change = yes
 
+				set_temp_variable = { atsynd1c = 0 }
+				set_temp_variable = { atsynd2c = 0 }
+				set_temp_variable = { atoppo1c = 0 }
+				set_temp_variable = { atoppo2c = 1 }
+				set_temp_variable = { atjaco1c = 1 }
+				set_temp_variable = { atjaco2c = 0 }
+				set_temp_variable = { atsore1c = 0 }
+				set_temp_variable = { atsore2c = 0 }
+				Cof_army_theory_change = yes
 
-
-
-
-
-
-
+				set_temp_variable = { atimpc = 0 }
+				set_temp_variable = { atimp1c = 0 }
+				set_temp_variable = { atimp2c = 0 }
+				set_temp_variable = { atimp3c = 0 }
+				set_temp_variable = { atimp4c = 5 }
+				set_temp_variable = { atimp5c = 5 }
+				set_temp_variable = { atimp6c = 0 }
+				set_temp_variable = { atimp7c = 0 }
+				set_temp_variable = { atimp8c = 0 }
+				Cof_army_theory_implementation_change = yes		
+			}
+		}
+	}
 
 	#sore-oldl
 	FRA_georges_valois = { #乔治·瓦卢瓦
@@ -1464,32 +1872,7 @@ characters = {
 		country_leader = {
 			desc = FRA_georges_valois_leader_desc
 			ideology = totalist_subtype
-		}
-	}
-
-	FRA_jacques_doriot = { #雅克·多里奥特
-		name = FRA_jacques_doriot
-		portraits = {
-			civilian = {
-				large = GFX_portrait_FRA_jacques_doriot_civilian_large
-				small = GFX_portrait_FRA_jacques_doriot_civilian_small
-			}
-		}
-		country_leader = {
-			desc = FRA_jacques_doriot_leader_desc
-			ideology = syndicalist_subtype
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = FRA_jacques_doriot
-			available = {
-				set_temp_variable = { bgt_seat_target = 80 }
-				custom_trigger_tooltip = {
-					tooltip	= sore_oldl_seat_greater_than_x
-					check_variable = { seat_sore_oldl > bgt_seat_target }
-				}
-			}
-			traits = { KR_flamboyant_brute }
+			traits = { FRA_great_leader }
 		}
 	}
 
@@ -1517,29 +1900,34 @@ characters = {
 				}
 			}
 			traits = { FRA_genius_economist }
+			desc = FRA_edouard_berth_advisor_desc
+			on_add = {
+				set_temp_variable = { esyndc = 0 }
+				set_temp_variable = { eoppoc = 0 }
+				set_temp_variable = { ejacoc = 0 }
+				set_temp_variable = { esorec = 10 }
+				econ_faction_influence_change = yes
+				
+				set_temp_variable = { ecc = 0 }
+				set_temp_variable = { emc = 0 }
+				set_temp_variable = { epc = 0 }
+				set_temp_variable = { eoc = 0 }
+				Cof_economy_model_change = yes
+				
+				set_temp_variable = { evc = 15 }
+				set_temp_variable = { einc = 0 }
+				set_temp_variable = { eioc = 0}
+				set_temp_variable = { eiac = 0 }
+				set_temp_variable = { eamc = 0 }
+				set_temp_variable = { eaec = 0 }
+				set_temp_variable = { eaac = 0 }
+				set_temp_variable = { eqc = 0 }
+				set_temp_variable = { elc = 5 }
+				set_temp_variable = { eic = 0 }
+				cof_econ_target_change = yes	
+			}
 		}
 	}
-
-	FRA_marcel_bucar = {	#马塞尔·布卡德 
-		name = FRA_marcel_bucar
-		portraits = {
-			civilian = {
-				small = GFX_portrait_FRA_marcel_bucar_civilian_small
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = FRA_marcel_bucar
-			available = {
-				set_temp_variable = { bgt_seat_target = 80 }
-				custom_trigger_tooltip = {
-					tooltip	= sore_oldl_seat_greater_than_x
-					check_variable = { seat_sore_oldl > bgt_seat_target }
-				}
-			}
-			traits = { FRA_ideological_zealot }
-		}
-	}		
 
 	FRA_hubert_bourgin = {	#于贝尔·布尔然  
 		name = FRA_hubert_bourgin
@@ -1559,8 +1947,31 @@ characters = {
 				}
 			}
 			traits = { FRA_militarist_agitator }
+			desc = FRA_hubert_bourgin_advisor_desc
 		}
 	}	
+
+	FRA_marcel_bucar = {	#马塞尔·布卡德 
+		name = FRA_marcel_bucar
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FRA_marcel_bucar_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_marcel_bucar
+			available = {
+				set_temp_variable = { bgt_seat_target = 80 }
+				custom_trigger_tooltip = {
+					tooltip	= sore_oldl_seat_greater_than_x
+					check_variable = { seat_sore_oldl > bgt_seat_target }
+				}
+			}
+			traits = { FRA_ideological_zealot }
+			desc = FRA_marcel_bucar_advisor_desc
+		}
+	}		
 
 	FRA_gustave_herve = {	#古斯塔夫·艾尔威  
 		name = FRA_gustave_herve
@@ -1580,61 +1991,208 @@ characters = {
 				}
 			}
 			traits = { FRA_anti_consumerist_ascetic }
+			desc = FRA_gustave_herve_advisor_desc
+			on_add = {
+				set_temp_variable = { esyndc = 0 }
+				set_temp_variable = { eoppoc = 0 }
+				set_temp_variable = { ejacoc = 0 }
+				set_temp_variable = { esorec = 5 }
+				econ_faction_influence_change = yes
+				
+				set_temp_variable = { ecc = 0 }
+				set_temp_variable = { emc = 0 }
+				set_temp_variable = { epc = 0 }
+				set_temp_variable = { eoc = 1 }
+				Cof_economy_model_change = yes
+				
+				set_temp_variable = { evc = 2.5 }
+				set_temp_variable = { einc = 0 }
+				set_temp_variable = { eioc = 0}
+				set_temp_variable = { eiac = 0 }
+				set_temp_variable = { eamc = 0 }
+				set_temp_variable = { eaec = 0 }
+				set_temp_variable = { eaac = 0 }
+				set_temp_variable = { eqc = 2.5 }
+				set_temp_variable = { elc = 0 }
+				set_temp_variable = { eic = 0 }
+				cof_econ_target_change = yes					
+			}
 		}
 	}	
 	
-	###################################
-	### Second in Command (generic) ###
-	###################################
-	FRA_confederation_general_du_travail = {
-		name = FRA_confederation_general_du_travail
+	FRA_diego_brosset = { #迭戈·布罗塞
+		name = FRA_diego_brosset
 		portraits = {
-			civilian = {
-				small = GFX_portrait_FRA_confederation_general_du_travail_civilian_small
+			army = {
+				large = GFX_portrait_FRA_diego_brosset_army_large
+				small = GFX_portrait_FRA_diego_brosset_army_small
 			}
 		}
-		advisor = {
-			slot = second_in_command
-			idea_token = FRA_confederation_general_du_travail_sic
-			traits = { KR_socialist_sic }
-			cost = 0
-			can_be_fired = no
-		}
-	}
-	
-	FRA_gabriel_lafaye = {	#加布里埃尔·拉费
-		name = FRA_gabriel_lafaye
-		portraits = {
-			civilian = {
-				small = GFX_portrait_FRA_gabriel_lafaye_civilian_small
-			}
+		corps_commander = {
+			desc = FRA_diego_brosset_commander_desc
+			traits = { trait_reckless adaptable }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
 		}
 		advisor = {
-			slot = political_advisor
-			idea_token = FRA_gabriel_lafaye
-			traits = { KR_railway_magnate }
-		}
-	}
-	FRA_joseph_paul_boncour = { #约瑟夫·保罗-邦库尔
-		name = FRA_joseph_paul_boncour
-		portraits = {
-			civilian = {
-				small = GFX_portrait_FRA_joseph_paul_boncour_civilian_small
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = FRA_joseph_paul_boncour
+			slot = high_command
+			idea_token = FRA_diego_brosset
 			available = {
-				NOT = { has_government = totalist }
+				set_temp_variable = { bgt_seat_target = 80 }
+				custom_trigger_tooltip = {
+					tooltip	= sore_oldl_seat_greater_than_x
+					check_variable = { seat_sore_oldl > bgt_seat_target }
+				}
 			}
-			traits = { KR_man_of_the_people }
+			traits = { FRA_hunter }
+			cost = 150
+			desc = FRA_diego_brosset_high_command_desc
+			on_add = {
+				set_temp_variable = { msyndc = 0 }
+				set_temp_variable = { moppoc = 0 }
+				set_temp_variable = { mjacoc = 0 }
+				set_temp_variable = { msorec = 5 }
+				mili_faction_influence_change = yes
+
+				set_temp_variable = { atsynd1c = 0 }
+				set_temp_variable = { atsynd2c = 0 }
+				set_temp_variable = { atoppo1c = 0 }
+				set_temp_variable = { atoppo2c = 0 }
+				set_temp_variable = { atjaco1c = 0 }
+				set_temp_variable = { atjaco2c = 0 }
+				set_temp_variable = { atsore1c = 1 }
+				set_temp_variable = { atsore2c = 1 }
+				Cof_army_theory_change = yes
+
+				set_temp_variable = { atimpc = 0 }
+				set_temp_variable = { atimp1c = 0 }
+				set_temp_variable = { atimp2c = 0 }
+				set_temp_variable = { atimp3c = 0 }
+				set_temp_variable = { atimp4c = 0 }
+				set_temp_variable = { atimp5c = 0 }
+				set_temp_variable = { atimp6c = 0 }
+				set_temp_variable = { atimp7c = 10 }
+				set_temp_variable = { atimp8c = 10 }
+				Cof_army_theory_implementation_change = yes					
+			}
 		}
 	}
 	
+	FRA_marie_pierre_koenig = { #马里-皮埃尔·柯尼希
+		name = FRA_marie_pierre_koenig
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_marie_pierre_koenig_army_large
+				small = GFX_portrait_FRA_marie_pierre_koenig_army_small
+			}
+		}
+		corps_commander = {
+			desc = FRA_marie_pierre_koenig_commander_desc
+			traits = { organizer brilliant_strategist }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FRA_marie_pierre_koenig
+			traits = { KR_army_chief_organisational_2 }
+			desc = FRA_marie_pierre_koenig_army_chief_desc
+			cost = 100
+			on_add = {
+				set_temp_variable = { msyndc = 0 }
+				set_temp_variable = { moppoc = 0 }
+				set_temp_variable = { mjacoc = 0 }
+				set_temp_variable = { msorec = 2.5 }
+				mili_faction_influence_change = yes
+			}
+		}
+	}
+
+	FRA_francois_darlan = { #弗朗索瓦·达尔朗
+		name = FRA_francois_darlan
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_francois_darlan_army_large
+				small = GFX_portrait_FRA_francois_darlan_army_small
+			}
+		}
+		navy_leader = {
+			desc = FRA_francois_darlan_admiral_desc
+			traits = { bold naval_lineage superior_tactician }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = FRA_francois_darlan
+			traits = { KR_navy_chief_decisive_battle_2 }
+			desc = FRA_francois_darlan_navy_chief_desc
+			cost = 100
+		}
+	}
 	
+	FRA_gabriel_auphan = { #加布里埃尔·奥方
+		name = FRA_gabriel_auphan
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_gabriel_auphan_army_large
+				small = GFX_portrait_FRA_gabriel_auphan_army_small
+			}
+		}
+		navy_leader = {
+			desc = FRA_gabriel_auphan_admiral_desc
+			traits = { seawolf }
+			desc = FRA_gabriel_auphan_admiral_desc
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
 
-
+	FRA_philippe_auboyneau = { #菲利普·奥布瓦诺
+		name = FRA_philippe_auboyneau
+		portraits = {
+			army = {
+				large = GFX_portrait_FRA_philippe_auboyneau_army_large
+				small = GFX_portrait_FRA_philippe_auboyneau_army_small
+			}
+		}
+		navy_leader = {
+			desc = FRA_philippe_auboyneau_admiral_desc
+			traits = { fleet_protector }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FRA_philippe_auboyneau
+			ledger = navy
+			traits = { KR_MHC_amphibious_assault_2 }
+			desc = FRA_philippe_auboyneau_high_command_desc
+			cost = 100
+			on_add = {
+				set_temp_variable = { msyndc = 0 }
+				set_temp_variable = { moppoc = 0 }
+				set_temp_variable = { mjacoc = 0 }
+				set_temp_variable = { msorec = 2.5 }
+				mili_faction_influence_change = yes				
+			}
+		}
+	}
 	
 	#sore-yout
 	FRA_georges_bataille = {	#乔治·巴塔耶  
@@ -1656,29 +2214,9 @@ characters = {
 				}
 			}
 			traits = { FRA_president_of_acephale }
+			desc = FRA_georges_bataille_advisor_desc
 		}
 	}		
-
-	FRA_alphonse_laurencic = {	#阿方斯·劳伦奇克  
-		name = FRA_alphonse_laurencic
-		portraits = {
-			civilian = {
-				small = GFX_portrait_FRA_alphonse_laurencic_civilian_small
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = FRA_alphonse_laurencic
-			available = {
-				set_temp_variable = { bgt_seat_target = 80 }
-				custom_trigger_tooltip = {
-					tooltip	= sore_yout_seat_greater_than_x
-					check_variable = { seat_sore_yout > bgt_seat_target }
-				}
-			}
-			traits = { FRA_surrealist_architect }
-		}
-	}	
 
 	FRA_michel_leiris = {	#米歇尔·雷里斯
 		name = FRA_michel_leiris
@@ -1698,8 +2236,31 @@ characters = {
 				}
 			}
 			traits = { FRA_anthropological_poet }
+			desc = FRA_michel_leiris_advisor_desc
 		}
-	}		
+	}
+
+	FRA_alphonse_laurencic = {	#阿方斯·劳伦奇克  
+		name = FRA_alphonse_laurencic
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FRA_alphonse_laurencic_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_alphonse_laurencic
+			available = {
+				set_temp_variable = { bgt_seat_target = 80 }
+				custom_trigger_tooltip = {
+					tooltip	= sore_yout_seat_greater_than_x
+					check_variable = { seat_sore_yout > bgt_seat_target }
+				}
+			}
+			traits = { FRA_surrealist_architect }
+			desc = FRA_alphonse_laurencic_advisor_desc
+		}
+	}	
 
 	FRA_georges_malraux = {	#乔治·马尔罗
 		name = FRA_georges_malraux
@@ -1719,38 +2280,86 @@ characters = {
 				}
 			}
 			traits = { FRA_cultural_caesar }
+			desc = FRA_georges_malraux_advisor_desc
 		}
 	}	
 
-	################
-	### Generals ###
-	################
-	
-
-	FRA_georges_catroux = { #乔治·卡特鲁
-		name = FRA_georges_catroux
+	FRA_maurice_duclos = { #莫里斯·杜克斯
+		name = FRA_maurice_duclos
 		portraits = {
-			army = {
-				large = GFX_portrait_FRA_georges_catroux_army_large
-				small = GFX_portrait_FRA_georges_catroux_army_small
+			civilian = {
+				small = GFX_portrait_FRA_maurice_duclos_civilian_small
 			}
 		}
-		field_marshal = {
-			desc = FRA_georges_catroux_commander_desc
-			traits = { organizer logistics_wizard }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-		}
 		advisor = {
-			slot = army_chief
-			idea_token = FRA_georges_catroux
-			traits = { KR_army_chief_planning_2 }
-			cost = 100
+			slot = high_command
+			idea_token = FRA_maurice_duclos
+			available = {
+				set_temp_variable = { bgt_seat_target = 80 }
+				custom_trigger_tooltip = {
+					tooltip	= sore_yout_seat_greater_than_x
+					check_variable = { seat_sore_yout > bgt_seat_target }
+				}
+			}
+			traits = { FRA_assassination_group_organizer }
+			cost = 150
+			desc = FRA_maurice_duclos_high_command_desc
+			on_add = {
+				set_temp_variable = { msyndc = 0 }
+				set_temp_variable = { moppoc = 0 }
+				set_temp_variable = { mjacoc = 0 }
+				set_temp_variable = { msorec = 5 }
+				mili_faction_influence_change = yes
+
+				set_temp_variable = { atsynd1c = 0 }
+				set_temp_variable = { atsynd2c = 0 }
+				set_temp_variable = { atoppo1c = 0 }
+				set_temp_variable = { atoppo2c = 0 }
+				set_temp_variable = { atjaco1c = 0 }
+				set_temp_variable = { atjaco2c = 0 }
+				set_temp_variable = { atsore1c = 0 }
+				set_temp_variable = { atsore2c = 1 }
+				Cof_army_theory_change = yes
+
+				set_temp_variable = { atimpc = 0 }
+				set_temp_variable = { atimp1c = 0 }
+				set_temp_variable = { atimp2c = 0 }
+				set_temp_variable = { atimp3c = 0 }
+				set_temp_variable = { atimp4c = 0 }
+				set_temp_variable = { atimp5c = 0 }
+				set_temp_variable = { atimp6c = 0 }
+				set_temp_variable = { atimp7c = 0 }
+				set_temp_variable = { atimp8c = 10 }
+				Cof_army_theory_implementation_change = yes					
+			}
 		}
 	}
+
+	FRA_andre_breton = {	#安德烈·布勒东
+		name = FRA_andre_breton
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FRA_andre_breton_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_andre_breton
+			available = {
+				set_temp_variable = { bgt_seat_target = 80 }
+				is_country_leader = no
+				custom_trigger_tooltip = {
+					tooltip	= sore_yout_seat_greater_than_x
+					check_variable = { seat_sore_yout > bgt_seat_target }
+				}
+			}
+			traits = { FRA_surrealist_leninist }
+			desc = FRA_andre_breton_advisor_desc
+		}
+	}	
+
+
+
 	FRA_gaston_billotte = {
 		name = FRA_gaston_billotte
 		portraits = {
@@ -1770,77 +2379,21 @@ characters = {
 		}
 	}
 	
-	FRA_marie_pierre_koenig = {
-		name = FRA_marie_pierre_koenig
+	FRA_joseph_vuillemin = { #约瑟夫·维耶曼
+		name = FRA_joseph_vuillemin
 		portraits = {
 			army = {
-				large = GFX_portrait_FRA_marie_pierre_koenig_army_large
-				small = GFX_portrait_FRA_marie_pierre_koenig_army_small
+				small = GFX_portrait_FRA_joseph_vuillemin_army_small
 			}
 		}
-		corps_commander = {
-			desc = FRA_marie_pierre_koenig_commander_desc
-			traits = { organizer brilliant_strategist }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-		}
 		advisor = {
-			slot = army_chief
-			idea_token = FRA_marie_pierre_koenig
-			traits = { KR_army_chief_organisational_2 }
+			slot = air_chief
+			idea_token = FRA_joseph_vuillemin
+			traits = { KR_air_chief_night_operations_2 }
 			cost = 100
 		}
 	}
 
-
-	FRA_rene_olry = {
-		name = FRA_rene_olry
-		portraits = {
-			army = {
-				large = GFX_portrait_FRA_rene_olry_army_large
-				small = GFX_portrait_FRA_rene_olry_army_small
-			}
-		}
-		corps_commander = {
-			desc = FRA_rene_olry_commander_desc
-			traits = { trait_mountaineer artillery_officer artillery_specialist }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 4
-			planning_skill = 2
-			logistics_skill = 2
-		}
-		advisor = {
-			slot = high_command
-			idea_token = FRA_rene_olry
-			ledger = army
-			traits = { KR_MHC_artillery_2 }
-			cost = 100
-		}
-	}
-	FRA_diego_brosset = {
-		name = FRA_diego_brosset
-		portraits = {
-			army = {
-				large = GFX_portrait_FRA_diego_brosset_army_large
-				small = GFX_portrait_FRA_diego_brosset_army_small
-			}
-		}
-		corps_commander = {
-			desc = FRA_diego_brosset_commander_desc
-			traits = { trait_reckless adaptable }
-			skill = 2
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 2
-		}
-	}
-
-	
 
 	FRA_jean_edouard_verneau = {
 		name = FRA_jean_edouard_verneau
@@ -2103,30 +2656,7 @@ characters = {
 	################
 	### Admirals ###
 	################
-	FRA_francois_darlan = {
-		name = FRA_francois_darlan
-		portraits = {
-			army = {
-				large = GFX_portrait_FRA_francois_darlan_army_large
-				small = GFX_portrait_FRA_francois_darlan_army_small
-			}
-		}
-		navy_leader = {
-			desc = FRA_francois_darlan_admiral_desc
-			traits = { bold naval_lineage superior_tactician }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			maneuvering_skill = 3
-			coordination_skill = 3
-		}
-		advisor = {
-			slot = navy_chief
-			idea_token = FRA_francois_darlan
-			traits = { KR_navy_chief_decisive_battle_2 }
-			cost = 100
-		}
-	}
+	
 	FRA_raoul_castex = {
 		name = FRA_raoul_castex
 		portraits = {
@@ -2189,49 +2719,8 @@ characters = {
 			cost = 100
 		}
 	}
-	FRA_gabriel_auphan = {
-		name = FRA_gabriel_auphan
-		portraits = {
-			army = {
-				large = GFX_portrait_FRA_gabriel_auphan_army_large
-				small = GFX_portrait_FRA_gabriel_auphan_army_small
-			}
-		}
-		navy_leader = {
-			desc = FRA_gabriel_auphan_admiral_desc
-			traits = { seawolf }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			maneuvering_skill = 2
-			coordination_skill = 2
-		}
-	}
-	FRA_philippe_auboyneau = {
-		name = FRA_philippe_auboyneau
-		portraits = {
-			army = {
-				large = GFX_portrait_FRA_philippe_auboyneau_army_large
-				small = GFX_portrait_FRA_philippe_auboyneau_army_small
-			}
-		}
-		navy_leader = {
-			desc = FRA_philippe_auboyneau_admiral_desc
-			traits = { fleet_protector }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			maneuvering_skill = 2
-			coordination_skill = 2
-		}
-		advisor = {
-			slot = high_command
-			idea_token = FRA_philippe_auboyneau
-			ledger = navy
-			traits = { KR_MHC_amphibious_assault_2 }
-			cost = 100
-		}
-	}
+	
+	
 	FRA_marcel_gensoul = {
 		name = FRA_marcel_gensoul
 		portraits = {
@@ -2310,20 +2799,7 @@ characters = {
 	######################
 	### Military Staff ###
 	######################
-	FRA_joseph_vuillemin = {
-		name = FRA_joseph_vuillemin
-		portraits = {
-			army = {
-				small = GFX_portrait_FRA_joseph_vuillemin_army_small
-			}
-		}
-		advisor = {
-			slot = air_chief
-			idea_token = FRA_joseph_vuillemin
-			traits = { KR_air_chief_night_operations_2 }
-			cost = 100
-		}
-	}
+
 	FRA_martial_henri_valin = {
 		name = FRA_martial_henri_valin
 		portraits = {

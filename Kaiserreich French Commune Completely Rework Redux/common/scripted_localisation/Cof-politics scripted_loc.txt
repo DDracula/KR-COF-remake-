@@ -404,6 +404,567 @@ defined_text = {
     }
 }
 
+#委员会成员
+defined_text = {
+	name = CBGT_leader_loc
+    text = {
+        trigger = { has_country_flag = CBGT_1936 }
+        localization_key = FRA_pierre_monatte
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_synd_mode }
+        localization_key = FRA_leon_jouhaux
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_synd_radi }
+        localization_key = FRA_benoit_frachon
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_oppo_comm }
+        localization_key = FRA_marcel_cachin
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_oppo_anar }
+        localization_key = FRA_maurice_joyeux
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_jaco_neos }
+        localization_key = FRA_marcel_deat
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_jaco_revo }
+        localization_key = FRA_jacques_doriot
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_sore_oldl }
+        localization_key = FRA_georges_valois
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_sore_yout }
+        localization_key = FRA_georges_bataille
+    }
+}
+
+defined_text = {
+	name = CBGT_faction_loc
+    text = {
+        trigger = { has_country_flag = CBGT_1936 }
+        localization_key = faction_synd_radi_detail
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_synd_mode }
+        localization_key = faction_synd_mode_detail
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_synd_radi }
+        localization_key = faction_synd_radi_detail
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_oppo_comm }
+        localization_key = faction_oppo_comm_detail
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_oppo_anar }
+        localization_key = faction_oppo_anar_detail
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_jaco_neos }
+        localization_key = faction_jaco_neos_detail
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_jaco_revo }
+        localization_key = faction_jaco_revo_detail
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_sore_oldl }
+        localization_key = faction_sore_oldl_detail
+    }
+    text = {
+        trigger = { has_country_flag = CBGT_sore_yout }
+        localization_key = faction_sore_yout_detail
+    }
+}
+
+defined_text = {
+	name = CCSP_leader_loc
+    text = {
+        trigger = { has_country_flag = CCSP_1936 }
+        localization_key = FRA_marceau_pivert
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_synd_mode }
+        localization_key = FRA_leon_jouhaux
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_synd_radi }
+        localization_key = FRA_benoit_frachon
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_oppo_comm }
+        localization_key = FRA_marcel_cachin
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_oppo_anar }
+        localization_key = FRA_maurice_joyeux
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_jaco_neos }
+        localization_key = FRA_marcel_deat
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_jaco_revo }
+        localization_key = FRA_jacques_doriot
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_sore_oldl }
+        localization_key = FRA_georges_valois
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_sore_yout }
+        localization_key = FRA_georges_bataille
+    }
+}
+
+defined_text = {
+	name = CCSP_faction_loc
+    text = {
+        trigger = { has_country_flag = CCSP_1936 }
+        localization_key = faction_oppo_comm_detail
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_synd_mode }
+        localization_key = faction_synd_mode_detail
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_synd_radi }
+        localization_key = faction_synd_radi_detail
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_oppo_comm }
+        localization_key = faction_oppo_comm_detail
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_oppo_anar }
+        localization_key = faction_oppo_anar_detail
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_jaco_neos }
+        localization_key = faction_jaco_neos_detail
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_jaco_revo }
+        localization_key = faction_jaco_revo_detail
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_sore_oldl }
+        localization_key = faction_sore_oldl_detail
+    }
+    text = {
+        trigger = { has_country_flag = CCSP_sore_yout }
+        localization_key = faction_sore_yout_detail
+    }
+}
+
+defined_text = {
+	name = DEA_leader_loc
+    text = {
+        trigger = { has_country_flag = DEA_1936 }
+        localization_key = FRA_pierre_monatte
+    }
+    text = {
+        trigger = { has_country_flag = DEA_synd_mode }
+        localization_key = FRA_robert_bothereau
+    }
+    text = {
+        trigger = { has_country_flag = DEA_synd_radi }
+        localization_key = FRA_pierre_monatte
+    }
+    text = {
+        trigger = { has_country_flag = DEA_oppo_comm }
+        localization_key = FRA_charles_tillon
+    }
+    text = {
+        trigger = { has_country_flag = DEA_oppo_anar }
+        localization_key = FRA_fernand_despres
+    }
+    text = {
+        trigger = { has_country_flag = DEA_jaco_neos }
+        localization_key = FRA_louis_vallon
+    }
+    text = {
+        trigger = { has_country_flag = DEA_jaco_revo }
+        localization_key = FRA_pierre_celor
+    }
+    text = {
+        trigger = { has_country_flag = DEA_sore_oldl }
+        localization_key = FRA_edouard_berth
+    }
+    text = {
+        trigger = { has_country_flag = DEA_sore_yout }
+        localization_key = FRA_edouard_berth
+    }
+}
+
+defined_text = {
+	name = DEA_faction_loc
+    text = {
+        trigger = { has_country_flag = DEA_1936 }
+        localization_key = faction_synd_radi_detail
+    }
+    text = {
+        trigger = { has_country_flag = DEA_synd_mode }
+        localization_key = faction_synd_mode_detail
+    }
+    text = {
+        trigger = { has_country_flag = DEA_synd_radi }
+        localization_key = faction_synd_radi_detail
+    }
+    text = {
+        trigger = { has_country_flag = DEA_oppo_comm }
+        localization_key = faction_oppo_comm_detail
+    }
+    text = {
+        trigger = { has_country_flag = DEA_oppo_anar }
+        localization_key = faction_oppo_anar_detail
+    }
+    text = {
+        trigger = { has_country_flag = DEA_jaco_neos }
+        localization_key = faction_jaco_neos_detail
+    }
+    text = {
+        trigger = { has_country_flag = DEA_jaco_revo }
+        localization_key = faction_jaco_revo_detail
+    }
+    text = {
+        trigger = { has_country_flag = DEA_sore_oldl }
+        localization_key = faction_sore_oldl_detail
+    }
+    text = {
+        trigger = { has_country_flag = DEA_sore_yout }
+        localization_key = faction_sore_yout_detail
+    }
+}
+
+defined_text = {
+	name = DFA_leader_loc
+    text = {
+        trigger = { has_country_flag = DFA_1936 }
+        localization_key = FRA_pierre_brossolette
+    }
+    text = {
+        trigger = { has_country_flag = DFA_synd_mode }
+        localization_key = FRA_leon_blum
+    }
+    text = {
+        trigger = { has_country_flag = DFA_synd_radi }
+        localization_key = FRA_charles_rappoport
+    }
+    text = {
+        trigger = { has_country_flag = DFA_oppo_comm }
+        localization_key = FRA_maurice_thorez
+    }
+    text = {
+        trigger = { has_country_flag = DFA_oppo_anar }
+        localization_key = FRA_may_picqueray
+    }
+    text = {
+        trigger = { has_country_flag = DFA_jaco_neos }
+        localization_key = FRA_pierre_renaudel
+    }
+    text = {
+        trigger = { has_country_flag = DFA_jaco_revo }
+        localization_key = FRA_jean_fontenoy
+    }
+    text = {
+        trigger = { has_country_flag = DFA_sore_oldl }
+        localization_key = FRA_hubert_bourgin
+    }
+    text = {
+        trigger = { has_country_flag = DFA_sore_yout }
+        localization_key = FRA_michel_leiris
+    }
+}
+
+defined_text = {
+	name = DFA_faction_loc
+    text = {
+        trigger = { has_country_flag = DFA_1936 }
+        localization_key = faction_synd_radi_detail
+    }
+    text = {
+        trigger = { has_country_flag = DFA_synd_mode }
+        localization_key = faction_synd_mode_detail
+    }
+    text = {
+        trigger = { has_country_flag = DFA_synd_radi }
+        localization_key = faction_synd_radi_detail
+    }
+    text = {
+        trigger = { has_country_flag = DFA_oppo_comm }
+        localization_key = faction_oppo_comm_detail
+    }
+    text = {
+        trigger = { has_country_flag = DFA_oppo_anar }
+        localization_key = faction_oppo_anar_detail
+    }
+    text = {
+        trigger = { has_country_flag = DFA_jaco_neos }
+        localization_key = faction_jaco_neos_detail
+    }
+    text = {
+        trigger = { has_country_flag = DFA_jaco_revo }
+        localization_key = faction_jaco_revo_detail
+    }
+    text = {
+        trigger = { has_country_flag = DFA_sore_oldl }
+        localization_key = faction_sore_oldl_detail
+    }
+    text = {
+        trigger = { has_country_flag = DFA_sore_yout }
+        localization_key = faction_sore_yout_detail
+    }
+}
+
+defined_text = {
+	name = DIS_leader_loc
+    text = {
+        trigger = { has_country_flag = DIS_1936 }
+        localization_key = FRA_charles_rappoport
+    }
+    text = {
+        trigger = { has_country_flag = DIS_synd_mode }
+        localization_key = FRA_louis_lecoin
+    }
+    text = {
+        trigger = { has_country_flag = DIS_synd_radi }
+        localization_key = FRA_jean_baptiste_lebas
+    }
+    text = {
+        trigger = { has_country_flag = DIS_oppo_comm }
+        localization_key = FRA_boris_souvarine
+    }
+    text = {
+        trigger = { has_country_flag = DIS_oppo_anar }
+        localization_key = FRA_andre_prudhommeaux
+    }
+    text = {
+        trigger = { has_country_flag = DIS_jaco_neos }
+        localization_key = FRA_adrien_marquet
+    }
+    text = {
+        trigger = { has_country_flag = DIS_jaco_revo }
+        localization_key = FRA_henri_barbe
+    }
+    text = {
+        trigger = { has_country_flag = DIS_sore_oldl }
+        localization_key = FRA_marcel_bucar
+    }
+    text = {
+        trigger = { has_country_flag = DIS_sore_yout }
+        localization_key = FRA_alphonse_laurencic
+    }
+}
+
+defined_text = {
+	name = DIS_faction_loc
+    text = {
+        trigger = { has_country_flag = DIS_1936 }
+        localization_key = faction_synd_radi_detail
+    }
+    text = {
+        trigger = { has_country_flag = DIS_synd_mode }
+        localization_key = faction_synd_mode_detail
+    }
+    text = {
+        trigger = { has_country_flag = DIS_synd_radi }
+        localization_key = faction_synd_radi_detail
+    }
+    text = {
+        trigger = { has_country_flag = DIS_oppo_comm }
+        localization_key = faction_oppo_comm_detail
+    }
+    text = {
+        trigger = { has_country_flag = DIS_oppo_anar }
+        localization_key = faction_oppo_anar_detail
+    }
+    text = {
+        trigger = { has_country_flag = DIS_jaco_neos }
+        localization_key = faction_jaco_neos_detail
+    }
+    text = {
+        trigger = { has_country_flag = DIS_jaco_revo }
+        localization_key = faction_jaco_revo_detail
+    }
+    text = {
+        trigger = { has_country_flag = DIS_sore_oldl }
+        localization_key = faction_sore_oldl_detail
+    }
+    text = {
+        trigger = { has_country_flag = DIS_sore_yout }
+        localization_key = faction_sore_yout_detail
+    }
+}
+
+defined_text = {
+	name = DSRG_leader_loc
+    text = {
+        trigger = { has_country_flag = DSRG_1936 }
+        localization_key = FRA_may_picqueray
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_synd_mode }
+        localization_key = FRA_louis_saillant
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_synd_radi }
+        localization_key = FRA_roger_salengro
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_oppo_comm }
+        localization_key = FRA_jacques_duclos
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_oppo_anar }
+        localization_key = FRA_rene_fremont
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_jaco_neos }
+        localization_key = FRA_georges_albertini
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_jaco_revo }
+        localization_key = FRA_simon_sabiani
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_sore_oldl }
+        localization_key = FRA_gustave_herve
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_sore_yout }
+        localization_key = FRA_georges_malraux
+    }
+}
+
+defined_text = {
+	name = DSRG_faction_loc
+    text = {
+        trigger = { has_country_flag = DSRG_1936 }
+        localization_key = faction_oppo_anar_detail
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_synd_mode }
+        localization_key = faction_synd_mode_detail
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_synd_radi }
+        localization_key = faction_synd_radi_detail
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_oppo_comm }
+        localization_key = faction_oppo_comm_detail
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_oppo_anar }
+        localization_key = faction_oppo_anar_detail
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_jaco_neos }
+        localization_key = faction_jaco_neos_detail
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_jaco_revo }
+        localization_key = faction_jaco_revo_detail
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_sore_oldl }
+        localization_key = faction_sore_oldl_detail
+    }
+    text = {
+        trigger = { has_country_flag = DSRG_sore_yout }
+        localization_key = faction_sore_yout_detail
+    }
+}
+
+defined_text = {
+	name = CGSC_leader_loc
+    text = {
+        trigger = { has_country_flag = CGSC_1936 }
+        localization_key = FRA_maurice_gamelin
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_synd_mode }
+        localization_key = FRA_maurice_gamelin
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_synd_radi }
+        localization_key = FRA_charles_delestraint
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_oppo_comm }
+        localization_key = FRA_henri_tanguy
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_oppo_anar }
+        localization_key = FRA_gaston_leval
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_jaco_neos }
+        localization_key = FRA_ernest_pezet
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_jaco_revo }
+        localization_key = FRA_victor_barthelemy
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_sore_oldl }
+        localization_key = FRA_diego_brosset
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_sore_yout }
+        localization_key = FRA_maurice_duclos
+    }
+}
+
+defined_text = {
+	name = CGSC_faction_loc
+    text = {
+        trigger = { has_country_flag = CGSC_1936 }
+        localization_key = faction_synd_mode_detail
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_synd_mode }
+        localization_key = faction_synd_mode_detail
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_synd_radi }
+        localization_key = faction_synd_radi_detail
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_oppo_comm }
+        localization_key = faction_oppo_comm_detail
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_oppo_anar }
+        localization_key = faction_oppo_anar_detail
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_jaco_neos }
+        localization_key = faction_jaco_neos_detail
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_jaco_revo }
+        localization_key = faction_jaco_revo_detail
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_sore_oldl }
+        localization_key = faction_sore_oldl_detail
+    }
+    text = {
+        trigger = { has_country_flag = CGSC_sore_yout }
+        localization_key = faction_sore_yout_detail
+    }
+}
+
 #buff显示
 defined_text = {
 	name = Cof_politics_pop_impact_w
@@ -487,7 +1048,7 @@ defined_text = {
 defined_text = {
 	name = vote_agree_synd_mode_loc
 	text = {
-		trigger = { has_country_flag = voting_time }
+		trigger = { has_country_flag = voting_for_bill }
 		localization_key = vote_agree_synd_mode_key
 	}
 }
@@ -495,7 +1056,7 @@ defined_text = {
 defined_text = {
 	name = vote_agree_synd_radi_loc
 	text = {
-		trigger = { has_country_flag = voting_time }
+		trigger = { has_country_flag = voting_for_bill }
 		localization_key = vote_agree_synd_radi_key
 	}
 }
@@ -503,7 +1064,7 @@ defined_text = {
 defined_text = {
 	name = vote_agree_oppo_comm_loc
 	text = {
-		trigger = { has_country_flag = voting_time }
+		trigger = { has_country_flag = voting_for_bill }
 		localization_key = vote_agree_oppo_comm_key
 	}
 }
@@ -511,7 +1072,7 @@ defined_text = {
 defined_text = {
 	name = vote_agree_oppo_anar_loc
 	text = {
-		trigger = { has_country_flag = voting_time }
+		trigger = { has_country_flag = voting_for_bill }
 		localization_key = vote_agree_oppo_anar_key
 	}
 }
@@ -519,7 +1080,7 @@ defined_text = {
 defined_text = {
 	name = vote_agree_jaco_neos_loc
 	text = {
-		trigger = { has_country_flag = voting_time }
+		trigger = { has_country_flag = voting_for_bill }
 		localization_key = vote_agree_jaco_neos_key
 	}
 }
@@ -527,7 +1088,7 @@ defined_text = {
 defined_text = {
 	name = vote_agree_jaco_revo_loc
 	text = {
-		trigger = { has_country_flag = voting_time }
+		trigger = { has_country_flag = voting_for_bill }
 		localization_key = vote_agree_jaco_revo_key
 	}
 }
@@ -535,7 +1096,7 @@ defined_text = {
 defined_text = {
 	name = vote_agree_sore_oldl_loc
 	text = {
-		trigger = { has_country_flag = voting_time }
+		trigger = { has_country_flag = voting_for_bill }
 		localization_key = vote_agree_sore_oldl_key
 	}
 }
@@ -543,7 +1104,7 @@ defined_text = {
 defined_text = {
 	name = vote_agree_sore_yout_loc
 	text = {
-		trigger = { has_country_flag = voting_time }
+		trigger = { has_country_flag = voting_for_bill }
 		localization_key = vote_agree_sore_yout_key
 	}
 }
@@ -667,5 +1228,50 @@ defined_text = {
     text = {
 		trigger = { check_variable = { ppvc < 0 } }
 		localization_key = to_BGT
+	}
+}
+
+defined_text = {
+	name = cof_politics_more_than_x_target
+	text = {
+		trigger = { check_variable = { target_t = 1 } }
+		localization_key = infulence_synd
+	}
+    text = {
+		trigger = { check_variable = { target_t = 2 } }
+		localization_key = infulence_oppo
+	}
+    text = {
+		trigger = { check_variable = { target_t = 3 } }
+		localization_key = infulence_jaco
+	}
+    text = {
+		trigger = { check_variable = { target_t = 4 } }
+		localization_key = infulence_sore
+	}
+}
+
+#法案
+defined_text = {
+	name = current_bill_name
+	text = {
+		trigger = { has_country_flag = bill_impeachment_marceau_pivert }
+		localization_key = bill_impeachment_marceau_pivert
+	}
+}
+
+defined_text = {
+	name = current_bill_effect
+	text = {
+		trigger = { has_country_flag = bill_impeachment_marceau_pivert }
+		localization_key = bill_impeachment_marceau_pivert_effect
+	}
+}
+
+defined_text = {
+	name = current_bill_intro
+	text = {
+		trigger = { has_country_flag = bill_impeachment_marceau_pivert }
+		localization_key = bill_impeachment_marceau_pivert_intro
 	}
 }

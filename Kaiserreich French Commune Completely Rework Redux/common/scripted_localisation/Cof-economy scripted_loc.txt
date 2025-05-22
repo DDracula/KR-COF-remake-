@@ -264,3 +264,18 @@ defined_text = {
 		localization_key = economy_sore
 	}
 }
+
+defined_text = {
+    name = symbol_unit
+    text = {
+		trigger = {
+            OR = {
+                check_variable = { target_t = 11 }
+                check_variable = { target_t = 12 }
+                check_variable = { target_t = 13 }
+                check_variable = { target_t = 14 }
+            }
+        }
+		localization_key = per_cent
+	}
+}

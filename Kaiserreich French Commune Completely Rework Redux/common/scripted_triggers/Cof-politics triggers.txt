@@ -331,3 +331,12 @@ pop_tendency_soldiers_sore = {
         check_variable = { pop_soldiers_sore > pop_soldiers_oppo }  
     }
 }
+
+###派系影响力
+cof_politics_more_than_x = {
+    custom_trigger_tooltip = {
+        tooltip = politics_target_more_than_x
+        cof_politics_target_choose = yes
+        check_variable = { target_v > target_num }
+    }
+}

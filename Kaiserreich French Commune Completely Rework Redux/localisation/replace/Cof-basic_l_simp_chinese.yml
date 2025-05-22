@@ -1,4 +1,5 @@
 ﻿l_simp_chinese:
+  FRA_the_great_union:0 "伟大的工会"
 
   FRA_leon_jouhaux:0 "莱昂·儒奥"
   FRA_leon_jouhaux_leader_desc:0 "$faction_synd$-$faction_synd_mode$\n§Y生于：§!§L1879年7月1日；法兰西共和国、塞纳省巴黎§!\n§Y背景：§!§L莱昂·儒奥获选成为劳工总议会的主席。作为一个革命的工会主义者，儒奥曾参与了1919年的总罢工，促成了法兰西公社的建立。他是法兰西正统工团主义的信徒，是公社各派系中真正意义上的中间派。§!"
@@ -20,7 +21,7 @@
   FRA_carpenter_fighter:0 "木匠斗士"
 
   FRA_maurice_gamelin:0 "莫里斯·甘末林"
-  FRA_maurice_gamelin_army_chief_desc:0 "$faction_synd$-$faction_synd_mode$\n$Cof_army_theory_panzer_group_proponent\n$§Y生于：§!§L1872年9月20日；法兰西共和国、塞纳省巴黎§!"
+  FRA_maurice_gamelin_army_chief_desc:0 "$faction_synd$-$faction_synd_mode$\n$Cof_army_theory_panzer_group_proponent\n$\n§Y生于：§!§L1872年9月20日；法兰西共和国、塞纳省巴黎§!"
   FRA_maurice_gamelin_theorist_desc:0 "$faction_synd$-$faction_synd_mode$\n$Cof_army_theory_panzer_group_proponent$\n§Y生于：§!§L1872年9月20日；法兰西共和国、塞纳省巴黎§!"
 
   FRA_vincent_auriol:0 "樊尚·奥里奥尔"
@@ -51,11 +52,13 @@
 
   FRA_roger_salengro:0 "罗歇·萨朗格罗"
   FRA_roger_salengro_advisor_desc:0 "$faction_synd$-$faction_synd_radi$\n§Y生于：§!§L1890年3月30日；法兰西共和国、诺尔省里尔§!"
-  FRA_cycliste_salengro:0 "“自行车萨朗格罗”"
+  FRA_cycliste_salengro:0 "自行车萨朗格罗"
 
   FRA_charles_delestraint:0 "夏尔·德莱斯特兰"
   FRA_charles_delestraint_theorist_desc:0 "$faction_synd$-$faction_synd_radi$\n$Cof_army_theory_blitz_delite_proponent$ $Cof_army_theory_motorization_proponent$\n§Y生于：§!§L1879年3月12日；法兰西共和国、加莱海峡省比亚切圣瓦斯特§!"
   FRA_charles_delestraint_army_chief_desc:0 "$faction_synd$-$faction_synd_radi$\n§Y生于：§!§L1879年3月12日；法兰西共和国、加莱海峡省比亚切圣瓦斯特§!"
+
+  FRA_pierre_brossolette:0 "皮埃尔·布罗索莱特"
 
 
 
@@ -120,7 +123,7 @@
   FRA_suzanne_girault_advisor_desc:0 "$faction_oppo$-$faction_oppo_comm$\n§Y生于：§!§L1882年7月28日；瑞士联邦、纳沙泰尔州拉绍德封§!"
 
   FRA_florimond_bonte:0 "弗洛里蒙·邦特"
-  FRA_florimond_bonte_commander_desc:0 "$faction_oppo$-$faction_oppo_comm$§Y生于：§!§L1890年1月22日；法兰西共和国、北滨海省图尔宽§!"
+  FRA_florimond_bonte_commander_desc:0 "$faction_oppo$-$faction_oppo_comm$\n§Y生于：§!§L1890年1月22日；法兰西共和国、北滨海省图尔宽§!"
 
   FRA_richard_sorge:0 "理查德·佐尔格"
 
@@ -164,97 +167,137 @@
 
   FRA_marcel_deat:0 "马塞尔·戴亚"
   FRA_marcel_deat_leader_desc:0 "$faction_jaco$-$faction_jaco_neos$\n§Y生于：§!§L1894年3月7日；法兰西共和国、涅夫勒省热里尼§!\n§Y背景：§!§L马塞尔·戴亚不是一个常规的“社会主义者”，又或者说，他对于传统的社会主义有些许鄙夷。公社的现状过于散漫，而没有一点“革命”的样子，这种不可控的恶心感一直萦绕在马塞尔·戴亚的心头，当他执掌了公社的最高权力，一场“构建革命”将把公社铸就成秩序与伟大的乌托邦。"
-  FRA_marcel_deat_advisor_desc:0 "$faction_jaco$-$faction_jaco_neos$§Y生于：§!§L1894年3月7日；法兰西共和国、涅夫勒省热里尼§!"
+  FRA_marcel_deat_advisor_desc:0 "$faction_jaco$-$faction_jaco_neos$\n§Y生于：§!§L1894年3月7日；法兰西共和国、涅夫勒省热里尼§!"
   FRA_general_architect_of_neosocialism:0 "新社会主义总设计师"
 
   FRA_louis_vallon:0 "路易·瓦隆"
-  FRA_louis_vallon_advisor_desc:0 "$faction_jaco$-$faction_jaco_neos$§Y生于：§!§L1901年8月12日；法兰西共和国、德龙省克雷斯§!"
+  FRA_louis_vallon_advisor_desc:0 "$faction_jaco$-$faction_jaco_neos$\n§Y生于：§!§L1901年8月12日；法兰西共和国、德龙省克雷斯§!"
   FRA_planned_economy_economist:0 "计划经济经济学家"
 
   FRA_pierre_renaudel:0 "皮埃尔·雷诺德尔"
+  FRA_pierre_renaudel_advisor_desc:0 "$faction_jaco$-$faction_jaco_neos$\n§Y生于：§!§L1901年8月12日；法兰西共和国、德龙省克雷斯§!"
+  FRA_humanitarian_reformist:0 "人道改革派"
 
   FRA_adrien_marquet:0 "阿德里安·马凯"
   FRA_adrien_marquet_advisor_desc:0 "$faction_jaco$-$faction_jaco_neos$\n§Y生于：§!§L1884年10月6日；法兰西共和国、吉伦特省波尔多§!\n§Y背景：§!§L通过领导波尔多公社的经历，雅各宾派的头面人物阿德里安·马凯向人们展示了戴亚“结构革命”理论的优越性。§!"  
+  FRA_technocratic_supporter:0 "技术官僚支持者"
 
   FRA_georges_albertini:0 "乔治·阿尔贝蒂尼 "
+  FRA_georges_albertini_advisor_desc:0 "$faction_jaco$-$faction_jaco_neos$\n§Y生于：§!§L1911年5月13日；法兰西共和国、索恩-卢瓦尔省沙隆-苏尔-索恩§!"
+  FRA_double_edged_and_smooth:0 "八面玲珑的两面派"
 
   FRA_ernest_pezet:0 "欧内斯特·佩泽"
+  FRA_ernest_pezet_army_chief_desc:0 "$faction_jaco$-$faction_jaco_neos$\n$Cof_army_theory_centrailed_command_proponent$\n§Y生于：§!§L1887年12月6日；法兰西共和国、阿韦龙省里尼亚克§!"
+  FRA_voix_du_combattant:0 "战斗人员之声"
 
   FRA_georges_catroux:0 "乔治·卡特鲁"
-  FRA_georges_catroux_army_chief_desc:0 "§Y生于：§!§L1877年1月29日；法兰西共和国、上维埃纳省利摩日§!"
-
-  FRA_rene_olry:0 "勒内·奥尔里"
-  FRA_rene_olry_high_command_desc:0 "§Y生于：§!§L1880年6月28日；法兰西共和国、北部省里尔§!"
+  FRA_georges_catroux_army_chief_desc:0 "$faction_jaco$-$faction_jaco_neos$\n$Cof_army_theory_centrailed_command_proponent$\n§Y生于：§!§L1877年1月29日；法兰西共和国、上维埃纳省利摩日§!"
 
   FRA_henri_frenay:0 "亨利·弗勒奈"
-  FRA_henri_frenay_commander_desc:0 "§Y生于：§!§L1905年11月11日；法兰西共和国、罗讷省里昂§!"
+  FRA_henri_frenay_commander_desc:0 "$faction_jaco$-$faction_jaco_neos$\n§Y生于：§!§L1905年11月11日；法兰西共和国、罗讷省里昂§!"
+  FRA_henri_frenay_high_command_desc:0 "$faction_jaco$-$faction_jaco_neos$\n$Cof_army_theory_infanty_artillery_proponent$ $Cof_army_theory_centrailed_command_proponent$\n§Y生于：§!§L1905年11月11日；法兰西共和国、罗讷省里昂§!"
 
   FRA_gabriel_lafaye:0 "加布里埃尔·拉费"
-  FRA_gabriel_lafaye_advisor_desc:0 "§Y生于：§!§L1888年10月4日；法兰西共和国、热尔省欧兹§!"
+  FRA_gabriel_lafaye_advisor_desc:0 "$faction_jaco$-$faction_jaco_neos$\n§Y生于：§!§L1888年10月4日；法兰西共和国、热尔省欧兹§!"
 
   FRA_joseph_paul_boncour:0 "约瑟夫·保罗-邦库尔"
-  FRA_joseph_paul_boncour_advisor_desc:0 "§Y生于：§!§L1873年8月4日；法兰西共和国、卢瓦和谢尔省圣艾尼昂§!"
+  FRA_joseph_paul_boncour_advisor_desc:0 "$faction_jaco$-$faction_jaco_neos$\n§Y生于：§!§L1873年8月4日；法兰西共和国、卢瓦和谢尔省圣艾尼昂§!"
 
 
   FRA_jacques_doriot:0 "雅克·多里奥特"
-  FRA_jacques_doriot_leader_desc:0 "§Y生于：§!§L1898年9月26日；法兰西共和国、瓦兹省布雷勒§!\n§Y背景：§!§L雅克·多里奥特，大战老兵，在被德国释放回国后发现法兰西已经彻底变了天。§!"
-  FRA_jacques_doriot_advisor_desc:0 "§Y生于：§!§L1898年9月26日；法兰西共和国瓦兹省布雷勒§!"
+  FRA_jacques_doriot_leader_desc:0 "$faction_jaco$-$faction_jaco_revo$\n§Y生于：§!§L1898年9月26日；法兰西共和国、瓦兹省布雷勒§!\n§Y背景：§!§L雅克·多里奥特，大战老兵，在被德国释放回国后发现法兰西已经彻底变了天。§!"
+  FRA_jacques_doriot_advisor_desc:0 "$faction_jaco$-$faction_jaco_revo$\n§Y生于：§!§L1898年9月26日；法兰西共和国瓦兹省布雷勒§!"
+  FRA_national_communist:0 "民族共产主义者"
 
   FRA_pierre_celor:0 "皮埃尔·赛洛"
+  FRA_pierre_celor_advisor_desc:0 "$faction_jaco$-$faction_jaco_revo$\n§Y生于：§!§L1902年4月19日；法兰西共和国、科雷兹省蒂勒§!"
+  FRA_rebel_economy_advocates:0 "叛逆经济倡导者"
 
   FRA_jean_fontenoy:0 "让·丰特努瓦"
+  FRA_jean_fontenoy_advisor_desc:0 "$faction_jaco$-$faction_jaco_revo$\n§Y生于：§!§L1899年3月21日；法兰西共和国、塞纳-马恩省枫丹白露§!"
+  FRA_diligent_diplomat:0 "勤勉的外交官"
 
   FRA_henri_barbe:0 "亨利·巴比"
-  FRA_henri_barbe_advisor_desc:0 "§Y生于：§!§L1902年3月14日；法兰西共和国、塞纳省巴黎§!"
+  FRA_henri_barbe_advisor_desc:0 "$faction_jaco$-$faction_jaco_revo$\n§Y生于：§!§L1902年3月14日；法兰西共和国、塞纳省巴黎§!"
 
   FRA_simon_sabiani:0 "西蒙·萨比亚尼"
+  FRA_simon_sabiani_high_command_desc:0 "$faction_jaco$-$faction_jaco_revo$\$Cof_army_theory_centrailed_command_proponent$ $Cof_army_theory_nco_initiative_proponent$\n§Y生于：§!§L1888年5月14日；法兰西共和国、科西嘉省卡萨马乔利§!"
+  FRA_le_lion_de_largonne:0 "拉格纳的狮子"
 
   FRA_victor_barthelemy:0 "维克多·巴泰勒米"
+  FRA_victor_barthelemy_high_command_desc:0 "$faction_jaco$-$faction_jaco_revo$\n$Cof_army_theory_centrailed_command_proponent$ $Cof_army_theory_defensive_countattack_proponent$\n§Y生于：§!§L1906年7月21日；法兰西共和国、科西嘉省博尼法乔§!"
+  FRA_friends_of_the_red_army_brigade:0 "红军旅之友"
 
+  FRA_rene_olry:0 "勒内·奥尔里"
+  FRA_rene_olry_high_command_desc:0 "$faction_jaco$-$faction_jaco_neos$\n$Cof_army_theory_centrailed_command_proponent$\§Y生于：§!§L1880年6月28日；法兰西共和国、北部省里尔§!"
 
 
 
   FRA_georges_valois:0 "乔治·瓦卢瓦"
-  FRA_georges_valois_leader_desc:0 "§Y生于：§!§L1878年10月7日；法兰西共和国、塞纳省巴黎§!\n§Y背景：§!§L乔治·瓦卢瓦，一个乔治·索雷尔提出的“国家工团主义”的追随者，已经成为了劳工总议会的主席。§!"
+  FRA_georges_valois_leader_desc:0 "$faction_sore$-$faction_sore_oldl$\n§Y生于：§!§L1878年10月7日；法兰西共和国、塞纳省巴黎§!\n§Y背景：§!§L乔治·瓦卢瓦，一个乔治·索雷尔提出的“国家工团主义”的追随者，已经成为了劳工总议会的主席。§!"
+  FRA_great_leader:0 "伟大领袖"
 
   FRA_edouard_berth:0 "爱德华·贝尔特"
+  FRA_edouard_berth_advisor_desc:0 "$faction_sore$\n§Y生于：§!§L1875年7月1日；法兰西共和国、诺尔省热蒙§!"
+  FRA_genius_economist:0 "天才经济学家"
 
   FRA_hubert_bourgin:0 "于贝尔·布尔然"
+  FRA_hubert_bourgin_advisor_desc:0 "$faction_sore$-$faction_sore_oldl$\n§Y生于：§!§L1874年11月3日；法兰西共和国、涅夫勒省讷韦尔§!"
+  FRA_militarist_agitator:0 "军国主义煽动者"
 
   FRA_marcel_bucar:0 "马塞尔·布卡德"
+  FRA_marcel_bucar_advisor_desc:0 "$faction_sore$-$faction_sore_oldl$\n§Y生于：§!§L1895年12月7日；法兰西共和国、塞纳-瓦兹省圣克莱尔-叙尔-埃普特§!"
+  FRA_ideological_zealot:0 "意识形态狂热者"
 
   FRA_gustave_herve:0 "古斯塔夫·艾尔威"
+  FRA_gustave_herve_advisor_desc:0 "$faction_sore$-$faction_sore_oldl$\n§Y生于：§!§L1871年1月2日；法兰西共和国、菲尼斯泰尔省布雷斯特§!"
+  FRA_anti_consumerist_ascetic:0 "反消费主义苦修者"
 
   FRA_diego_brosset:0 "迭戈·布罗塞"
-  FRA_diego_brosset_commander_desc:0 "§Y生于：§!§L1898年10月3日；阿根廷共和国、布宜诺斯艾利斯省布宜诺斯艾利斯§!"
+  FRA_diego_brosset_commander_desc:0 "$faction_sore$-$faction_sore_oldl$\n§Y生于：§!§L1898年10月3日；阿根廷共和国、布宜诺斯艾利斯省布宜诺斯艾利斯§!"
+  FRA_diego_brosset_high_command_desc:0 "$faction_sore$-$faction_sore_oldl$\n$Cof_army_theory_nco_initiative_proponent$ $Cof_army_theory_small_combat_proponent$\n§Y生于：§!§L1898年10月3日；阿根廷共和国、布宜诺斯艾利斯省布宜诺斯艾利斯§!"
+  FRA_hunter:0 "猎手"
 
   FRA_marie_pierre_koenig:0 "马里-皮埃尔·柯尼希"
-  FRA_marie_pierre_koenig_army_chief_desc:0 "§Y生于：§!§L1898年10月10日；法兰西共和国、卡尔瓦多斯省卡昂§!"
-  FRA_marie_pierre_koenig_leader_desc:0 "§Y生于：§!§L1898年10月10日；法兰西共和国、卡尔瓦多斯省卡昂§!"
+  FRA_marie_pierre_koenig_army_chief_desc:0 "$faction_sore$-$faction_sore_oldl$\n§Y生于：§!§L1898年10月10日；法兰西共和国、卡尔瓦多斯省卡昂§!"
+  FRA_marie_pierre_koenig_leader_desc:0 "$faction_sore$-$faction_sore_oldl$\n§Y生于：§!§L1898年10月10日；法兰西共和国、卡尔瓦多斯省卡昂§!"
 
   FRA_francois_darlan:0 "弗朗索瓦·达尔朗"
-  FRA_francois_darlan_navy_chief_desc:0 "§Y生于：§!§L1881年8月7日；法兰西共和国、洛特-加龙省内拉克§!\n§Y背景：§!§L让·路易·泽维尔·弗朗索瓦·达尔朗于1881年8月7日出生于一个海军世家。1902年，他从海军学校毕业。在大战期间，他在凡尔登战役的炮兵连队中服役。在革命的混乱中，达尔朗抛弃了他的爱国主义和温和左翼信念，重新加入联邦海军，并在接下来的几年里迅速晋升。现在，他是法国海军中最受尊敬的人之一，并对自己帮助重建的海军感到非常自豪。§!"
+  FRA_francois_darlan_navy_chief_desc:0 "$faction_sore$-$faction_sore_oldl$\n§Y生于：§!§L1881年8月7日；法兰西共和国、洛特-加龙省内拉克§!\n§Y背景：§!§L让·路易·泽维尔·弗朗索瓦·达尔朗于1881年8月7日出生于一个海军世家。1902年，他从海军学校毕业。在大战期间，他在凡尔登战役的炮兵连队中服役。在革命的混乱中，达尔朗抛弃了他的爱国主义和温和左翼信念，重新加入联邦海军，并在接下来的几年里迅速晋升。现在，他是法国海军中最受尊敬的人之一，并对自己帮助重建的海军感到非常自豪。§!"
 
   FRA_gabriel_auphan:0 "加布里埃尔·奥方"
-  FRA_gabriel_auphan_admiral_desc:0 "§Y生于：§!§L1894年11月4日；法兰西共和国、加尔省阿莱斯§!"
+  FRA_gabriel_auphan_admiral_desc:0 "$faction_sore$-$faction_sore_oldl$\n§Y生于：§!§L1894年11月4日；法兰西共和国、加尔省阿莱斯§!"
 
   FRA_philippe_auboyneau:0 "菲利普·奥布瓦诺"
-  FRA_philippe_auboyneau_high_command_desc:0 "§Y生于：§!§L1899年11月9日；奥斯曼帝国、科斯坦丁尼耶维拉耶君士坦丁堡§!"
+  FRA_philippe_auboyneau_high_command_desc:0 "$faction_sore$-$faction_sore_oldl$\n§Y生于：§!§L1899年11月9日；奥斯曼帝国、科斯坦丁尼耶维拉耶君士坦丁堡§!"
+
 
   FRA_georges_bataille:0 "乔治·巴塔耶"
+  FRA_georges_bataille_advisor_desc:0 "$faction_sore$-$faction_sore_yout$\n§Y生于：§!§L1897年9月10日；法兰西第三共和国、多姆山省比永§!"
+  FRA_president_of_acephale:0 "无头社领袖"
 
   FRA_michel_leiris:0 "米歇尔·雷里斯"
+  FRA_michel_leiris_advisor_desc:0 "$faction_sore$-$faction_sore_yout$\n§Y生于：§!§L1901年4月20日；法兰西第三共和国、塞纳省巴黎第十六区§!"
+  FRA_anthropological_poet:0 "人类学诗人"
 
   FRA_alphonse_laurencic:0 "阿方斯·劳伦奇克"
+  FRA_alphonse_laurencic_advisor_desc:0 "$faction_sore$-$faction_sore_yout$\n§Y生于：§!§L1902年7月2日；法兰西共和国、塞纳-瓦兹省昂吉安莱班§!"
+  FRA_surrealist_architect:0 "超现实主义建筑师"
 
   FRA_georges_malraux:0 "乔治·马尔罗"
+  FRA_georges_malraux_advisor_desc:0 "$faction_sore$-$faction_sore_yout$\n§Y生于：§!§L1901年11月3日；法兰西共和国、塞纳省巴黎§!"
+  FRA_cultural_caesar:0 "文化凯撒"
 
   FRA_maurice_duclos:0 "莫里斯·杜克斯"
+  FRA_maurice_duclos_high_command_desc:0 "$faction_sore$-$faction_sore_yout$\n$Cof_army_theory_small_combat_proponent$\n§Y生于：§!§L1906年8月23日；法兰西共和国、塞纳省讷伊-苏尔-塞纳§!"
+  FRA_assassination_group_organizer:0 "暗杀团组建者"
 
   FRA_andre_breton:0 "安德烈·布勒东"
+  FRA_andre_breton_advisor_desc:0 "$faction_sore$-$faction_sore_yout$\n§Y生于：§!§L1896年2月19日；法兰西共和国、奥恩省廷什布雷§!"
+  FRA_surrealist_leninist:0 "超现实主义列宁主义者"
 
   FRA_joseph_vuillemin:0 "约瑟夫·维耶曼"
-  FRA_joseph_vuillemin_air_chief_desc:0 "§Y生于：§!§L1883年3月14日；法兰西共和国、吉伦特省波尔多§! "
+  FRA_joseph_vuillemin_air_chief_desc:0 "$faction_sore$-$faction_sore_yout$\n§Y生于：§!§L1883年3月14日；法兰西共和国、吉伦特省波尔多§! "
 
 
 
@@ -329,23 +372,6 @@
   FRA_aime_doumenc_commander_desc:0 "§Y生于：§!§L1880年11月16日；法兰西共和国、伊泽尔省格勒诺布尔§!"
 
   FRA_odette_sansom:0 "奥黛特·桑松"
-
-
-  FRA_militarist_agitator:0 "军国主义煽动者"
-
-  FRA_technocratic_supporter:0 "技术官僚支持者"
-
-
-
-  FRA_double_edged_and_smooth:0 "八面玲珑的两面派"
-  FRA_surrealist_leninist:0 "超现实主义列宁主义者"
-  FRA_genius_economist:0 "天才经济学家"
-  FRA_ideological_zealot:0 "意识形态狂热者"
-  FRA_anti_consumerist_ascetic:0 "反消费主义苦修者"
-  FRA_president_of_acephale:0 "无头社领袖"
-  FRA_surrealist_architect:0 "超现实主义建筑师"
-  FRA_anthropological_poet:0 "人类学诗人"
-  FRA_cultural_caesar:0 "文化凯撒"
 
 
 
@@ -490,6 +516,7 @@
   FRA_economics_of_war:0 "战争经济学"
   FRA_pilot_mechanized_assembly:0 "试点机械化装配"
   FRA_pioneer_model:0 "先军模式"
+
   FRA_commune_army_council:0 "公社红军委员会"
   FRA_central_brain:0 "中枢大脑"
   FRA_strike_wherever_one_points:0 "指哪打哪"
@@ -555,6 +582,7 @@
   FRA_rapid_support_forces:0 "快速反应部队"
   FRA_radio_advantage:0 "无线电优势"
   FRA_elite_field_engineer_regiment:0 "精锐工兵部队"
+
   FRA_white_paper_on_world_revolution:0 "世界革命白皮书"
   FRA_department_revolutionary_ideal:0 "革命理念部"
   FRA_problem_with_neibour:0 "我们的邻居"
@@ -637,6 +665,7 @@
   FRA_international_red_army:0 "国际红军"
   FRA_red_sky_fighter:0 "红色天空斗士"
   FRA_united_red_navy:0 "联合红海军"
+
   FRA_toulon_naval_declaration:0 "土伦海军宣言"
   FRA_mediterranean_naval_base:0 "地中海海军基地"
   FRA_british_naval_cooperation:0 "不列颠海军合作"
@@ -684,6 +713,7 @@
   FRA_amazonian_sky_fighter:0 "亚马逊天空斗士"
   FRA_stealth_parachuting:0 "隐秘式伞击"
   FRA_futurism_and_flight:0 "未来主义与飞行"
+
   FRA_another_victory_for_syndicalists:0 "又一次工团派的胜利"
   FRA_to_unite_sacrifice_first:0 "若要团结，先要牺牲"
   FRA_composite_worker_education_program:0 "综合工人教育计划"
@@ -705,6 +735,7 @@
   FRA_cutting_dangerous_people:0 "剔除危险份子"
   FRA_declaration_of_the_new_normal:0 "宣布新常态"
   FRA_old_alliance:0 "老盟友"
+
   FRA_the_opposition_goes_against_the_grain:0 "反对派成了当权派"
   FRA_outside_the_BGT_and_CSP:0 "体系之外"
   FRA_no_more_proletarian_proletariat:0 "没有“更加无产的无产阶级”"
@@ -730,12 +761,13 @@
   FRA_bring_in_the_reformers:0 "联络改革派"
   FRA_supervisory_committee:0 "监察委员会"
   FRA_anti_power_checks_and_balances:0 "反暴政与权力平衡"
+
   FRA_french_styke_revolution:0 "法式革命"
   FRA_administrative_technocrats:0 "行政型技术官僚"
   FRA_all_it_takes_is_action:0 "唯有行动"
   FRA_benevolent_dictatorship:0 "美德独裁"
   FRA_the_cult_of_reason:0 "理性崇拜"
-  FRA_class_struggle_as_program:0 "阶级斗争为纲"
+  FRA_class_struggle_as_program:0 "阶级对抗理论"
   FRA_acting_is_better_than_thinking:0 "行胜于思"
   FRA_first_line_feedback:0 "第一线反馈"
   FRA_constructing_revolutionary_manifesto:0 "构建革命宣言"
@@ -753,6 +785,7 @@
   FRA_thousands_paths_to_technician:0 "通向技官的道路"
   FRA_new_man_project:0 "“新人”计划"
   FRA_principle_of_orthodoxy:0 "正统意识形态原则"
+
   FRA_purer_model_of_revolution:0 "纯洁革命模式"
   FRA_new_friend:0 "新朋友"
   FRA_proletarian_model_of_education:0 "无产阶级教育模式"
@@ -778,14 +811,16 @@
   FRA_a_real_revolution:0 "一场真正的革命"
   FRA_committees_are_lower_than_parliaments:0 "委员会低于议会"
   FRA_reduction_of_local_autonomy:0 "削减地方自治权"
+
   FRA_reaffirmation_of_freedom_of_religion:0 "重申宗教自由"
   FRA_state_atheism:0 "国家无神论"
-  FRA_relying_on_CSP:0 "依靠总议会"
-  FRA_support_for_BGT:0 "支持公安委"
+  FRA_relying_on_CSP:0 "依靠公安委"
+  FRA_support_for_BGT:0 "支持总议会"
   FRA_presence_is_reason:0 "存在即合理"
   FRA_reform_for_revolution:0 "改革为了革命"
   FRA_principle_of_stability:0 "稳定性原则"
   FRA_performance_legitimacy:0 "绩效合法性"
+
   FRA_second_dreyfus_case:0 "第二次德雷福斯案"
   FRA_tightening_immigration_bill:0 "收紧移民法案"
   FRA_national_counterintelligence_act:0 "国家反间谍法"
@@ -797,6 +832,7 @@
   FRA_progressive_women:0 "进步的女性"
   FRA_free_assembly:0 "自由集会"
   FRA_assembly_declaration_system:0 "集会申报机制"
+
   FRA_enemy_at_the_gates:0 "大敌当前"
   FRA_ten_year_model:0 "十年任期制"
   FRA_integrated_politics:0 "定于一尊"
@@ -824,8 +860,6 @@
   FRA_neutralize_hostility:0 "压制反对"
   FRA_get_back_on_track:0 "重回正轨"
   FRA_political_legacy:0 "政治遗产"
-
-  FRA_leader_of_socialism:0 "世界社会主义领袖"
 
 
 
