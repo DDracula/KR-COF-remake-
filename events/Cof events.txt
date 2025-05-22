@@ -1,0 +1,209 @@
+add_namespace = cofpolitics
+add_namespace = cofeconomic
+add_namespace = cofmilitary
+add_namespace = cofinternational
+add_namespace = int
+
+country_event = {
+	id = cofpolitics.0
+	is_triggered_only = yes
+	option = {
+        remove_targeted_decision = { target = FRA decision = SRI_join_the_intl }
+	}
+}
+
+country_event = {
+	id = cofpolitics.1
+	title = cofpolitics.1.title
+	desc = cofpolitics.1.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.1.a
+        ai_chance = { base = 0 }
+        country_event = cofpolitics.2
+	}
+    option = {
+		name = cofpolitics.1.b
+        ai_chance = { base = 0 }
+        country_event = cofpolitics.5
+	}
+    option = {
+		name = cofpolitics.1.c
+        ai_chance = { base = 0 }
+        country_event = cofpolitics.8
+	}
+    option = {
+		name = cofpolitics.1.d
+        ai_chance = { base = 0 }
+        country_event = cofpolitics.11
+	}
+}
+
+country_event = {
+	id = cofpolitics.2
+	title = cofpolitics.2.title
+	desc = cofpolitics.2.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.2.a
+        ai_chance = { base = 0 }
+        country_event = cofpolitics.3
+	}
+    option = {
+		name = cofpolitics.2.b
+        ai_chance = { base = 0 }
+        country_event = cofpolitics.4
+	}
+}
+
+country_event = {
+	id = cofpolitics.3
+	title = cofpolitics.3.title
+	desc = cofpolitics.3.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.3.a
+        ai_chance = { base = 0 }
+	}
+}
+
+country_event = {
+	id = cofpolitics.4
+	title = cofpolitics.4.title
+	desc = cofpolitics.4.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.4.a
+        ai_chance = { base = 0 }
+	}
+}
+
+country_event = {
+	id = cofpolitics.5
+	title = cofpolitics.5.title
+	desc = cofpolitics.5.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.5.a
+        ai_chance = { base = 0 }
+        country_event = cofpolitics.6
+	}
+    option = {
+		name = cofpolitics.5.b
+        ai_chance = { base = 0 }
+        country_event = cofpolitics.7
+	}
+}
+
+country_event = {
+	id = cofpolitics.6
+	title = cofpolitics.6.title
+	desc = cofpolitics.6.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.6.a
+        ai_chance = { base = 0 }
+	}
+}
+
+country_event = {
+	id = cofpolitics.7
+	title = cofpolitics.7.title
+	desc = cofpolitics.7.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.7.a
+        ai_chance = { base = 0 }
+	}
+}
+
+country_event = {
+	id = cofpolitics.8
+	title = cofpolitics.8.title
+	desc = cofpolitics.8.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.8.a
+        ai_chance = { base = 0 }
+        country_event = cofpolitics.9
+	}
+    option = {
+		name = cofpolitics.8.b
+        ai_chance = { base = 0 }
+        country_event = cofpolitics.10
+	}
+}
+
+country_event = {
+	id = cofpolitics.9
+	title = cofpolitics.9.title
+	desc = cofpolitics.9.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.9.a
+        ai_chance = { base = 0 }
+	}
+}
+
+country_event = {
+	id = cofpolitics.10
+	title = cofpolitics.10.title
+	desc = cofpolitics.10.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.10.a
+        ai_chance = { base = 0 }
+	}
+}
+
+country_event = {
+	id = cofpolitics.11
+	title = cofpolitics.11.title
+	desc = cofpolitics.11.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.11.a
+        ai_chance = { base = 0 }
+        country_event = cofpolitics.12
+	}
+    option = {
+		name = cofpolitics.11.b
+        ai_chance = { base = 0 }
+        country_event = cofpolitics.13
+	}
+}
+
+country_event = {
+	id = cofpolitics.12
+	title = cofpolitics.12.title
+	desc = cofpolitics.12.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.12.a
+        ai_chance = { base = 0 }
+	}
+}
+
+country_event = {
+	id = cofpolitics.13
+	title = cofpolitics.13.title
+	desc = cofpolitics.13.desc
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+	option = {
+		name = cofpolitics.13.a
+        ai_chance = { base = 0 }
+	}
+}

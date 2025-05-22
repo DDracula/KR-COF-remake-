@@ -1,0 +1,28 @@
+Cof_politics = {
+    icon = GFX_decision_cat_communard_flag
+	allowed = { original_tag = FRA }
+	priority = 12
+}
+
+Cof_social_class = {
+	icon = GFX_decision_cat_communard_flag
+	allowed = { original_tag = FRA }
+	priority = 11
+}
+
+Cof_economy = {
+	icon = GFX_decision_cat_communard_flag
+	allowed = { original_tag = FRA }
+	priority = 10
+}
+
+Cof_militray_reform = {
+	icon = GFX_decision_cat_communard_flag
+	allowed = { original_tag = FRA }
+	priority = 9
+}
+
+Cof_hidden = {
+	allowed = { original_tag = FRA }
+	priority = 0
+}
